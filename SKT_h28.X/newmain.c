@@ -432,7 +432,7 @@ unsigned short n,t;
     for(t=30;t>0;t--){
         BUZZ=1;
     }
-}    
+}   
 
 
 /*  メイン関数（問題にあわせて変更）    */
@@ -453,6 +453,7 @@ void main(void)
     //ここから編集
     LEDR=LEDG=LEDB=OFF;
 
+
     while(1){
         if(SW1 == UP){
             break;
@@ -460,7 +461,43 @@ void main(void)
     }
     while(1){
         if(SW1==UP){
-            dynam(SEGU,SEGP,0,0);
+            if(SW2==DN){
+                dynam(SEGU,SEGP,0,0);
+            }else{
+
+                __delay_ms(500);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG1,0,0);
+                
+                __delay_ms(500);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG3,0,0);
+
+                __delay_ms(500);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG5,0,0);
+
+                __delay_ms(500);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG7,0,0);
+
+                __delay_ms(500);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG9,0,0);
+            }
+            
+            
+
         }
         else{
             dynam(SEGD,SEGN,0,0);

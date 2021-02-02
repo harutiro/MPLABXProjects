@@ -5182,6 +5182,7 @@ void main(void)
 
     RC0=RC2=RC1=1;
 
+
     while(1){
         if(RA0 == 0){
             break;
@@ -5189,7 +5190,43 @@ void main(void)
     }
     while(1){
         if(RA0==0){
-            dynam((0x02|0x04|0x08|0x10|0x20),(0x01|0x02|0x10|0x20|0x40),0,0);
+            if(RA1){
+                dynam((0x02|0x04|0x08|0x10|0x20),(0x01|0x02|0x10|0x20|0x40),0,0);
+            }else{
+
+                _delay((unsigned long)((500)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x02|0x04),0,0);
+
+                _delay((unsigned long)((500)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x40|0x01|0x08|0x02|0x04),0,0);
+
+                _delay((unsigned long)((500)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x20|0x08|0x40|0x01|0x04),0,0);
+
+                _delay((unsigned long)((500)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x01|0x02|0x04|0x20),0,0);
+
+                _delay((unsigned long)((500)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x20|0x08|0x40|0x01|0x02|0x04),0,0);
+            }
+
+
+
         }
         else{
             dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
