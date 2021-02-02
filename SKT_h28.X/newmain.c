@@ -434,6 +434,17 @@ unsigned short n,t;
     }
 }   
 
+void clear(void){
+    dynam(SEGD,SEGN,0,0);
+    __delay_ms(1000);
+    while(1){
+        if(SW1 == UP){
+            break;
+        }
+    }
+
+}
+
 
 /*  メイン関数（問題にあわせて変更）    */
 void main(void)
@@ -517,30 +528,35 @@ void main(void)
             }else{
                 __delay_ms(1000);
                 if(SW2 == DN){
+                    clear();
                     continue;
                 }
                 dynam(0,SEG8,0,0);
                 
                 __delay_ms(1000);
                 if(SW2 == DN){
+                    clear();
                     continue;
                 }
                 dynam(0,SEG6,0,0);
 
                 __delay_ms(1000);
                 if(SW2 == DN){
+                    clear();
                     continue;
                 }
                 dynam(0,SEG4,0,0);
 
                 __delay_ms(1000);
                 if(SW2 == DN){
+                    clear();
                     continue;
                 }
                 dynam(0,SEG2,0,0);
 
                 __delay_ms(1000);
                 if(SW2 == DN){
+                    clear();
                     continue;
                 }
                 dynam(0,SEG0,0,0);

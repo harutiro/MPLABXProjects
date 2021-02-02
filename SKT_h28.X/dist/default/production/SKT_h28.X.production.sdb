@@ -31,7 +31,9 @@
 [v _tact tact `(v  1 e 1 0 ]
 "368
 [v _fclr fclr `(v  1 e 1 0 ]
-"439
+"437
+[v _clear clear `(v  1 e 1 0 ]
+"450
 [v _main main `(v  1 e 1 0 ]
 "429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -93,10 +95,10 @@
 [v _fugou fugou `us  1 e 2 0 ]
 "145
 [v _samp samp `[16]us  1 e 32 0 ]
-"439
+"450
 [v _main main `(v  1 e 1 0 ]
 {
-"541
+"567
 } 0
 "194
 [v _zenoff zenoff `(v  1 e 1 0 ]
@@ -107,6 +109,11 @@
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172
+} 0
+"437
+[v _clear clear `(v  1 e 1 0 ]
+{
+"446
 } 0
 "205
 [v _dynam dynam `(v  1 e 1 0 ]
