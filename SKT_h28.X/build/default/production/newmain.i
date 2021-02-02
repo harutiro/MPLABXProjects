@@ -5229,7 +5229,42 @@ void main(void)
 
         }
         else{
-            dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
+            if(RA1 == 1){
+
+                dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
+
+            }else{
+                _delay((unsigned long)((1000)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20|0x40),0,0);
+
+                _delay((unsigned long)((1000)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x20|0x10|0x08|0x04|0x01|0x40),0,0);
+
+                _delay((unsigned long)((1000)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x02|0x04|0x20|0x40),0,0);
+
+                _delay((unsigned long)((1000)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x01|0x02|0x08|0x40|0x10),0,0);
+
+                _delay((unsigned long)((1000)*(16000000/4000UL)));
+                if(RA1 == 1){
+                    continue;
+                }
+                dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20),0,0);
+            }
+
         }
     }
 }

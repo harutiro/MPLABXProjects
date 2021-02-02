@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Tue Feb 02 17:29:21 2021
+                                                                                               Tue Feb 02 17:52:20 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F1938
@@ -401,189 +401,189 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    387  0FEF                     	;# 
    388                           
    389                           	psect	idataBANK0
-   390  04C7                     __pidataBANK0:
+   390  0418                     __pidataBANK0:
    391                           
    392                           ;initializer for _kisu
-   393  04C7  3406               	retlw	6
-   394  04C8  3400               	retlw	0
-   395  04C9  344F               	retlw	79
-   396  04CA  3400               	retlw	0
-   397  04CB  346D               	retlw	109
-   398  04CC  3400               	retlw	0
-   399  04CD  3427               	retlw	39
-   400  04CE  3400               	retlw	0
-   401  04CF  346F               	retlw	111
-   402  04D0  3400               	retlw	0
+   393  0418  3406               	retlw	6
+   394  0419  3400               	retlw	0
+   395  041A  344F               	retlw	79
+   396  041B  3400               	retlw	0
+   397  041C  346D               	retlw	109
+   398  041D  3400               	retlw	0
+   399  041E  3427               	retlw	39
+   400  041F  3400               	retlw	0
+   401  0420  346F               	retlw	111
+   402  0421  3400               	retlw	0
    403                           
    404                           ;initializer for _gusu
-   405  04D1  343F               	retlw	63
-   406  04D2  3400               	retlw	0
-   407  04D3  345B               	retlw	91
-   408  04D4  3400               	retlw	0
-   409  04D5  3466               	retlw	102
-   410  04D6  3400               	retlw	0
-   411  04D7  347D               	retlw	125
-   412  04D8  3400               	retlw	0
-   413  04D9  347F               	retlw	127
-   414  04DA  3400               	retlw	0
+   405  0422  343F               	retlw	63
+   406  0423  3400               	retlw	0
+   407  0424  345B               	retlw	91
+   408  0425  3400               	retlw	0
+   409  0426  3466               	retlw	102
+   410  0427  3400               	retlw	0
+   411  0428  347D               	retlw	125
+   412  0429  3400               	retlw	0
+   413  042A  347F               	retlw	127
+   414  042B  3400               	retlw	0
    415                           
    416                           ;initializer for _mojn
-   417  04DB  3454               	retlw	84
-   418  04DC  3400               	retlw	0
-   419  04DD  3473               	retlw	115
-   420  04DE  3400               	retlw	0
+   417  042C  3454               	retlw	84
+   418  042D  3400               	retlw	0
+   419  042E  3473               	retlw	115
+   420  042F  3400               	retlw	0
    421                           
    422                           ;initializer for _mojh
-   423  04DF  3476               	retlw	118
-   424  04E0  3400               	retlw	0
-   425  04E1  3438               	retlw	56
-   426  04E2  3400               	retlw	0
+   423  0430  3476               	retlw	118
+   424  0431  3400               	retlw	0
+   425  0432  3438               	retlw	56
+   426  0433  3400               	retlw	0
    427                           
    428                           	psect	idataBANK1
-   429  0517                     __pidataBANK1:
+   429  0468                     __pidataBANK1:
    430                           
    431                           ;initializer for _samp
-   432  0517  343F               	retlw	63
-   433  0518  3400               	retlw	0
-   434  0519  3406               	retlw	6
-   435  051A  3400               	retlw	0
-   436  051B  345B               	retlw	91
-   437  051C  3400               	retlw	0
-   438  051D  344F               	retlw	79
-   439  051E  3400               	retlw	0
-   440  051F  3466               	retlw	102
-   441  0520  3400               	retlw	0
-   442  0521  346D               	retlw	109
-   443  0522  3400               	retlw	0
-   444  0523  347D               	retlw	125
-   445  0524  3400               	retlw	0
-   446  0525  3427               	retlw	39
-   447  0526  3400               	retlw	0
-   448  0527  347F               	retlw	127
-   449  0528  3400               	retlw	0
-   450  0529  346F               	retlw	111
-   451  052A  3400               	retlw	0
-   452  052B  345F               	retlw	95
-   453  052C  3400               	retlw	0
-   454  052D  347C               	retlw	124
-   455  052E  3400               	retlw	0
-   456  052F  3458               	retlw	88
-   457  0530  3400               	retlw	0
-   458  0531  345E               	retlw	94
-   459  0532  3400               	retlw	0
-   460  0533  3479               	retlw	121
-   461  0534  3400               	retlw	0
-   462  0535  3471               	retlw	113
-   463  0536  3400               	retlw	0
+   432  0468  343F               	retlw	63
+   433  0469  3400               	retlw	0
+   434  046A  3406               	retlw	6
+   435  046B  3400               	retlw	0
+   436  046C  345B               	retlw	91
+   437  046D  3400               	retlw	0
+   438  046E  344F               	retlw	79
+   439  046F  3400               	retlw	0
+   440  0470  3466               	retlw	102
+   441  0471  3400               	retlw	0
+   442  0472  346D               	retlw	109
+   443  0473  3400               	retlw	0
+   444  0474  347D               	retlw	125
+   445  0475  3400               	retlw	0
+   446  0476  3427               	retlw	39
+   447  0477  3400               	retlw	0
+   448  0478  347F               	retlw	127
+   449  0479  3400               	retlw	0
+   450  047A  346F               	retlw	111
+   451  047B  3400               	retlw	0
+   452  047C  345F               	retlw	95
+   453  047D  3400               	retlw	0
+   454  047E  347C               	retlw	124
+   455  047F  3400               	retlw	0
+   456  0480  3458               	retlw	88
+   457  0481  3400               	retlw	0
+   458  0482  345E               	retlw	94
+   459  0483  3400               	retlw	0
+   460  0484  3479               	retlw	121
+   461  0485  3400               	retlw	0
+   462  0486  3471               	retlw	113
+   463  0487  3400               	retlw	0
    464                           
    465                           ;initializer for _num0
-   466  0537  343F               	retlw	63
-   467  0538  3400               	retlw	0
-   468  0539  3406               	retlw	6
-   469  053A  3400               	retlw	0
-   470  053B  345B               	retlw	91
-   471  053C  3400               	retlw	0
-   472  053D  344F               	retlw	79
-   473  053E  3400               	retlw	0
-   474  053F  3466               	retlw	102
-   475  0540  3400               	retlw	0
-   476  0541  346D               	retlw	109
-   477  0542  3400               	retlw	0
-   478  0543  347D               	retlw	125
-   479  0544  3400               	retlw	0
-   480  0545  3427               	retlw	39
-   481  0546  3400               	retlw	0
-   482  0547  347F               	retlw	127
-   483  0548  3400               	retlw	0
-   484  0549  346F               	retlw	111
-   485  054A  3400               	retlw	0
+   466  0488  343F               	retlw	63
+   467  0489  3400               	retlw	0
+   468  048A  3406               	retlw	6
+   469  048B  3400               	retlw	0
+   470  048C  345B               	retlw	91
+   471  048D  3400               	retlw	0
+   472  048E  344F               	retlw	79
+   473  048F  3400               	retlw	0
+   474  0490  3466               	retlw	102
+   475  0491  3400               	retlw	0
+   476  0492  346D               	retlw	109
+   477  0493  3400               	retlw	0
+   478  0494  347D               	retlw	125
+   479  0495  3400               	retlw	0
+   480  0496  3427               	retlw	39
+   481  0497  3400               	retlw	0
+   482  0498  347F               	retlw	127
+   483  0499  3400               	retlw	0
+   484  049A  346F               	retlw	111
+   485  049B  3400               	retlw	0
    486                           
    487                           ;initializer for _mojf
-   488  054B  3471               	retlw	113
-   489  054C  3400               	retlw	0
-   490  054D  3479               	retlw	121
-   491  054E  3400               	retlw	0
-   492  054F  345E               	retlw	94
-   493  0550  3400               	retlw	0
-   494  0551  3458               	retlw	88
-   495  0552  3400               	retlw	0
-   496  0553  347C               	retlw	124
-   497  0554  3400               	retlw	0
-   498  0555  345F               	retlw	95
-   499  0556  3400               	retlw	0
+   488  049C  3471               	retlw	113
+   489  049D  3400               	retlw	0
+   490  049E  3479               	retlw	121
+   491  049F  3400               	retlw	0
+   492  04A0  345E               	retlw	94
+   493  04A1  3400               	retlw	0
+   494  04A2  3458               	retlw	88
+   495  04A3  3400               	retlw	0
+   496  04A4  347C               	retlw	124
+   497  04A5  3400               	retlw	0
+   498  04A6  345F               	retlw	95
+   499  04A7  3400               	retlw	0
    500                           
    501                           ;initializer for _moja
-   502  0557  345F               	retlw	95
-   503  0558  3400               	retlw	0
-   504  0559  347C               	retlw	124
-   505  055A  3400               	retlw	0
-   506  055B  3458               	retlw	88
-   507  055C  3400               	retlw	0
-   508  055D  345E               	retlw	94
-   509  055E  3400               	retlw	0
-   510  055F  3479               	retlw	121
-   511  0560  3400               	retlw	0
-   512  0561  3471               	retlw	113
-   513  0562  3400               	retlw	0
+   502  04A8  345F               	retlw	95
+   503  04A9  3400               	retlw	0
+   504  04AA  347C               	retlw	124
+   505  04AB  3400               	retlw	0
+   506  04AC  3458               	retlw	88
+   507  04AD  3400               	retlw	0
+   508  04AE  345E               	retlw	94
+   509  04AF  3400               	retlw	0
+   510  04B0  3479               	retlw	121
+   511  04B1  3400               	retlw	0
+   512  04B2  3471               	retlw	113
+   513  04B3  3400               	retlw	0
    514                           
    515                           	psect	idataBANK2
-   516  04E3                     __pidataBANK2:
+   516  0434                     __pidataBANK2:
    517                           
    518                           ;initializer for _samf
-   519  04E3  3471               	retlw	113
-   520  04E4  3400               	retlw	0
-   521  04E5  3479               	retlw	121
-   522  04E6  3400               	retlw	0
-   523  04E7  345E               	retlw	94
-   524  04E8  3400               	retlw	0
-   525  04E9  3458               	retlw	88
-   526  04EA  3400               	retlw	0
-   527  04EB  347C               	retlw	124
-   528  04EC  3400               	retlw	0
-   529  04ED  345F               	retlw	95
-   530  04EE  3400               	retlw	0
-   531  04EF  346F               	retlw	111
-   532  04F0  3400               	retlw	0
-   533  04F1  347F               	retlw	127
-   534  04F2  3400               	retlw	0
-   535  04F3  3427               	retlw	39
-   536  04F4  3400               	retlw	0
-   537  04F5  347D               	retlw	125
-   538  04F6  3400               	retlw	0
-   539  04F7  346D               	retlw	109
-   540  04F8  3400               	retlw	0
-   541  04F9  3466               	retlw	102
-   542  04FA  3400               	retlw	0
-   543  04FB  344F               	retlw	79
-   544  04FC  3400               	retlw	0
-   545  04FD  345B               	retlw	91
-   546  04FE  3400               	retlw	0
-   547  04FF  3406               	retlw	6
-   548  0500  3400               	retlw	0
-   549  0501  343F               	retlw	63
-   550  0502  3400               	retlw	0
+   519  0434  3471               	retlw	113
+   520  0435  3400               	retlw	0
+   521  0436  3479               	retlw	121
+   522  0437  3400               	retlw	0
+   523  0438  345E               	retlw	94
+   524  0439  3400               	retlw	0
+   525  043A  3458               	retlw	88
+   526  043B  3400               	retlw	0
+   527  043C  347C               	retlw	124
+   528  043D  3400               	retlw	0
+   529  043E  345F               	retlw	95
+   530  043F  3400               	retlw	0
+   531  0440  346F               	retlw	111
+   532  0441  3400               	retlw	0
+   533  0442  347F               	retlw	127
+   534  0443  3400               	retlw	0
+   535  0444  3427               	retlw	39
+   536  0445  3400               	retlw	0
+   537  0446  347D               	retlw	125
+   538  0447  3400               	retlw	0
+   539  0448  346D               	retlw	109
+   540  0449  3400               	retlw	0
+   541  044A  3466               	retlw	102
+   542  044B  3400               	retlw	0
+   543  044C  344F               	retlw	79
+   544  044D  3400               	retlw	0
+   545  044E  345B               	retlw	91
+   546  044F  3400               	retlw	0
+   547  0450  3406               	retlw	6
+   548  0451  3400               	retlw	0
+   549  0452  343F               	retlw	63
+   550  0453  3400               	retlw	0
    551                           
    552                           ;initializer for _moji
-   553  0503  345F               	retlw	95
-   554  0504  3400               	retlw	0
-   555  0505  347C               	retlw	124
-   556  0506  3400               	retlw	0
-   557  0507  3458               	retlw	88
-   558  0508  3400               	retlw	0
-   559  0509  345E               	retlw	94
-   560  050A  3400               	retlw	0
-   561  050B  3479               	retlw	121
-   562  050C  3400               	retlw	0
-   563  050D  3471               	retlw	113
-   564  050E  3400               	retlw	0
-   565  050F  3476               	retlw	118
-   566  0510  3400               	retlw	0
-   567  0511  3438               	retlw	56
-   568  0512  3400               	retlw	0
-   569  0513  3454               	retlw	84
-   570  0514  3400               	retlw	0
-   571  0515  3473               	retlw	115
-   572  0516  3400               	retlw	0
+   553  0454  345F               	retlw	95
+   554  0455  3400               	retlw	0
+   555  0456  347C               	retlw	124
+   556  0457  3400               	retlw	0
+   557  0458  3458               	retlw	88
+   558  0459  3400               	retlw	0
+   559  045A  345E               	retlw	94
+   560  045B  3400               	retlw	0
+   561  045C  3479               	retlw	121
+   562  045D  3400               	retlw	0
+   563  045E  3471               	retlw	113
+   564  045F  3400               	retlw	0
+   565  0460  3476               	retlw	118
+   566  0461  3400               	retlw	0
+   567  0462  3438               	retlw	56
+   568  0463  3400               	retlw	0
+   569  0464  3454               	retlw	84
+   570  0465  3400               	retlw	0
+   571  0466  3473               	retlw	115
+   572  0467  3400               	retlw	0
    573  000E                     _PORTC	set	14
    574  000D                     _PORTB	set	13
    575  000C                     _PORTA	set	12
@@ -610,7 +610,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    596  07CD                     __initialization:
    597                           
    598                           ; Initialize objects allocated to BANK0
-   599  07CD  30C7               	movlw	low __pidataBANK0
+   599  07CD  3018               	movlw	low __pidataBANK0
    600  07CE  0084               	movwf	4
    601  07CF  3084               	movlw	(high __pidataBANK0)| (0+128)
    602  07D0  0085               	movwf	5
@@ -619,22 +619,22 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    605  07D3  3000               	movlw	high __pdataBANK0
    606  07D4  0087               	movwf	7
    607  07D5  301C               	movlw	28
-   608  07D6  3184  24A5  3187   	fcall	init_ram
+   608  07D6  3183  23F6  3187   	fcall	init_ram
    609                           
    610                           ; Initialize objects allocated to BANK1
-   611  07D9  3017               	movlw	low __pidataBANK1
+   611  07D9  3068               	movlw	low __pidataBANK1
    612  07DA  0084               	movwf	4
-   613  07DB  3085               	movlw	(high __pidataBANK1)| (0+128)
+   613  07DB  3084               	movlw	(high __pidataBANK1)| (0+128)
    614  07DC  0085               	movwf	5
    615  07DD  30A0               	movlw	low __pdataBANK1
    616  07DE  0086               	movwf	6
    617  07DF  3000               	movlw	high __pdataBANK1
    618  07E0  0087               	movwf	7
    619  07E1  304C               	movlw	76
-   620  07E2  3184  24A5  3187   	fcall	init_ram
+   620  07E2  3183  23F6  3187   	fcall	init_ram
    621                           
    622                           ; Initialize objects allocated to BANK2
-   623  07E5  30E3               	movlw	low __pidataBANK2
+   623  07E5  3034               	movlw	low __pidataBANK2
    624  07E6  0084               	movwf	4
    625  07E7  3084               	movlw	(high __pidataBANK2)| (0+128)
    626  07E8  0085               	movwf	5
@@ -643,7 +643,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    629  07EB  3001               	movlw	high __pdataBANK2
    630  07EC  0087               	movwf	7
    631  07ED  3034               	movlw	52
-   632  07EE  3184  24A5  3187   	fcall	init_ram
+   632  07EE  3183  23F6  3187   	fcall	init_ram
    633                           
    634                           ; Clear objects allocated to COMMON
    635  07F1  01FA               	clrf	__pbssCOMMON& (0+127)
@@ -657,13 +657,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    643  07F7  3000               	movlw	high __pbssBANK0
    644  07F8  0085               	movwf	5
    645  07F9  301E               	movlw	30
-   646  07FA  3184  249F  3187   	fcall	clear_ram0
+   646  07FA  3183  23F0  3187   	fcall	clear_ram0
    647  07FD                     end_of_initialization:	
    648                           ;End of C runtime variable initialization code
    649                           
    650  07FD                     __end_of__initialization:
    651  07FD  0020               	movlb	0
-   652  07FE  3185  2D63         	ljmp	_main	;jump to C main() function
+   652  07FE  3186  2E1E         	ljmp	_main	;jump to C main() function
    653                           
    654                           	psect	bssCOMMON
    655  007A                     __pbssCOMMON:
@@ -735,27 +735,27 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    721  0140                     	ds	20
    722                           
    723                           	psect	inittext
-   724  04A5                     init_ram:
-   725  04A5  00FE               	movwf	btemp
-   726  04A6                     initloop:
-   727  04A6  0012               	moviw fsr0++
-   728  04A7  001E               	movwi fsr1++
-   729  04A8  0BFE               	decfsz	btemp,f
-   730  04A9  2CA6               	goto	initloop
-   731  04AA  3400               	retlw	0
+   724  03F6                     init_ram:
+   725  03F6  00FE               	movwf	btemp
+   726  03F7                     initloop:
+   727  03F7  0012               	moviw fsr0++
+   728  03F8  001E               	movwi fsr1++
+   729  03F9  0BFE               	decfsz	btemp,f
+   730  03FA  2BF7               	goto	initloop
+   731  03FB  3400               	retlw	0
    732                           
    733                           	psect	clrtext
-   734  049F                     clear_ram0:	
+   734  03F0                     clear_ram0:	
    735                           ;	Called with FSR0 containing the base address, and
    736                           ;	WREG with the size to clear
    737                           
-   738  049F  0064               	clrwdt	;clear the watchdog before getting into this loop
-   739  04A0                     clrloop0:
-   740  04A0  0180               	clrf	0	;clear RAM location pointed to by FSR
-   741  04A1  3101               	addfsr 0,1
-   742  04A2  0B89               	decfsz	9,f	;Have we reached the end of clearing yet?
-   743  04A3  2CA0               	goto	clrloop0	;have we reached the end yet?
-   744  04A4  3400               	retlw	0	;all done for this memory range, return
+   738  03F0  0064               	clrwdt	;clear the watchdog before getting into this loop
+   739  03F1                     clrloop0:
+   740  03F1  0180               	clrf	0	;clear RAM location pointed to by FSR
+   741  03F2  3101               	addfsr 0,1
+   742  03F3  0B89               	decfsz	9,f	;Have we reached the end of clearing yet?
+   743  03F4  2BF1               	goto	clrloop0	;have we reached the end yet?
+   744  03F5  3400               	retlw	0	;all done for this memory range, return
    745                           
    746                           	psect	cstackCOMMON
    747  0070                     __pcstackCOMMON:
@@ -821,7 +821,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    807  0060                     	ds	2
    808                           
    809                           	psect	maintext
-   810  0563                     __pmaintext:	
+   810  061E                     __pmaintext:	
    811 ;;
    812 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
    813 ;;
@@ -867,1177 +867,1411 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    848                           
    849                           
    850                           ;psect for function _main
-   851  0563                     _main:
-   852  0563                     l1998:	
+   851  061E                     _main:
+   852  061E                     l2045:	
    853                           ;incstack = 0
    854                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
    855                           
    856                           
    857                           ;newmain.c: 442:     OSCCON=0x7A;
-   858  0563  307A               	movlw	122
-   859  0564  0021               	movlb	1	; select bank1
-   860  0565  0099               	movwf	25	;volatile
-   861  0566                     l2000:
+   858  061E  307A               	movlw	122
+   859  061F  0021               	movlb	1	; select bank1
+   860  0620  0099               	movwf	25	;volatile
+   861  0621                     l2047:
    862                           
    863                           ;newmain.c: 444:     portinit();
-   864  0566  3184  24B4  3185   	fcall	_portinit
+   864  0621  3184  2405  3186   	fcall	_portinit
    865                           
    866                           ;newmain.c: 446:     zenoff();
-   867  0569  3184  24AB  3185   	fcall	_zenoff
-   868  056C                     l2002:
-   869  056C                     l2004:
-   870  056C                     l2006:
-   871  056C                     l2008:
-   872  056C                     l2010:
-   873  056C                     l251:	
+   867  0624  3183  23FC  3186   	fcall	_zenoff
+   868  0627                     l2049:
+   869  0627                     l2051:
+   870  0627                     l2053:
+   871  0627                     l2055:
+   872  0627                     l2057:
+   873  0627                     l251:	
    874                           ;newmain.c: 451:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
    875                           
-   876  056C  0020               	movlb	0	; select bank0
-   877  056D  1C0C               	btfss	12,0	;volatile
-   878  056E  2D70               	goto	u1511
-   879  056F  2D71               	goto	u1510
-   880  0570                     u1511:
-   881  0570  2D6C               	goto	l251
-   882  0571                     u1510:
-   883  0571                     l2012:
-   884  0571  1C8C               	btfss	12,1	;volatile
-   885  0572  2D74               	goto	u1521
-   886  0573  2D75               	goto	u1520
-   887  0574                     u1521:
-   888  0574  2D6C               	goto	l251
-   889  0575                     u1520:
-   890  0575                     l2014:
-   891  0575  1D0C               	btfss	12,2	;volatile
-   892  0576  2D78               	goto	u1531
-   893  0577  2D79               	goto	u1530
-   894  0578                     u1531:
-   895  0578  2D6C               	goto	l251
-   896  0579                     u1530:
-   897  0579                     l253:
+   876  0627  0020               	movlb	0	; select bank0
+   877  0628  1C0C               	btfss	12,0	;volatile
+   878  0629  2E2B               	goto	u1571
+   879  062A  2E2C               	goto	u1570
+   880  062B                     u1571:
+   881  062B  2E27               	goto	l251
+   882  062C                     u1570:
+   883  062C                     l2059:
+   884  062C  1C8C               	btfss	12,1	;volatile
+   885  062D  2E2F               	goto	u1581
+   886  062E  2E30               	goto	u1580
+   887  062F                     u1581:
+   888  062F  2E27               	goto	l251
+   889  0630                     u1580:
+   890  0630                     l2061:
+   891  0630  1D0C               	btfss	12,2	;volatile
+   892  0631  2E33               	goto	u1591
+   893  0632  2E34               	goto	u1590
+   894  0633                     u1591:
+   895  0633  2E27               	goto	l251
+   896  0634                     u1590:
+   897  0634                     l253:
    898                           
    899                           ;newmain.c: 454:     RC0=RC2=RC1=1;
-   900  0579  148E               	bsf	14,1	;volatile
-   901  057A  188E               	btfsc	14,1	;volatile
-   902  057B  2D7D               	goto	u1541
-   903  057C  2D80               	goto	u1540
-   904  057D                     u1541:
-   905  057D  0020               	movlb	0	; select bank0
-   906  057E  150E               	bsf	14,2	;volatile
-   907  057F  2D82               	goto	u1554
-   908  0580                     u1540:
-   909  0580  0020               	movlb	0	; select bank0
-   910  0581  110E               	bcf	14,2	;volatile
-   911  0582                     u1554:
-   912  0582  190E               	btfsc	14,2	;volatile
-   913  0583  2D85               	goto	u1551
-   914  0584  2D88               	goto	u1550
-   915  0585                     u1551:
-   916  0585  0020               	movlb	0	; select bank0
-   917  0586  140E               	bsf	14,0	;volatile
-   918  0587  2D8A               	goto	u1564
-   919  0588                     u1550:
-   920  0588  0020               	movlb	0	; select bank0
-   921  0589  100E               	bcf	14,0	;volatile
-   922  058A                     u1564:
-   923  058A                     l254:	
+   900  0634  148E               	bsf	14,1	;volatile
+   901  0635  188E               	btfsc	14,1	;volatile
+   902  0636  2E38               	goto	u1601
+   903  0637  2E3B               	goto	u1600
+   904  0638                     u1601:
+   905  0638  0020               	movlb	0	; select bank0
+   906  0639  150E               	bsf	14,2	;volatile
+   907  063A  2E3D               	goto	u1614
+   908  063B                     u1600:
+   909  063B  0020               	movlb	0	; select bank0
+   910  063C  110E               	bcf	14,2	;volatile
+   911  063D                     u1614:
+   912  063D  190E               	btfsc	14,2	;volatile
+   913  063E  2E40               	goto	u1611
+   914  063F  2E43               	goto	u1610
+   915  0640                     u1611:
+   916  0640  0020               	movlb	0	; select bank0
+   917  0641  140E               	bsf	14,0	;volatile
+   918  0642  2E45               	goto	u1624
+   919  0643                     u1610:
+   920  0643  0020               	movlb	0	; select bank0
+   921  0644  100E               	bcf	14,0	;volatile
+   922  0645                     u1624:
+   923  0645                     l254:	
    924                           ;newmain.c: 457:     while(1){
    925                           
    926                           
    927                           ;newmain.c: 458:         if(RA0 == 0){
-   928  058A  180C               	btfsc	12,0	;volatile
-   929  058B  2D8D               	goto	u1571
-   930  058C  2D8E               	goto	u1570
-   931  058D                     u1571:
-   932  058D  2D8A               	goto	l254
-   933  058E                     u1570:
-   934  058E                     l258:	
+   928  0645  180C               	btfsc	12,0	;volatile
+   929  0646  2E48               	goto	u1631
+   930  0647  2E49               	goto	u1630
+   931  0648                     u1631:
+   932  0648  2E45               	goto	l254
+   933  0649                     u1630:
+   934  0649                     l258:	
    935                           ;newmain.c: 462:     while(1){
    936                           
    937                           
    938                           ;newmain.c: 463:         if(RA0==0){
-   939  058E  0020               	movlb	0	; select bank0
-   940  058F  180C               	btfsc	12,0	;volatile
-   941  0590  2D92               	goto	u1581
-   942  0591  2D93               	goto	u1580
-   943  0592                     u1581:
-   944  0592  2E4F               	goto	l2062
-   945  0593                     u1580:
-   946  0593                     l2018:
+   939  0649  0020               	movlb	0	; select bank0
+   940  064A  180C               	btfsc	12,0	;volatile
+   941  064B  2E4D               	goto	u1641
+   942  064C  2E4E               	goto	u1640
+   943  064D                     u1641:
+   944  064D  2F0A               	goto	l259
+   945  064E                     u1640:
+   946  064E                     l2065:
    947                           
    948                           ;newmain.c: 464:             if(RA1){
-   949  0593  1C8C               	btfss	12,1	;volatile
-   950  0594  2D96               	goto	u1591
-   951  0595  2D97               	goto	u1590
-   952  0596                     u1591:
-   953  0596  2DA9               	goto	l2022
-   954  0597                     u1590:
-   955  0597                     l2020:
+   949  064E  1C8C               	btfss	12,1	;volatile
+   950  064F  2E51               	goto	u1651
+   951  0650  2E52               	goto	u1650
+   952  0651                     u1651:
+   953  0651  2E64               	goto	l2069
+   954  0652                     u1650:
+   955  0652                     l2067:
    956                           
    957                           ;newmain.c: 465:                 dynam((0x02|0x04|0x08|0x10|0x20),(0x01|0x02|0x10|0x20|0
       +                          x40),0,0);
-   958  0597  303E               	movlw	62
-   959  0598  00F0               	movwf	dynam@dig1data
-   960  0599  3000               	movlw	0
-   961  059A  00F1               	movwf	dynam@dig1data+1
-   962  059B  3073               	movlw	115
-   963  059C  00F2               	movwf	dynam@dig2data
-   964  059D  3000               	movlw	0
-   965  059E  00F3               	movwf	dynam@dig2data+1
-   966  059F  3000               	movlw	0
-   967  05A0  00F4               	movwf	dynam@smdata
-   968  05A1  00F5               	movwf	dynam@smdata+1
-   969  05A2  3000               	movlw	0
-   970  05A3  00F6               	movwf	dynam@tr
-   971  05A4  00F7               	movwf	dynam@tr+1
-   972  05A5  3186  2663  3185   	fcall	_dynam
+   958  0652  303E               	movlw	62
+   959  0653  00F0               	movwf	dynam@dig1data
+   960  0654  3000               	movlw	0
+   961  0655  00F1               	movwf	dynam@dig1data+1
+   962  0656  3073               	movlw	115
+   963  0657  00F2               	movwf	dynam@dig2data
+   964  0658  3000               	movlw	0
+   965  0659  00F3               	movwf	dynam@dig2data+1
+   966  065A  3000               	movlw	0
+   967  065B  00F4               	movwf	dynam@smdata
+   968  065C  00F5               	movwf	dynam@smdata+1
+   969  065D  3000               	movlw	0
+   970  065E  00F6               	movwf	dynam@tr
+   971  065F  00F7               	movwf	dynam@tr+1
+   972  0660  3184  24B4  3186   	fcall	_dynam
    973                           
    974                           ;newmain.c: 466:             }else{
-   975  05A8  2D8E               	goto	l258
-   976  05A9                     l2022:
+   975  0663  2E49               	goto	l258
+   976  0664                     l2069:
    977                           
    978                           ;newmain.c: 468:                 _delay((unsigned long)((500)*(16000000/4000UL)));
-   979  05A9  300B               	movlw	11
-   980  05AA  00F9               	movwf	??_main+1
-   981  05AB  3026               	movlw	38
-   982  05AC  00F8               	movwf	??_main
-   983  05AD  305E               	movlw	94
-   984  05AE                     u1887:
-   985  05AE  0B89               	decfsz	9,f
-   986  05AF  2DAE               	goto	u1887
-   987  05B0  0BF8               	decfsz	??_main,f
-   988  05B1  2DAE               	goto	u1887
-   989  05B2  0BF9               	decfsz	??_main+1,f
-   990  05B3  2DAE               	goto	u1887
-   991  05B4                     l2024:
+   979  0664  300B               	movlw	11
+   980  0665  00F9               	movwf	??_main+1
+   981  0666  3026               	movlw	38
+   982  0667  00F8               	movwf	??_main
+   983  0668  305E               	movlw	94
+   984  0669                     u2007:
+   985  0669  0B89               	decfsz	9,f
+   986  066A  2E69               	goto	u2007
+   987  066B  0BF8               	decfsz	??_main,f
+   988  066C  2E69               	goto	u2007
+   989  066D  0BF9               	decfsz	??_main+1,f
+   990  066E  2E69               	goto	u2007
+   991  066F                     l2071:
    992                           
    993                           ;newmain.c: 469:                 if(RA1 == 1){
-   994  05B4  0020               	movlb	0	; select bank0
-   995  05B5  1C8C               	btfss	12,1	;volatile
-   996  05B6  2DB8               	goto	u1601
-   997  05B7  2DB9               	goto	u1600
-   998  05B8                     u1601:
-   999  05B8  2DBA               	goto	l2028
-  1000  05B9                     u1600:
-  1001  05B9  2D8E               	goto	l258
-  1002  05BA                     l2028:
+   994  066F  0020               	movlb	0	; select bank0
+   995  0670  1C8C               	btfss	12,1	;volatile
+   996  0671  2E73               	goto	u1661
+   997  0672  2E74               	goto	u1660
+   998  0673                     u1661:
+   999  0673  2E75               	goto	l2075
+  1000  0674                     u1660:
+  1001  0674  2E49               	goto	l258
+  1002  0675                     l2075:
   1003                           
   1004                           ;newmain.c: 472:                 dynam(0,(0x02|0x04),0,0);
-  1005  05BA  3000               	movlw	0
-  1006  05BB  00F0               	movwf	dynam@dig1data
-  1007  05BC  00F1               	movwf	dynam@dig1data+1
-  1008  05BD  3006               	movlw	6
-  1009  05BE  00F2               	movwf	dynam@dig2data
-  1010  05BF  3000               	movlw	0
-  1011  05C0  00F3               	movwf	dynam@dig2data+1
-  1012  05C1  3000               	movlw	0
-  1013  05C2  00F4               	movwf	dynam@smdata
-  1014  05C3  00F5               	movwf	dynam@smdata+1
-  1015  05C4  3000               	movlw	0
-  1016  05C5  00F6               	movwf	dynam@tr
-  1017  05C6  00F7               	movwf	dynam@tr+1
-  1018  05C7  3186  2663  3185   	fcall	_dynam
-  1019  05CA                     l2030:
+  1005  0675  3000               	movlw	0
+  1006  0676  00F0               	movwf	dynam@dig1data
+  1007  0677  00F1               	movwf	dynam@dig1data+1
+  1008  0678  3006               	movlw	6
+  1009  0679  00F2               	movwf	dynam@dig2data
+  1010  067A  3000               	movlw	0
+  1011  067B  00F3               	movwf	dynam@dig2data+1
+  1012  067C  3000               	movlw	0
+  1013  067D  00F4               	movwf	dynam@smdata
+  1014  067E  00F5               	movwf	dynam@smdata+1
+  1015  067F  3000               	movlw	0
+  1016  0680  00F6               	movwf	dynam@tr
+  1017  0681  00F7               	movwf	dynam@tr+1
+  1018  0682  3184  24B4  3186   	fcall	_dynam
+  1019  0685                     l2077:
   1020                           
   1021                           ;newmain.c: 474:                 _delay((unsigned long)((500)*(16000000/4000UL)));
-  1022  05CA  300B               	movlw	11
-  1023  05CB  00F9               	movwf	??_main+1
-  1024  05CC  3026               	movlw	38
-  1025  05CD  00F8               	movwf	??_main
-  1026  05CE  305E               	movlw	94
-  1027  05CF                     u1897:
-  1028  05CF  0B89               	decfsz	9,f
-  1029  05D0  2DCF               	goto	u1897
-  1030  05D1  0BF8               	decfsz	??_main,f
-  1031  05D2  2DCF               	goto	u1897
-  1032  05D3  0BF9               	decfsz	??_main+1,f
-  1033  05D4  2DCF               	goto	u1897
-  1034  05D5                     l2032:
+  1022  0685  300B               	movlw	11
+  1023  0686  00F9               	movwf	??_main+1
+  1024  0687  3026               	movlw	38
+  1025  0688  00F8               	movwf	??_main
+  1026  0689  305E               	movlw	94
+  1027  068A                     u2017:
+  1028  068A  0B89               	decfsz	9,f
+  1029  068B  2E8A               	goto	u2017
+  1030  068C  0BF8               	decfsz	??_main,f
+  1031  068D  2E8A               	goto	u2017
+  1032  068E  0BF9               	decfsz	??_main+1,f
+  1033  068F  2E8A               	goto	u2017
+  1034  0690                     l2079:
   1035                           
   1036                           ;newmain.c: 475:                 if(RA1 == 1){
-  1037  05D5  0020               	movlb	0	; select bank0
-  1038  05D6  1C8C               	btfss	12,1	;volatile
-  1039  05D7  2DD9               	goto	u1611
-  1040  05D8  2DDA               	goto	u1610
-  1041  05D9                     u1611:
-  1042  05D9  2DDB               	goto	l2036
-  1043  05DA                     u1610:
-  1044  05DA  2D8E               	goto	l258
-  1045  05DB                     l2036:
+  1037  0690  0020               	movlb	0	; select bank0
+  1038  0691  1C8C               	btfss	12,1	;volatile
+  1039  0692  2E94               	goto	u1671
+  1040  0693  2E95               	goto	u1670
+  1041  0694                     u1671:
+  1042  0694  2E96               	goto	l2083
+  1043  0695                     u1670:
+  1044  0695  2E49               	goto	l258
+  1045  0696                     l2083:
   1046                           
   1047                           ;newmain.c: 478:                 dynam(0,(0x40|0x01|0x08|0x02|0x04),0,0);
-  1048  05DB  3000               	movlw	0
-  1049  05DC  00F0               	movwf	dynam@dig1data
-  1050  05DD  00F1               	movwf	dynam@dig1data+1
-  1051  05DE  304F               	movlw	79
-  1052  05DF  00F2               	movwf	dynam@dig2data
-  1053  05E0  3000               	movlw	0
-  1054  05E1  00F3               	movwf	dynam@dig2data+1
-  1055  05E2  3000               	movlw	0
-  1056  05E3  00F4               	movwf	dynam@smdata
-  1057  05E4  00F5               	movwf	dynam@smdata+1
-  1058  05E5  3000               	movlw	0
-  1059  05E6  00F6               	movwf	dynam@tr
-  1060  05E7  00F7               	movwf	dynam@tr+1
-  1061  05E8  3186  2663  3185   	fcall	_dynam
-  1062  05EB                     l2038:
+  1048  0696  3000               	movlw	0
+  1049  0697  00F0               	movwf	dynam@dig1data
+  1050  0698  00F1               	movwf	dynam@dig1data+1
+  1051  0699  304F               	movlw	79
+  1052  069A  00F2               	movwf	dynam@dig2data
+  1053  069B  3000               	movlw	0
+  1054  069C  00F3               	movwf	dynam@dig2data+1
+  1055  069D  3000               	movlw	0
+  1056  069E  00F4               	movwf	dynam@smdata
+  1057  069F  00F5               	movwf	dynam@smdata+1
+  1058  06A0  3000               	movlw	0
+  1059  06A1  00F6               	movwf	dynam@tr
+  1060  06A2  00F7               	movwf	dynam@tr+1
+  1061  06A3  3184  24B4  3186   	fcall	_dynam
+  1062  06A6                     l2085:
   1063                           
   1064                           ;newmain.c: 480:                 _delay((unsigned long)((500)*(16000000/4000UL)));
-  1065  05EB  300B               	movlw	11
-  1066  05EC  00F9               	movwf	??_main+1
-  1067  05ED  3026               	movlw	38
-  1068  05EE  00F8               	movwf	??_main
-  1069  05EF  305E               	movlw	94
-  1070  05F0                     u1907:
-  1071  05F0  0B89               	decfsz	9,f
-  1072  05F1  2DF0               	goto	u1907
-  1073  05F2  0BF8               	decfsz	??_main,f
-  1074  05F3  2DF0               	goto	u1907
-  1075  05F4  0BF9               	decfsz	??_main+1,f
-  1076  05F5  2DF0               	goto	u1907
-  1077  05F6                     l2040:
+  1065  06A6  300B               	movlw	11
+  1066  06A7  00F9               	movwf	??_main+1
+  1067  06A8  3026               	movlw	38
+  1068  06A9  00F8               	movwf	??_main
+  1069  06AA  305E               	movlw	94
+  1070  06AB                     u2027:
+  1071  06AB  0B89               	decfsz	9,f
+  1072  06AC  2EAB               	goto	u2027
+  1073  06AD  0BF8               	decfsz	??_main,f
+  1074  06AE  2EAB               	goto	u2027
+  1075  06AF  0BF9               	decfsz	??_main+1,f
+  1076  06B0  2EAB               	goto	u2027
+  1077  06B1                     l2087:
   1078                           
   1079                           ;newmain.c: 481:                 if(RA1 == 1){
-  1080  05F6  0020               	movlb	0	; select bank0
-  1081  05F7  1C8C               	btfss	12,1	;volatile
-  1082  05F8  2DFA               	goto	u1621
-  1083  05F9  2DFB               	goto	u1620
-  1084  05FA                     u1621:
-  1085  05FA  2DFC               	goto	l2044
-  1086  05FB                     u1620:
-  1087  05FB  2D8E               	goto	l258
-  1088  05FC                     l2044:
+  1080  06B1  0020               	movlb	0	; select bank0
+  1081  06B2  1C8C               	btfss	12,1	;volatile
+  1082  06B3  2EB5               	goto	u1681
+  1083  06B4  2EB6               	goto	u1680
+  1084  06B5                     u1681:
+  1085  06B5  2EB7               	goto	l2091
+  1086  06B6                     u1680:
+  1087  06B6  2E49               	goto	l258
+  1088  06B7                     l2091:
   1089                           
   1090                           ;newmain.c: 484:                 dynam(0,(0x20|0x08|0x40|0x01|0x04),0,0);
-  1091  05FC  3000               	movlw	0
-  1092  05FD  00F0               	movwf	dynam@dig1data
-  1093  05FE  00F1               	movwf	dynam@dig1data+1
-  1094  05FF  306D               	movlw	109
-  1095  0600  00F2               	movwf	dynam@dig2data
-  1096  0601  3000               	movlw	0
-  1097  0602  00F3               	movwf	dynam@dig2data+1
-  1098  0603  3000               	movlw	0
-  1099  0604  00F4               	movwf	dynam@smdata
-  1100  0605  00F5               	movwf	dynam@smdata+1
-  1101  0606  3000               	movlw	0
-  1102  0607  00F6               	movwf	dynam@tr
-  1103  0608  00F7               	movwf	dynam@tr+1
-  1104  0609  3186  2663  3185   	fcall	_dynam
-  1105  060C                     l2046:
+  1091  06B7  3000               	movlw	0
+  1092  06B8  00F0               	movwf	dynam@dig1data
+  1093  06B9  00F1               	movwf	dynam@dig1data+1
+  1094  06BA  306D               	movlw	109
+  1095  06BB  00F2               	movwf	dynam@dig2data
+  1096  06BC  3000               	movlw	0
+  1097  06BD  00F3               	movwf	dynam@dig2data+1
+  1098  06BE  3000               	movlw	0
+  1099  06BF  00F4               	movwf	dynam@smdata
+  1100  06C0  00F5               	movwf	dynam@smdata+1
+  1101  06C1  3000               	movlw	0
+  1102  06C2  00F6               	movwf	dynam@tr
+  1103  06C3  00F7               	movwf	dynam@tr+1
+  1104  06C4  3184  24B4  3186   	fcall	_dynam
+  1105  06C7                     l2093:
   1106                           
   1107                           ;newmain.c: 486:                 _delay((unsigned long)((500)*(16000000/4000UL)));
-  1108  060C  300B               	movlw	11
-  1109  060D  00F9               	movwf	??_main+1
-  1110  060E  3026               	movlw	38
-  1111  060F  00F8               	movwf	??_main
-  1112  0610  305E               	movlw	94
-  1113  0611                     u1917:
-  1114  0611  0B89               	decfsz	9,f
-  1115  0612  2E11               	goto	u1917
-  1116  0613  0BF8               	decfsz	??_main,f
-  1117  0614  2E11               	goto	u1917
-  1118  0615  0BF9               	decfsz	??_main+1,f
-  1119  0616  2E11               	goto	u1917
-  1120  0617                     l2048:
+  1108  06C7  300B               	movlw	11
+  1109  06C8  00F9               	movwf	??_main+1
+  1110  06C9  3026               	movlw	38
+  1111  06CA  00F8               	movwf	??_main
+  1112  06CB  305E               	movlw	94
+  1113  06CC                     u2037:
+  1114  06CC  0B89               	decfsz	9,f
+  1115  06CD  2ECC               	goto	u2037
+  1116  06CE  0BF8               	decfsz	??_main,f
+  1117  06CF  2ECC               	goto	u2037
+  1118  06D0  0BF9               	decfsz	??_main+1,f
+  1119  06D1  2ECC               	goto	u2037
+  1120  06D2                     l2095:
   1121                           
   1122                           ;newmain.c: 487:                 if(RA1 == 1){
-  1123  0617  0020               	movlb	0	; select bank0
-  1124  0618  1C8C               	btfss	12,1	;volatile
-  1125  0619  2E1B               	goto	u1631
-  1126  061A  2E1C               	goto	u1630
-  1127  061B                     u1631:
-  1128  061B  2E1D               	goto	l2052
-  1129  061C                     u1630:
-  1130  061C  2D8E               	goto	l258
-  1131  061D                     l2052:
+  1123  06D2  0020               	movlb	0	; select bank0
+  1124  06D3  1C8C               	btfss	12,1	;volatile
+  1125  06D4  2ED6               	goto	u1691
+  1126  06D5  2ED7               	goto	u1690
+  1127  06D6                     u1691:
+  1128  06D6  2ED8               	goto	l2099
+  1129  06D7                     u1690:
+  1130  06D7  2E49               	goto	l258
+  1131  06D8                     l2099:
   1132                           
   1133                           ;newmain.c: 490:                 dynam(0,(0x01|0x02|0x04|0x20),0,0);
-  1134  061D  3000               	movlw	0
-  1135  061E  00F0               	movwf	dynam@dig1data
-  1136  061F  00F1               	movwf	dynam@dig1data+1
-  1137  0620  3027               	movlw	39
-  1138  0621  00F2               	movwf	dynam@dig2data
-  1139  0622  3000               	movlw	0
-  1140  0623  00F3               	movwf	dynam@dig2data+1
-  1141  0624  3000               	movlw	0
-  1142  0625  00F4               	movwf	dynam@smdata
-  1143  0626  00F5               	movwf	dynam@smdata+1
-  1144  0627  3000               	movlw	0
-  1145  0628  00F6               	movwf	dynam@tr
-  1146  0629  00F7               	movwf	dynam@tr+1
-  1147  062A  3186  2663  3185   	fcall	_dynam
-  1148  062D                     l2054:
+  1134  06D8  3000               	movlw	0
+  1135  06D9  00F0               	movwf	dynam@dig1data
+  1136  06DA  00F1               	movwf	dynam@dig1data+1
+  1137  06DB  3027               	movlw	39
+  1138  06DC  00F2               	movwf	dynam@dig2data
+  1139  06DD  3000               	movlw	0
+  1140  06DE  00F3               	movwf	dynam@dig2data+1
+  1141  06DF  3000               	movlw	0
+  1142  06E0  00F4               	movwf	dynam@smdata
+  1143  06E1  00F5               	movwf	dynam@smdata+1
+  1144  06E2  3000               	movlw	0
+  1145  06E3  00F6               	movwf	dynam@tr
+  1146  06E4  00F7               	movwf	dynam@tr+1
+  1147  06E5  3184  24B4  3186   	fcall	_dynam
+  1148  06E8                     l2101:
   1149                           
   1150                           ;newmain.c: 492:                 _delay((unsigned long)((500)*(16000000/4000UL)));
-  1151  062D  300B               	movlw	11
-  1152  062E  00F9               	movwf	??_main+1
-  1153  062F  3026               	movlw	38
-  1154  0630  00F8               	movwf	??_main
-  1155  0631  305E               	movlw	94
-  1156  0632                     u1927:
-  1157  0632  0B89               	decfsz	9,f
-  1158  0633  2E32               	goto	u1927
-  1159  0634  0BF8               	decfsz	??_main,f
-  1160  0635  2E32               	goto	u1927
-  1161  0636  0BF9               	decfsz	??_main+1,f
-  1162  0637  2E32               	goto	u1927
-  1163  0638                     l2056:
+  1151  06E8  300B               	movlw	11
+  1152  06E9  00F9               	movwf	??_main+1
+  1153  06EA  3026               	movlw	38
+  1154  06EB  00F8               	movwf	??_main
+  1155  06EC  305E               	movlw	94
+  1156  06ED                     u2047:
+  1157  06ED  0B89               	decfsz	9,f
+  1158  06EE  2EED               	goto	u2047
+  1159  06EF  0BF8               	decfsz	??_main,f
+  1160  06F0  2EED               	goto	u2047
+  1161  06F1  0BF9               	decfsz	??_main+1,f
+  1162  06F2  2EED               	goto	u2047
+  1163  06F3                     l2103:
   1164                           
   1165                           ;newmain.c: 493:                 if(RA1 == 1){
-  1166  0638  0020               	movlb	0	; select bank0
-  1167  0639  1C8C               	btfss	12,1	;volatile
-  1168  063A  2E3C               	goto	u1641
-  1169  063B  2E3D               	goto	u1640
-  1170  063C                     u1641:
-  1171  063C  2E3E               	goto	l2060
-  1172  063D                     u1640:
-  1173  063D  2D8E               	goto	l258
-  1174  063E                     l2060:
+  1166  06F3  0020               	movlb	0	; select bank0
+  1167  06F4  1C8C               	btfss	12,1	;volatile
+  1168  06F5  2EF7               	goto	u1701
+  1169  06F6  2EF8               	goto	u1700
+  1170  06F7                     u1701:
+  1171  06F7  2EF9               	goto	l2107
+  1172  06F8                     u1700:
+  1173  06F8  2E49               	goto	l258
+  1174  06F9                     l2107:
   1175                           
   1176                           ;newmain.c: 496:                 dynam(0,(0x20|0x08|0x40|0x01|0x02|0x04),0,0);
-  1177  063E  3000               	movlw	0
-  1178  063F  00F0               	movwf	dynam@dig1data
-  1179  0640  00F1               	movwf	dynam@dig1data+1
-  1180  0641  306F               	movlw	111
-  1181  0642  00F2               	movwf	dynam@dig2data
-  1182  0643  3000               	movlw	0
-  1183  0644  00F3               	movwf	dynam@dig2data+1
-  1184  0645  3000               	movlw	0
-  1185  0646  00F4               	movwf	dynam@smdata
-  1186  0647  00F5               	movwf	dynam@smdata+1
-  1187  0648  3000               	movlw	0
-  1188  0649  00F6               	movwf	dynam@tr
-  1189  064A  00F7               	movwf	dynam@tr+1
-  1190  064B  3186  2663  3185   	fcall	_dynam
-  1191  064E  2D8E               	goto	l258
-  1192  064F                     l2062:
-  1193                           
-  1194                           ;newmain.c: 503:             dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
-  1195  064F  305E               	movlw	94
-  1196  0650  00F0               	movwf	dynam@dig1data
-  1197  0651  3000               	movlw	0
-  1198  0652  00F1               	movwf	dynam@dig1data+1
-  1199  0653  3054               	movlw	84
-  1200  0654  00F2               	movwf	dynam@dig2data
-  1201  0655  3000               	movlw	0
-  1202  0656  00F3               	movwf	dynam@dig2data+1
-  1203  0657  3000               	movlw	0
-  1204  0658  00F4               	movwf	dynam@smdata
-  1205  0659  00F5               	movwf	dynam@smdata+1
-  1206  065A  3000               	movlw	0
-  1207  065B  00F6               	movwf	dynam@tr
-  1208  065C  00F7               	movwf	dynam@tr+1
-  1209  065D  3186  2663  3185   	fcall	_dynam
-  1210  0660  2D8E               	goto	l258
-  1211  0661  3180  2802         	ljmp	start
-  1212  0663                     __end_of_main:
-  1213                           
-  1214                           	psect	text1
-  1215  04AB                     __ptext1:	
-  1216 ;; *************** function _zenoff *****************
-  1217 ;; Defined at:
-  1218 ;;		line 194 in file "newmain.c"
-  1219 ;; Parameters:    Size  Location     Type
-  1220 ;;		None
-  1221 ;; Auto vars:     Size  Location     Type
-  1222 ;;		None
-  1223 ;; Return value:  Size  Location     Type
-  1224 ;;                  1    wreg      void 
-  1225 ;; Registers used:
-  1226 ;;		status,2
-  1227 ;; Tracked objects:
-  1228 ;;		On entry : 0/0
-  1229 ;;		On exit  : 0/0
-  1230 ;;		Unchanged: 0/0
-  1231 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
-      +1  BANK12
-  1232 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1233 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1234 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1235 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1236 ;;Total ram usage:        0 bytes
-  1237 ;; Hardware stack levels used:    1
-  1238 ;; This function calls:
-  1239 ;;		Nothing
-  1240 ;; This function is called by:
-  1241 ;;		_main
-  1242 ;; This function uses a non-reentrant model
-  1243 ;;
-  1244                           
-  1245                           
-  1246                           ;psect for function _zenoff
-  1247  04AB                     _zenoff:
-  1248  04AB                     l1554:	
-  1249                           ;incstack = 0
-  1250                           ; Regs used in _zenoff: [status,2]
-  1251                           
+  1177  06F9  3000               	movlw	0
+  1178  06FA  00F0               	movwf	dynam@dig1data
+  1179  06FB  00F1               	movwf	dynam@dig1data+1
+  1180  06FC  306F               	movlw	111
+  1181  06FD  00F2               	movwf	dynam@dig2data
+  1182  06FE  3000               	movlw	0
+  1183  06FF  00F3               	movwf	dynam@dig2data+1
+  1184  0700  3000               	movlw	0
+  1185  0701  00F4               	movwf	dynam@smdata
+  1186  0702  00F5               	movwf	dynam@smdata+1
+  1187  0703  3000               	movlw	0
+  1188  0704  00F6               	movwf	dynam@tr
+  1189  0705  00F7               	movwf	dynam@tr+1
+  1190  0706  3184  24B4  3186   	fcall	_dynam
+  1191  0709  2E49               	goto	l258
+  1192  070A                     l259:	
+  1193                           ;newmain.c: 502:         else{
+  1194                           
+  1195                           
+  1196                           ;newmain.c: 503:             if(RA1 == 1){
+  1197  070A  1C8C               	btfss	12,1	;volatile
+  1198  070B  2F0D               	goto	u1711
+  1199  070C  2F0E               	goto	u1710
+  1200  070D                     u1711:
+  1201  070D  2F20               	goto	l2111
+  1202  070E                     u1710:
+  1203  070E                     l2109:
+  1204                           
+  1205                           ;newmain.c: 505:                 dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
+  1206  070E  305E               	movlw	94
+  1207  070F  00F0               	movwf	dynam@dig1data
+  1208  0710  3000               	movlw	0
+  1209  0711  00F1               	movwf	dynam@dig1data+1
+  1210  0712  3054               	movlw	84
+  1211  0713  00F2               	movwf	dynam@dig2data
+  1212  0714  3000               	movlw	0
+  1213  0715  00F3               	movwf	dynam@dig2data+1
+  1214  0716  3000               	movlw	0
+  1215  0717  00F4               	movwf	dynam@smdata
+  1216  0718  00F5               	movwf	dynam@smdata+1
+  1217  0719  3000               	movlw	0
+  1218  071A  00F6               	movwf	dynam@tr
+  1219  071B  00F7               	movwf	dynam@tr+1
+  1220  071C  3184  24B4  3186   	fcall	_dynam
+  1221                           
+  1222                           ;newmain.c: 507:             }else{
+  1223  071F  2E49               	goto	l258
+  1224  0720                     l2111:
+  1225                           
+  1226                           ;newmain.c: 508:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+  1227  0720  3015               	movlw	21
+  1228  0721  00F9               	movwf	??_main+1
+  1229  0722  304B               	movlw	75
+  1230  0723  00F8               	movwf	??_main
+  1231  0724  30BE               	movlw	190
+  1232  0725                     u2057:
+  1233  0725  0B89               	decfsz	9,f
+  1234  0726  2F25               	goto	u2057
+  1235  0727  0BF8               	decfsz	??_main,f
+  1236  0728  2F25               	goto	u2057
+  1237  0729  0BF9               	decfsz	??_main+1,f
+  1238  072A  2F25               	goto	u2057
+  1239  072B  3200               	nop2
+  1240  072C                     l2113:
+  1241                           
+  1242                           ;newmain.c: 509:                 if(RA1 == 1){
+  1243  072C  0020               	movlb	0	; select bank0
+  1244  072D  1C8C               	btfss	12,1	;volatile
+  1245  072E  2F30               	goto	u1721
+  1246  072F  2F31               	goto	u1720
+  1247  0730                     u1721:
+  1248  0730  2F32               	goto	l2117
+  1249  0731                     u1720:
+  1250  0731  2E49               	goto	l258
+  1251  0732                     l2117:
   1252                           
-  1253                           ;newmain.c: 196:     RC0=1;
-  1254  04AB  0020               	movlb	0	; select bank0
-  1255  04AC  140E               	bsf	14,0	;volatile
-  1256                           
-  1257                           ;newmain.c: 197:     RC1=1;
-  1258  04AD  148E               	bsf	14,1	;volatile
-  1259                           
-  1260                           ;newmain.c: 198:     RC2=1;
-  1261  04AE  150E               	bsf	14,2	;volatile
-  1262  04AF                     l1556:
-  1263                           
-  1264                           ;newmain.c: 199:     PORTB=0x00;
-  1265  04AF  018D               	clrf	13	;volatile
-  1266  04B0                     l1558:
-  1267                           
-  1268                           ;newmain.c: 200:     RC7=0;RC7=1;RC7=0;
-  1269  04B0  138E               	bcf	14,7	;volatile
-  1270  04B1                     l1560:
-  1271  04B1  178E               	bsf	14,7	;volatile
-  1272  04B2                     l1562:
-  1273  04B2  138E               	bcf	14,7	;volatile
-  1274  04B3                     l108:
-  1275  04B3  0008               	return
-  1276  04B4                     __end_of_zenoff:
-  1277                           
-  1278                           	psect	text2
-  1279  04B4                     __ptext2:	
-  1280 ;; *************** function _portinit *****************
-  1281 ;; Defined at:
-  1282 ;;		line 160 in file "newmain.c"
-  1283 ;; Parameters:    Size  Location     Type
-  1284 ;;		None
-  1285 ;; Auto vars:     Size  Location     Type
-  1286 ;;		None
-  1287 ;; Return value:  Size  Location     Type
-  1288 ;;                  1    wreg      void 
-  1289 ;; Registers used:
-  1290 ;;		wreg, status,2
-  1291 ;; Tracked objects:
-  1292 ;;		On entry : 0/0
-  1293 ;;		On exit  : 0/0
-  1294 ;;		Unchanged: 0/0
-  1295 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
-      +1  BANK12
-  1296 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1297 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1298 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1299 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1300 ;;Total ram usage:        0 bytes
-  1301 ;; Hardware stack levels used:    1
-  1302 ;; This function calls:
-  1303 ;;		Nothing
-  1304 ;; This function is called by:
-  1305 ;;		_main
-  1306 ;; This function uses a non-reentrant model
-  1307 ;;
-  1308                           
-  1309                           
-  1310                           ;psect for function _portinit
-  1311  04B4                     _portinit:
-  1312  04B4                     l1524:	
-  1313                           ;incstack = 0
-  1314                           ; Regs used in _portinit: [wreg+status,2]
-  1315                           
-  1316                           
-  1317                           ;newmain.c: 163:     ANSELA=0x00;
-  1318  04B4  0023               	movlb	3	; select bank3
-  1319  04B5  018C               	clrf	12	;volatile
-  1320                           
-  1321                           ;newmain.c: 164:     ANSELB=0x00;
-  1322  04B6  018D               	clrf	13	;volatile
-  1323  04B7                     l1526:
-  1324                           
-  1325                           ;newmain.c: 166:     PORTA=0x07;
-  1326  04B7  3007               	movlw	7
-  1327  04B8  0020               	movlb	0	; select bank0
-  1328  04B9  008C               	movwf	12	;volatile
-  1329  04BA                     l1528:
-  1330                           
-  1331                           ;newmain.c: 167:     TRISA=0x07;
-  1332  04BA  3007               	movlw	7
-  1333  04BB  0021               	movlb	1	; select bank1
-  1334  04BC  008C               	movwf	12	;volatile
-  1335                           
-  1336                           ;newmain.c: 168:     PORTB=0x00;
-  1337  04BD  0020               	movlb	0	; select bank0
-  1338  04BE  018D               	clrf	13	;volatile
-  1339                           
-  1340                           ;newmain.c: 169:     TRISB=0x00;
-  1341  04BF  0021               	movlb	1	; select bank1
-  1342  04C0  018D               	clrf	13	;volatile
-  1343  04C1                     l1530:
-  1344                           
-  1345                           ;newmain.c: 170:     PORTC=0x07;
-  1346  04C1  3007               	movlw	7
-  1347  04C2  0020               	movlb	0	; select bank0
-  1348  04C3  008E               	movwf	14	;volatile
-  1349  04C4                     l1532:
-  1350                           
-  1351                           ;newmain.c: 171:     TRISC=0x00;
-  1352  04C4  0021               	movlb	1	; select bank1
-  1353  04C5  018E               	clrf	14	;volatile
-  1354  04C6                     l95:
-  1355  04C6  0008               	return
-  1356  04C7                     __end_of_portinit:
+  1253                           ;newmain.c: 512:                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20|0x40),0,0);
+  1254  0732  3000               	movlw	0
+  1255  0733  00F0               	movwf	dynam@dig1data
+  1256  0734  00F1               	movwf	dynam@dig1data+1
+  1257  0735  307F               	movlw	127
+  1258  0736  00F2               	movwf	dynam@dig2data
+  1259  0737  3000               	movlw	0
+  1260  0738  00F3               	movwf	dynam@dig2data+1
+  1261  0739  3000               	movlw	0
+  1262  073A  00F4               	movwf	dynam@smdata
+  1263  073B  00F5               	movwf	dynam@smdata+1
+  1264  073C  3000               	movlw	0
+  1265  073D  00F6               	movwf	dynam@tr
+  1266  073E  00F7               	movwf	dynam@tr+1
+  1267  073F  3184  24B4  3186   	fcall	_dynam
+  1268  0742                     l2119:
+  1269                           
+  1270                           ;newmain.c: 514:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+  1271  0742  3015               	movlw	21
+  1272  0743  00F9               	movwf	??_main+1
+  1273  0744  304B               	movlw	75
+  1274  0745  00F8               	movwf	??_main
+  1275  0746  30BE               	movlw	190
+  1276  0747                     u2067:
+  1277  0747  0B89               	decfsz	9,f
+  1278  0748  2F47               	goto	u2067
+  1279  0749  0BF8               	decfsz	??_main,f
+  1280  074A  2F47               	goto	u2067
+  1281  074B  0BF9               	decfsz	??_main+1,f
+  1282  074C  2F47               	goto	u2067
+  1283  074D  3200               	nop2
+  1284  074E                     l2121:
+  1285                           
+  1286                           ;newmain.c: 515:                 if(RA1 == 1){
+  1287  074E  0020               	movlb	0	; select bank0
+  1288  074F  1C8C               	btfss	12,1	;volatile
+  1289  0750  2F52               	goto	u1731
+  1290  0751  2F53               	goto	u1730
+  1291  0752                     u1731:
+  1292  0752  2F54               	goto	l2125
+  1293  0753                     u1730:
+  1294  0753  2E49               	goto	l258
+  1295  0754                     l2125:
+  1296                           
+  1297                           ;newmain.c: 518:                 dynam(0,(0x20|0x10|0x08|0x04|0x01|0x40),0,0);
+  1298  0754  3000               	movlw	0
+  1299  0755  00F0               	movwf	dynam@dig1data
+  1300  0756  00F1               	movwf	dynam@dig1data+1
+  1301  0757  307D               	movlw	125
+  1302  0758  00F2               	movwf	dynam@dig2data
+  1303  0759  3000               	movlw	0
+  1304  075A  00F3               	movwf	dynam@dig2data+1
+  1305  075B  3000               	movlw	0
+  1306  075C  00F4               	movwf	dynam@smdata
+  1307  075D  00F5               	movwf	dynam@smdata+1
+  1308  075E  3000               	movlw	0
+  1309  075F  00F6               	movwf	dynam@tr
+  1310  0760  00F7               	movwf	dynam@tr+1
+  1311  0761  3184  24B4  3186   	fcall	_dynam
+  1312  0764                     l2127:
+  1313                           
+  1314                           ;newmain.c: 520:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+  1315  0764  3015               	movlw	21
+  1316  0765  00F9               	movwf	??_main+1
+  1317  0766  304B               	movlw	75
+  1318  0767  00F8               	movwf	??_main
+  1319  0768  30BE               	movlw	190
+  1320  0769                     u2077:
+  1321  0769  0B89               	decfsz	9,f
+  1322  076A  2F69               	goto	u2077
+  1323  076B  0BF8               	decfsz	??_main,f
+  1324  076C  2F69               	goto	u2077
+  1325  076D  0BF9               	decfsz	??_main+1,f
+  1326  076E  2F69               	goto	u2077
+  1327  076F  3200               	nop2
+  1328  0770                     l2129:
+  1329                           
+  1330                           ;newmain.c: 521:                 if(RA1 == 1){
+  1331  0770  0020               	movlb	0	; select bank0
+  1332  0771  1C8C               	btfss	12,1	;volatile
+  1333  0772  2F74               	goto	u1741
+  1334  0773  2F75               	goto	u1740
+  1335  0774                     u1741:
+  1336  0774  2F76               	goto	l2133
+  1337  0775                     u1740:
+  1338  0775  2E49               	goto	l258
+  1339  0776                     l2133:
+  1340                           
+  1341                           ;newmain.c: 524:                 dynam(0,(0x02|0x04|0x20|0x40),0,0);
+  1342  0776  3000               	movlw	0
+  1343  0777  00F0               	movwf	dynam@dig1data
+  1344  0778  00F1               	movwf	dynam@dig1data+1
+  1345  0779  3066               	movlw	102
+  1346  077A  00F2               	movwf	dynam@dig2data
+  1347  077B  3000               	movlw	0
+  1348  077C  00F3               	movwf	dynam@dig2data+1
+  1349  077D  3000               	movlw	0
+  1350  077E  00F4               	movwf	dynam@smdata
+  1351  077F  00F5               	movwf	dynam@smdata+1
+  1352  0780  3000               	movlw	0
+  1353  0781  00F6               	movwf	dynam@tr
+  1354  0782  00F7               	movwf	dynam@tr+1
+  1355  0783  3184  24B4  3186   	fcall	_dynam
+  1356  0786                     l2135:
   1357                           
-  1358                           	psect	text3
-  1359  0663                     __ptext3:	
-  1360 ;; *************** function _dynam *****************
-  1361 ;; Defined at:
-  1362 ;;		line 205 in file "newmain.c"
-  1363 ;; Parameters:    Size  Location     Type
-  1364 ;;  dig1data        2    0[COMMON] unsigned short 
-  1365 ;;  dig2data        2    2[COMMON] unsigned short 
-  1366 ;;  smdata          2    4[COMMON] unsigned short 
-  1367 ;;  tr              2    6[COMMON] unsigned int 
-  1368 ;; Auto vars:     Size  Location     Type
-  1369 ;;  ext             2    6[BANK0 ] unsigned short 
-  1370 ;;  j               2    4[BANK0 ] unsigned int 
-  1371 ;;  tm              2    2[BANK0 ] unsigned int 
-  1372 ;;  smd             2    0[BANK0 ] unsigned short 
-  1373 ;; Return value:  Size  Location     Type
-  1374 ;;                  1    wreg      void 
-  1375 ;; Registers used:
-  1376 ;;		wreg, fsr0l, fsr0h, status,2, status,0
-  1377 ;; Tracked objects:
-  1378 ;;		On entry : 0/0
-  1379 ;;		On exit  : 0/0
-  1380 ;;		Unchanged: 0/0
-  1381 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
-      +1  BANK12
-  1382 ;;      Params:         8       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1383 ;;      Locals:         0       8       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1384 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1385 ;;      Totals:         8       8       0       0       0       0       0       0       0       0       0       0       
-      +0       0
-  1386 ;;Total ram usage:       16 bytes
-  1387 ;; Hardware stack levels used:    1
-  1388 ;; This function calls:
-  1389 ;;		Nothing
-  1390 ;; This function is called by:
-  1391 ;;		_main
-  1392 ;; This function uses a non-reentrant model
-  1393 ;;
-  1394                           
-  1395                           
-  1396                           ;psect for function _dynam
-  1397  0663                     _dynam:
-  1398  0663                     l1564:	
-  1399                           ;incstack = 0
-  1400                           ; Regs used in _dynam: [wreg-fsr0h+status,2+status,0]
+  1358                           ;newmain.c: 526:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+  1359  0786  3015               	movlw	21
+  1360  0787  00F9               	movwf	??_main+1
+  1361  0788  304B               	movlw	75
+  1362  0789  00F8               	movwf	??_main
+  1363  078A  30BE               	movlw	190
+  1364  078B                     u2087:
+  1365  078B  0B89               	decfsz	9,f
+  1366  078C  2F8B               	goto	u2087
+  1367  078D  0BF8               	decfsz	??_main,f
+  1368  078E  2F8B               	goto	u2087
+  1369  078F  0BF9               	decfsz	??_main+1,f
+  1370  0790  2F8B               	goto	u2087
+  1371  0791  3200               	nop2
+  1372  0792                     l2137:
+  1373                           
+  1374                           ;newmain.c: 527:                 if(RA1 == 1){
+  1375  0792  0020               	movlb	0	; select bank0
+  1376  0793  1C8C               	btfss	12,1	;volatile
+  1377  0794  2F96               	goto	u1751
+  1378  0795  2F97               	goto	u1750
+  1379  0796                     u1751:
+  1380  0796  2F98               	goto	l2141
+  1381  0797                     u1750:
+  1382  0797  2E49               	goto	l258
+  1383  0798                     l2141:
+  1384                           
+  1385                           ;newmain.c: 530:                 dynam(0,(0x01|0x02|0x08|0x40|0x10),0,0);
+  1386  0798  3000               	movlw	0
+  1387  0799  00F0               	movwf	dynam@dig1data
+  1388  079A  00F1               	movwf	dynam@dig1data+1
+  1389  079B  305B               	movlw	91
+  1390  079C  00F2               	movwf	dynam@dig2data
+  1391  079D  3000               	movlw	0
+  1392  079E  00F3               	movwf	dynam@dig2data+1
+  1393  079F  3000               	movlw	0
+  1394  07A0  00F4               	movwf	dynam@smdata
+  1395  07A1  00F5               	movwf	dynam@smdata+1
+  1396  07A2  3000               	movlw	0
+  1397  07A3  00F6               	movwf	dynam@tr
+  1398  07A4  00F7               	movwf	dynam@tr+1
+  1399  07A5  3184  24B4  3186   	fcall	_dynam
+  1400  07A8                     l2143:
   1401                           
-  1402  0663  0020               	movlb	0	; select bank0
-  1403  0664  01DC               	clrf	dynam@tm
-  1404  0665  01DD               	clrf	dynam@tm+1
-  1405                           
-  1406                           ;newmain.c: 208:     unsigned short ext=0,smd=0;
-  1407  0666  01E0               	clrf	dynam@ext
-  1408  0667  01E1               	clrf	dynam@ext+1
-  1409  0668  01DA               	clrf	dynam@smd
-  1410  0669  01DB               	clrf	dynam@smd+1
-  1411  066A                     l1566:
-  1412                           
-  1413                           ;newmain.c: 209:     RC7=0;
-  1414  066A  138E               	bcf	14,7	;volatile
-  1415  066B                     l1568:
-  1416                           
-  1417                           ;newmain.c: 210:     PORTB=dig1data;
-  1418  066B  0870               	movf	dynam@dig1data,w
-  1419  066C  008D               	movwf	13	;volatile
-  1420  066D                     l1570:
-  1421                           
-  1422                           ;newmain.c: 211:     RC5=0;RC6=1;
-  1423  066D  128E               	bcf	14,5	;volatile
-  1424  066E                     l1572:
-  1425  066E  170E               	bsf	14,6	;volatile
-  1426  066F                     l1574:
-  1427                           
-  1428                           ;newmain.c: 212:     if(tr==5){tm=4000;}
-  1429  066F  3005               	movlw	5
-  1430  0670  0676               	xorwf	dynam@tr,w
-  1431  0671  0477               	iorwf	dynam@tr+1,w
-  1432  0672  1D03               	btfss	3,2
-  1433  0673  2E75               	goto	u891
-  1434  0674  2E76               	goto	u890
-  1435  0675                     u891:
-  1436  0675  2E7B               	goto	l1578
-  1437  0676                     u890:
-  1438  0676                     l1576:
-  1439  0676  30A0               	movlw	160
-  1440  0677  00DC               	movwf	dynam@tm
-  1441  0678  300F               	movlw	15
-  1442  0679  00DD               	movwf	dynam@tm+1
-  1443  067A  2E7F               	goto	l112
-  1444  067B                     l1578:
-  1445  067B  30D0               	movlw	208
-  1446  067C  00DC               	movwf	dynam@tm
-  1447  067D  3007               	movlw	7
-  1448  067E  00DD               	movwf	dynam@tm+1
-  1449  067F                     l112:
-  1450                           
-  1451                           ;newmain.c: 214:     for(j=tm;j>0;--j);
-  1452  067F  085D               	movf	dynam@tm+1,w
-  1453  0680  00DF               	movwf	dynam@j+1
-  1454  0681  085C               	movf	dynam@tm,w
-  1455  0682  00DE               	movwf	dynam@j
-  1456  0683                     l1580:
-  1457  0683  085E               	movf	dynam@j,w
-  1458  0684  045F               	iorwf	dynam@j+1,w
-  1459  0685  1D03               	btfss	3,2
-  1460  0686  2E88               	goto	u901
-  1461  0687  2E89               	goto	u900
-  1462  0688                     u901:
-  1463  0688  2E8A               	goto	l1584
-  1464  0689                     u900:
-  1465  0689  2E8F               	goto	l114
-  1466  068A                     l1584:
-  1467  068A  3001               	movlw	1
-  1468  068B  02DE               	subwf	dynam@j,f
-  1469  068C  3000               	movlw	0
-  1470  068D  3BDF               	subwfb	dynam@j+1,f
-  1471  068E  2E83               	goto	l1580
-  1472  068F                     l114:
-  1473                           
-  1474                           ;newmain.c: 215:     RC5=0;RC6=0;
-  1475  068F  128E               	bcf	14,5	;volatile
-  1476  0690  130E               	bcf	14,6	;volatile
-  1477  0691                     l1588:
+  1402                           ;newmain.c: 532:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+  1403  07A8  3015               	movlw	21
+  1404  07A9  00F9               	movwf	??_main+1
+  1405  07AA  304B               	movlw	75
+  1406  07AB  00F8               	movwf	??_main
+  1407  07AC  30BE               	movlw	190
+  1408  07AD                     u2097:
+  1409  07AD  0B89               	decfsz	9,f
+  1410  07AE  2FAD               	goto	u2097
+  1411  07AF  0BF8               	decfsz	??_main,f
+  1412  07B0  2FAD               	goto	u2097
+  1413  07B1  0BF9               	decfsz	??_main+1,f
+  1414  07B2  2FAD               	goto	u2097
+  1415  07B3  3200               	nop2
+  1416  07B4                     l2145:
+  1417                           
+  1418                           ;newmain.c: 533:                 if(RA1 == 1){
+  1419  07B4  0020               	movlb	0	; select bank0
+  1420  07B5  1C8C               	btfss	12,1	;volatile
+  1421  07B6  2FB8               	goto	u1761
+  1422  07B7  2FB9               	goto	u1760
+  1423  07B8                     u1761:
+  1424  07B8  2FBA               	goto	l2149
+  1425  07B9                     u1760:
+  1426  07B9  2E49               	goto	l258
+  1427  07BA                     l2149:
+  1428                           
+  1429                           ;newmain.c: 536:                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20),0,0);
+  1430  07BA  3000               	movlw	0
+  1431  07BB  00F0               	movwf	dynam@dig1data
+  1432  07BC  00F1               	movwf	dynam@dig1data+1
+  1433  07BD  303F               	movlw	63
+  1434  07BE  00F2               	movwf	dynam@dig2data
+  1435  07BF  3000               	movlw	0
+  1436  07C0  00F3               	movwf	dynam@dig2data+1
+  1437  07C1  3000               	movlw	0
+  1438  07C2  00F4               	movwf	dynam@smdata
+  1439  07C3  00F5               	movwf	dynam@smdata+1
+  1440  07C4  3000               	movlw	0
+  1441  07C5  00F6               	movwf	dynam@tr
+  1442  07C6  00F7               	movwf	dynam@tr+1
+  1443  07C7  3184  24B4  3186   	fcall	_dynam
+  1444  07CA  2E49               	goto	l258
+  1445  07CB  3180  2802         	ljmp	start
+  1446  07CD                     __end_of_main:
+  1447                           
+  1448                           	psect	text1
+  1449  03FC                     __ptext1:	
+  1450 ;; *************** function _zenoff *****************
+  1451 ;; Defined at:
+  1452 ;;		line 194 in file "newmain.c"
+  1453 ;; Parameters:    Size  Location     Type
+  1454 ;;		None
+  1455 ;; Auto vars:     Size  Location     Type
+  1456 ;;		None
+  1457 ;; Return value:  Size  Location     Type
+  1458 ;;                  1    wreg      void 
+  1459 ;; Registers used:
+  1460 ;;		status,2
+  1461 ;; Tracked objects:
+  1462 ;;		On entry : 0/0
+  1463 ;;		On exit  : 0/0
+  1464 ;;		Unchanged: 0/0
+  1465 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1466 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1467 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1468 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1469 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1470 ;;Total ram usage:        0 bytes
+  1471 ;; Hardware stack levels used:    1
+  1472 ;; This function calls:
+  1473 ;;		Nothing
+  1474 ;; This function is called by:
+  1475 ;;		_main
+  1476 ;; This function uses a non-reentrant model
+  1477 ;;
   1478                           
-  1479                           ;newmain.c: 216:     PORTB=dig2data;
-  1480  0691  0872               	movf	dynam@dig2data,w
-  1481  0692  008D               	movwf	13	;volatile
-  1482  0693                     l1590:
-  1483                           
-  1484                           ;newmain.c: 217:     RC6=0;RC5=1;
-  1485  0693  130E               	bcf	14,6	;volatile
-  1486  0694                     l1592:
-  1487  0694  168E               	bsf	14,5	;volatile
-  1488  0695                     l1594:
-  1489                           
-  1490                           ;newmain.c: 218:     if(tr==5){tm=4000;}
-  1491  0695  3005               	movlw	5
-  1492  0696  0676               	xorwf	dynam@tr,w
-  1493  0697  0477               	iorwf	dynam@tr+1,w
-  1494  0698  1D03               	btfss	3,2
-  1495  0699  2E9B               	goto	u911
-  1496  069A  2E9C               	goto	u910
-  1497  069B                     u911:
-  1498  069B  2EA1               	goto	l1598
-  1499  069C                     u910:
-  1500  069C                     l1596:
-  1501  069C  30A0               	movlw	160
-  1502  069D  00DC               	movwf	dynam@tm
-  1503  069E  300F               	movlw	15
-  1504  069F  00DD               	movwf	dynam@tm+1
-  1505  06A0  2EA5               	goto	l116
-  1506  06A1                     l1598:
-  1507  06A1  30D0               	movlw	208
-  1508  06A2  00DC               	movwf	dynam@tm
-  1509  06A3  3007               	movlw	7
-  1510  06A4  00DD               	movwf	dynam@tm+1
-  1511  06A5                     l116:
-  1512                           
-  1513                           ;newmain.c: 220:     for(j=tm;j>0;--j);
-  1514  06A5  085D               	movf	dynam@tm+1,w
-  1515  06A6  00DF               	movwf	dynam@j+1
-  1516  06A7  085C               	movf	dynam@tm,w
-  1517  06A8  00DE               	movwf	dynam@j
-  1518  06A9                     l1600:
-  1519  06A9  085E               	movf	dynam@j,w
-  1520  06AA  045F               	iorwf	dynam@j+1,w
-  1521  06AB  1D03               	btfss	3,2
-  1522  06AC  2EAE               	goto	u921
-  1523  06AD  2EAF               	goto	u920
-  1524  06AE                     u921:
-  1525  06AE  2EB0               	goto	l1604
-  1526  06AF                     u920:
-  1527  06AF  2EB5               	goto	l118
-  1528  06B0                     l1604:
-  1529  06B0  3001               	movlw	1
-  1530  06B1  02DE               	subwf	dynam@j,f
-  1531  06B2  3000               	movlw	0
-  1532  06B3  3BDF               	subwfb	dynam@j+1,f
-  1533  06B4  2EA9               	goto	l1600
-  1534  06B5                     l118:
-  1535                           
-  1536                           ;newmain.c: 221:     RC5=0;RC6=0;
-  1537  06B5  128E               	bcf	14,5	;volatile
-  1538  06B6  130E               	bcf	14,6	;volatile
-  1539                           
-  1540                           ;newmain.c: 222:     switch(smdata){
-  1541  06B7  2FBC               	goto	l1714
-  1542  06B8                     l1608:
+  1479                           
+  1480                           ;psect for function _zenoff
+  1481  03FC                     _zenoff:
+  1482  03FC                     l1601:	
+  1483                           ;incstack = 0
+  1484                           ; Regs used in _zenoff: [status,2]
+  1485                           
+  1486                           
+  1487                           ;newmain.c: 196:     RC0=1;
+  1488  03FC  0020               	movlb	0	; select bank0
+  1489  03FD  140E               	bsf	14,0	;volatile
+  1490                           
+  1491                           ;newmain.c: 197:     RC1=1;
+  1492  03FE  148E               	bsf	14,1	;volatile
+  1493                           
+  1494                           ;newmain.c: 198:     RC2=1;
+  1495  03FF  150E               	bsf	14,2	;volatile
+  1496  0400                     l1603:
+  1497                           
+  1498                           ;newmain.c: 199:     PORTB=0x00;
+  1499  0400  018D               	clrf	13	;volatile
+  1500  0401                     l1605:
+  1501                           
+  1502                           ;newmain.c: 200:     RC7=0;RC7=1;RC7=0;
+  1503  0401  138E               	bcf	14,7	;volatile
+  1504  0402                     l1607:
+  1505  0402  178E               	bsf	14,7	;volatile
+  1506  0403                     l1609:
+  1507  0403  138E               	bcf	14,7	;volatile
+  1508  0404                     l108:
+  1509  0404  0008               	return
+  1510  0405                     __end_of_zenoff:
+  1511                           
+  1512                           	psect	text2
+  1513  0405                     __ptext2:	
+  1514 ;; *************** function _portinit *****************
+  1515 ;; Defined at:
+  1516 ;;		line 160 in file "newmain.c"
+  1517 ;; Parameters:    Size  Location     Type
+  1518 ;;		None
+  1519 ;; Auto vars:     Size  Location     Type
+  1520 ;;		None
+  1521 ;; Return value:  Size  Location     Type
+  1522 ;;                  1    wreg      void 
+  1523 ;; Registers used:
+  1524 ;;		wreg, status,2
+  1525 ;; Tracked objects:
+  1526 ;;		On entry : 0/0
+  1527 ;;		On exit  : 0/0
+  1528 ;;		Unchanged: 0/0
+  1529 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1530 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1531 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1532 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1533 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1534 ;;Total ram usage:        0 bytes
+  1535 ;; Hardware stack levels used:    1
+  1536 ;; This function calls:
+  1537 ;;		Nothing
+  1538 ;; This function is called by:
+  1539 ;;		_main
+  1540 ;; This function uses a non-reentrant model
+  1541 ;;
+  1542                           
   1543                           
-  1544                           ;newmain.c: 224:                 PORTB=0x00;smd=(0x01|0x02|0x04|0x08|0x10|0x20);
-  1545  06B8  018D               	clrf	13	;volatile
-  1546  06B9                     l1610:
-  1547  06B9                     l1612:
-  1548                           
-  1549                           ;newmain.c: 225:                 RC7=0;RC7=1;RC7=0;
-  1550  06B9  138E               	bcf	14,7	;volatile
-  1551  06BA                     l1614:
-  1552  06BA  178E               	bsf	14,7	;volatile
-  1553  06BB                     l1616:
-  1554  06BB  138E               	bcf	14,7	;volatile
-  1555                           
-  1556                           ;newmain.c: 226:                 break;
-  1557  06BC  2FCC               	goto	l135
-  1558  06BD                     l1618:
-  1559                           
-  1560                           ;newmain.c: 228:                 if(flg==1)cw=0;flg=0;
-  1561  06BD  0334               	decf	_flg,w
-  1562  06BE  0435               	iorwf	_flg+1,w
-  1563  06BF  1D03               	btfss	3,2
-  1564  06C0  2EC2               	goto	u931
-  1565  06C1  2EC3               	goto	u930
-  1566  06C2                     u931:
-  1567  06C2  2EC5               	goto	l123
-  1568  06C3                     u930:
-  1569  06C3                     l1620:
-  1570  06C3  01FA               	clrf	_cw
-  1571  06C4  01FB               	clrf	_cw+1
-  1572  06C5                     l123:
-  1573  06C5  01B4               	clrf	_flg
-  1574  06C6  01B5               	clrf	_flg+1
-  1575  06C7                     l1622:
-  1576                           
-  1577                           ;newmain.c: 229:                 if((cw==0)&&(ext==0)){cw=1;ccw=0;ext=1;PORTB=smd=0x09;}
-  1578  06C7  087A               	movf	_cw,w
-  1579  06C8  047B               	iorwf	_cw+1,w
-  1580  06C9  1D03               	btfss	3,2
-  1581  06CA  2ECC               	goto	u941
-  1582  06CB  2ECD               	goto	u940
-  1583  06CC                     u941:
-  1584  06CC  2EE3               	goto	l1634
-  1585  06CD                     u940:
-  1586  06CD                     l1624:
-  1587  06CD  0860               	movf	dynam@ext,w
-  1588  06CE  0461               	iorwf	dynam@ext+1,w
-  1589  06CF  1D03               	btfss	3,2
-  1590  06D0  2ED2               	goto	u951
-  1591  06D1  2ED3               	goto	u950
-  1592  06D2                     u951:
-  1593  06D2  2EE3               	goto	l1634
-  1594  06D3                     u950:
-  1595  06D3                     l1626:
-  1596  06D3  3001               	movlw	1
-  1597  06D4  00FA               	movwf	_cw
-  1598  06D5  3000               	movlw	0
-  1599  06D6  00FB               	movwf	_cw+1
-  1600  06D7                     l1628:
-  1601  06D7  01B2               	clrf	_ccw
-  1602  06D8  01B3               	clrf	_ccw+1
-  1603  06D9                     l1630:
-  1604  06D9  3001               	movlw	1
-  1605  06DA  00E0               	movwf	dynam@ext
-  1606  06DB  3000               	movlw	0
-  1607  06DC  00E1               	movwf	dynam@ext+1
-  1608  06DD                     l1632:
-  1609  06DD  3009               	movlw	9
-  1610  06DE  00DA               	movwf	dynam@smd
-  1611  06DF  3000               	movlw	0
-  1612  06E0  00DB               	movwf	dynam@smd+1
-  1613  06E1  085A               	movf	dynam@smd,w
-  1614  06E2  008D               	movwf	13	;volatile
-  1615  06E3                     l1634:
-  1616                           
-  1617                           ;newmain.c: 230:                 if((cw==1)&&(ext==0)){cw=2;ccw=3;ext=1;PORTB=smd=0x0C;}
-  1618  06E3  037A               	decf	_cw,w
-  1619  06E4  047B               	iorwf	_cw+1,w
-  1620  06E5  1D03               	btfss	3,2
-  1621  06E6  2EE8               	goto	u961
-  1622  06E7  2EE9               	goto	u960
-  1623  06E8                     u961:
-  1624  06E8  2F01               	goto	l1640
-  1625  06E9                     u960:
-  1626  06E9                     l1636:
-  1627  06E9  0860               	movf	dynam@ext,w
-  1628  06EA  0461               	iorwf	dynam@ext+1,w
-  1629  06EB  1D03               	btfss	3,2
-  1630  06EC  2EEE               	goto	u971
-  1631  06ED  2EEF               	goto	u970
-  1632  06EE                     u971:
-  1633  06EE  2F01               	goto	l1640
-  1634  06EF                     u970:
-  1635  06EF                     l1638:
-  1636  06EF  3002               	movlw	2
-  1637  06F0  00FA               	movwf	_cw
-  1638  06F1  3000               	movlw	0
-  1639  06F2  00FB               	movwf	_cw+1
-  1640  06F3  3003               	movlw	3
-  1641  06F4  00B2               	movwf	_ccw
-  1642  06F5  3000               	movlw	0
-  1643  06F6  00B3               	movwf	_ccw+1
-  1644  06F7  3001               	movlw	1
-  1645  06F8  00E0               	movwf	dynam@ext
-  1646  06F9  3000               	movlw	0
-  1647  06FA  00E1               	movwf	dynam@ext+1
-  1648  06FB  300C               	movlw	12
-  1649  06FC  00DA               	movwf	dynam@smd
-  1650  06FD  3000               	movlw	0
-  1651  06FE  00DB               	movwf	dynam@smd+1
-  1652  06FF  085A               	movf	dynam@smd,w
-  1653  0700  008D               	movwf	13	;volatile
-  1654  0701                     l1640:
+  1544                           ;psect for function _portinit
+  1545  0405                     _portinit:
+  1546  0405                     l1571:	
+  1547                           ;incstack = 0
+  1548                           ; Regs used in _portinit: [wreg+status,2]
+  1549                           
+  1550                           
+  1551                           ;newmain.c: 163:     ANSELA=0x00;
+  1552  0405  0023               	movlb	3	; select bank3
+  1553  0406  018C               	clrf	12	;volatile
+  1554                           
+  1555                           ;newmain.c: 164:     ANSELB=0x00;
+  1556  0407  018D               	clrf	13	;volatile
+  1557  0408                     l1573:
+  1558                           
+  1559                           ;newmain.c: 166:     PORTA=0x07;
+  1560  0408  3007               	movlw	7
+  1561  0409  0020               	movlb	0	; select bank0
+  1562  040A  008C               	movwf	12	;volatile
+  1563  040B                     l1575:
+  1564                           
+  1565                           ;newmain.c: 167:     TRISA=0x07;
+  1566  040B  3007               	movlw	7
+  1567  040C  0021               	movlb	1	; select bank1
+  1568  040D  008C               	movwf	12	;volatile
+  1569                           
+  1570                           ;newmain.c: 168:     PORTB=0x00;
+  1571  040E  0020               	movlb	0	; select bank0
+  1572  040F  018D               	clrf	13	;volatile
+  1573                           
+  1574                           ;newmain.c: 169:     TRISB=0x00;
+  1575  0410  0021               	movlb	1	; select bank1
+  1576  0411  018D               	clrf	13	;volatile
+  1577  0412                     l1577:
+  1578                           
+  1579                           ;newmain.c: 170:     PORTC=0x07;
+  1580  0412  3007               	movlw	7
+  1581  0413  0020               	movlb	0	; select bank0
+  1582  0414  008E               	movwf	14	;volatile
+  1583  0415                     l1579:
+  1584                           
+  1585                           ;newmain.c: 171:     TRISC=0x00;
+  1586  0415  0021               	movlb	1	; select bank1
+  1587  0416  018E               	clrf	14	;volatile
+  1588  0417                     l95:
+  1589  0417  0008               	return
+  1590  0418                     __end_of_portinit:
+  1591                           
+  1592                           	psect	text3
+  1593  04B4                     __ptext3:	
+  1594 ;; *************** function _dynam *****************
+  1595 ;; Defined at:
+  1596 ;;		line 205 in file "newmain.c"
+  1597 ;; Parameters:    Size  Location     Type
+  1598 ;;  dig1data        2    0[COMMON] unsigned short 
+  1599 ;;  dig2data        2    2[COMMON] unsigned short 
+  1600 ;;  smdata          2    4[COMMON] unsigned short 
+  1601 ;;  tr              2    6[COMMON] unsigned int 
+  1602 ;; Auto vars:     Size  Location     Type
+  1603 ;;  ext             2    6[BANK0 ] unsigned short 
+  1604 ;;  j               2    4[BANK0 ] unsigned int 
+  1605 ;;  tm              2    2[BANK0 ] unsigned int 
+  1606 ;;  smd             2    0[BANK0 ] unsigned short 
+  1607 ;; Return value:  Size  Location     Type
+  1608 ;;                  1    wreg      void 
+  1609 ;; Registers used:
+  1610 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1611 ;; Tracked objects:
+  1612 ;;		On entry : 0/0
+  1613 ;;		On exit  : 0/0
+  1614 ;;		Unchanged: 0/0
+  1615 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1616 ;;      Params:         8       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1617 ;;      Locals:         0       8       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1618 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1619 ;;      Totals:         8       8       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1620 ;;Total ram usage:       16 bytes
+  1621 ;; Hardware stack levels used:    1
+  1622 ;; This function calls:
+  1623 ;;		Nothing
+  1624 ;; This function is called by:
+  1625 ;;		_main
+  1626 ;; This function uses a non-reentrant model
+  1627 ;;
+  1628                           
+  1629                           
+  1630                           ;psect for function _dynam
+  1631  04B4                     _dynam:
+  1632  04B4                     l1611:	
+  1633                           ;incstack = 0
+  1634                           ; Regs used in _dynam: [wreg-fsr0h+status,2+status,0]
+  1635                           
+  1636  04B4  0020               	movlb	0	; select bank0
+  1637  04B5  01DC               	clrf	dynam@tm
+  1638  04B6  01DD               	clrf	dynam@tm+1
+  1639                           
+  1640                           ;newmain.c: 208:     unsigned short ext=0,smd=0;
+  1641  04B7  01E0               	clrf	dynam@ext
+  1642  04B8  01E1               	clrf	dynam@ext+1
+  1643  04B9  01DA               	clrf	dynam@smd
+  1644  04BA  01DB               	clrf	dynam@smd+1
+  1645  04BB                     l1613:
+  1646                           
+  1647                           ;newmain.c: 209:     RC7=0;
+  1648  04BB  138E               	bcf	14,7	;volatile
+  1649  04BC                     l1615:
+  1650                           
+  1651                           ;newmain.c: 210:     PORTB=dig1data;
+  1652  04BC  0870               	movf	dynam@dig1data,w
+  1653  04BD  008D               	movwf	13	;volatile
+  1654  04BE                     l1617:
   1655                           
-  1656                           ;newmain.c: 231:                 if((cw==2)&&(ext==0)){cw=3;ccw=2;ext=1;PORTB=smd=0x06;}
-  1657  0701  3002               	movlw	2
-  1658  0702  067A               	xorwf	_cw,w
-  1659  0703  047B               	iorwf	_cw+1,w
-  1660  0704  1D03               	btfss	3,2
-  1661  0705  2F07               	goto	u981
-  1662  0706  2F08               	goto	u980
-  1663  0707                     u981:
-  1664  0707  2F20               	goto	l1646
-  1665  0708                     u980:
-  1666  0708                     l1642:
-  1667  0708  0860               	movf	dynam@ext,w
-  1668  0709  0461               	iorwf	dynam@ext+1,w
-  1669  070A  1D03               	btfss	3,2
-  1670  070B  2F0D               	goto	u991
-  1671  070C  2F0E               	goto	u990
-  1672  070D                     u991:
-  1673  070D  2F20               	goto	l1646
-  1674  070E                     u990:
-  1675  070E                     l1644:
-  1676  070E  3003               	movlw	3
-  1677  070F  00FA               	movwf	_cw
-  1678  0710  3000               	movlw	0
-  1679  0711  00FB               	movwf	_cw+1
-  1680  0712  3002               	movlw	2
-  1681  0713  00B2               	movwf	_ccw
-  1682  0714  3000               	movlw	0
-  1683  0715  00B3               	movwf	_ccw+1
-  1684  0716  3001               	movlw	1
-  1685  0717  00E0               	movwf	dynam@ext
-  1686  0718  3000               	movlw	0
-  1687  0719  00E1               	movwf	dynam@ext+1
-  1688  071A  3006               	movlw	6
-  1689  071B  00DA               	movwf	dynam@smd
-  1690  071C  3000               	movlw	0
-  1691  071D  00DB               	movwf	dynam@smd+1
-  1692  071E  085A               	movf	dynam@smd,w
-  1693  071F  008D               	movwf	13	;volatile
-  1694  0720                     l1646:
-  1695                           
-  1696                           ;newmain.c: 232:                 if((cw==3)&&(ext==0)){cw=0;ccw=1;ext=1;PORTB=smd=0x03;}
-  1697  0720  3003               	movlw	3
-  1698  0721  067A               	xorwf	_cw,w
-  1699  0722  047B               	iorwf	_cw+1,w
-  1700  0723  1D03               	btfss	3,2
-  1701  0724  2F26               	goto	u1001
-  1702  0725  2F27               	goto	u1000
-  1703  0726                     u1001:
-  1704  0726  2EB9               	goto	l1612
-  1705  0727                     u1000:
-  1706  0727                     l1648:
-  1707  0727  0860               	movf	dynam@ext,w
-  1708  0728  0461               	iorwf	dynam@ext+1,w
-  1709  0729  1D03               	btfss	3,2
-  1710  072A  2F2C               	goto	u1011
-  1711  072B  2F2D               	goto	u1010
-  1712  072C                     u1011:
-  1713  072C  2EB9               	goto	l1612
-  1714  072D                     u1010:
-  1715  072D                     l1650:
-  1716  072D  01FA               	clrf	_cw
-  1717  072E  01FB               	clrf	_cw+1
-  1718  072F                     l1652:
-  1719  072F  3001               	movlw	1
-  1720  0730  00B2               	movwf	_ccw
-  1721  0731  3000               	movlw	0
-  1722  0732  00B3               	movwf	_ccw+1
-  1723  0733                     l1654:
-  1724  0733                     l1656:
-  1725  0733  3003               	movlw	3
-  1726  0734  00DA               	movwf	dynam@smd
-  1727  0735  3000               	movlw	0
-  1728  0736  00DB               	movwf	dynam@smd+1
-  1729  0737  085A               	movf	dynam@smd,w
-  1730  0738  008D               	movwf	13	;volatile
-  1731  0739  2EB9               	goto	l1612
-  1732  073A                     l1664:
-  1733                           
-  1734                           ;newmain.c: 236:                 if(flg==1)ccw=0;flg=0;
-  1735  073A  0334               	decf	_flg,w
-  1736  073B  0435               	iorwf	_flg+1,w
-  1737  073C  1D03               	btfss	3,2
-  1738  073D  2F3F               	goto	u1021
-  1739  073E  2F40               	goto	u1020
-  1740  073F                     u1021:
-  1741  073F  2F42               	goto	l129
-  1742  0740                     u1020:
-  1743  0740                     l1666:
-  1744  0740  01B2               	clrf	_ccw
-  1745  0741  01B3               	clrf	_ccw+1
-  1746  0742                     l129:
-  1747  0742  01B4               	clrf	_flg
-  1748  0743  01B5               	clrf	_flg+1
-  1749  0744                     l1668:
-  1750                           
-  1751                           ;newmain.c: 237:                 if((ccw==0)&&(ext==0)){ccw=1;cw=0;ext=1;PORTB=smd=0x03;
-      +                          }
-  1752  0744  0832               	movf	_ccw,w
-  1753  0745  0433               	iorwf	_ccw+1,w
-  1754  0746  1D03               	btfss	3,2
-  1755  0747  2F49               	goto	u1031
-  1756  0748  2F4A               	goto	u1030
-  1757  0749                     u1031:
-  1758  0749  2F60               	goto	l1680
-  1759  074A                     u1030:
-  1760  074A                     l1670:
-  1761  074A  0860               	movf	dynam@ext,w
-  1762  074B  0461               	iorwf	dynam@ext+1,w
-  1763  074C  1D03               	btfss	3,2
-  1764  074D  2F4F               	goto	u1041
-  1765  074E  2F50               	goto	u1040
-  1766  074F                     u1041:
-  1767  074F  2F60               	goto	l1680
-  1768  0750                     u1040:
-  1769  0750                     l1672:
-  1770  0750  3001               	movlw	1
-  1771  0751  00B2               	movwf	_ccw
-  1772  0752  3000               	movlw	0
-  1773  0753  00B3               	movwf	_ccw+1
-  1774  0754                     l1674:
-  1775  0754  01FA               	clrf	_cw
-  1776  0755  01FB               	clrf	_cw+1
-  1777  0756                     l1676:
-  1778  0756  3001               	movlw	1
-  1779  0757  00E0               	movwf	dynam@ext
-  1780  0758  3000               	movlw	0
-  1781  0759  00E1               	movwf	dynam@ext+1
-  1782  075A                     l1678:
-  1783  075A  3003               	movlw	3
-  1784  075B  00DA               	movwf	dynam@smd
-  1785  075C  3000               	movlw	0
-  1786  075D  00DB               	movwf	dynam@smd+1
-  1787  075E  085A               	movf	dynam@smd,w
-  1788  075F  008D               	movwf	13	;volatile
-  1789  0760                     l1680:
-  1790                           
-  1791                           ;newmain.c: 238:                 if((ccw==1)&&(ext==0)){ccw=2;cw=3;ext=1;PORTB=smd=0x06;
-      +                          }
-  1792  0760  0332               	decf	_ccw,w
-  1793  0761  0433               	iorwf	_ccw+1,w
-  1794  0762  1D03               	btfss	3,2
-  1795  0763  2F65               	goto	u1051
-  1796  0764  2F66               	goto	u1050
-  1797  0765                     u1051:
-  1798  0765  2F7E               	goto	l1686
-  1799  0766                     u1050:
-  1800  0766                     l1682:
-  1801  0766  0860               	movf	dynam@ext,w
-  1802  0767  0461               	iorwf	dynam@ext+1,w
-  1803  0768  1D03               	btfss	3,2
-  1804  0769  2F6B               	goto	u1061
-  1805  076A  2F6C               	goto	u1060
-  1806  076B                     u1061:
-  1807  076B  2F7E               	goto	l1686
-  1808  076C                     u1060:
-  1809  076C                     l1684:
-  1810  076C  3002               	movlw	2
-  1811  076D  00B2               	movwf	_ccw
-  1812  076E  3000               	movlw	0
-  1813  076F  00B3               	movwf	_ccw+1
-  1814  0770  3003               	movlw	3
-  1815  0771  00FA               	movwf	_cw
-  1816  0772  3000               	movlw	0
-  1817  0773  00FB               	movwf	_cw+1
-  1818  0774  3001               	movlw	1
-  1819  0775  00E0               	movwf	dynam@ext
-  1820  0776  3000               	movlw	0
-  1821  0777  00E1               	movwf	dynam@ext+1
-  1822  0778  3006               	movlw	6
-  1823  0779  00DA               	movwf	dynam@smd
-  1824  077A  3000               	movlw	0
-  1825  077B  00DB               	movwf	dynam@smd+1
-  1826  077C  085A               	movf	dynam@smd,w
-  1827  077D  008D               	movwf	13	;volatile
-  1828  077E                     l1686:
-  1829                           
-  1830                           ;newmain.c: 239:                 if((ccw==2)&&(ext==0)){ccw=3;cw=2;ext=1;PORTB=smd=0x0C;
-      +                          }
-  1831  077E  3002               	movlw	2
-  1832  077F  0632               	xorwf	_ccw,w
-  1833  0780  0433               	iorwf	_ccw+1,w
-  1834  0781  1D03               	btfss	3,2
-  1835  0782  2F84               	goto	u1071
-  1836  0783  2F85               	goto	u1070
-  1837  0784                     u1071:
-  1838  0784  2F9D               	goto	l1692
-  1839  0785                     u1070:
-  1840  0785                     l1688:
-  1841  0785  0860               	movf	dynam@ext,w
-  1842  0786  0461               	iorwf	dynam@ext+1,w
-  1843  0787  1D03               	btfss	3,2
-  1844  0788  2F8A               	goto	u1081
-  1845  0789  2F8B               	goto	u1080
-  1846  078A                     u1081:
-  1847  078A  2F9D               	goto	l1692
-  1848  078B                     u1080:
-  1849  078B                     l1690:
-  1850  078B  3003               	movlw	3
-  1851  078C  00B2               	movwf	_ccw
-  1852  078D  3000               	movlw	0
-  1853  078E  00B3               	movwf	_ccw+1
-  1854  078F  3002               	movlw	2
-  1855  0790  00FA               	movwf	_cw
-  1856  0791  3000               	movlw	0
-  1857  0792  00FB               	movwf	_cw+1
-  1858  0793  3001               	movlw	1
-  1859  0794  00E0               	movwf	dynam@ext
-  1860  0795  3000               	movlw	0
-  1861  0796  00E1               	movwf	dynam@ext+1
-  1862  0797  300C               	movlw	12
-  1863  0798  00DA               	movwf	dynam@smd
-  1864  0799  3000               	movlw	0
-  1865  079A  00DB               	movwf	dynam@smd+1
-  1866  079B  085A               	movf	dynam@smd,w
-  1867  079C  008D               	movwf	13	;volatile
-  1868  079D                     l1692:
-  1869                           
-  1870                           ;newmain.c: 240:                 if((ccw==3)&&(ext==0)){ccw=0;cw=1;ext=1;PORTB=smd=0x09;
-      +                          }
-  1871  079D  3003               	movlw	3
-  1872  079E  0632               	xorwf	_ccw,w
-  1873  079F  0433               	iorwf	_ccw+1,w
-  1874  07A0  1D03               	btfss	3,2
-  1875  07A1  2FA3               	goto	u1091
-  1876  07A2  2FA4               	goto	u1090
-  1877  07A3                     u1091:
-  1878  07A3  2EB9               	goto	l1612
-  1879  07A4                     u1090:
-  1880  07A4                     l1694:
-  1881  07A4  0860               	movf	dynam@ext,w
-  1882  07A5  0461               	iorwf	dynam@ext+1,w
-  1883  07A6  1D03               	btfss	3,2
-  1884  07A7  2FA9               	goto	u1101
-  1885  07A8  2FAA               	goto	u1100
-  1886  07A9                     u1101:
-  1887  07A9  2EB9               	goto	l1612
-  1888  07AA                     u1100:
-  1889  07AA                     l1696:
-  1890  07AA  01B2               	clrf	_ccw
-  1891  07AB  01B3               	clrf	_ccw+1
-  1892  07AC                     l1698:
-  1893  07AC  3001               	movlw	1
-  1894  07AD  00FA               	movwf	_cw
-  1895  07AE  3000               	movlw	0
-  1896  07AF  00FB               	movwf	_cw+1
-  1897  07B0                     l1700:
-  1898  07B0                     l1702:
-  1899  07B0  3009               	movlw	9
-  1900  07B1  00DA               	movwf	dynam@smd
-  1901  07B2  3000               	movlw	0
-  1902  07B3  00DB               	movwf	dynam@smd+1
-  1903  07B4  085A               	movf	dynam@smd,w
-  1904  07B5  008D               	movwf	13	;volatile
-  1905  07B6  2EB9               	goto	l1612
-  1906  07B7                     l1710:
-  1907                           
-  1908                           ;newmain.c: 244:                 cw=ccw=0;
-  1909  07B7  01B2               	clrf	_ccw
-  1910  07B8  01B3               	clrf	_ccw+1
-  1911  07B9  01FA               	clrf	_cw
-  1912  07BA  01FB               	clrf	_cw+1
-  1913                           
-  1914                           ;newmain.c: 245:                 break;
-  1915  07BB  2FCC               	goto	l135
-  1916  07BC                     l1714:
-  1917                           
-  1918                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
-      +                          itches
-  1919                           ; Switch size 1, requested type "simple"
-  1920                           ; Number of cases is 1, Range of values is 0 to 0
-  1921                           ; switch strategies available:
-  1922                           ; Name         Instructions Cycles
-  1923                           ; simple_byte            4     3 (average)
-  1924                           ; direct_byte            8     6 (fixed)
-  1925                           ; jumptable            260     6 (fixed)
-  1926                           ;	Chosen strategy is simple_byte
-  1927  07BC  0875               	movf	dynam@smdata+1,w
-  1928  07BD  3A00               	xorlw	0	; case 0
-  1929  07BE  1903               	skipnz
-  1930  07BF  2FC1               	goto	l2180
-  1931  07C0  2FB7               	goto	l1710
-  1932  07C1                     l2180:
-  1933                           
-  1934                           ; Switch size 1, requested type "simple"
-  1935                           ; Number of cases is 3, Range of values is 0 to 2
-  1936                           ; switch strategies available:
-  1937                           ; Name         Instructions Cycles
-  1938                           ; simple_byte           10     6 (average)
-  1939                           ; direct_byte           12     6 (fixed)
-  1940                           ; jumptable            260     6 (fixed)
-  1941                           ;	Chosen strategy is simple_byte
-  1942  07C1  0874               	movf	dynam@smdata,w
-  1943  07C2  3A00               	xorlw	0	; case 0
-  1944  07C3  1903               	skipnz
-  1945  07C4  2EB8               	goto	l1608
-  1946  07C5  3A01               	xorlw	1	; case 1
-  1947  07C6  1903               	skipnz
-  1948  07C7  2EBD               	goto	l1618
-  1949  07C8  3A03               	xorlw	3	; case 2
-  1950  07C9  1903               	skipnz
-  1951  07CA  2F3A               	goto	l1664
-  1952  07CB  2FB7               	goto	l1710
-  1953  07CC                     l135:
-  1954  07CC  0008               	return
-  1955  07CD                     __end_of_dynam:
-  1956  007E                     btemp	set	126	;btemp
-  1957  007E                     wtemp0	set	126
-  1958                           
-  1959                           	psect	config
-  1960                           
-  1961                           ;Config register CONFIG1 @ 0x8007
-  1962                           ;	Oscillator Selection
-  1963                           ;	FOSC = INTOSC, INTOSC oscillator: I/O function on CLKIN pin
-  1964                           ;	Watchdog Timer Enable
-  1965                           ;	WDTE = OFF, WDT disabled
-  1966                           ;	Power-up Timer Enable
-  1967                           ;	PWRTE = OFF, PWRT disabled
-  1968                           ;	MCLR Pin Function Select
-  1969                           ;	MCLRE = ON, MCLR/VPP pin function is MCLR
-  1970                           ;	Flash Program Memory Code Protection
-  1971                           ;	CP = OFF, Program memory code protection is disabled
-  1972                           ;	Data Memory Code Protection
-  1973                           ;	CPD = OFF, Data memory code protection is disabled
-  1974                           ;	Brown-out Reset Enable
-  1975                           ;	BOREN = OFF, Brown-out Reset disabled
-  1976                           ;	Clock Out Enable
-  1977                           ;	CLKOUTEN = OFF, CLKOUT function is disabled. I/O or oscillator function on the CLKOUT 
-      +                          pin
-  1978                           ;	Internal/External Switchover
-  1979                           ;	IESO = OFF, Internal/External Switchover mode is disabled
-  1980                           ;	Fail-Safe Clock Monitor Enable
-  1981                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
-  1982  8007                     	org	32775
-  1983  8007  09E4               	dw	2532
+  1656                           ;newmain.c: 211:     RC5=0;RC6=1;
+  1657  04BE  128E               	bcf	14,5	;volatile
+  1658  04BF                     l1619:
+  1659  04BF  170E               	bsf	14,6	;volatile
+  1660  04C0                     l1621:
+  1661                           
+  1662                           ;newmain.c: 212:     if(tr==5){tm=4000;}
+  1663  04C0  3005               	movlw	5
+  1664  04C1  0676               	xorwf	dynam@tr,w
+  1665  04C2  0477               	iorwf	dynam@tr+1,w
+  1666  04C3  1D03               	btfss	3,2
+  1667  04C4  2CC6               	goto	u951
+  1668  04C5  2CC7               	goto	u950
+  1669  04C6                     u951:
+  1670  04C6  2CCC               	goto	l1625
+  1671  04C7                     u950:
+  1672  04C7                     l1623:
+  1673  04C7  30A0               	movlw	160
+  1674  04C8  00DC               	movwf	dynam@tm
+  1675  04C9  300F               	movlw	15
+  1676  04CA  00DD               	movwf	dynam@tm+1
+  1677  04CB  2CD0               	goto	l112
+  1678  04CC                     l1625:
+  1679  04CC  30D0               	movlw	208
+  1680  04CD  00DC               	movwf	dynam@tm
+  1681  04CE  3007               	movlw	7
+  1682  04CF  00DD               	movwf	dynam@tm+1
+  1683  04D0                     l112:
+  1684                           
+  1685                           ;newmain.c: 214:     for(j=tm;j>0;--j);
+  1686  04D0  085D               	movf	dynam@tm+1,w
+  1687  04D1  00DF               	movwf	dynam@j+1
+  1688  04D2  085C               	movf	dynam@tm,w
+  1689  04D3  00DE               	movwf	dynam@j
+  1690  04D4                     l1627:
+  1691  04D4  085E               	movf	dynam@j,w
+  1692  04D5  045F               	iorwf	dynam@j+1,w
+  1693  04D6  1D03               	btfss	3,2
+  1694  04D7  2CD9               	goto	u961
+  1695  04D8  2CDA               	goto	u960
+  1696  04D9                     u961:
+  1697  04D9  2CDB               	goto	l1631
+  1698  04DA                     u960:
+  1699  04DA  2CE0               	goto	l114
+  1700  04DB                     l1631:
+  1701  04DB  3001               	movlw	1
+  1702  04DC  02DE               	subwf	dynam@j,f
+  1703  04DD  3000               	movlw	0
+  1704  04DE  3BDF               	subwfb	dynam@j+1,f
+  1705  04DF  2CD4               	goto	l1627
+  1706  04E0                     l114:
+  1707                           
+  1708                           ;newmain.c: 215:     RC5=0;RC6=0;
+  1709  04E0  128E               	bcf	14,5	;volatile
+  1710  04E1  130E               	bcf	14,6	;volatile
+  1711  04E2                     l1635:
+  1712                           
+  1713                           ;newmain.c: 216:     PORTB=dig2data;
+  1714  04E2  0872               	movf	dynam@dig2data,w
+  1715  04E3  008D               	movwf	13	;volatile
+  1716  04E4                     l1637:
+  1717                           
+  1718                           ;newmain.c: 217:     RC6=0;RC5=1;
+  1719  04E4  130E               	bcf	14,6	;volatile
+  1720  04E5                     l1639:
+  1721  04E5  168E               	bsf	14,5	;volatile
+  1722  04E6                     l1641:
+  1723                           
+  1724                           ;newmain.c: 218:     if(tr==5){tm=4000;}
+  1725  04E6  3005               	movlw	5
+  1726  04E7  0676               	xorwf	dynam@tr,w
+  1727  04E8  0477               	iorwf	dynam@tr+1,w
+  1728  04E9  1D03               	btfss	3,2
+  1729  04EA  2CEC               	goto	u971
+  1730  04EB  2CED               	goto	u970
+  1731  04EC                     u971:
+  1732  04EC  2CF2               	goto	l1645
+  1733  04ED                     u970:
+  1734  04ED                     l1643:
+  1735  04ED  30A0               	movlw	160
+  1736  04EE  00DC               	movwf	dynam@tm
+  1737  04EF  300F               	movlw	15
+  1738  04F0  00DD               	movwf	dynam@tm+1
+  1739  04F1  2CF6               	goto	l116
+  1740  04F2                     l1645:
+  1741  04F2  30D0               	movlw	208
+  1742  04F3  00DC               	movwf	dynam@tm
+  1743  04F4  3007               	movlw	7
+  1744  04F5  00DD               	movwf	dynam@tm+1
+  1745  04F6                     l116:
+  1746                           
+  1747                           ;newmain.c: 220:     for(j=tm;j>0;--j);
+  1748  04F6  085D               	movf	dynam@tm+1,w
+  1749  04F7  00DF               	movwf	dynam@j+1
+  1750  04F8  085C               	movf	dynam@tm,w
+  1751  04F9  00DE               	movwf	dynam@j
+  1752  04FA                     l1647:
+  1753  04FA  085E               	movf	dynam@j,w
+  1754  04FB  045F               	iorwf	dynam@j+1,w
+  1755  04FC  1D03               	btfss	3,2
+  1756  04FD  2CFF               	goto	u981
+  1757  04FE  2D00               	goto	u980
+  1758  04FF                     u981:
+  1759  04FF  2D01               	goto	l1651
+  1760  0500                     u980:
+  1761  0500  2D06               	goto	l118
+  1762  0501                     l1651:
+  1763  0501  3001               	movlw	1
+  1764  0502  02DE               	subwf	dynam@j,f
+  1765  0503  3000               	movlw	0
+  1766  0504  3BDF               	subwfb	dynam@j+1,f
+  1767  0505  2CFA               	goto	l1647
+  1768  0506                     l118:
+  1769                           
+  1770                           ;newmain.c: 221:     RC5=0;RC6=0;
+  1771  0506  128E               	bcf	14,5	;volatile
+  1772  0507  130E               	bcf	14,6	;volatile
+  1773                           
+  1774                           ;newmain.c: 222:     switch(smdata){
+  1775  0508  2E0D               	goto	l1761
+  1776  0509                     l1655:
+  1777                           
+  1778                           ;newmain.c: 224:                 PORTB=0x00;smd=(0x01|0x02|0x04|0x08|0x10|0x20);
+  1779  0509  018D               	clrf	13	;volatile
+  1780  050A                     l1657:
+  1781  050A                     l1659:
+  1782                           
+  1783                           ;newmain.c: 225:                 RC7=0;RC7=1;RC7=0;
+  1784  050A  138E               	bcf	14,7	;volatile
+  1785  050B                     l1661:
+  1786  050B  178E               	bsf	14,7	;volatile
+  1787  050C                     l1663:
+  1788  050C  138E               	bcf	14,7	;volatile
+  1789                           
+  1790                           ;newmain.c: 226:                 break;
+  1791  050D  2E1D               	goto	l135
+  1792  050E                     l1665:
+  1793                           
+  1794                           ;newmain.c: 228:                 if(flg==1)cw=0;flg=0;
+  1795  050E  0334               	decf	_flg,w
+  1796  050F  0435               	iorwf	_flg+1,w
+  1797  0510  1D03               	btfss	3,2
+  1798  0511  2D13               	goto	u991
+  1799  0512  2D14               	goto	u990
+  1800  0513                     u991:
+  1801  0513  2D16               	goto	l123
+  1802  0514                     u990:
+  1803  0514                     l1667:
+  1804  0514  01FA               	clrf	_cw
+  1805  0515  01FB               	clrf	_cw+1
+  1806  0516                     l123:
+  1807  0516  01B4               	clrf	_flg
+  1808  0517  01B5               	clrf	_flg+1
+  1809  0518                     l1669:
+  1810                           
+  1811                           ;newmain.c: 229:                 if((cw==0)&&(ext==0)){cw=1;ccw=0;ext=1;PORTB=smd=0x09;}
+  1812  0518  087A               	movf	_cw,w
+  1813  0519  047B               	iorwf	_cw+1,w
+  1814  051A  1D03               	btfss	3,2
+  1815  051B  2D1D               	goto	u1001
+  1816  051C  2D1E               	goto	u1000
+  1817  051D                     u1001:
+  1818  051D  2D34               	goto	l1681
+  1819  051E                     u1000:
+  1820  051E                     l1671:
+  1821  051E  0860               	movf	dynam@ext,w
+  1822  051F  0461               	iorwf	dynam@ext+1,w
+  1823  0520  1D03               	btfss	3,2
+  1824  0521  2D23               	goto	u1011
+  1825  0522  2D24               	goto	u1010
+  1826  0523                     u1011:
+  1827  0523  2D34               	goto	l1681
+  1828  0524                     u1010:
+  1829  0524                     l1673:
+  1830  0524  3001               	movlw	1
+  1831  0525  00FA               	movwf	_cw
+  1832  0526  3000               	movlw	0
+  1833  0527  00FB               	movwf	_cw+1
+  1834  0528                     l1675:
+  1835  0528  01B2               	clrf	_ccw
+  1836  0529  01B3               	clrf	_ccw+1
+  1837  052A                     l1677:
+  1838  052A  3001               	movlw	1
+  1839  052B  00E0               	movwf	dynam@ext
+  1840  052C  3000               	movlw	0
+  1841  052D  00E1               	movwf	dynam@ext+1
+  1842  052E                     l1679:
+  1843  052E  3009               	movlw	9
+  1844  052F  00DA               	movwf	dynam@smd
+  1845  0530  3000               	movlw	0
+  1846  0531  00DB               	movwf	dynam@smd+1
+  1847  0532  085A               	movf	dynam@smd,w
+  1848  0533  008D               	movwf	13	;volatile
+  1849  0534                     l1681:
+  1850                           
+  1851                           ;newmain.c: 230:                 if((cw==1)&&(ext==0)){cw=2;ccw=3;ext=1;PORTB=smd=0x0C;}
+  1852  0534  037A               	decf	_cw,w
+  1853  0535  047B               	iorwf	_cw+1,w
+  1854  0536  1D03               	btfss	3,2
+  1855  0537  2D39               	goto	u1021
+  1856  0538  2D3A               	goto	u1020
+  1857  0539                     u1021:
+  1858  0539  2D52               	goto	l1687
+  1859  053A                     u1020:
+  1860  053A                     l1683:
+  1861  053A  0860               	movf	dynam@ext,w
+  1862  053B  0461               	iorwf	dynam@ext+1,w
+  1863  053C  1D03               	btfss	3,2
+  1864  053D  2D3F               	goto	u1031
+  1865  053E  2D40               	goto	u1030
+  1866  053F                     u1031:
+  1867  053F  2D52               	goto	l1687
+  1868  0540                     u1030:
+  1869  0540                     l1685:
+  1870  0540  3002               	movlw	2
+  1871  0541  00FA               	movwf	_cw
+  1872  0542  3000               	movlw	0
+  1873  0543  00FB               	movwf	_cw+1
+  1874  0544  3003               	movlw	3
+  1875  0545  00B2               	movwf	_ccw
+  1876  0546  3000               	movlw	0
+  1877  0547  00B3               	movwf	_ccw+1
+  1878  0548  3001               	movlw	1
+  1879  0549  00E0               	movwf	dynam@ext
+  1880  054A  3000               	movlw	0
+  1881  054B  00E1               	movwf	dynam@ext+1
+  1882  054C  300C               	movlw	12
+  1883  054D  00DA               	movwf	dynam@smd
+  1884  054E  3000               	movlw	0
+  1885  054F  00DB               	movwf	dynam@smd+1
+  1886  0550  085A               	movf	dynam@smd,w
+  1887  0551  008D               	movwf	13	;volatile
+  1888  0552                     l1687:
+  1889                           
+  1890                           ;newmain.c: 231:                 if((cw==2)&&(ext==0)){cw=3;ccw=2;ext=1;PORTB=smd=0x06;}
+  1891  0552  3002               	movlw	2
+  1892  0553  067A               	xorwf	_cw,w
+  1893  0554  047B               	iorwf	_cw+1,w
+  1894  0555  1D03               	btfss	3,2
+  1895  0556  2D58               	goto	u1041
+  1896  0557  2D59               	goto	u1040
+  1897  0558                     u1041:
+  1898  0558  2D71               	goto	l1693
+  1899  0559                     u1040:
+  1900  0559                     l1689:
+  1901  0559  0860               	movf	dynam@ext,w
+  1902  055A  0461               	iorwf	dynam@ext+1,w
+  1903  055B  1D03               	btfss	3,2
+  1904  055C  2D5E               	goto	u1051
+  1905  055D  2D5F               	goto	u1050
+  1906  055E                     u1051:
+  1907  055E  2D71               	goto	l1693
+  1908  055F                     u1050:
+  1909  055F                     l1691:
+  1910  055F  3003               	movlw	3
+  1911  0560  00FA               	movwf	_cw
+  1912  0561  3000               	movlw	0
+  1913  0562  00FB               	movwf	_cw+1
+  1914  0563  3002               	movlw	2
+  1915  0564  00B2               	movwf	_ccw
+  1916  0565  3000               	movlw	0
+  1917  0566  00B3               	movwf	_ccw+1
+  1918  0567  3001               	movlw	1
+  1919  0568  00E0               	movwf	dynam@ext
+  1920  0569  3000               	movlw	0
+  1921  056A  00E1               	movwf	dynam@ext+1
+  1922  056B  3006               	movlw	6
+  1923  056C  00DA               	movwf	dynam@smd
+  1924  056D  3000               	movlw	0
+  1925  056E  00DB               	movwf	dynam@smd+1
+  1926  056F  085A               	movf	dynam@smd,w
+  1927  0570  008D               	movwf	13	;volatile
+  1928  0571                     l1693:
+  1929                           
+  1930                           ;newmain.c: 232:                 if((cw==3)&&(ext==0)){cw=0;ccw=1;ext=1;PORTB=smd=0x03;}
+  1931  0571  3003               	movlw	3
+  1932  0572  067A               	xorwf	_cw,w
+  1933  0573  047B               	iorwf	_cw+1,w
+  1934  0574  1D03               	btfss	3,2
+  1935  0575  2D77               	goto	u1061
+  1936  0576  2D78               	goto	u1060
+  1937  0577                     u1061:
+  1938  0577  2D0A               	goto	l1659
+  1939  0578                     u1060:
+  1940  0578                     l1695:
+  1941  0578  0860               	movf	dynam@ext,w
+  1942  0579  0461               	iorwf	dynam@ext+1,w
+  1943  057A  1D03               	btfss	3,2
+  1944  057B  2D7D               	goto	u1071
+  1945  057C  2D7E               	goto	u1070
+  1946  057D                     u1071:
+  1947  057D  2D0A               	goto	l1659
+  1948  057E                     u1070:
+  1949  057E                     l1697:
+  1950  057E  01FA               	clrf	_cw
+  1951  057F  01FB               	clrf	_cw+1
+  1952  0580                     l1699:
+  1953  0580  3001               	movlw	1
+  1954  0581  00B2               	movwf	_ccw
+  1955  0582  3000               	movlw	0
+  1956  0583  00B3               	movwf	_ccw+1
+  1957  0584                     l1701:
+  1958  0584                     l1703:
+  1959  0584  3003               	movlw	3
+  1960  0585  00DA               	movwf	dynam@smd
+  1961  0586  3000               	movlw	0
+  1962  0587  00DB               	movwf	dynam@smd+1
+  1963  0588  085A               	movf	dynam@smd,w
+  1964  0589  008D               	movwf	13	;volatile
+  1965  058A  2D0A               	goto	l1659
+  1966  058B                     l1711:
+  1967                           
+  1968                           ;newmain.c: 236:                 if(flg==1)ccw=0;flg=0;
+  1969  058B  0334               	decf	_flg,w
+  1970  058C  0435               	iorwf	_flg+1,w
+  1971  058D  1D03               	btfss	3,2
+  1972  058E  2D90               	goto	u1081
+  1973  058F  2D91               	goto	u1080
+  1974  0590                     u1081:
+  1975  0590  2D93               	goto	l129
+  1976  0591                     u1080:
+  1977  0591                     l1713:
+  1978  0591  01B2               	clrf	_ccw
+  1979  0592  01B3               	clrf	_ccw+1
+  1980  0593                     l129:
+  1981  0593  01B4               	clrf	_flg
+  1982  0594  01B5               	clrf	_flg+1
+  1983  0595                     l1715:
   1984                           
-  1985                           ;Config register CONFIG2 @ 0x8008
-  1986                           ;	Flash Memory Self-Write Protection
-  1987                           ;	WRT = OFF, Write protection off
-  1988                           ;	Voltage Regulator Capacitor Enable
-  1989                           ;	VCAPEN = OFF, All VCAP pin functionality is disabled
-  1990                           ;	PLL Enable
-  1991                           ;	PLLEN = OFF, 4x PLL disabled
-  1992                           ;	Stack Overflow/Underflow Reset Enable
-  1993                           ;	STVREN = ON, Stack Overflow or Underflow will cause a Reset
-  1994                           ;	Brown-out Reset Voltage Selection
-  1995                           ;	BORV = LO, Brown-out Reset Voltage (Vbor), low trip point selected.
-  1996                           ;	Low-Voltage Programming Enable
-  1997                           ;	LVP = OFF, High-voltage on MCLR/VPP must be used for programming
-  1998  8008                     	org	32776
-  1999  8008  1EFF               	dw	7935
+  1985                           ;newmain.c: 237:                 if((ccw==0)&&(ext==0)){ccw=1;cw=0;ext=1;PORTB=smd=0x03;
+      +                          }
+  1986  0595  0832               	movf	_ccw,w
+  1987  0596  0433               	iorwf	_ccw+1,w
+  1988  0597  1D03               	btfss	3,2
+  1989  0598  2D9A               	goto	u1091
+  1990  0599  2D9B               	goto	u1090
+  1991  059A                     u1091:
+  1992  059A  2DB1               	goto	l1727
+  1993  059B                     u1090:
+  1994  059B                     l1717:
+  1995  059B  0860               	movf	dynam@ext,w
+  1996  059C  0461               	iorwf	dynam@ext+1,w
+  1997  059D  1D03               	btfss	3,2
+  1998  059E  2DA0               	goto	u1101
+  1999  059F  2DA1               	goto	u1100
+  2000  05A0                     u1101:
+  2001  05A0  2DB1               	goto	l1727
+  2002  05A1                     u1100:
+  2003  05A1                     l1719:
+  2004  05A1  3001               	movlw	1
+  2005  05A2  00B2               	movwf	_ccw
+  2006  05A3  3000               	movlw	0
+  2007  05A4  00B3               	movwf	_ccw+1
+  2008  05A5                     l1721:
+  2009  05A5  01FA               	clrf	_cw
+  2010  05A6  01FB               	clrf	_cw+1
+  2011  05A7                     l1723:
+  2012  05A7  3001               	movlw	1
+  2013  05A8  00E0               	movwf	dynam@ext
+  2014  05A9  3000               	movlw	0
+  2015  05AA  00E1               	movwf	dynam@ext+1
+  2016  05AB                     l1725:
+  2017  05AB  3003               	movlw	3
+  2018  05AC  00DA               	movwf	dynam@smd
+  2019  05AD  3000               	movlw	0
+  2020  05AE  00DB               	movwf	dynam@smd+1
+  2021  05AF  085A               	movf	dynam@smd,w
+  2022  05B0  008D               	movwf	13	;volatile
+  2023  05B1                     l1727:
+  2024                           
+  2025                           ;newmain.c: 238:                 if((ccw==1)&&(ext==0)){ccw=2;cw=3;ext=1;PORTB=smd=0x06;
+      +                          }
+  2026  05B1  0332               	decf	_ccw,w
+  2027  05B2  0433               	iorwf	_ccw+1,w
+  2028  05B3  1D03               	btfss	3,2
+  2029  05B4  2DB6               	goto	u1111
+  2030  05B5  2DB7               	goto	u1110
+  2031  05B6                     u1111:
+  2032  05B6  2DCF               	goto	l1733
+  2033  05B7                     u1110:
+  2034  05B7                     l1729:
+  2035  05B7  0860               	movf	dynam@ext,w
+  2036  05B8  0461               	iorwf	dynam@ext+1,w
+  2037  05B9  1D03               	btfss	3,2
+  2038  05BA  2DBC               	goto	u1121
+  2039  05BB  2DBD               	goto	u1120
+  2040  05BC                     u1121:
+  2041  05BC  2DCF               	goto	l1733
+  2042  05BD                     u1120:
+  2043  05BD                     l1731:
+  2044  05BD  3002               	movlw	2
+  2045  05BE  00B2               	movwf	_ccw
+  2046  05BF  3000               	movlw	0
+  2047  05C0  00B3               	movwf	_ccw+1
+  2048  05C1  3003               	movlw	3
+  2049  05C2  00FA               	movwf	_cw
+  2050  05C3  3000               	movlw	0
+  2051  05C4  00FB               	movwf	_cw+1
+  2052  05C5  3001               	movlw	1
+  2053  05C6  00E0               	movwf	dynam@ext
+  2054  05C7  3000               	movlw	0
+  2055  05C8  00E1               	movwf	dynam@ext+1
+  2056  05C9  3006               	movlw	6
+  2057  05CA  00DA               	movwf	dynam@smd
+  2058  05CB  3000               	movlw	0
+  2059  05CC  00DB               	movwf	dynam@smd+1
+  2060  05CD  085A               	movf	dynam@smd,w
+  2061  05CE  008D               	movwf	13	;volatile
+  2062  05CF                     l1733:
+  2063                           
+  2064                           ;newmain.c: 239:                 if((ccw==2)&&(ext==0)){ccw=3;cw=2;ext=1;PORTB=smd=0x0C;
+      +                          }
+  2065  05CF  3002               	movlw	2
+  2066  05D0  0632               	xorwf	_ccw,w
+  2067  05D1  0433               	iorwf	_ccw+1,w
+  2068  05D2  1D03               	btfss	3,2
+  2069  05D3  2DD5               	goto	u1131
+  2070  05D4  2DD6               	goto	u1130
+  2071  05D5                     u1131:
+  2072  05D5  2DEE               	goto	l1739
+  2073  05D6                     u1130:
+  2074  05D6                     l1735:
+  2075  05D6  0860               	movf	dynam@ext,w
+  2076  05D7  0461               	iorwf	dynam@ext+1,w
+  2077  05D8  1D03               	btfss	3,2
+  2078  05D9  2DDB               	goto	u1141
+  2079  05DA  2DDC               	goto	u1140
+  2080  05DB                     u1141:
+  2081  05DB  2DEE               	goto	l1739
+  2082  05DC                     u1140:
+  2083  05DC                     l1737:
+  2084  05DC  3003               	movlw	3
+  2085  05DD  00B2               	movwf	_ccw
+  2086  05DE  3000               	movlw	0
+  2087  05DF  00B3               	movwf	_ccw+1
+  2088  05E0  3002               	movlw	2
+  2089  05E1  00FA               	movwf	_cw
+  2090  05E2  3000               	movlw	0
+  2091  05E3  00FB               	movwf	_cw+1
+  2092  05E4  3001               	movlw	1
+  2093  05E5  00E0               	movwf	dynam@ext
+  2094  05E6  3000               	movlw	0
+  2095  05E7  00E1               	movwf	dynam@ext+1
+  2096  05E8  300C               	movlw	12
+  2097  05E9  00DA               	movwf	dynam@smd
+  2098  05EA  3000               	movlw	0
+  2099  05EB  00DB               	movwf	dynam@smd+1
+  2100  05EC  085A               	movf	dynam@smd,w
+  2101  05ED  008D               	movwf	13	;volatile
+  2102  05EE                     l1739:
+  2103                           
+  2104                           ;newmain.c: 240:                 if((ccw==3)&&(ext==0)){ccw=0;cw=1;ext=1;PORTB=smd=0x09;
+      +                          }
+  2105  05EE  3003               	movlw	3
+  2106  05EF  0632               	xorwf	_ccw,w
+  2107  05F0  0433               	iorwf	_ccw+1,w
+  2108  05F1  1D03               	btfss	3,2
+  2109  05F2  2DF4               	goto	u1151
+  2110  05F3  2DF5               	goto	u1150
+  2111  05F4                     u1151:
+  2112  05F4  2D0A               	goto	l1659
+  2113  05F5                     u1150:
+  2114  05F5                     l1741:
+  2115  05F5  0860               	movf	dynam@ext,w
+  2116  05F6  0461               	iorwf	dynam@ext+1,w
+  2117  05F7  1D03               	btfss	3,2
+  2118  05F8  2DFA               	goto	u1161
+  2119  05F9  2DFB               	goto	u1160
+  2120  05FA                     u1161:
+  2121  05FA  2D0A               	goto	l1659
+  2122  05FB                     u1160:
+  2123  05FB                     l1743:
+  2124  05FB  01B2               	clrf	_ccw
+  2125  05FC  01B3               	clrf	_ccw+1
+  2126  05FD                     l1745:
+  2127  05FD  3001               	movlw	1
+  2128  05FE  00FA               	movwf	_cw
+  2129  05FF  3000               	movlw	0
+  2130  0600  00FB               	movwf	_cw+1
+  2131  0601                     l1747:
+  2132  0601                     l1749:
+  2133  0601  3009               	movlw	9
+  2134  0602  00DA               	movwf	dynam@smd
+  2135  0603  3000               	movlw	0
+  2136  0604  00DB               	movwf	dynam@smd+1
+  2137  0605  085A               	movf	dynam@smd,w
+  2138  0606  008D               	movwf	13	;volatile
+  2139  0607  2D0A               	goto	l1659
+  2140  0608                     l1757:
+  2141                           
+  2142                           ;newmain.c: 244:                 cw=ccw=0;
+  2143  0608  01B2               	clrf	_ccw
+  2144  0609  01B3               	clrf	_ccw+1
+  2145  060A  01FA               	clrf	_cw
+  2146  060B  01FB               	clrf	_cw+1
+  2147                           
+  2148                           ;newmain.c: 245:                 break;
+  2149  060C  2E1D               	goto	l135
+  2150  060D                     l1761:
+  2151                           
+  2152                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  2153                           ; Switch size 1, requested type "simple"
+  2154                           ; Number of cases is 1, Range of values is 0 to 0
+  2155                           ; switch strategies available:
+  2156                           ; Name         Instructions Cycles
+  2157                           ; simple_byte            4     3 (average)
+  2158                           ; direct_byte            8     6 (fixed)
+  2159                           ; jumptable            260     6 (fixed)
+  2160                           ;	Chosen strategy is simple_byte
+  2161  060D  0875               	movf	dynam@smdata+1,w
+  2162  060E  3A00               	xorlw	0	; case 0
+  2163  060F  1903               	skipnz
+  2164  0610  2E12               	goto	l2267
+  2165  0611  2E08               	goto	l1757
+  2166  0612                     l2267:
+  2167                           
+  2168                           ; Switch size 1, requested type "simple"
+  2169                           ; Number of cases is 3, Range of values is 0 to 2
+  2170                           ; switch strategies available:
+  2171                           ; Name         Instructions Cycles
+  2172                           ; simple_byte           10     6 (average)
+  2173                           ; direct_byte           12     6 (fixed)
+  2174                           ; jumptable            260     6 (fixed)
+  2175                           ;	Chosen strategy is simple_byte
+  2176  0612  0874               	movf	dynam@smdata,w
+  2177  0613  3A00               	xorlw	0	; case 0
+  2178  0614  1903               	skipnz
+  2179  0615  2D09               	goto	l1655
+  2180  0616  3A01               	xorlw	1	; case 1
+  2181  0617  1903               	skipnz
+  2182  0618  2D0E               	goto	l1665
+  2183  0619  3A03               	xorlw	3	; case 2
+  2184  061A  1903               	skipnz
+  2185  061B  2D8B               	goto	l1711
+  2186  061C  2E08               	goto	l1757
+  2187  061D                     l135:
+  2188  061D  0008               	return
+  2189  061E                     __end_of_dynam:
+  2190  007E                     btemp	set	126	;btemp
+  2191  007E                     wtemp0	set	126
+  2192                           
+  2193                           	psect	config
+  2194                           
+  2195                           ;Config register CONFIG1 @ 0x8007
+  2196                           ;	Oscillator Selection
+  2197                           ;	FOSC = INTOSC, INTOSC oscillator: I/O function on CLKIN pin
+  2198                           ;	Watchdog Timer Enable
+  2199                           ;	WDTE = OFF, WDT disabled
+  2200                           ;	Power-up Timer Enable
+  2201                           ;	PWRTE = OFF, PWRT disabled
+  2202                           ;	MCLR Pin Function Select
+  2203                           ;	MCLRE = ON, MCLR/VPP pin function is MCLR
+  2204                           ;	Flash Program Memory Code Protection
+  2205                           ;	CP = OFF, Program memory code protection is disabled
+  2206                           ;	Data Memory Code Protection
+  2207                           ;	CPD = OFF, Data memory code protection is disabled
+  2208                           ;	Brown-out Reset Enable
+  2209                           ;	BOREN = OFF, Brown-out Reset disabled
+  2210                           ;	Clock Out Enable
+  2211                           ;	CLKOUTEN = OFF, CLKOUT function is disabled. I/O or oscillator function on the CLKOUT 
+      +                          pin
+  2212                           ;	Internal/External Switchover
+  2213                           ;	IESO = OFF, Internal/External Switchover mode is disabled
+  2214                           ;	Fail-Safe Clock Monitor Enable
+  2215                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
+  2216  8007                     	org	32775
+  2217  8007  09E4               	dw	2532
+  2218                           
+  2219                           ;Config register CONFIG2 @ 0x8008
+  2220                           ;	Flash Memory Self-Write Protection
+  2221                           ;	WRT = OFF, Write protection off
+  2222                           ;	Voltage Regulator Capacitor Enable
+  2223                           ;	VCAPEN = OFF, All VCAP pin functionality is disabled
+  2224                           ;	PLL Enable
+  2225                           ;	PLLEN = OFF, 4x PLL disabled
+  2226                           ;	Stack Overflow/Underflow Reset Enable
+  2227                           ;	STVREN = ON, Stack Overflow or Underflow will cause a Reset
+  2228                           ;	Brown-out Reset Voltage Selection
+  2229                           ;	BORV = LO, Brown-out Reset Voltage (Vbor), low trip point selected.
+  2230                           ;	Low-Voltage Programming Enable
+  2231                           ;	LVP = OFF, High-voltage on MCLR/VPP must be used for programming
+  2232  8008                     	org	32776
+  2233  8008  1EFF               	dw	7935
 
 Data Sizes:
     Strings     0
@@ -2129,7 +2363,7 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                12    12      0    2580
+ (0) _main                                                12    12      0    4100
                                               8 COMMON     2     2      0
                                               8 BANK0     10    10      0
                               _dynam
@@ -2140,7 +2374,7 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (1) _portinit                                             0     0      0       0
  ---------------------------------------------------------------------------------
- (1) _dynam                                               16     8      8    2575
+ (1) _dynam                                               16     8      8    4095
                                               0 COMMON     8     0      8
                                               0 BANK0      8     8      0
  ---------------------------------------------------------------------------------
@@ -2258,78 +2492,89 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Tue Feb 02 17:29:21 2021
+Symbol Table                                                                                   Tue Feb 02 17:52:20 2021
 
-                     l95 04C6                       _cw 007A                      l112 067F  
-                    l114 068F                      l123 06C5                      l116 06A5  
-                    l108 04B3                      l118 06B5                      l135 07CC  
-                    l129 0742                      l251 056C                      l253 0579  
-                    l254 058A                      l258 058E                      _RA0 0060  
-                    _RA1 0061                      _RA2 0062                      _RC0 0070  
-                    _RC1 0071                      _RC2 0072                      _RC5 0075  
-                    _RC6 0076                      _RC7 0077                      u900 0689  
-                    u901 0688                      u910 069C                      u911 069B  
-                    u920 06AF                      u921 06AE                      u930 06C3  
-                    u931 06C2                      u940 06CD                      u941 06CC  
-                    u950 06D3                      u951 06D2                      u960 06E9  
-                    u961 06E8                      u970 06EF                      u890 0676  
-                    u971 06EE                      u891 0675                      u980 0708  
-                    u981 0707                      u990 070E                      u991 070D  
-                    _ccw 0032                      _flg 0034                      wreg 0009  
-                   l2000 0566                     l2010 056C                     l2002 056C  
-                   l2020 0597                     l2012 0571                     l2004 056C  
-                   l2030 05CA                     l2022 05A9                     l2014 0575  
-                   l2006 056C                     l2040 05F6                     l2032 05D5  
-                   l2024 05B4                     l2008 056C                     l2018 0593  
-                   l2060 063E                     l2052 061D                     l2044 05FC  
-                   l2036 05DB                     l2028 05BA                     l2054 062D  
-                   l2046 060C                     l2038 05EB                     l2062 064F  
-                   l1600 06A9                     l2056 0638                     l2048 0617  
-                   l1610 06B9                     l1530 04C1                     l2180 07C1  
-                   l1700 07B0                     l1620 06C3                     l1612 06B9  
-                   l1604 06B0                     l1532 04C4                     l1524 04B4  
-                   l1710 07B7                     l1702 07B0                     l1630 06D9  
-                   l1622 06C7                     l1614 06BA                     l1526 04B7  
-                   l1640 0701                     l1632 06DD                     l1624 06CD  
-                   l1616 06BB                     l1608 06B8                     l1528 04BA  
-                   l1560 04B1                     l1650 072D                     l1642 0708  
-                   l1626 06D3                     l1634 06E3                     l1618 06BD  
-                   l1714 07BC                     l1570 066D                     l1562 04B2  
-                   l1554 04AB                     l1652 072F                     l1644 070E  
-                   l1636 06E9                     l1628 06D7                     l1580 0683  
-                   l1572 066E                     l1564 0663                     l1556 04AF  
-                   l1670 074A                     l1654 0733                     l1646 0720  
-                   l1638 06EF                     l1590 0693                     l1574 066F  
-                   l1566 066A                     l1558 04B0                     l1672 0750  
-                   l1680 0760                     l1664 073A                     l1656 0733  
-                   l1648 0727                     l1592 0694                     l1584 068A  
-                   l1576 0676                     l1568 066B                     l1690 078B  
-                   l1682 0766                     l1674 0754                     l1666 0740  
-                   l1594 0695                     l1578 067B                     l1692 079D  
-                   l1684 076C                     l1676 0756                     l1668 0744  
-                   l1596 069C                     l1588 0691                     l1694 07A4  
-                   l1686 077E                     l1678 075A                     l1598 06A1  
-                   l1696 07AA                     l1688 0785                     l1698 07AC  
-                   l1998 0563                     u1000 0727                     u1001 0726  
-                   u1010 072D                     u1011 072C                     u1100 07AA  
-                   u1020 0740                     u1101 07A9                     u1021 073F  
-                   u1030 074A                     u1031 0749                     u1040 0750  
-                   u1041 074F                     u1050 0766                     u1051 0765  
-                   u1060 076C                     u1061 076B                     u1070 0785  
-                   u1071 0784                     u1080 078B                     u1081 078A  
-                   u1090 07A4                     u1091 07A3                     u1510 0571  
-                   u1511 0570                     u1600 05B9                     u1520 0575  
-                   u1601 05B8                     u1521 0574                     u1610 05DA  
-                   u1530 0579                     u1611 05D9                     u1531 0578  
-                   u1620 05FB                     u1540 0580                     u1621 05FA  
-                   u1541 057D                     u1630 061C                     u1550 0588  
-                   u1631 061B                     u1551 0585                     u1640 063D  
-                   u1641 063C                     u1570 058E                     u1554 0582  
-                   u1571 058D                     u1580 0593                     u1564 058A  
-                   u1581 0592                     u1590 0597                     u1591 0596  
-                   u1907 05F0                     u1917 0611                     u1927 0632  
-                   u1887 05AE                     u1897 05CF                     _atai 002C  
-                   _main 0563                     _num0 00C0                     _kisu 003E  
+                     l95 0417                       _cw 007A                      l112 04D0  
+                    l114 04E0                      l123 0516                      l116 04F6  
+                    l108 0404                      l118 0506                      l135 061D  
+                    l129 0593                      l251 0627                      l253 0634  
+                    l254 0645                      l258 0649                      l259 070A  
+                    _RA0 0060                      _RA1 0061                      _RA2 0062  
+                    _RC0 0070                      _RC1 0071                      _RC2 0072  
+                    _RC5 0075                      _RC6 0076                      _RC7 0077  
+                    u950 04C7                      u951 04C6                      u960 04DA  
+                    u961 04D9                      u970 04ED                      u971 04EC  
+                    u980 0500                      u981 04FF                      u990 0514  
+                    u991 0513                      _ccw 0032                      _flg 0034  
+                    wreg 0009                     l2101 06E8                     l2111 0720  
+                   l2103 06F3                     l2121 074E                     l2113 072C  
+                   l2107 06F9                     l2051 0627                     l2141 0798  
+                   l2133 0776                     l2125 0754                     l2117 0732  
+                   l2109 070E                     l2061 0630                     l2053 0627  
+                   l2045 061E                     l2143 07A8                     l2135 0786  
+                   l2127 0764                     l2119 0742                     l2071 066F  
+                   l2055 0627                     l2047 0621                     l1601 03FC  
+                   l2145 07B4                     l2137 0792                     l2129 0770  
+                   l2065 064E                     l2057 0627                     l2049 0627  
+                   l1611 04B4                     l1603 0400                     l2091 06B7  
+                   l2083 0696                     l2075 0675                     l2067 0652  
+                   l2059 062C                     l1701 0584                     l1621 04C0  
+                   l1613 04BB                     l1605 0401                     l2149 07BA  
+                   l2093 06C7                     l2085 06A6                     l2077 0685  
+                   l2069 0664                     l1711 058B                     l1703 0584  
+                   l1631 04DB                     l1623 04C7                     l1615 04BC  
+                   l1607 0402                     l2095 06D2                     l2087 06B1  
+                   l2079 0690                     l1721 05A5                     l1713 0591  
+                   l1641 04E6                     l1625 04CC                     l1617 04BE  
+                   l1609 0403                     l2267 0612                     l1731 05BD  
+                   l1723 05A7                     l1715 0595                     l1651 0501  
+                   l1643 04ED                     l1635 04E2                     l1627 04D4  
+                   l1619 04BF                     l1571 0405                     l2099 06D8  
+                   l1741 05F5                     l1733 05CF                     l1725 05AB  
+                   l1717 059B                     l1661 050B                     l1645 04F2  
+                   l1637 04E4                     l1573 0408                     l1743 05FB  
+                   l1735 05D6                     l1719 05A1                     l1727 05B1  
+                   l1671 051E                     l1663 050C                     l1655 0509  
+                   l1647 04FA                     l1639 04E5                     l1575 040B  
+                   l1745 05FD                     l1737 05DC                     l1729 05B7  
+                   l1673 0524                     l1681 0534                     l1665 050E  
+                   l1657 050A                     l1761 060D                     l1577 0412  
+                   l1747 0601                     l1739 05EE                     l1691 055F  
+                   l1683 053A                     l1675 0528                     l1667 0514  
+                   l1659 050A                     l1579 0415                     l1757 0608  
+                   l1749 0601                     l1693 0571                     l1685 0540  
+                   l1677 052A                     l1669 0518                     l1695 0578  
+                   l1687 0552                     l1679 052E                     l1697 057E  
+                   l1689 0559                     l1699 0580                     u1000 051E  
+                   u1001 051D                     u1010 0524                     u1011 0523  
+                   u1100 05A1                     u1020 053A                     u1101 05A0  
+                   u1021 0539                     u1110 05B7                     u1030 0540  
+                   u1111 05B6                     u1031 053F                     u1120 05BD  
+                   u1040 0559                     u1121 05BC                     u1041 0558  
+                   u1130 05D6                     u1050 055F                     u1131 05D5  
+                   u1051 055E                     u1140 05DC                     u1060 0578  
+                   u1141 05DB                     u1061 0577                     u1150 05F5  
+                   u1070 057E                     u1151 05F4                     u1071 057D  
+                   u2007 0669                     u1160 05FB                     u1080 0591  
+                   u1161 05FA                     u1081 0590                     u2017 068A  
+                   u1090 059B                     u1091 059A                     u2027 06AB  
+                   u2037 06CC                     u2047 06ED                     u1600 063B  
+                   u2057 0725                     u1601 0638                     u1610 0643  
+                   u2067 0747                     u1611 0640                     u1700 06F8  
+                   u2077 0769                     u1701 06F7                     u1710 070E  
+                   u1630 0649                     u1614 063D                     u2087 078B  
+                   u1711 070D                     u1631 0648                     u1720 0731  
+                   u1640 064E                     u1624 0645                     u2097 07AD  
+                   u1721 0730                     u1641 064D                     u1730 0753  
+                   u1650 0652                     u1570 062C                     u1731 0752  
+                   u1651 0651                     u1571 062B                     u1740 0775  
+                   u1660 0674                     u1580 0630                     u1741 0774  
+                   u1661 0673                     u1581 062F                     u1750 0797  
+                   u1670 0695                     u1590 0634                     u1751 0796  
+                   u1671 0694                     u1591 0633                     u1760 07B9  
+                   u1680 06B6                     u1761 07B8                     u1681 06B5  
+                   u1690 06D7                     u1691 06D6                     _atai 002C  
+                   _main 061E                     _num0 00C0                     _kisu 003E  
                    _moja 00E0                     _samf 0120                     _mojf 00D4  
                    _mojh 0056                     _moji 0140                     _mojn 0052  
                    _samp 00A0                     _gusu 0048                     fsr0h 0005  
@@ -2338,25 +2583,25 @@ Symbol Table                                                                    
                   ?_main 0070                    _PORTA 000C                    _PORTB 000D  
                   _PORTC 000E                    _TRISA 008C                    _TRISB 008D  
                   _TRISC 008E                    _code1 0022                    _atai1 002E  
-                  _count 002A                    _dynam 0663                    _fugou 0020  
+                  _count 002A                    _dynam 04B4                    _fugou 0020  
                   status 0003                    wtemp0 007E          __initialization 07CD  
-           __end_of_main 0663                   ??_main 0078                   ?_dynam 0070  
+           __end_of_main 07CD                   ??_main 0078                   ?_dynam 0070  
                  _ANSELA 018C                   _ANSELB 018D                   _OSCCON 0099  
             dynam@smdata 0074                   _code10 0024                   _atai10 0030  
-                 _flag_P 0036                   _flag_R 0038                   _zenoff 04AB  
-                 dynam@j 005E         __end_of_portinit 04C7  __end_of__initialization 07FD  
-         __pcstackCOMMON 0070             __pidataBANK0 04C7             __pidataBANK1 0517  
-           __pidataBANK2 04E3            __end_of_dynam 07CD                  ??_dynam 0078  
-             __pbssBANK0 0020               __pmaintext 0563                  ?_zenoff 0070  
-              ?_portinit 0070                  _code100 0026                  __ptext1 04AB  
-                __ptext2 04B4                  __ptext3 0663          __size_of_zenoff 0009  
-                clrloop0 04A0     end_of_initialization 07FD                  dynam@tm 005C  
-                dynam@tr 0076                  init_ram 04A5                  initloop 04A6  
-             ??_portinit 0070           __end_of_zenoff 04B4      start_initialization 07CD  
+                 _flag_P 0036                   _flag_R 0038                   _zenoff 03FC  
+                 dynam@j 005E         __end_of_portinit 0418  __end_of__initialization 07FD  
+         __pcstackCOMMON 0070             __pidataBANK0 0418             __pidataBANK1 0468  
+           __pidataBANK2 0434            __end_of_dynam 061E                  ??_dynam 0078  
+             __pbssBANK0 0020               __pmaintext 061E                  ?_zenoff 0070  
+              ?_portinit 0070                  _code100 0026                  __ptext1 03FC  
+                __ptext2 0405                  __ptext3 04B4          __size_of_zenoff 0009  
+                clrloop0 03F1     end_of_initialization 07FD                  dynam@tm 005C  
+                dynam@tr 0076                  init_ram 03F6                  initloop 03F7  
+             ??_portinit 0070           __end_of_zenoff 0405      start_initialization 07CD  
             __pdataBANK0 003E              __pdataBANK1 00A0              __pdataBANK2 0120  
                ??_zenoff 0070              __pbssCOMMON 007A                ___latbits 0003  
           __pcstackBANK0 005A        __size_of_portinit 0013           __size_of_dynam 016A  
-          dynam@dig1data 0070            dynam@dig2data 0072                clear_ram0 049F  
+          dynam@dig1data 0070            dynam@dig2data 0072                clear_ram0 03F0  
                _code1000 0028                 _flag_sw1 003C                 _flag_sw2 003A  
-               _flag_sw3 007C            __size_of_main 0100                 _portinit 04B4  
+               _flag_sw3 007C            __size_of_main 01AF                 _portinit 0405  
                dynam@ext 0060                 dynam@smd 005A  

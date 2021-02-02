@@ -2122,19 +2122,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 507 ]
 {
 "503
-[; ;newmain.c: 503:             dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
+[; ;newmain.c: 503:             if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 516  ]
+{
+"505
+[; ;newmain.c: 505:                 dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
 [e ( _dynam (4 , , , -> | | | | -> 2 `i -> 4 `i -> 8 `i -> 16 `i -> 64 `i `us -> | | -> 4 `i -> 16 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
-"504
-[; ;newmain.c: 504:         }
+"507
+[; ;newmain.c: 507:             }else{
+}
+[e $U 517  ]
+[e :U 516 ]
+{
+"508
+[; ;newmain.c: 508:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"509
+[; ;newmain.c: 509:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 518  ]
+{
+"510
+[; ;newmain.c: 510:                     continue;
+[e $U 504  ]
+"511
+[; ;newmain.c: 511:                 }
+}
+[e :U 518 ]
+"512
+[; ;newmain.c: 512:                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20|0x40),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"514
+[; ;newmain.c: 514:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"515
+[; ;newmain.c: 515:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 519  ]
+{
+"516
+[; ;newmain.c: 516:                     continue;
+[e $U 504  ]
+"517
+[; ;newmain.c: 517:                 }
+}
+[e :U 519 ]
+"518
+[; ;newmain.c: 518:                 dynam(0,(0x20|0x10|0x08|0x04|0x01|0x40),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | | -> 32 `i -> 16 `i -> 8 `i -> 4 `i -> 1 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"520
+[; ;newmain.c: 520:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"521
+[; ;newmain.c: 521:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 520  ]
+{
+"522
+[; ;newmain.c: 522:                     continue;
+[e $U 504  ]
+"523
+[; ;newmain.c: 523:                 }
+}
+[e :U 520 ]
+"524
+[; ;newmain.c: 524:                 dynam(0,(0x02|0x04|0x20|0x40),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | -> 2 `i -> 4 `i -> 32 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"526
+[; ;newmain.c: 526:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"527
+[; ;newmain.c: 527:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 521  ]
+{
+"528
+[; ;newmain.c: 528:                     continue;
+[e $U 504  ]
+"529
+[; ;newmain.c: 529:                 }
+}
+[e :U 521 ]
+"530
+[; ;newmain.c: 530:                 dynam(0,(0x01|0x02|0x08|0x40|0x10),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | -> 1 `i -> 2 `i -> 8 `i -> 64 `i -> 16 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"532
+[; ;newmain.c: 532:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"533
+[; ;newmain.c: 533:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 522  ]
+{
+"534
+[; ;newmain.c: 534:                     continue;
+[e $U 504  ]
+"535
+[; ;newmain.c: 535:                 }
+}
+[e :U 522 ]
+"536
+[; ;newmain.c: 536:                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i -> 16 `i -> 32 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"537
+[; ;newmain.c: 537:             }
+}
+[e :U 517 ]
+"539
+[; ;newmain.c: 539:         }
 }
 [e :U 515 ]
-"505
-[; ;newmain.c: 505:     }
+"540
+[; ;newmain.c: 540:     }
 }
 [e :U 504 ]
 [e $U 505  ]
 [e :U 506 ]
-"506
-[; ;newmain.c: 506: }
+"541
+[; ;newmain.c: 541: }
 [e :UE 496 ]
 }

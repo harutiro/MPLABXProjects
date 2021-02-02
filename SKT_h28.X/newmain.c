@@ -454,16 +454,23 @@ void main(void)
     LEDR=LEDG=LEDB=OFF;
 
 
+    //最初の起動ロック
     while(1){
         if(SW1 == UP){
             break;
         }
     }
+    //メインの動き
     while(1){
+        //SW1アップの時
         if(SW1==UP){
+            //SW２オフ
             if(SW2==DN){
                 dynam(SEGU,SEGP,0,0);
+
+            //SW２オン    
             }else{
+                
 
                 __delay_ms(500);
                 if(SW2 == DN){
@@ -499,8 +506,46 @@ void main(void)
             
 
         }
+        //1ダウンの時
         else{
-            dynam(SEGD,SEGN,0,0);
+            //SW２ダウン
+            if(SW2 == DN){
+
+                dynam(SEGD,SEGN,0,0);
+
+            //SW２アップ
+            }else{
+                __delay_ms(1000);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG8,0,0);
+                
+                __delay_ms(1000);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG6,0,0);
+
+                __delay_ms(1000);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG4,0,0);
+
+                __delay_ms(1000);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG2,0,0);
+
+                __delay_ms(1000);
+                if(SW2 == DN){
+                    continue;
+                }
+                dynam(0,SEG0,0,0);
+            }
+            
         }
     }
 }

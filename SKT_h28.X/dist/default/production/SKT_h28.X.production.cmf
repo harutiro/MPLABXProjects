@@ -11,27 +11,27 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\harut\AppData\Local\Temp\sf9k.o
+$C:\Users\harut\AppData\Local\Temp\sgjc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
 $dist/default/production\SKT_h28.X.production.o
 cinit CODE 0 7CD 7CD 33 2
-text1 CODE 0 4AB 4AB 9 2
-text2 CODE 0 4B4 4B4 13 2
-text3 CODE 0 663 663 16A 2
-maintext CODE 0 563 563 100 2
+text1 CODE 0 3FC 3FC 9 2
+text2 CODE 0 405 405 13 2
+text3 CODE 0 4B4 4B4 16A 2
+maintext CODE 0 61E 61E 1AF 2
 cstackCOMMON COMMON 1 70 70 A 1
 cstackBANK0 BANK0 1 5A 5A 8 1
-inittext CODE 0 4A5 4A5 6 2
+inittext CODE 0 3F6 3F6 6 2
 bssBANK0 BANK0 1 20 20 1E 1
-idataBANK0 CODE 0 4C7 4C7 1C 2
-idataBANK1 CODE 0 517 517 4C 2
-idataBANK2 CODE 0 4E3 4E3 34 2
+idataBANK0 CODE 0 418 418 1C 2
+idataBANK1 CODE 0 468 468 4C 2
+idataBANK2 CODE 0 434 434 34 2
 dataBANK0 BANK0 1 3E 3E 1C 1
 dataBANK1 BANK1 1 A0 A0 4C 1
 dataBANK2 BANK2 1 120 120 34 1
-clrtext CODE 0 49F 49F 6 2
+clrtext CODE 0 3F0 3F0 6 2
 bssCOMMON COMMON 1 7A 7A 4 1
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
@@ -63,9 +63,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-49E 2
+CONST 4-3EF 2
 CONST 800-3FFF 2
-ENTRY 4-49E 2
+ENTRY 4-3EF 2
 ENTRY 800-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -91,7 +91,7 @@ SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 20D4-23EF 1
-CODE 4-49E 2
+CODE 4-3EF 2
 CODE 800-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -108,9 +108,9 @@ BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
-STRCODE 4-49E 2
+STRCODE 4-3EF 2
 STRCODE 800-3FFF 2
-STRING 4-49E 2
+STRING 4-3EF 2
 STRING 800-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -126,148 +126,166 @@ STRING 800-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SKT_h28.X.production.o
-7CD cinit CODE >1110:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7CD cinit CODE >1113:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7CD cinit CODE >1252:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7CE cinit CODE >1253:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7CF cinit CODE >1254:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D0 cinit CODE >1255:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D1 cinit CODE >1256:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D2 cinit CODE >1257:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D3 cinit CODE >1258:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D4 cinit CODE >1259:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D5 cinit CODE >1260:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D6 cinit CODE >1261:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7D9 cinit CODE >1265:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7DA cinit CODE >1266:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7DB cinit CODE >1267:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7DC cinit CODE >1268:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7DD cinit CODE >1269:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7DE cinit CODE >1270:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7DF cinit CODE >1271:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E0 cinit CODE >1272:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E1 cinit CODE >1273:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E2 cinit CODE >1274:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E5 cinit CODE >1278:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E6 cinit CODE >1279:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E7 cinit CODE >1280:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E8 cinit CODE >1281:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7E9 cinit CODE >1282:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7EA cinit CODE >1283:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7EB cinit CODE >1284:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7EC cinit CODE >1285:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7ED cinit CODE >1286:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7EE cinit CODE >1287:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F1 cinit CODE >1304:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F2 cinit CODE >1305:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F3 cinit CODE >1306:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F4 cinit CODE >1307:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F5 cinit CODE >1311:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F6 cinit CODE >1312:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F7 cinit CODE >1313:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F8 cinit CODE >1314:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7F9 cinit CODE >1315:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7FA cinit CODE >1316:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7FD cinit CODE >1322:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7FD cinit CODE >1324:C:\Users\harut\AppData\Local\Temp\sf9k.s
-7FE cinit CODE >1325:C:\Users\harut\AppData\Local\Temp\sf9k.s
-663 text3 CODE >205:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-663 text3 CODE >207:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-666 text3 CODE >208:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-66A text3 CODE >209:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-66B text3 CODE >210:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-66D text3 CODE >211:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-66F text3 CODE >212:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-67B text3 CODE >213:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-67F text3 CODE >214:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-68F text3 CODE >215:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-691 text3 CODE >216:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-693 text3 CODE >217:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-695 text3 CODE >218:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6A1 text3 CODE >219:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6A5 text3 CODE >220:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6B5 text3 CODE >221:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6B7 text3 CODE >222:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6B8 text3 CODE >224:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6B9 text3 CODE >225:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6BC text3 CODE >226:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6BD text3 CODE >228:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6C7 text3 CODE >229:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-6E3 text3 CODE >230:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-701 text3 CODE >231:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-720 text3 CODE >232:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-73A text3 CODE >236:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-744 text3 CODE >237:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-760 text3 CODE >238:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-77E text3 CODE >239:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-79D text3 CODE >240:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-7B7 text3 CODE >244:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-7BB text3 CODE >245:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-7BC text3 CODE >246:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-7CC text3 CODE >247:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4B4 text2 CODE >160:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4B4 text2 CODE >163:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4B6 text2 CODE >164:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4B7 text2 CODE >166:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4BA text2 CODE >167:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4BD text2 CODE >168:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4BF text2 CODE >169:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4C1 text2 CODE >170:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4C4 text2 CODE >171:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4C6 text2 CODE >172:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4AB text1 CODE >194:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4AB text1 CODE >196:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4AD text1 CODE >197:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4AE text1 CODE >198:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4AF text1 CODE >199:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4B0 text1 CODE >200:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-4B3 text1 CODE >201:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-563 maintext CODE >439:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-563 maintext CODE >442:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-566 maintext CODE >444:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-569 maintext CODE >446:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-56C maintext CODE >448:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-56C maintext CODE >451:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-579 maintext CODE >454:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-58A maintext CODE >457:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-58A maintext CODE >458:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-58E maintext CODE >462:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-58E maintext CODE >463:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-593 maintext CODE >464:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-597 maintext CODE >465:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5A8 maintext CODE >466:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5A9 maintext CODE >468:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5B4 maintext CODE >469:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5BA maintext CODE >472:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5CA maintext CODE >474:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5D5 maintext CODE >475:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5DB maintext CODE >478:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5EB maintext CODE >480:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5F6 maintext CODE >481:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-5FC maintext CODE >484:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-60C maintext CODE >486:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-617 maintext CODE >487:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-61D maintext CODE >490:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-62D maintext CODE >492:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-638 maintext CODE >493:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-63E maintext CODE >496:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-64F maintext CODE >503:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
-49F clrtext CODE >1293:C:\Users\harut\AppData\Local\Temp\sf9k.s
-49F clrtext CODE >1294:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A0 clrtext CODE >1295:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A0 clrtext CODE >1296:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A1 clrtext CODE >1297:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A2 clrtext CODE >1298:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A3 clrtext CODE >1299:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A4 clrtext CODE >1300:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A5 inittext CODE >1241:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A5 inittext CODE >1242:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A6 inittext CODE >1243:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A6 inittext CODE >1244:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A7 inittext CODE >1245:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A8 inittext CODE >1246:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4A9 inittext CODE >1247:C:\Users\harut\AppData\Local\Temp\sf9k.s
-4AA inittext CODE >1248:C:\Users\harut\AppData\Local\Temp\sf9k.s
+7CD cinit CODE >1110:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7CD cinit CODE >1113:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7CD cinit CODE >1252:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7CE cinit CODE >1253:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7CF cinit CODE >1254:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D0 cinit CODE >1255:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D1 cinit CODE >1256:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D2 cinit CODE >1257:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D3 cinit CODE >1258:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D4 cinit CODE >1259:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D5 cinit CODE >1260:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D6 cinit CODE >1261:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7D9 cinit CODE >1265:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7DA cinit CODE >1266:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7DB cinit CODE >1267:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7DC cinit CODE >1268:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7DD cinit CODE >1269:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7DE cinit CODE >1270:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7DF cinit CODE >1271:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E0 cinit CODE >1272:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E1 cinit CODE >1273:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E2 cinit CODE >1274:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E5 cinit CODE >1278:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E6 cinit CODE >1279:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E7 cinit CODE >1280:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E8 cinit CODE >1281:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7E9 cinit CODE >1282:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7EA cinit CODE >1283:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7EB cinit CODE >1284:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7EC cinit CODE >1285:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7ED cinit CODE >1286:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7EE cinit CODE >1287:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F1 cinit CODE >1304:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F2 cinit CODE >1305:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F3 cinit CODE >1306:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F4 cinit CODE >1307:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F5 cinit CODE >1311:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F6 cinit CODE >1312:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F7 cinit CODE >1313:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F8 cinit CODE >1314:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7F9 cinit CODE >1315:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7FA cinit CODE >1316:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7FD cinit CODE >1322:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7FD cinit CODE >1324:C:\Users\harut\AppData\Local\Temp\sgjc.s
+7FE cinit CODE >1325:C:\Users\harut\AppData\Local\Temp\sgjc.s
+4B4 text3 CODE >205:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4B4 text3 CODE >207:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4B7 text3 CODE >208:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4BB text3 CODE >209:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4BC text3 CODE >210:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4BE text3 CODE >211:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4C0 text3 CODE >212:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4CC text3 CODE >213:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4D0 text3 CODE >214:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4E0 text3 CODE >215:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4E2 text3 CODE >216:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4E4 text3 CODE >217:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4E6 text3 CODE >218:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4F2 text3 CODE >219:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+4F6 text3 CODE >220:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+506 text3 CODE >221:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+508 text3 CODE >222:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+509 text3 CODE >224:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+50A text3 CODE >225:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+50D text3 CODE >226:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+50E text3 CODE >228:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+518 text3 CODE >229:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+534 text3 CODE >230:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+552 text3 CODE >231:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+571 text3 CODE >232:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+58B text3 CODE >236:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+595 text3 CODE >237:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+5B1 text3 CODE >238:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+5CF text3 CODE >239:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+5EE text3 CODE >240:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+608 text3 CODE >244:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+60C text3 CODE >245:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+60D text3 CODE >246:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+61D text3 CODE >247:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+405 text2 CODE >160:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+405 text2 CODE >163:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+407 text2 CODE >164:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+408 text2 CODE >166:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+40B text2 CODE >167:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+40E text2 CODE >168:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+410 text2 CODE >169:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+412 text2 CODE >170:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+415 text2 CODE >171:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+417 text2 CODE >172:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+3FC text1 CODE >194:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+3FC text1 CODE >196:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+3FE text1 CODE >197:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+3FF text1 CODE >198:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+400 text1 CODE >199:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+401 text1 CODE >200:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+404 text1 CODE >201:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+61E maintext CODE >439:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+61E maintext CODE >442:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+621 maintext CODE >444:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+624 maintext CODE >446:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+627 maintext CODE >448:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+627 maintext CODE >451:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+634 maintext CODE >454:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+645 maintext CODE >457:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+645 maintext CODE >458:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+649 maintext CODE >462:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+649 maintext CODE >463:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+64E maintext CODE >464:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+652 maintext CODE >465:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+663 maintext CODE >466:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+664 maintext CODE >468:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+66F maintext CODE >469:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+675 maintext CODE >472:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+685 maintext CODE >474:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+690 maintext CODE >475:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+696 maintext CODE >478:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6A6 maintext CODE >480:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6B1 maintext CODE >481:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6B7 maintext CODE >484:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6C7 maintext CODE >486:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6D2 maintext CODE >487:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6D8 maintext CODE >490:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6E8 maintext CODE >492:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6F3 maintext CODE >493:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+6F9 maintext CODE >496:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+70A maintext CODE >502:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+70A maintext CODE >503:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+70E maintext CODE >505:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+71F maintext CODE >507:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+720 maintext CODE >508:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+72C maintext CODE >509:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+732 maintext CODE >512:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+742 maintext CODE >514:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+74E maintext CODE >515:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+754 maintext CODE >518:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+764 maintext CODE >520:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+770 maintext CODE >521:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+776 maintext CODE >524:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+786 maintext CODE >526:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+792 maintext CODE >527:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+798 maintext CODE >530:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+7A8 maintext CODE >532:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+7B4 maintext CODE >533:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+7BA maintext CODE >536:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
+3F0 clrtext CODE >1293:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F0 clrtext CODE >1294:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F1 clrtext CODE >1295:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F1 clrtext CODE >1296:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F2 clrtext CODE >1297:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F3 clrtext CODE >1298:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F4 clrtext CODE >1299:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F5 clrtext CODE >1300:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F6 inittext CODE >1241:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F6 inittext CODE >1242:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F7 inittext CODE >1243:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F7 inittext CODE >1244:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F8 inittext CODE >1245:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3F9 inittext CODE >1246:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3FA inittext CODE >1247:C:\Users\harut\AppData\Local\Temp\sgjc.s
+3FB inittext CODE >1248:C:\Users\harut\AppData\Local\Temp\sgjc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -289,19 +307,19 @@ __Hspace_1 154 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
-__end_of_portinit 98E 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
+__end_of_portinit 830 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
 __HidataBANK2 0 0 ABS 0 idataBANK2 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _cw 7A 0 COMMON 1 bssCOMMON dist/default/production\SKT_h28.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sf9k.o
+___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sgjc.o
 _atai 2C 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
-_main AC6 0 CODE 0 maintext dist/default/production\SKT_h28.X.production.o
+_main C3C 0 CODE 0 maintext dist/default/production\SKT_h28.X.production.o
 _samp A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_h28.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
-start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\sf9k.o
+start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\sgjc.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
@@ -310,12 +328,12 @@ __LidataBANK2 0 0 ABS 0 idataBANK2 -
 __Hpowerup 0 0 CODE 0 powerup -
 dynam@ext 60 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28.X.production.o
 dynam@smd 5A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sf9k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sf9k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sf9k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sf9k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sf9k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sf9k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgjc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgjc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgjc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgjc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgjc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgjc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -326,15 +344,15 @@ _ANSELA 18C 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 dynam@j 5E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sf9k.o
-___stacklo 20D4 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sf9k.o
+___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sgjc.o
+___stacklo 20D4 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sgjc.o
 __size_of_dynam 0 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 dynam@smdata 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28.X.production.o
 start_initialization F9A 0 CODE 0 cinit dist/default/production\SKT_h28.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
-clear_ram0 93E 0 CODE 0 clrtext dist/default/production\SKT_h28.X.production.o
+clear_ram0 7E0 0 CODE 0 clrtext dist/default/production\SKT_h28.X.production.o
 __pcstackBANK0 5A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sf9k.o
+___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sgjc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -429,7 +447,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram 94A 0 CODE 0 inittext dist/default/production\SKT_h28.X.production.o
+init_ram 7EC 0 CODE 0 inittext dist/default/production\SKT_h28.X.production.o
 __Linittext 0 0 ABS 0 inittext -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -445,7 +463,7 @@ __Hsfr7 0 0 ABS 0 sfr7 -
 __Hsfr8 0 0 ABS 0 sfr8 -
 __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
-__end_of_zenoff 968 0 CODE 0 text1 dist/default/production\SKT_h28.X.production.o
+__end_of_zenoff 80A 0 CODE 0 text1 dist/default/production\SKT_h28.X.production.o
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
 __Linit 4 0 CODE 0 init -
@@ -482,7 +500,7 @@ _code10 24 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 _flag_P 36 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 _flag_R 38 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\sf9k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\sgjc.o
 __pdataBANK0 3E 0 BANK0 1 dataBANK0 dist/default/production\SKT_h28.X.production.o
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_h28.X.production.o
 __pdataBANK2 120 0 BANK2 1 dataBANK2 dist/default/production\SKT_h28.X.production.o
@@ -509,7 +527,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext AC6 0 CODE 0 maintext dist/default/production\SKT_h28.X.production.o
+__pmaintext C3C 0 CODE 0 maintext dist/default/production\SKT_h28.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -524,31 +542,31 @@ __pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\SKT_h28.X.productio
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_zenoff 956 0 CODE 0 text1 dist/default/production\SKT_h28.X.production.o
+_zenoff 7F8 0 CODE 0 text1 dist/default/production\SKT_h28.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\SKT_h28.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 956 0 CODE 0 text1 dist/default/production\SKT_h28.X.production.o
-__ptext2 968 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
-__ptext3 CC6 0 CODE 0 text3 dist/default/production\SKT_h28.X.production.o
+__ptext1 7F8 0 CODE 0 text1 dist/default/production\SKT_h28.X.production.o
+__ptext2 80A 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
+__ptext3 968 0 CODE 0 text3 dist/default/production\SKT_h28.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __size_of_zenoff 0 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\SKT_h28.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 98E 0 CODE 0 idataBANK0 dist/default/production\SKT_h28.X.production.o
-__pidataBANK1 A2E 0 CODE 0 idataBANK1 dist/default/production\SKT_h28.X.production.o
-__pidataBANK2 9C6 0 CODE 0 idataBANK2 dist/default/production\SKT_h28.X.production.o
+__pidataBANK0 830 0 CODE 0 idataBANK0 dist/default/production\SKT_h28.X.production.o
+__pidataBANK1 8D0 0 CODE 0 idataBANK1 dist/default/production\SKT_h28.X.production.o
+__pidataBANK2 868 0 CODE 0 idataBANK2 dist/default/production\SKT_h28.X.production.o
 _code1000 28 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __size_of_portinit 0 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main CC6 0 CODE 0 maintext dist/default/production\SKT_h28.X.production.o
-__end_of_dynam F9A 0 CODE 0 text3 dist/default/production\SKT_h28.X.production.o
+__end_of_main F9A 0 CODE 0 maintext dist/default/production\SKT_h28.X.production.o
+__end_of_dynam C3C 0 CODE 0 text3 dist/default/production\SKT_h28.X.production.o
 _PORTA C 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 _PORTB D 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
 _PORTC E 0 ABS 0 - dist/default/production\SKT_h28.X.production.o
@@ -560,7 +578,7 @@ __Lram 0 0 ABS 0 ram -
 _atai1 2E 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 _code1 22 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 _count 2A 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
-_dynam CC6 0 CODE 0 text3 dist/default/production\SKT_h28.X.production.o
+_dynam 968 0 CODE 0 text3 dist/default/production\SKT_h28.X.production.o
 _fugou 20 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 dynam@dig1data 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28.X.production.o
 dynam@dig2data 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28.X.production.o
@@ -570,7 +588,7 @@ __HdataBANK2 0 0 ABS 0 dataBANK2 -
 __initialization F9A 0 CODE 0 cinit dist/default/production\SKT_h28.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
 _code100 26 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28.X.production.o
-_portinit 968 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
+_portinit 80A 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -597,20 +615,20 @@ _portinit 968 0 CODE 0 text2 dist/default/production\SKT_h28.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7CD F9A 33 2
-text1 0 4AB 956 9 2
-text2 0 4B4 968 13 2
-text3 0 663 CC6 16A 2
-maintext 0 563 AC6 100 2
+text1 0 3FC 7F8 9 2
+text2 0 405 80A 13 2
+text3 0 4B4 968 16A 2
+maintext 0 61E C3C 1AF 2
 cstackCOMMON 1 70 70 E 1
-inittext 0 4A5 94A 6 2
+inittext 0 3F6 7EC 6 2
 reset_vec 0 0 0 4 2
 bssBANK0 1 20 20 42 1
-idataBANK0 0 4C7 98E 1C 2
-idataBANK1 0 517 A2E 4C 2
-idataBANK2 0 4E3 9C6 34 2
+idataBANK0 0 418 830 1C 2
+idataBANK1 0 468 8D0 4C 2
+idataBANK2 0 434 868 34 2
 dataBANK1 1 A0 A0 4C 1
 dataBANK2 1 120 120 34 1
-clrtext 0 49F 93E 6 2
+clrtext 0 3F0 7E0 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
