@@ -27,45 +27,50 @@
 
 //プリプロセッサー
 //Ｉ／Ｏポート関係
-#define DATA    PORTB
-#define SW1     RA0
-#define SW2     RA1
-#define SW3     RA2
-#define DIGIT1  RC5
-#define DIGIT2  RC6
-#define CLK     RC7
-#define LEDR    RC0
-#define LEDB    RC1
-#define LEDG    RC2
-#define BUZZ    RC2
+//＝＝＝＝＝＝＝＝＝＝＝＝直接データの読み書きができるところ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#define DATA    PORTB     //セグメントの表示情報格納
+#define SW1     RA0       //スイッチ１の情報格納
+#define SW2     RA1       //スイッチ２の情報格納
+#define SW3     RA2       //スイッチ３の情報格納
+#define DIGIT1  RC5       //セグメント左の表示モード
+#define DIGIT2  RC6       //セグメント右の動作モード
+#define CLK     RC7       //？？？
+#define LEDR    RC0       //カラーLED「レッド」管理
+#define LEDB    RC1       //カラーLED「ブルー」管理
+#define LEDG    RC2       //カラーLED「グリーン」管理
+#define BUZZ    RC2       //ブザー管理
 
-//表示、スイッチ操作定義
-#define UP      0
+
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝表示、スイッチ操作定義＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#define UP      0      //SW1、SW2の動作
 #define DN      1
-#define PUSH    0
+#define PUSH    0      //SW3の動作
 #define NPUSH   1
-#define R       0
-#define P       1
-#define PR      2
-#define ON      0
-#define OFF     1
-#define REN     2
-#define SW3R    ((flag_sw3==1)&&(flag_R==1))
-#define SW3P    ((flag_sw3==0)&&(flag_P==1))
-#define SW3PR   ((flag_sw3==0)&&(flag_P==1))
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝SW3のフラグ関係の定義＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#define R       0      //押されているとき
+#define P       1      //押されていないとき
+#define PR      2      //連打されてるとき
 
-//セグメントａ to ｇ表示定義
-#define SEG_    0x00
-#define SEGa    0x01
-#define SEGb    0x02
-#define SEGc    0x04
-#define SEGd    0x08
-#define SEGe    0x10
-#define SEGf    0x20
-#define SEGg    0x40
+#define ON      0      //押されているとき
+#define OFF     1      //押されていないとき
+#define REN     2      //連打されてるとき
+
+#define SW3R    ((flag_sw3==1)&&(flag_R==1))     //押されているとき
+#define SW3P    ((flag_sw3==0)&&(flag_P==1))     //押されていないとき
+#define SW3PR   ((flag_sw3==0)&&(flag_P==1))     //連打されてるとき
+
+//＝＝＝＝＝＝＝＝＝＝＝＝＝セグメントａ to ｇ表示定義＝＝＝＝＝＝＝＝＝＝＝＝＝
+#define SEG_    0x00          //セグの表示     __________
+#define SEGa    0x01          //             |    a     |
+#define SEGb    0x02          //           f |          | b
+#define SEGc    0x04          //             |__________|
+#define SEGd    0x08          //             |    g     |
+#define SEGe    0x10          //           e |          | c
+#define SEGf    0x20          //             |__________|
+#define SEGg    0x40          //                  d
 #define SEGdp   0x80
 
-//７セグメント数字・文字表示定義
+//＝＝＝＝＝＝＝＝＝＝＝＝＝７セグメント数字・文字表示定義＝＝＝＝＝＝＝＝＝＝＝
 #define SEG0    (SEGa|SEGb|SEGc|SEGd|SEGe|SEGf)
 #define SEG1    (SEGb|SEGc)
 #define SEG2    (SEGa|SEGb|SEGd|SEGg|SEGe)
@@ -89,27 +94,27 @@
 #define SEGP    (SEGa|SEGb|SEGe|SEGf|SEGg)
 #define SEGDP   (SEGdp)
 
-//ステッピングモータ励磁定義
-#define SM_AB   0x03
-#define SM_BC   0x06
-#define SM_CD   0x0C
-#define SM_DA   0x09
-#define SM_OFF  0x00
-#define NO      0
-#define T2      1
-#define H2      2
-#define H       1
-#define L       5
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ステッピングモータ励磁定義＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#define SM_AB   0x03    //磁石の位置を指定
+#define SM_BC   0x06    //磁石の位置を指定
+#define SM_CD   0x0C    //磁石の位置を指定
+#define SM_DA   0x09    //磁石の位置を指定
+#define SM_OFF  0x00    //磁石の位置を指定
+#define NO      0　　　　//回転停止
+#define T2      1　　　　//時計回り
+#define H2      2　　　　//反時計回り
+#define H       1　　　　//動作早い
+#define L       5　　　　//動作遅い
 
-//計算処理用 8,10,16進数
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝計算処理用 8,10,16進数＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 #define OCT     8
 #define DEC    10
 #define HEX    16
 
-//動作周波数（16MHz）
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝動作周波数（16MHz）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 #define _XTAL_FREQ 16000000
 
-//遅延時間（delay）
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝遅延時間（delay）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 #define __delay(x) _delay((unsigned long)((x)))
 #define __delay_us(x) _delay((unsigned long)((x)*(_XTAL_FREQ/4000000UL)))
 #define __delay_ms(x) _delay((unsigned long)((x)*(_XTAL_FREQ/4000UL)))
@@ -131,12 +136,13 @@ void buzzon();
 void buzzof();
 
 //グローバル変数定義
-unsigned short flag_sw1,flag_sw2,flag_sw3;
-unsigned short flag_R,flag_P;
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝関数のデータが書き込まれる場所＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+unsigned short flag_sw1,flag_sw2,flag_sw3; //スイッチの動作が書かれる
+unsigned short flag_R,flag_P;              //スイッチが押されてるどうかが判断される
 unsigned short flg;
 unsigned short cw=0,ccw=0;
 int atai10,atai1,atai;
-int count;
+int count;　　　　　　　　　　　　　　　　　　//動作のカウントが入る。
 
 //グローバル変数定義（ｎ進変換用）
 unsigned short code1000,code100,code10,code1,fugou;
@@ -145,7 +151,7 @@ unsigned short code1000,code100,code10,code1,fugou;
 unsigned short samp[]={SEG0,SEG1,SEG2,SEG3,SEG4,SEG5,SEG6,SEG7,SEG8,SEG9,SEGA,SEGB,SEGC,SEGD,SEGE,SEGF};
 unsigned short samf[]={SEGF,SEGE,SEGD,SEGC,SEGB,SEGA,SEG9,SEG8,SEG7,SEG6,SEG5,SEG4,SEG3,SEG2,SEG1,SEG0};
 
-//配列データ
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝配列データ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 unsigned short num0[]={SEG0,SEG1,SEG2,SEG3,SEG4,SEG5,SEG6,SEG7,SEG8,SEG9};  //  num0-9  配列 数字表示
 unsigned short gusu[]={SEG0,SEG2,SEG4,SEG6,SEG8};                           //  gusu    配列 偶数表示
 unsigned short kisu[]={SEG1,SEG3,SEG5,SEG7,SEG9};                           //  kisu    配列 奇数表示
@@ -182,7 +188,7 @@ void wait(unsigned short wt)
 }
 
 
-//タイミング調整関数
+//タイミング調整関数 + SEG表示
 //wait(調整時間);
 void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
 {
@@ -219,18 +225,21 @@ void dynam(unsigned short dig1data,unsigned short dig2data,unsigned short smdata
     unsigned int j=0,tm=0;
     unsigned short ext=0,smd=0;     //切替変数初期化
     CLK=0;
+
     DATA=dig1data;                  //表示データ格納
     DIGIT1=0;DIGIT2=1;              //セグメント表示制御
     if(tr==L){tm=4000;}             //輝度調整
     else{tm=2000;}
     for(j=tm;j>0;--j); 
     DIGIT1=0;DIGIT2=0;              //７セグメント非表示
+
     DATA=dig2data;                  //表示データ格納
     DIGIT2=0;DIGIT1=1;              //セグメント表示制御
     if(tr==L){tm=4000;}             //輝度調整
     else{tm=2000;}
     for(j=tm;j>0;--j); 
     DIGIT1=0;DIGIT2=0;              //７セグメント非表示
+
     switch(smdata){                 //ＳＭ相励磁制御
             case NO:                //無励磁で停止
                 DATA=SM_OFF;smd=SEG0;
@@ -446,9 +455,9 @@ unsigned short n,t;
     }
 }   
 
+//ｄｎ終了動作
 void clear(void){
-    dynam(SEGD,SEGN,0,0);
-    __delay_ms(1000);
+    waitSEG(SEGD,SEGN,1000);
     while(1){
         if(SW1 == UP){
             break;
