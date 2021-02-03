@@ -494,36 +494,16 @@ void main(void)
             //SW‚QƒIƒ“    
             }else{
                 
+                for(i = 1;i <= 9;i += 2){
 
-                __delay_ms(500);
-                if(SW2 == DN){
-                    continue;
+                    waitSEG(num0[i],0,500);
+
+                    if(SW2 == DN){
+                        continue;
+                    }
+
                 }
-                dynam(0,SEG1,0,0);
                 
-                __delay_ms(500);
-                if(SW2 == DN){
-                    continue;
-                }
-                dynam(0,SEG3,0,0);
-
-                __delay_ms(500);
-                if(SW2 == DN){
-                    continue;
-                }
-                dynam(0,SEG5,0,0);
-
-                __delay_ms(500);
-                if(SW2 == DN){
-                    continue;
-                }
-                dynam(0,SEG7,0,0);
-
-                __delay_ms(500);
-                if(SW2 == DN){
-                    continue;
-                }
-                dynam(0,SEG9,0,0);
                 
                 
             }
@@ -540,42 +520,18 @@ void main(void)
 
             //SW‚QƒAƒbƒv
             }else{
-                __delay_ms(1000);
-                if(SW2 == DN){
-                    clear();
-                    continue;
+
+                for(i = 8;i >= 0;i -= 2){
+                    
+                    waitSEG(num0[i],0,1000);
+
+                    if(SW2 == DN){
+                        clear();
+                        continue;
+                    }    
                 }
-                dynam(0,SEG8,0,0);
+
                 
-                __delay_ms(1000);
-                if(SW2 == DN){
-                    clear();
-                    continue;
-                }
-                dynam(0,SEG6,0,0);
-
-                __delay_ms(1000);
-                if(SW2 == DN){
-                    clear();
-                    continue;
-                }
-                dynam(0,SEG4,0,0);
-
-                __delay_ms(1000);
-                if(SW2 == DN){
-                    clear();
-                    continue;
-                }
-                dynam(0,SEG2,0,0);
-
-                __delay_ms(1000);
-                if(SW2 == DN){
-                    clear();
-                    continue;
-                }
-                dynam(0,SEG0,0,0);
-
-                waitSEG(SEG2,SEG7,1000);
             }
             
         }

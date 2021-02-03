@@ -2162,54 +2162,124 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 525  ]
 [e :U 524 ]
 {
+"523
+[; ;newmain.c: 523:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
 "524
-[; ;newmain.c: 524:                 for(i = 8;i >= 0;i -= 2){
+[; ;newmain.c: 524:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 526  ]
 {
-[e = _i -> 8 `i ]
-[e $ >= _i -> 0 `i 526  ]
-[e $U 527  ]
-[e :U 526 ]
-{
-"526
-[; ;newmain.c: 526:                     waitSEG(num0[i],0,1000);
-[e ( _waitSEG (3 , , *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 1000 `i `us ]
-"528
-[; ;newmain.c: 528:                     if(RA1 == 1){
-[e $ ! == -> _RA1 `i -> 1 `i 529  ]
-{
-"529
-[; ;newmain.c: 529:                         clear();
+"525
+[; ;newmain.c: 525:                     clear();
 [e ( _clear ..  ]
-"530
-[; ;newmain.c: 530:                         continue;
-[e $U 528  ]
-"531
-[; ;newmain.c: 531:                     }
+"526
+[; ;newmain.c: 526:                     continue;
+[e $U 513  ]
+"527
+[; ;newmain.c: 527:                 }
 }
-[e :U 529 ]
+[e :U 526 ]
+"528
+[; ;newmain.c: 528:                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20|0x40),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"530
+[; ;newmain.c: 530:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"531
+[; ;newmain.c: 531:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 527  ]
+{
 "532
-[; ;newmain.c: 532:                 }
+[; ;newmain.c: 532:                     clear();
+[e ( _clear ..  ]
+"533
+[; ;newmain.c: 533:                     continue;
+[e $U 513  ]
+"534
+[; ;newmain.c: 534:                 }
+}
+[e :U 527 ]
+"535
+[; ;newmain.c: 535:                 dynam(0,(0x20|0x10|0x08|0x04|0x01|0x40),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | | -> 32 `i -> 16 `i -> 8 `i -> 4 `i -> 1 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"537
+[; ;newmain.c: 537:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"538
+[; ;newmain.c: 538:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 528  ]
+{
+"539
+[; ;newmain.c: 539:                     clear();
+[e ( _clear ..  ]
+"540
+[; ;newmain.c: 540:                     continue;
+[e $U 513  ]
+"541
+[; ;newmain.c: 541:                 }
 }
 [e :U 528 ]
-[e =- _i -> 2 `i ]
-[e $ >= _i -> 0 `i 526  ]
-[e :U 527 ]
+"542
+[; ;newmain.c: 542:                 dynam(0,(0x02|0x04|0x20|0x40),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | -> 2 `i -> 4 `i -> 32 `i -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"544
+[; ;newmain.c: 544:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"545
+[; ;newmain.c: 545:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 529  ]
+{
+"546
+[; ;newmain.c: 546:                     clear();
+[e ( _clear ..  ]
+"547
+[; ;newmain.c: 547:                     continue;
+[e $U 513  ]
+"548
+[; ;newmain.c: 548:                 }
 }
-"535
-[; ;newmain.c: 535:             }
+[e :U 529 ]
+"549
+[; ;newmain.c: 549:                 dynam(0,(0x01|0x02|0x08|0x40|0x10),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | -> 1 `i -> 2 `i -> 8 `i -> 64 `i -> 16 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"551
+[; ;newmain.c: 551:                 _delay((unsigned long)((1000)*(16000000/4000UL)));
+[e ( __delay (1 * -> -> -> 1000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
+"552
+[; ;newmain.c: 552:                 if(RA1 == 1){
+[e $ ! == -> _RA1 `i -> 1 `i 530  ]
+{
+"553
+[; ;newmain.c: 553:                     clear();
+[e ( _clear ..  ]
+"554
+[; ;newmain.c: 554:                     continue;
+[e $U 513  ]
+"555
+[; ;newmain.c: 555:                 }
+}
+[e :U 530 ]
+"556
+[; ;newmain.c: 556:                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20),0,0);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> | | | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i -> 16 `i -> 32 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"558
+[; ;newmain.c: 558:                 waitSEG((0x01|0x02|0x08|0x40|0x10),(0x01|0x02|0x04|0x20),1000);
+[e ( _waitSEG (3 , , -> | | | | -> 1 `i -> 2 `i -> 8 `i -> 64 `i -> 16 `i `us -> | | | -> 1 `i -> 2 `i -> 4 `i -> 32 `i `us -> -> 1000 `i `us ]
+"559
+[; ;newmain.c: 559:             }
 }
 [e :U 525 ]
-"537
-[; ;newmain.c: 537:         }
+"561
+[; ;newmain.c: 561:         }
 }
 [e :U 523 ]
-"538
-[; ;newmain.c: 538:     }
+"562
+[; ;newmain.c: 562:     }
 }
 [e :U 513 ]
 [e $U 514  ]
 [e :U 515 ]
-"539
-[; ;newmain.c: 539: }
+"563
+[; ;newmain.c: 563: }
 [e :UE 505 ]
 }
