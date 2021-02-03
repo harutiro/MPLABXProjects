@@ -9,7 +9,6 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <itemPath>newmain.c</itemPath>
-      <itemPath>Q2.c</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"

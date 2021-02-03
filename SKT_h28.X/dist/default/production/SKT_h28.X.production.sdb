@@ -7,6 +7,8 @@
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
@@ -21,19 +23,21 @@
 [v _portinit portinit `(v  1 e 1 0 ]
 "176
 [v _wait wait `(v  1 e 1 0 ]
-"194
+"187
+[v _waitSEG waitSEG `(v  1 e 1 0 ]
+"206
 [v _zenoff zenoff `(v  1 e 1 0 ]
-"205
+"217
 [v _dynam dynam `(v  1 e 1 0 ]
-"330
+"342
 [v _tactsw tactsw `(v  1 e 1 0 ]
-"345
+"357
 [v _tact tact `(v  1 e 1 0 ]
-"368
+"380
 [v _fclr fclr `(v  1 e 1 0 ]
-"437
+"449
 [v _clear clear `(v  1 e 1 0 ]
-"450
+"462
 [v _main main `(v  1 e 1 0 ]
 "429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -95,40 +99,63 @@
 [v _fugou fugou `us  1 e 2 0 ]
 "145
 [v _samp samp `[16]us  1 e 32 0 ]
-"450
+"462
 [v _main main `(v  1 e 1 0 ]
 {
-"567
+"583
 } 0
-"194
+"206
 [v _zenoff zenoff `(v  1 e 1 0 ]
 {
-"201
+"213
 } 0
-"160
+"187
+[v _waitSEG waitSEG `(v  1 e 1 0 ]
+{
+"190
+[v waitSEG@i i `ui  1 a 2 8 ]
+"187
+[v waitSEG@seg1 seg1 `us  1 p 2 8 ]
+[v waitSEG@seg2 seg2 `us  1 p 2 10 ]
+[v waitSEG@wt wt `us  1 p 2 12 ]
+"194
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\newmain.c
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172
 } 0
-"437
+"449
 [v _clear clear `(v  1 e 1 0 ]
 {
-"446
+"458
 } 0
-"205
+"217
 [v _dynam dynam `(v  1 e 1 0 ]
 {
-"208
+"220
 [v dynam@ext ext `us  1 a 2 6 ]
-"207
+"219
 [v dynam@j j `ui  1 a 2 4 ]
 [v dynam@tm tm `ui  1 a 2 2 ]
-"208
+"220
 [v dynam@smd smd `us  1 a 2 0 ]
-"205
+"217
 [v dynam@dig1data dig1data `us  1 p 2 0 ]
 [v dynam@dig2data dig2data `us  1 p 2 2 ]
 [v dynam@smdata smdata `us  1 p 2 4 ]
 [v dynam@tr tr `ui  1 p 2 6 ]
-"247
+"259
 } 0

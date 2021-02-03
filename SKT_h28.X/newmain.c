@@ -181,6 +181,18 @@ void wait(unsigned short wt)
     }
 }
 
+
+//タイミング調整関数
+//wait(調整時間);
+void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+{
+    wt = wt / 10;
+    unsigned int i;
+    for(i=wt;i>0;--i){   
+        dynam(seg1,seg2,0,0);
+    }
+}
+
 //セグメント表示初期化関数
 //hyouji();
 void hyouji(void)
@@ -512,6 +524,8 @@ void main(void)
                     continue;
                 }
                 dynam(0,SEG9,0,0);
+                
+                
             }
             
             
@@ -560,6 +574,8 @@ void main(void)
                     continue;
                 }
                 dynam(0,SEG0,0,0);
+
+                waitSEG(SEG2,SEG7,1000);
             }
             
         }

@@ -4912,6 +4912,18 @@ void wait(unsigned short wt)
 
 
 
+
+void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+{
+    wt = wt / 10;
+    unsigned int i;
+    for(i=wt;i>0;--i){
+        dynam(seg1,seg2,0,0);
+    }
+}
+
+
+
 void hyouji(void)
 {
     RC5=RC6=0;
@@ -5241,6 +5253,8 @@ void main(void)
                     continue;
                 }
                 dynam(0,(0x20|0x08|0x40|0x01|0x02|0x04),0,0);
+
+
             }
 
 
@@ -5289,6 +5303,8 @@ void main(void)
                     continue;
                 }
                 dynam(0,(0x01|0x02|0x04|0x08|0x10|0x20),0,0);
+
+                waitSEG((0x01|0x02|0x08|0x40|0x10),(0x01|0x02|0x04|0x20),1000);
             }
 
         }
