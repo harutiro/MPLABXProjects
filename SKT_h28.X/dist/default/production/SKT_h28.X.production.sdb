@@ -19,7 +19,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"160 C:\Users\harut\MPLABXProjects\SKT_h28.X\Q2.c
+"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\Q2.c
 [v _portinit portinit `(v  1 e 1 0 ]
 "176
 [v _wait wait `(v  1 e 1 0 ]
@@ -73,7 +73,7 @@
 [v _RC6 RC6 `VEb  1 e 0 @118 ]
 "8203
 [v _RC7 RC7 `VEb  1 e 0 @119 ]
-"134 C:\Users\harut\MPLABXProjects\SKT_h28.X\Q2.c
+"134 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\Q2.c
 [v _flag_sw3 flag_sw3 `us  1 e 2 0 ]
 "135
 [v _flag_R flag_R `us  1 e 2 0 ]
@@ -151,7 +151,7 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"357 C:\Users\harut\MPLABXProjects\SKT_h28.X\Q2.c
+"357 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28.X\Q2.c
 [v _tact tact `(v  1 e 1 0 ]
 {
 [v tact@mode mode `us  1 p 2 8 ]
