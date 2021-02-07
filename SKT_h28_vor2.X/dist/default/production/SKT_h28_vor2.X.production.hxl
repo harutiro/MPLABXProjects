@@ -1,14 +1,22 @@
 ### HEXMate logfile and output summary ###
 ### Memory Usage ###
  Unused memory ranges:
+<<<<<<< HEAD:SKT_h28.X/dist/default/debug/SKT_h28.X.debug.hxl
   8h - 80Fh
+=======
+  8h - 831h
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/dist/default/production/SKT_h28_vor2.X.production.hxl
   1000h - FFFFh
   10000h - 1000Dh
   10012h - 1003Fh
   
- dist/default/debug\SKT_h28.X.debug.hex ranges:
+ dist/default/production\SKT_h28_vor2.X.production.hex ranges:
   0h - 7h
+<<<<<<< HEAD:SKT_h28.X/dist/default/debug/SKT_h28.X.debug.hxl
   810h - FFFh
+=======
+  832h - FFFh
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/dist/default/production/SKT_h28_vor2.X.production.hxl
   1000Eh - 10011h
   
 ### Hex Memory Map ###
@@ -22,9 +30,13 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/debug\SKT_h28.X.debug.hex
+  1 = dist/default/production\SKT_h28_vor2.X.production.hex
 00000000: 11111111--------------------------------------------------------
+<<<<<<< HEAD:SKT_h28.X/dist/default/debug/SKT_h28.X.debug.hxl
 00000800: ----------------111111111111111111111111111111111111111111111111
+=======
+00000800: --------------------------------------------------11111111111111
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/dist/default/production/SKT_h28_vor2.X.production.hxl
 00000840: 1111111111111111111111111111111111111111111111111111111111111111
 00000880: 1111111111111111111111111111111111111111111111111111111111111111
 000008C0: 1111111111111111111111111111111111111111111111111111111111111111

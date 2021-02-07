@@ -2065,60 +2065,125 @@ Version 4.0 HI-TECH Software Intermediate Code
 "478
 [; ;Q2.c: 478:     RC0=RC2=RC1=1;
 [e = _RC0 -> = _RC2 -> = _RC1 -> -> 1 `i `b `b `b ]
-"482
-[; ;Q2.c: 482:     while(1){
+"481
+[; ;Q2.c: 481:     fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"485
+[; ;Q2.c: 485:     while(1){
 [e :U 510 ]
 {
-"483
-[; ;Q2.c: 483:         if(RA0 == 0){
+"486
+[; ;Q2.c: 486:         if(RA0 == 0){
 [e $ ! == -> _RA0 `i -> 0 `i 512  ]
 {
-"484
-[; ;Q2.c: 484:             break;
+"487
+[; ;Q2.c: 487:             break;
 [e $U 511  ]
-"485
-[; ;Q2.c: 485:         }
+"488
+[; ;Q2.c: 488:         }
 }
 [e :U 512 ]
-"486
-[; ;Q2.c: 486:     }
+"489
+[; ;Q2.c: 489:     }
 }
 [e :U 509 ]
 [e $U 510  ]
 [e :U 511 ]
-"488
-[; ;Q2.c: 488:     while(1){
+"491
+[; ;Q2.c: 491:     while(1){
 [e :U 514 ]
 {
-"489
-[; ;Q2.c: 489:         if(RA0 == 0){
+"492
+[; ;Q2.c: 492:         if(RA0 == 0){
 [e $ ! == -> _RA0 `i -> 0 `i 516  ]
 {
-"491
-[; ;Q2.c: 491:             dynam(0x40,0x40,0,0);
-[e ( _dynam (4 , , , -> -> 64 `i `us -> -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
-"492
-[; ;Q2.c: 492:             tact(2);
-[e ( _tact (1 -> -> 2 `i `us ]
 "494
-[; ;Q2.c: 494:             if((flag_P = 1)&&(flag_R = 1)){
-[e $ ! && != -> = _flag_P -> -> 1 `i `us `ui -> -> 0 `i `ui != -> = _flag_R -> -> 1 `i `us `ui -> -> 0 `i `ui 517  ]
+[; ;Q2.c: 494:             dynam(0x40,0x40,0,0);
+[e ( _dynam (4 , , , -> -> 64 `i `us -> -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
+"496
+[; ;Q2.c: 496:             tact(2);
+[e ( _tact (1 -> -> 2 `i `us ]
+"498
+[; ;Q2.c: 498:             while(1){
+[e :U 518 ]
 {
+<<<<<<< HEAD:SKT_h28.X/build/default/debug/Q2.p1
 "496
 [; ;Q2.c: 496:                 while(1){
-[e :U 519 ]
-{
-"498
-[; ;Q2.c: 498:                     for(i = 1;i <= 4; i++){
-{
-[e = _i -> 1 `i ]
-[e $ <= _i -> 4 `i 521  ]
-[e $U 522  ]
-[e :U 521 ]
-{
+=======
 "500
-[; ;Q2.c: 500:                         waitSEG(moji[i],moji[i],1000);
+[; ;Q2.c: 500:                 dynam(0,0,1,1);
+[e ( _dynam (4 , , , -> -> 0 `i `us -> -> 0 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
+"501
+[; ;Q2.c: 501:                 if(cw == 0,ccw == 3){
+[e $ ! != ; -> == -> _cw `ui -> -> 0 `i `ui `i -> == -> _ccw `ui -> -> 3 `i `ui `i -> 0 `i 520  ]
+{
+"503
+[; ;Q2.c: 503:                     while(1){
+[e :U 522 ]
+{
+"505
+[; ;Q2.c: 505:                         zenoff();
+[e ( _zenoff ..  ]
+"506
+[; ;Q2.c: 506:                     }
+}
+[e :U 521 ]
+[e $U 522  ]
+[e :U 523 ]
+"508
+[; ;Q2.c: 508:                 }
+}
+[e :U 520 ]
+"510
+[; ;Q2.c: 510:             }
+}
+[e :U 517 ]
+[e $U 518  ]
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/build/default/production/Q2.p1
+[e :U 519 ]
+"512
+[; ;Q2.c: 512:             if(RA1 == 0){
+[e $ ! == -> _RA1 `i -> 0 `i 524  ]
+{
+"513
+[; ;Q2.c: 513:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"514
+[; ;Q2.c: 514:             }
+}
+[e :U 524 ]
+"517
+[; ;Q2.c: 517:             if(((flag_sw3==0)&&(flag_P==1))){
+[e $ ! && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui 525  ]
+{
+"519
+[; ;Q2.c: 519:                 while(1){
+[e :U 527 ]
+{
+"521
+[; ;Q2.c: 521:                     for(i = 0;i <= 3; i++){
+{
+[e = _i -> 0 `i ]
+[e $ <= _i -> 3 `i 529  ]
+[e $U 530  ]
+[e :U 529 ]
+{
+"523
+[; ;Q2.c: 523:                         waitSEG(moji[i],moji[i],1000);
 [e ( _waitSEG (3 , , *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux -> -> 1000 `i `us ]
+"525
+[; ;Q2.c: 525:                         if(RA0 = 1){
+[e $ ! = _RA0 -> -> 1 `i `b 532  ]
+{
+"526
+[; ;Q2.c: 526:                             while (1){
+[e :U 534 ]
+{
+"528
+[; ;Q2.c: 528:                                 waitSEG(moji[i],moji[i],1000);
+[e ( _waitSEG (3 , , *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux -> -> 1000 `i `us ]
+<<<<<<< HEAD:SKT_h28.X/build/default/debug/Q2.p1
 "502
 [; ;Q2.c: 502:                         if(RA0 = 1){
 [e $ ! = _RA0 -> -> 1 `i `b 524  ]
@@ -2142,11 +2207,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 524 ]
 "513
 [; ;Q2.c: 513:                     }
+=======
+"532
+[; ;Q2.c: 532:                             }
+}
+[e :U 533 ]
+[e $U 534  ]
+[e :U 535 ]
+"534
+[; ;Q2.c: 534:                         }
+}
+[e :U 532 ]
+"536
+[; ;Q2.c: 536:                     }
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/build/default/production/Q2.p1
 }
 [e ++ _i -> 1 `i ]
-[e $ <= _i -> 4 `i 521  ]
-[e :U 522 ]
+[e $ <= _i -> 3 `i 529  ]
+[e :U 530 ]
 }
+<<<<<<< HEAD:SKT_h28.X/build/default/debug/Q2.p1
 "514
 [; ;Q2.c: 514:                 }
 }
@@ -2163,11 +2243,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 516 ]
 "520
 [; ;Q2.c: 520:     }
+=======
+"537
+[; ;Q2.c: 537:                 }
+}
+[e :U 526 ]
+[e $U 527  ]
+[e :U 528 ]
+"540
+[; ;Q2.c: 540:             }
+}
+[e :U 525 ]
+"542
+[; ;Q2.c: 542:         }
+}
+[e :U 516 ]
+"543
+[; ;Q2.c: 543:     }
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/build/default/production/Q2.p1
 }
 [e :U 513 ]
 [e $U 514  ]
 [e :U 515 ]
+<<<<<<< HEAD:SKT_h28.X/build/default/debug/Q2.p1
 "521
 [; ;Q2.c: 521: }
+=======
+"544
+[; ;Q2.c: 544: }
+>>>>>>> 3e8fb4be1a7d832d80d83b0c4114691b5d5e6fd9:SKT_h28_vor2.X/build/default/production/Q2.p1
 [e :UE 505 ]
 }
