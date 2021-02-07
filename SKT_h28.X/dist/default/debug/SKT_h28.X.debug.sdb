@@ -102,9 +102,7 @@
 "463
 [v _main main `(v  1 e 1 0 ]
 {
-"472
-[v main@i i `i  1 a 2 22 ]
-"521
+"544
 } 0
 "206
 [v _zenoff zenoff `(v  1 e 1 0 ]
@@ -170,4 +168,10 @@
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172
+} 0
+"380
+[v _fclr fclr `(v  1 e 1 0 ]
+{
+[v fclr@flg flg `us  1 p 2 0 ]
+"395
 } 0

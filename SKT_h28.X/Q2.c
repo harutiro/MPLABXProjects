@@ -476,6 +476,9 @@ void main(void)
 
     //ここから編集
     LEDR=LEDG=LEDB=OFF;
+    
+    //フラグリセット
+    fclr(PR);
 
 
     //最初の起動ロック
@@ -489,13 +492,33 @@ void main(void)
         if(SW1 == UP){
 
             dynam(SEGg,SEGg,0,0);
+            
             tact(REN);
+            
+            while(1){
+            
+                dynam(0,0,T2,H);
+                if(cw == 0,ccw == 3){
+                
+                    while(1){
+                    
+                        zenoff();
+                    }
+                
+                }
+            
+            }
+            
+            if(SW2 == UP){
+                fclr(PR);
+            }
+           
 
-            if((flag_P = 1)&&(flag_R = 1)){
+            if(SW3PR){
 
                 while(1){
 
-                    for(i = 1;i <= 4; i++){
+                    for(i = 0;i <= 3; i++){
 
                         waitSEG(moji[i],moji[i],1000);
 
