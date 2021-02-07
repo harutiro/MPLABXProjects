@@ -2105,7 +2105,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! && != -> = _flag_P -> -> 1 `i `us `ui -> -> 0 `i `ui != -> = _flag_R -> -> 1 `i `us `ui -> -> 0 `i `ui 517  ]
 {
 "496
-[; ;Q2.c: 496:                 while (1){
+[; ;Q2.c: 496:                 while(1){
 [e :U 519 ]
 {
 "498
@@ -2120,33 +2120,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Q2.c: 500:                         waitSEG(moji[i],moji[i],1000);
 [e ( _waitSEG (3 , , *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux -> -> 1000 `i `us ]
 "502
-[; ;Q2.c: 502:                     }
+[; ;Q2.c: 502:                         if(RA0 = 1){
+[e $ ! = _RA0 -> -> 1 `i `b 524  ]
+{
+"503
+[; ;Q2.c: 503:                             while (1){
+[e :U 526 ]
+{
+"505
+[; ;Q2.c: 505:                                 waitSEG(moji[i],moji[i],1000);
+[e ( _waitSEG (3 , , *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux *U + &U _moji * -> -> _i `ui `ux -> -> # *U &U _moji `ui `ux -> -> 1000 `i `us ]
+"509
+[; ;Q2.c: 509:                             }
+}
+[e :U 525 ]
+[e $U 526  ]
+[e :U 527 ]
+"511
+[; ;Q2.c: 511:                         }
+}
+[e :U 524 ]
+"513
+[; ;Q2.c: 513:                     }
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 4 `i 521  ]
 [e :U 522 ]
 }
-"504
-[; ;Q2.c: 504:                 }
+"514
+[; ;Q2.c: 514:                 }
 }
 [e :U 518 ]
 [e $U 519  ]
 [e :U 520 ]
-"506
-[; ;Q2.c: 506:             }
+"517
+[; ;Q2.c: 517:             }
 }
 [e :U 517 ]
-"508
-[; ;Q2.c: 508:         }
+"519
+[; ;Q2.c: 519:         }
 }
 [e :U 516 ]
-"509
-[; ;Q2.c: 509:     }
+"520
+[; ;Q2.c: 520:     }
 }
 [e :U 513 ]
 [e $U 514  ]
 [e :U 515 ]
-"510
-[; ;Q2.c: 510: }
+"521
+[; ;Q2.c: 521: }
 [e :UE 505 ]
 }

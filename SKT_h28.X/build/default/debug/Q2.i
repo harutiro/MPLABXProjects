@@ -5222,15 +5222,26 @@ void main(void)
 
             if((flag_P = 1)&&(flag_R = 1)){
 
-                while (1){
+                while(1){
 
                     for(i = 1;i <= 4; i++){
 
                         waitSEG(moji[i],moji[i],1000);
 
-                    }
+                        if(RA0 = 1){
+                            while (1){
 
+                                waitSEG(moji[i],moji[i],1000);
+
+
+
+                            }
+
+                        }
+
+                    }
                 }
+
 
             }
 
