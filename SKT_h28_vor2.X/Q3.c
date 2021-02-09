@@ -495,88 +495,9 @@ void main(void)
     //ÉÅÉCÉìÇÃìÆÇ´
     hukki:
     while(1){
-        if(SW1 == UP){
-
-            
-            dynam(SEGg,SEGg,0,0);
-            
-
-            
-            
-            tact(ON);
-
-            if(SW3R){
-                
-                fclr(PR);
-
-                while(1){
-
-                    for(i = 0;i <= 3; i++){
-
-                        waitSEG(moji[i],moji[i],1000);
-
-                        if(SW1 = DN){
-                            while (1){
-                                
-                                tact(REN);
-                                
-                                if(SW3PR){
-
-                                    switch (i)
-                                    {
-                                    case 0:
-                                        motor(360,SEGA,SEGH,T2,H);
-                                        fclr(PR);
-                                        goto hukki;
-                                        break;
-
-                                    case 1:
-                                        motor(180,SEGB,SEGL,T2,L);
-                                        fclr(PR);
-                                        goto hukki;
-                                        break;
-
-                                    case 2:
-                                        motor(360,SEGC,SEGH,H2,H);
-                                        fclr(PR);
-                                        goto hukki;
-                                        break;        
-                                    
-                                    case 3:
-                                        motor(180,SEGD,SEGL,H2,L);
-                                        fclr(PR);
-                                        goto hukki;
-                                        break;
-
-                                    default:
-                                        break;
-                                    }
-                                
-                                }else{
-                                
-                                    dynam(moji[i],moji[i],0,0);
-                                
-                                }
-
-
-                                
-
-                                
-                               
-
-                                
-
-                            }
-
-                        }
-
-                    }
-                }    
-                
-                
-            }    
-            
-        }
+        
+       if(SW1 == UP)     
+        
     }
 }
 

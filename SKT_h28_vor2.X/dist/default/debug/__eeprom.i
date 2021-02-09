@@ -1,4 +1,4 @@
-# 1 "Q2.c"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c99\\pic\\__eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Q2.c" 2
-
-
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c99\\pic\\__eeprom.c" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4818,485 +4816,176 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
-# 3 "Q2.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c99\\pic\\__eeprom.c" 2
 
 
 
 
-
-
-
-#pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = ON
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config CLKOUTEN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-
-#pragma config WRT = OFF
-#pragma config VCAPEN = OFF
-#pragma config PLLEN = OFF
-#pragma config STVREN = ON
-#pragma config BORV = LO
-#pragma config LVP = OFF
-# 118 "Q2.c"
-void portinit(void);
-void wait(unsigned short wt);
-void hyouji(void);
-void zenoff(void);
-void dynam(unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr);
-void hen7(int value,unsigned short ns1);
-void hens(unsigned short keta10,unsigned short keta1,unsigned short ns2);
-void tactsw(void);
-void tact(unsigned short mode);
-void fclr(unsigned short flg);
-void kaisu(unsigned short mode1);
-void jikan(void);
-void buzzon();
-void buzzof();
-
-
-unsigned short flag_sw1,flag_sw2,flag_sw3;
-unsigned short flag_R,flag_P;
-unsigned short flg;
-unsigned short cw=0,ccw=0;
-int atai10,atai1,atai;
-int count;
-
-
-unsigned short code1000,code100,code10,code1,fugou;
-
-
-unsigned short samp[]={(0x01|0x02|0x04|0x08|0x10|0x20),(0x02|0x04),(0x01|0x02|0x08|0x40|0x10),(0x40|0x01|0x08|0x02|0x04),(0x02|0x04|0x20|0x40),(0x20|0x08|0x40|0x01|0x04),(0x20|0x10|0x08|0x04|0x01|0x40),(0x01|0x02|0x04|0x20),(0x01|0x02|0x04|0x08|0x10|0x20|0x40),(0x20|0x08|0x40|0x01|0x02|0x04),(0x01|0x02|0x04|0x08|0x10|0x40),(0x04|0x08|0x10|0x20|0x40),(0x08|0x10|0x40),(0x02|0x04|0x08|0x10|0x40),(0x01|0x08|0x10|0x20|0x40),(0x01|0x10|0x20|0x40)};
-unsigned short samf[]={(0x01|0x10|0x20|0x40),(0x01|0x08|0x10|0x20|0x40),(0x02|0x04|0x08|0x10|0x40),(0x08|0x10|0x40),(0x04|0x08|0x10|0x20|0x40),(0x01|0x02|0x04|0x08|0x10|0x40),(0x20|0x08|0x40|0x01|0x02|0x04),(0x01|0x02|0x04|0x08|0x10|0x20|0x40),(0x01|0x02|0x04|0x20),(0x20|0x10|0x08|0x04|0x01|0x40),(0x20|0x08|0x40|0x01|0x04),(0x02|0x04|0x20|0x40),(0x40|0x01|0x08|0x02|0x04),(0x01|0x02|0x08|0x40|0x10),(0x02|0x04),(0x01|0x02|0x04|0x08|0x10|0x20)};
-
-
-unsigned short num0[]={(0x01|0x02|0x04|0x08|0x10|0x20),(0x02|0x04),(0x01|0x02|0x08|0x40|0x10),(0x40|0x01|0x08|0x02|0x04),(0x02|0x04|0x20|0x40),(0x20|0x08|0x40|0x01|0x04),(0x20|0x10|0x08|0x04|0x01|0x40),(0x01|0x02|0x04|0x20),(0x01|0x02|0x04|0x08|0x10|0x20|0x40),(0x20|0x08|0x40|0x01|0x02|0x04)};
-unsigned short gusu[]={(0x01|0x02|0x04|0x08|0x10|0x20),(0x01|0x02|0x08|0x40|0x10),(0x02|0x04|0x20|0x40),(0x20|0x10|0x08|0x04|0x01|0x40),(0x01|0x02|0x04|0x08|0x10|0x20|0x40)};
-unsigned short kisu[]={(0x02|0x04),(0x40|0x01|0x08|0x02|0x04),(0x20|0x08|0x40|0x01|0x04),(0x01|0x02|0x04|0x20),(0x20|0x08|0x40|0x01|0x02|0x04)};
-unsigned short moji[]={(0x01|0x02|0x04|0x08|0x10|0x40),(0x04|0x08|0x10|0x20|0x40),(0x08|0x10|0x40),(0x02|0x04|0x08|0x10|0x40),(0x01|0x08|0x10|0x20|0x40),(0x01|0x10|0x20|0x40),(0x02|0x04|0x10|0x20|0x40),(0x08|0x10|0x20),(0x04|0x10|0x40),(0x01|0x02|0x10|0x20|0x40)};
-unsigned short moja[]={(0x01|0x02|0x04|0x08|0x10|0x40),(0x04|0x08|0x10|0x20|0x40),(0x08|0x10|0x40),(0x02|0x04|0x08|0x10|0x40),(0x01|0x08|0x10|0x20|0x40),(0x01|0x10|0x20|0x40)};
-unsigned short mojf[]={(0x01|0x10|0x20|0x40),(0x01|0x08|0x10|0x20|0x40),(0x02|0x04|0x08|0x10|0x40),(0x08|0x10|0x40),(0x04|0x08|0x10|0x20|0x40),(0x01|0x02|0x04|0x08|0x10|0x40)};
-unsigned short mojh[]={(0x02|0x04|0x10|0x20|0x40),(0x08|0x10|0x20)};
-unsigned short mojn[]={(0x04|0x10|0x40),(0x01|0x02|0x10|0x20|0x40)};
-
-
-
-void portinit(void)
+void
+__eecpymem(volatile unsigned char *to, __eeprom unsigned char * from, unsigned char size)
 {
+ volatile unsigned char *cp = to;
 
-    ANSELA=0x00;
-    ANSELB=0x00;
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)from;
+ while(size--) {
+  while (EECON1bits.WR) continue;
 
-    PORTA=0x07;
-    TRISA=0x07;
-    PORTB=0x00;
-    TRISB=0x00;
-    PORTC=0x07;
-    TRISC=0x00;
+  EECON1 &= 0x7F;
+
+  EECON1bits.RD = 1;
+  *cp++ = EEDATA;
+  ++EEADR;
+ }
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c99\\pic\\__eeprom.c"
 }
 
-
-
-void wait(unsigned short wt)
+void
+__memcpyee(__eeprom unsigned char * to, const unsigned char *from, unsigned char size)
 {
-    unsigned int i,j;
-    for(i=10*wt;i>0;--i){
-        for(j=10;j>0;--j);
-    }
+ const unsigned char *ptr =from;
+
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)to - 1U;
+
+ EECON1 &= 0x7F;
+
+ while(size--) {
+  while (EECON1bits.WR) {
+   continue;
+  }
+  EEDATA = *ptr++;
+  ++EEADR;
+  STATUSbits.CARRY = 0;
+  if (INTCONbits.GIE) {
+   STATUSbits.CARRY = 1;
+  }
+  INTCONbits.GIE = 0;
+  EECON1bits.WREN = 1;
+  EECON2 = 0x55;
+  EECON2 = 0xAA;
+  EECON1bits.WR = 1;
+  EECON1bits.WREN = 0;
+  if (STATUSbits.CARRY) {
+   INTCONbits.GIE = 1;
+  }
+ }
+# 101 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c99\\pic\\__eeprom.c"
 }
 
-
-
-
-void hyouji(void)
+unsigned char
+__eetoc(__eeprom void *addr)
 {
-    RC5=RC6=0;
-    wait(1);
+ unsigned char data;
+ __eecpymem((unsigned char *) &data,addr,1);
+ return data;
 }
 
-
-
-void zenoff(void)
+unsigned int
+__eetoi(__eeprom void *addr)
 {
-    RC0=1;
-    RC1=1;
-    RC2=1;
-    PORTB=0x00;
-    RC7=0;RC7=1;RC7=0;
+ unsigned int data;
+ __eecpymem((unsigned char *) &data,addr,2);
+ return data;
 }
 
-
-
-void dynam(unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr)
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__eetom(__eeprom void *addr)
 {
-    unsigned int j=0,tm=0;
-    unsigned short ext=0,smd=0;
-    RC7=0;
-    PORTB=dig1data;
-    RC5=0;RC6=1;
-    if(tr==5){tm=4000;}
-    else{tm=2000;}
-    for(j=tm;j>0;--j);
-    RC5=0;RC6=0;
-    PORTB=dig2data;
-    RC6=0;RC5=1;
-    if(tr==5){tm=4000;}
-    else{tm=2000;}
-    for(j=tm;j>0;--j);
-    RC5=0;RC6=0;
-    switch(smdata){
-            case 0:
-                PORTB=0x00;smd=(0x01|0x02|0x04|0x08|0x10|0x20);
-                RC7=0;RC7=1;RC7=0;
-                break;
-            case 1:
-                if(flg==1)cw=0;flg=0;
-                if((cw==0)&&(ext==0)){cw=1;ccw=0;ext=1;PORTB=smd=0x09;}
-                if((cw==1)&&(ext==0)){cw=2;ccw=3;ext=1;PORTB=smd=0x0C;}
-                if((cw==2)&&(ext==0)){cw=3;ccw=2;ext=1;PORTB=smd=0x06;}
-                if((cw==3)&&(ext==0)){cw=0;ccw=1;ext=1;PORTB=smd=0x03;}
-                RC7=0;RC7=1;RC7=0;
-                break;
-            case 2:
-                if(flg==1)ccw=0;flg=0;
-                if((ccw==0)&&(ext==0)){ccw=1;cw=0;ext=1;PORTB=smd=0x03;}
-                if((ccw==1)&&(ext==0)){ccw=2;cw=3;ext=1;PORTB=smd=0x06;}
-                if((ccw==2)&&(ext==0)){ccw=3;cw=2;ext=1;PORTB=smd=0x0C;}
-                if((ccw==3)&&(ext==0)){ccw=0;cw=1;ext=1;PORTB=smd=0x09;}
-                RC7=0;RC7=1;RC7=0;
-                break;
-            default:
-                cw=ccw=0;
-                break;
-    }
+ __uint24 data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
 }
+#pragma warning pop
 
-
-
-void hen7(int value,unsigned short ns1)
+unsigned long
+__eetol(__eeprom void *addr)
 {
-    int value100,value10,value1;
-    unsigned int l,m,n;
-    fugou=0;
-    if(value<0)fugou=1;
-    if(fugou==1){
-        value=(~(value-1));
-    }
-    switch(ns1){
-            case 10:
-                value100=value/100;
-                value10 =(value-(value100*100))/10;
-                value1 =value%10;
-                code1000=(0x01|0x02|0x04|0x08|0x10|0x20);
-                for(l=0;l<=2;++l){
-                    if(value100==l)code100=samp[l];
-                }
-                for(m=0;m<=9;++m){
-                    if(value10==m)code10=samp[m];
-                }
-                for(n=0;n<=9;++n){
-                    if(value1==n)code1=samp[n];
-                }
-                break;
-            case 8:
-                value100=value>>6;
-                value10 =(value-(value100<<6))>>3;
-                value =value%8;
-                code1000=(0x01|0x02|0x04|0x08|0x10|0x20);
-                for(l=0;l<=3;++l){
-                    if(value100==l)code100=samp[l];
-                }
-                for(m=0;m<=7;++m){
-                    if(value10==m)code10=samp[m];
-                }
-                for(n=0;n<=7;++n){
-                    if(value1==n)code1=samp[n];
-                }
-                break;
-            case 16:
-                code1000=(0x01|0x02|0x04|0x08|0x10|0x20);
-                code100=(0x01|0x02|0x04|0x08|0x10|0x20);
-                value10 =value>>4;
-                value1 =value%16;
-                for(m=0;m<=15;++m){
-                    if(value10==m)code10=samp[m];
-                }
-                for(n=0;n<=15;++n){
-                    if(value1==n)code1=samp[n];
-                }
-                break;
-            default:
-                break;
-    }
+ unsigned long data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
 }
 
-
-void hens(unsigned short keta10,unsigned short keta1,unsigned short ns2)
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__eetoo(__eeprom void *addr)
 {
-    unsigned int m,n;
-    keta10=keta10;
-    keta1=keta1;
-    if((ns2==10)||(ns2==16)){
-        for(m=0;m<=15;++m){
-            if(keta10==samp[m])atai10=m;
-        }
-        for(n=0;n<=15;++n){
-            if(keta1 ==samp[n])atai1=n;
-        }
-        if(keta10==0x00)atai10=0;
-        if(keta1 ==0x00)atai1 =0;
-        if(ns2==10){atai=((atai10*10)+atai1);}
-        if(ns2==16){atai=((atai10*16)+atai1);}
-    }
+ unsigned long long data;
+ __eecpymem((unsigned char *) &data,addr,8);
+ return data;
 }
+#pragma warning pop
 
-
-
-void tactsw(void)
+unsigned char
+__ctoee(__eeprom void *addr, unsigned char data)
 {
-    unsigned short a,b,c;
-    b=c=0;
-    while(1){
-            a=RA2;
-            if(b==a)++c;
-            else c=0;
-            if(c>10){flag_sw3=(~a)&0x01;return;}
-            b=a;
-    }
+ __memcpyee(addr,(unsigned char *) &data,1);
+ return data;
 }
 
-
-
-void tact(unsigned short mode)
+unsigned int
+__itoee(__eeprom void *addr, unsigned int data)
 {
-    switch(mode){
-            case 0:
-                tactsw();
-                if(flag_sw3==0)flag_R=1;
-                break;
-            case 1:
-                tactsw();
-                if(flag_sw3==1)flag_P=1;
-                break;
-            case 2:
-                tactsw();
-                if(flag_sw3==0)flag_R=1;
-                if((flag_sw3==1)&&(flag_R==1))flag_P=1;
-                break;
-            default:
-                break;
-    }
+ __memcpyee(addr,(unsigned char *) &data,2);
+ return data;
 }
 
-
-
-void fclr(unsigned short flg)
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__mtoee(__eeprom void *addr, __uint24 data)
 {
-    switch(flg){
-                case 0:
-                    flag_R=0;
-                    break;
-                case 1:
-                    flag_P=0;
-                    break;
-                case 2:
-                    flag_P=flag_R=0;
-                    break;
-                default:
-                    break;
-    }
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
 }
+#pragma warning pop
 
-
-
-void kaisu(unsigned short mode1)
+unsigned long
+__ltoee(__eeprom void *addr, unsigned long data)
 {
-    switch(mode1){
-                case 0:
-                    tact(0);
-                    if(((flag_sw3==1)&&(flag_R==1))){++count;fclr(0);}
-                    break;
-                case 1:
-                    tact(1);
-                    if(((flag_sw3==0)&&(flag_P==1))){++count;fclr(1);}
-                    break;
-                default:
-                    break;
-    }
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }
 
-
-
-void jikan(void)
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__otoee(__eeprom void *addr, unsigned long long data)
 {
-    if(RA2==0){++count;}
-    else{count=0;}
+ __memcpyee(addr,(unsigned char *) &data,8);
+ return data;
 }
+#pragma warning pop
 
-
-
-void buzzon(void)
+float
+__eetoft(__eeprom void *addr)
 {
-    unsigned short t;
-    for(t=30;t>0;t--){
-        RC2=1;
-    }
-    for(t=30;t>0;t--){
-        RC2=0;
-    }
+ float data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
 }
 
-
-
-void buzzof(void)
+double
+__eetofl(__eeprom void *addr)
 {
-unsigned short n,t;
-    for(t=30;t>0;t--){
-        RC2=1;
-    }
-    for(t=30;t>0;t--){
-        RC2=1;
-    }
+ double data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
 }
 
-void clear(void){
-    dynam((0x02|0x04|0x08|0x10|0x40),(0x04|0x10|0x40),0,0);
-    _delay((unsigned long)((1000)*(16000000/4000UL)));
-    while(1){
-        if(RA0 == 0){
-            break;
-        }
-    }
-
-}
-
-
-
-void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+float
+__fttoee(__eeprom void *addr, float data)
 {
-    wt = wt / 10;
-    unsigned int i;
-    for(i=wt;i>0;--i){
-        dynam(seg1,seg2,0,0);
-    }
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
 }
 
-void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
-
-    for(int i = kakudo;i>=0;i--){
-        dynam(dig1data,dig2data,smdata,tr);
-    }
-}
-
-
-void main(void)
+double
+__fltoee(__eeprom void *addr, double data)
 {
-
-    OSCCON=0x7A;
-
-    portinit();
-
-    zenoff();
-
-    int i=0,j=0,k=0,m=0,n=0;
-
-
-    while((RA0!=1)||(RA1!=1)||(RA2!=1));
-
-
-    RC0=RC2=RC1=1;
-
-
-    fclr(2);
-
-
-
-    while(1){
-        if(RA0 == 0){
-            break;
-        }
-    }
-
-    hukki:
-    while(1){
-        if(RA0 == 0){
-
-
-            dynam(0x40,0x40,0,0);
-
-
-
-
-            tact(0);
-
-            if(((flag_sw3==1)&&(flag_R==1))){
-
-                fclr(2);
-
-                while(1){
-
-                    for(i = 0;i <= 3; i++){
-
-                        waitSEG(moji[i],moji[i],1000);
-
-                        if(RA0 = 1){
-                            while (1){
-
-                                tact(2);
-
-                                if(((flag_sw3==0)&&(flag_P==1))){
-
-                                    switch (i)
-                                    {
-                                    case 0:
-                                        motor(360,(0x01|0x02|0x04|0x08|0x10|0x40),(0x02|0x04|0x10|0x20|0x40),1,1);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    case 1:
-                                        motor(180,(0x04|0x08|0x10|0x20|0x40),(0x08|0x10|0x20),1,5);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    case 2:
-                                        motor(360,(0x08|0x10|0x40),(0x02|0x04|0x10|0x20|0x40),2,1);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    case 3:
-                                        motor(180,(0x02|0x04|0x08|0x10|0x40),(0x08|0x10|0x20),2,5);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    default:
-                                        break;
-                                    }
-
-                                }else{
-
-                                    dynam(moji[i],moji[i],0,0);
-
-                                }
-# 569 "Q2.c"
-                            }
-
-                        }
-
-                    }
-                }
-
-
-            }
-
-        }
-    }
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }

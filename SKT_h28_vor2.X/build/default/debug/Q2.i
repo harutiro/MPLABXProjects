@@ -4913,6 +4913,17 @@ void wait(unsigned short wt)
 
 
 
+void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+{
+    wt = wt / 10;
+    unsigned int i;
+    for(i=wt;i>0;--i){
+        dynam(seg1,seg2,0,0);
+    }
+}
+
+
+
 void hyouji(void)
 {
     RC5=RC6=0;
@@ -5177,22 +5188,6 @@ void clear(void){
 
 
 
-void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
-{
-    wt = wt / 10;
-    unsigned int i;
-    for(i=wt;i>0;--i){
-        dynam(seg1,seg2,0,0);
-    }
-}
-
-void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
-
-    for(int i = kakudo;i>=0;i--){
-        dynam(dig1data,dig2data,smdata,tr);
-    }
-}
-
 
 void main(void)
 {
@@ -5222,81 +5217,31 @@ void main(void)
         }
     }
 
-    hukki:
     while(1){
         if(RA0 == 0){
 
-
             dynam(0x40,0x40,0,0);
 
+            tact(2);
 
+            while(1){
 
-
-            tact(0);
-
-            if(((flag_sw3==1)&&(flag_R==1))){
-
-                fclr(2);
-
-                while(1){
-
-                    for(i = 0;i <= 3; i++){
-
-                        waitSEG(moji[i],moji[i],1000);
-
-                        if(RA0 = 1){
-                            while (1){
-
-                                tact(2);
-
-                                if(((flag_sw3==0)&&(flag_P==1))){
-
-                                    switch (i)
-                                    {
-                                    case 0:
-                                        motor(360,(0x01|0x02|0x04|0x08|0x10|0x40),(0x02|0x04|0x10|0x20|0x40),1,1);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    case 1:
-                                        motor(180,(0x04|0x08|0x10|0x20|0x40),(0x08|0x10|0x20),1,5);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    case 2:
-                                        motor(360,(0x08|0x10|0x40),(0x02|0x04|0x10|0x20|0x40),2,1);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    case 3:
-                                        motor(180,(0x02|0x04|0x08|0x10|0x40),(0x08|0x10|0x20),2,5);
-                                        fclr(2);
-                                        goto hukki;
-                                        break;
-
-                                    default:
-                                        break;
-                                    }
-
-                                }else{
-
-                                    dynam(moji[i],moji[i],0,0);
-
-                                }
-# 569 "Q2.c"
-                            }
-
-                        }
-
+                dynam(0,0,1,5);
+                i++;
+                if(i>=360){
+                    while(1){
+                        i++;
                     }
+
                 }
 
 
             }
 
+            if(RA1 == 0){
+                fclr(2);
+            }
+# 542 "Q2.c"
         }
     }
 }
