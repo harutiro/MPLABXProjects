@@ -464,6 +464,21 @@ void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned 
     }
 }
 
+int bottomTime (void){
+    while (1){
+        tact(REN);
+        if(SW3R){
+            jikan();
+        }
+        if(SW3PR){
+            jikan();
+            return count;
+        }
+    }
+    
+
+}
+
 /*  メイン関数（問題にあわせて変更）    */
 void main(void)
 {
@@ -492,20 +507,44 @@ void main(void)
             break;
         }
     }
+
+    int time;
     //メインの動き
     hukki:
     while(1){
+        
         
        if(SW1 == UP){
            for(i = 9;i>=0;i--){
 
                waitSEG(num0[i],0,500);
                
-               if(SW2 == UP){
-                   while(1){
-                       dynam(num0[i],0,0,0);
-                   }
-               }
+               
+                while(SW2 == UP){
+                    dynam(num0[i],SEG0,0,0);
+                    time = bottomTime();
+                    fclr(PR);
+
+                    if(time >= 1000){
+                        for(j=0;j<i;j++){
+
+                            motor(360,num0[i],num0[j],T2,H);
+                        }
+
+                        while(1){
+                            waitSEG(num0[i],num0[j],500);
+                            waitSEG(0,0,500);
+                            if(SW1 == DN && SW2 == DN){
+                                goto hukki;
+                            }
+                        }
+                    }
+
+
+                    
+
+                }   
+               
            }
        }     
         
