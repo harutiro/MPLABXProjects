@@ -5229,6 +5229,12 @@ void main(void)
            for(i = 9;i>=0;i--){
 
                waitSEG(num0[i],0,500);
+
+               if(RA1 == 0){
+                   while(1){
+                       dynam(num0[i],0,0,0);
+                   }
+               }
            }
        }
 
