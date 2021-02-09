@@ -496,7 +496,12 @@ void main(void)
     hukki:
     while(1){
         
-       if(SW1 == UP)     
+       if(SW1 == UP){
+           for(i = 9;i>=0;i--){
+
+               waitSEG(num0[i],0,500);
+           }
+       }     
         
     }
 }
