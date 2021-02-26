@@ -182,6 +182,17 @@
 //}
 //
 //
+////タイミング調整関数
+////wait(調整時間);
+//void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+//{
+//    wt = wt / 10;
+//    unsigned int i;
+//    for(i=wt;i>0;--i){   
+//        dynam(seg1,seg2,0,0);
+//    }
+//}
+//
 ////セグメント表示初期化関数
 ////hyouji();
 //void hyouji(void)
@@ -436,7 +447,7 @@
 //}   
 //
 //void clear(void){
-//    dynam(SEGD,SEGN,0,0);
+//    waitSEG(SEGD,SEGN,1000);
 //    __delay_ms(1000);
 //    while(1){
 //        if(SW1 == UP){
@@ -446,38 +457,6 @@
 //
 //}
 //
-////タイミング調整関数
-////wait(調整時間);
-//void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
-//{
-//    wt = wt / 10;
-//    unsigned int i;
-//    for(i=wt;i>0;--i){   
-//        dynam(seg1,seg2,0,0);
-//    }
-//}
-//
-//void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
-//
-//    for(int i = kakudo;i>=0;i--){
-//        dynam(dig1data,dig2data,smdata,tr);
-//    }
-//}
-//
-//int bottomTime (void){
-//    while (1){
-//        tact(REN);
-//        if(SW3R){
-//            jikan();
-//        }
-//        if(SW3PR){
-//            jikan();
-//            return count;
-//        }
-//    }
-//    
-//
-//}
 //
 ///*  メイン関数（問題にあわせて変更）    */
 //void main(void)
@@ -496,9 +475,6 @@
 //
 //    //ここから編集
 //    LEDR=LEDG=LEDB=OFF;
-//    
-//    //フラグリセット
-//    fclr(PR);
 //
 //
 //    //最初の起動ロック
@@ -507,47 +483,57 @@
 //            break;
 //        }
 //    }
-//
-//    int time;
 //    //メインの動き
-//    hukki:
 //    while(1){
-//        
-//        
-//       if(SW1 == UP){
-//           for(i = 9;i>=0;i--){
+//        //SW1アップの時
+//        if(SW1==UP){
+//            //SW２オフ
+//            if(SW2==DN){
+//                dynam(SEGU,SEGP,0,0);
 //
-//               waitSEG(num0[i],0,500);
-//               
-//               
-//                while(SW2 == UP){
-//                    dynam(num0[i],SEG0,0,0);
-//                    time = bottomTime();
-//                    fclr(PR);
+//            //SW２オン    
+//            }else{
+//                
+//                for(i = 1;i <= 9;i += 2){
 //
-//                    if(time >= 1000){
-//                        for(j=0;j<i;j++){
+//                    waitSEG(num0[i],0,500);
 //
-//                            motor(360,num0[i],num0[j],T2,H);
-//                        }
-//
-//                        while(1){
-//                            waitSEG(num0[i],num0[j],500);
-//                            waitSEG(0,0,500);
-//                            if(SW1 == DN && SW2 == DN){
-//                                goto hukki;
-//                            }
-//                        }
+//                    if(SW2 == DN){
+//                        continue;
 //                    }
 //
+//                }
+//                
+//                
+//                
+//            }
+//            
+//            
 //
+//        }
+//        //1ダウンの時
+//        else{
+//            //SW２ダウン
+//            if(SW2 == DN){
+//
+//                dynam(SEGD,SEGN,0,0);
+//
+//            //SW２アップ
+//            }else{
+//
+//                for(i = 8;i >= 0;i -= 2){
 //                    
+//                    waitSEG(num0[i],0,1000);
 //
-//                }   
-//               
-//           }
-//       }     
-//        
+//                    if(SW2 == DN){
+//                        clear();
+//                        continue;
+//                    }    
+//                }
+//
+//                
+//            }
+//            
+//        }
 //    }
 //}
-//

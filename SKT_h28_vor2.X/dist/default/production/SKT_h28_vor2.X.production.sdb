@@ -19,7 +19,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor2.X\Q3.c
+"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor2.X\Q2.c
 [v _portinit portinit `(v  1 e 1 0 ]
 "176
 [v _wait wait `(v  1 e 1 0 ]
@@ -33,15 +33,11 @@
 [v _tact tact `(v  1 e 1 0 ]
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
-"406
-[v _jikan jikan `(v  1 e 1 0 ]
 "451
 [v _waitSEG waitSEG `(v  1 e 1 0 ]
 "460
 [v _motor motor `(v  1 e 1 0 ]
-"467
-[v _bottomTime bottomTime `(i  1 e 2 0 ]
-"483
+"468
 [v _main main `(v  1 e 1 0 ]
 "429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -79,7 +75,7 @@
 [v _RC6 RC6 `VEb  1 e 0 @118 ]
 "8203
 [v _RC7 RC7 `VEb  1 e 0 @119 ]
-"134 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor2.X\Q3.c
+"134 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor2.X\Q2.c
 [v _flag_sw3 flag_sw3 `us  1 e 2 0 ]
 "135
 [v _flag_R flag_R `us  1 e 2 0 ]
@@ -103,17 +99,14 @@
 [v _fugou fugou `us  1 e 2 0 ]
 "145
 [v _samp samp `[16]us  1 e 32 0 ]
-"149
-[v _num0 num0 `[10]us  1 e 20 0 ]
-"483
+"152
+[v _moji moji `[10]us  1 e 20 0 ]
+"468
 [v _main main `(v  1 e 1 0 ]
 {
-"492
-[v main@i i `i  1 a 2 28 ]
-[v main@j j `i  1 a 2 26 ]
-"511
-[v main@time time `i  1 a 2 24 ]
-"552
+"477
+[v main@i i `i  1 a 2 26 ]
+"581
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]
@@ -143,7 +136,22 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor2.X\Q3.c
+"346 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor2.X\Q2.c
+[v _tact tact `(v  1 e 1 0 ]
+{
+[v tact@mode mode `us  1 p 2 8 ]
+"365
+} 0
+"331
+[v _tactsw tactsw `(v  1 e 1 0 ]
+{
+"333
+[v tactsw@a a `us  1 a 2 6 ]
+[v tactsw@c c `us  1 a 2 4 ]
+[v tactsw@b b `us  1 a 2 2 ]
+"342
+} 0
+"160
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172
@@ -183,29 +191,4 @@
 {
 [v fclr@flg flg `us  1 p 2 0 ]
 "384
-} 0
-"467
-[v _bottomTime bottomTime `(i  1 e 2 0 ]
-{
-"480
-} 0
-"346
-[v _tact tact `(v  1 e 1 0 ]
-{
-[v tact@mode mode `us  1 p 2 8 ]
-"365
-} 0
-"331
-[v _tactsw tactsw `(v  1 e 1 0 ]
-{
-"333
-[v tactsw@a a `us  1 a 2 6 ]
-[v tactsw@c c `us  1 a 2 4 ]
-[v tactsw@b b `us  1 a 2 2 ]
-"342
-} 0
-"406
-[v _jikan jikan `(v  1 e 1 0 ]
-{
-"410
 } 0
