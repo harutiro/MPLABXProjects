@@ -386,8 +386,8 @@ idataBANK0 86 95 CODE 86 0
 inittext 7A 85 CODE 7A 0
 clrtext 6E 79 CODE 6E 0
 %locals
-dist/default/production\SKT_h28_vor3.X.production.o
-C:\Users\harut\AppData\Local\Temp\siis.s
+dist/default/debug\SKT_h28_vor3.X.debug.o
+C:\Users\harut\AppData\Local\Temp\sh7g.s
 1123 7D1 0 CODE 0
 1126 7D1 0 CODE 0
 1262 7D1 0 CODE 0

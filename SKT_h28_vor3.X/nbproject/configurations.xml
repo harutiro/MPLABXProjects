@@ -11,6 +11,7 @@
       <itemPath>Q1.c</itemPath>
       <itemPath>Q2.c</itemPath>
       <itemPath>Q3.c</itemPath>
+      <itemPath>Q4.c</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -144,6 +145,9 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <PICkit3PlatformTool>
+        <property key="firmware.download.all" value="false"/>
+      </PICkit3PlatformTool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
       </XC8-CO>
