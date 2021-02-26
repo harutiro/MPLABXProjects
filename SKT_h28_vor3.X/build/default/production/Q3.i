@@ -5237,39 +5237,58 @@ void main(void)
         }
     }
 
-    int time;
+    int time = 0;
 
     hukki:
     while(1){
 
 
        if(RA0 == 0){
-           for(i = 9;i>=0;i--){
-
+           for(i = 9; i>=0 ; i--){
                waitSEG(num0[i],0,500);
 
-
-                while(RA1 == 0){
+                while(RA1 == 0 ){
                     dynam(num0[i],(0x01|0x02|0x04|0x08|0x10|0x20),0,0);
-                    time = bottomTime();
-                    fclr(2);
 
-                    if(time >= 1000){
-                        for(j=0;j<i;j++){
+                    jikan();
 
+                    if(time != 0 && time < 100 && count == 0){
+
+                        for(j=0; j<i ; j++ ){
                             motor(360,num0[i],num0[j],1,1);
                         }
-
                         while(1){
                             waitSEG(num0[i],num0[j],500);
-                            waitSEG(0,0,500);
+                            wait(500);
                             if(RA0 == 1 && RA1 == 1){
+                                time = 0;
                                 goto hukki;
                             }
                         }
+
+
+
+
+                    }else if(time != 0 && count == 0) {
+
+                        for(j=0; j<i ; j++ ){
+                            motor(360,num0[i],num0[j],2,5);
+                        }
+                        while(1){
+                            waitSEG(num0[i],num0[j],1000);
+                            wait(1000);
+                            if(RA0 == 1 && RA1 == 1){
+                                time = 0;
+                                goto hukki;
+                            }
+                        }
+
+
+
+
                     }
 
-
+                    time = count;
 
 
                 }

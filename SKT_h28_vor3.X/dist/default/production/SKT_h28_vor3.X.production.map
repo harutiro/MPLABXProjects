@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\SKT_h28_vor3.X.production.sym \
   --cmf=dist/default/production\SKT_h28_vor3.X.production.cmf -z -Q16F1938 \
-  -oC:\Users\harut\AppData\Local\Temp\shdc.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\harut\AppData\Local\Temp\sja4.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/SKT_h28_vor3.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=020ECh-023EFh -pstack=STACK \
   -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh -ASTRING=00h-0FFhx64 \
@@ -31,7 +31,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\harut\AppData\Local\Temp\shdc.o \
+  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\harut\AppData\Local\Temp\sja4.o \
   dist/default/production\SKT_h28_vor3.X.production.o 
 
 Object code version is 3.11
@@ -41,36 +41,35 @@ Machine type is 16F1938
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\harut\AppData\Local\Temp\shdc.o
+C:\Users\harut\AppData\Local\Temp\sja4.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
 dist/default/production\SKT_h28_vor3.X.production.o
                 cinit                               7D1      7D1       2F      FA2       0
                 config                             8007     8007        2        0       4
-                text11                              353      353        D      6A6       0
-                text10                              454      454       3D      8A8       0
-                text9                               4D9      4D9       4B      9B2       0
-                text8                               3B7      3B7       2D      76E       0
-                text7                               373      373       20      6E6       0
-                text6                               667      667      16A      CCE       0
-                text5                               393      393       24      726       0
-                text4                               360      360       13      6C0       0
-                text3                               418      418       3C      830       0
-                text2                               3E4      3E4       34      7C8       0
-                text1                               34A      34A        9      694       0
-                maintext                            570      570       F7      AE0       0
+                text10                              393      393       20      726       0
+                text9                               354      354        D      6A8       0
+                text8                               667      667      16A      CCE       0
+                text7                               3B3      3B3       24      766       0
+                text6                               361      361       13      6C2       0
+                text5                               374      374       1F      6E8       0
+                text4                               3D7      3D7       2A      7AE       0
+                text3                               435      435       3C      86A       0
+                text2                               401      401       34      802       0
+                text1                               34B      34B        9      696       0
+                maintext                            505      505      162      A0A       0
                 cstackBANK0                          42       42       1E       20       1
                 cstackCOMMON                         70       70        D       70       1
-                clrtext                             336      336        6      66C       0
-                inittext                            33C      33C        6      678       0
+                clrtext                             337      337        6      66E       0
+                inittext                            33D      33D        6      67A       0
                 dataBANK2                           120      120       4C      120       1
                 dataBANK1                            A0       A0       48       A0       1
                 dataBANK0                            60       60        8       20       1
                 bssBANK0                             20       20       22       20       1
-                idataBANK2                          524      524       4C      A48       0
-                idataBANK1                          491      491       48      922       0
-                idataBANK0                          342      342        8      684       0
+                idataBANK2                          4B9      4B9       4C      972       0
+                idataBANK1                          471      471       48      8E2       0
+                idataBANK0                          343      343        8      686       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -79,23 +78,22 @@ TOTAL           Name                               Link     Load   Length     Sp
                 end_init                              2        2        2         0
                 cinit                               7D1      7D1       2F         0
                 reset_vec                             0        0        2         0
-                text11                              353      353        D         0
-                text10                              454      454       3D         0
-                text9                               4D9      4D9       4B         0
-                text8                               3B7      3B7       2D         0
-                text7                               373      373       20         0
-                text6                               667      667      16A         0
-                text5                               393      393       24         0
-                text4                               360      360       13         0
-                text3                               418      418       3C         0
-                text2                               3E4      3E4       34         0
-                text1                               34A      34A        9         0
-                maintext                            570      570       F7         0
-                clrtext                             336      336        6         0
-                inittext                            33C      33C        6         0
-                idataBANK2                          524      524       4C         0
-                idataBANK1                          491      491       48         0
-                idataBANK0                          342      342        8         0
+                text10                              393      393       20         0
+                text9                               354      354        D         0
+                text8                               667      667      16A         0
+                text7                               3B3      3B3       24         0
+                text6                               361      361       13         0
+                text5                               374      374       1F         0
+                text4                               3D7      3D7       2A         0
+                text3                               435      435       3C         0
+                text2                               401      401       34         0
+                text1                               34B      34B        9         0
+                maintext                            505      505      162         0
+                clrtext                             337      337        6         0
+                inittext                            33D      33D        6         0
+                idataBANK2                          4B9      4B9       4C         0
+                idataBANK1                          471      471       48         0
+                idataBANK0                          343      343        8         0
 
         CLASS   STRCODE        
 
@@ -264,23 +262,22 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
                 dataBANK1                      0000A0  000048  0000E8        A0       1  BANK1       1
                 dataBANK2                      000120  00004C  00016C       120       1  BANK2       1
-                clrtext                        000336  000006  00033C       66C       0  CODE        2
-                inittext                       00033C  000006  000342       678       0  CODE        2
-                idataBANK0                     000342  000008  00034A       684       0  CODE        2
-                text1                          00034A  000009  000353       694       0  CODE        2
-                text11                         000353  00000D  000360       6A6       0  CODE        2
-                text4                          000360  000013  000373       6C0       0  CODE        2
-                text7                          000373  000020  000393       6E6       0  CODE        2
-                text5                          000393  000024  0003B7       726       0  CODE        2
-                text8                          0003B7  00002D  0003E4       76E       0  CODE        2
-                text2                          0003E4  000034  000418       7C8       0  CODE        2
-                text3                          000418  00003C  000454       830       0  CODE        2
-                text10                         000454  00003D  000491       8A8       0  CODE        2
-                idataBANK1                     000491  000048  0004D9       922       0  CODE        2
-                text9                          0004D9  00004B  000524       9B2       0  CODE        2
-                idataBANK2                     000524  00004C  000570       A48       0  CODE        2
-                maintext                       000570  0000F7  000667       AE0       0  CODE        2
-                text6                          000667  00016A  0007D1       CCE       0  CODE        2
+                clrtext                        000337  000006  00033D       66E       0  CODE        2
+                inittext                       00033D  000006  000343       67A       0  CODE        2
+                idataBANK0                     000343  000008  00034B       686       0  CODE        2
+                text1                          00034B  000009  000354       696       0  CODE        2
+                text9                          000354  00000D  000361       6A8       0  CODE        2
+                text6                          000361  000013  000374       6C2       0  CODE        2
+                text5                          000374  00001F  000393       6E8       0  CODE        2
+                text10                         000393  000020  0003B3       726       0  CODE        2
+                text7                          0003B3  000024  0003D7       766       0  CODE        2
+                text4                          0003D7  00002A  000401       7AE       0  CODE        2
+                text2                          000401  000034  000435       802       0  CODE        2
+                text3                          000435  00003C  000471       86A       0  CODE        2
+                idataBANK1                     000471  000048  0004B9       8E2       0  CODE        2
+                idataBANK2                     0004B9  00004C  000505       972       0  CODE        2
+                maintext                       000505  000162  000667       A0A       0  CODE        2
+                text8                          000667  00016A  0007D1       CCE       0  CODE        2
                 cinit                          0007D1  00002F  000800       FA2       0  CODE        2
 
 
@@ -301,13 +298,13 @@ UNUSED ADDRESS RANGES
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
-        CODE             00004-00335             332           2
+        CODE             00004-00336             333           2
                          00800-03FFF             800
         COMMON           0007D-0007D               1           1
-        CONST            00004-00335             100           2
+        CONST            00004-00336             100           2
                          00800-03FFF             100
         EEDATA           0F000-0F0FF             100           2
-        ENTRY            00004-00335             100           2
+        ENTRY            00004-00336             100           2
                          00800-03FFF             100
         IDLOC            08000-08003               4           2
         RAM              00068-0006F               8           1
@@ -356,15 +353,15 @@ UNUSED ADDRESS RANGES
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
         STACK            020EC-023EF             304           1
-        STRCODE          00004-00335             332           2
+        STRCODE          00004-00336             333           2
                          00800-03FFF            3800
-        STRING           00004-00335             100           2
+        STRING           00004-00336             100           2
                          00800-03FFF             100
 
                                   Symbol Table
 
 ?___lwdiv                cstackCOMMON 00070
-?_bottomTime             cstackCOMMON 0007A
+?___wmul                 cstackCOMMON 00070
 _ANSELA                  (abs)        0018C
 _ANSELB                  (abs)        0018D
 _OSCCON                  (abs)        00099
@@ -585,7 +582,7 @@ __S2                     (abs)        00000
 __S3                     (abs)        00000
 ___int_sp                stack        00000
 ___latbits               (abs)        00003
-___lwdiv                 text3        00418
+___lwdiv                 text3        00435
 ___lwdiv@counter         cstackCOMMON 00077
 ___lwdiv@dividend        cstackCOMMON 00072
 ___lwdiv@divisor         cstackCOMMON 00070
@@ -593,19 +590,22 @@ ___lwdiv@quotient        cstackCOMMON 00075
 ___sp                    stack        00000
 ___stackhi               (abs)        023EF
 ___stacklo               (abs)        020EC
-__end_of___lwdiv         text3        00454
+___wmul                  text5        00374
+___wmul@multiplicand     cstackCOMMON 00072
+___wmul@multiplier       cstackCOMMON 00070
+___wmul@product          cstackCOMMON 00074
+__end_of___lwdiv         text3        00471
+__end_of___wmul          text5        00393
 __end_of__initialization cinit        007FD
-__end_of_bottomTime      text8        003E4
-__end_of_dynam           text6        007D1
-__end_of_fclr            text7        00393
-__end_of_jikan           text11       00360
+__end_of_dynam           text8        007D1
+__end_of_fclr            text10       003B3
+__end_of_jikan           text9        00361
 __end_of_main            maintext     00667
-__end_of_motor           text5        003B7
-__end_of_portinit        text4        00373
-__end_of_tact            text9        00524
-__end_of_tactsw          text10       00491
-__end_of_waitSEG         text2        00418
-__end_of_zenoff          text1        00353
+__end_of_motor           text7        003D7
+__end_of_portinit        text6        00374
+__end_of_wait            text4        00401
+__end_of_waitSEG         text2        00435
+__end_of_zenoff          text1        00354
 __initialization         cinit        007D1
 __pbssBANK0              bssBANK0     00020
 __pcstackBANK0           cstackBANK0  00042
@@ -613,37 +613,34 @@ __pcstackCOMMON          cstackCOMMON 00070
 __pdataBANK0             dataBANK0    00060
 __pdataBANK1             dataBANK1    000A0
 __pdataBANK2             dataBANK2    00120
-__pidataBANK0            idataBANK0   00342
-__pidataBANK1            idataBANK1   00491
-__pidataBANK2            idataBANK2   00524
-__pmaintext              maintext     00570
-__ptext1                 text1        0034A
-__ptext10                text10       00454
-__ptext11                text11       00353
-__ptext2                 text2        003E4
-__ptext3                 text3        00418
-__ptext4                 text4        00360
-__ptext5                 text5        00393
-__ptext6                 text6        00667
-__ptext7                 text7        00373
-__ptext8                 text8        003B7
-__ptext9                 text9        004D9
+__pidataBANK0            idataBANK0   00343
+__pidataBANK1            idataBANK1   00471
+__pidataBANK2            idataBANK2   004B9
+__pmaintext              maintext     00505
+__ptext1                 text1        0034B
+__ptext10                text10       00393
+__ptext2                 text2        00401
+__ptext3                 text3        00435
+__ptext4                 text4        003D7
+__ptext5                 text5        00374
+__ptext6                 text6        00361
+__ptext7                 text7        003B3
+__ptext8                 text8        00667
+__ptext9                 text9        00354
 __size_of___lwdiv        (abs)        00000
-__size_of_bottomTime     (abs)        00000
+__size_of___wmul         (abs)        00000
 __size_of_dynam          (abs)        00000
 __size_of_fclr           (abs)        00000
 __size_of_jikan          (abs)        00000
 __size_of_main           (abs)        00000
 __size_of_motor          (abs)        00000
 __size_of_portinit       (abs)        00000
-__size_of_tact           (abs)        00000
-__size_of_tactsw         (abs)        00000
+__size_of_wait           (abs)        00000
 __size_of_waitSEG        (abs)        00000
 __size_of_zenoff         (abs)        00000
 _atai                    bssBANK0     0002C
 _atai1                   bssBANK0     0002E
 _atai10                  bssBANK0     00030
-_bottomTime              text8        003B7
 _ccw                     bssBANK0     00032
 _code1                   bssBANK0     00022
 _code10                  bssBANK0     00024
@@ -651,25 +648,24 @@ _code100                 bssBANK0     00026
 _code1000                bssBANK0     00028
 _count                   bssBANK0     0002A
 _cw                      bssBANK0     00034
-_dynam                   text6        00667
-_fclr                    text7        00373
+_dynam                   text8        00667
+_fclr                    text10       00393
 _flag_P                  bssBANK0     00038
 _flag_R                  bssBANK0     0003A
 _flag_sw3                bssBANK0     0003C
 _flg                     bssBANK0     00036
 _fugou                   bssBANK0     00020
-_jikan                   text11       00353
-_main                    maintext     00570
-_motor                   text5        00393
+_jikan                   text9        00354
+_main                    maintext     00505
+_motor                   text7        003B3
 _num0                    dataBANK1    000C0
-_portinit                text4        00360
+_portinit                text6        00361
 _samp                    dataBANK1    000A0
-_tact                    text9        004D9
-_tactsw                  text10       00454
-_waitSEG                 text2        003E4
-_zenoff                  text1        0034A
+_wait                    text4        003D7
+_waitSEG                 text2        00401
+_zenoff                  text1        0034B
 btemp                    (abs)        0007E
-clear_ram0               clrtext      00336
+clear_ram0               clrtext      00337
 dynam@dig1data           cstackCOMMON 00070
 dynam@dig2data           cstackCOMMON 00072
 dynam@ext                cstackBANK0  00048
@@ -680,7 +676,7 @@ dynam@tm                 cstackBANK0  00044
 dynam@tr                 cstackCOMMON 00076
 end_of_initialization    cinit        007FD
 fclr@flg                 cstackCOMMON 00070
-init_ram                 inittext     0033C
+init_ram                 inittext     0033D
 intlevel0                functab      00000
 intlevel1                functab      00000
 intlevel2                functab      00000
@@ -699,10 +695,9 @@ motor@tr                 cstackBANK0  00052
 reset_vec                reset_vec    00000
 start                    init         00002
 start_initialization     cinit        007D1
-tact@mode                cstackCOMMON 00078
-tactsw@a                 cstackCOMMON 00076
-tactsw@b                 cstackCOMMON 00072
-tactsw@c                 cstackCOMMON 00074
+wait@i                   cstackCOMMON 00078
+wait@j                   cstackCOMMON 0007A
+wait@wt                  cstackCOMMON 00076
 waitSEG@i                cstackCOMMON 00078
 waitSEG@seg1             cstackBANK0  0004A
 waitSEG@seg2             cstackBANK0  0004C
@@ -738,13 +733,14 @@ FUNCTION INFORMATION:
       Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
       Totals:         1      12       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       13 bytes
- Hardware stack levels required when called:    3
+ Hardware stack levels required when called:    2
  This function calls:
-		_bottomTime
 		_dynam
 		_fclr
+		_jikan
 		_motor
 		_portinit
+		_wait
 		_waitSEG
 		_zenoff
  This function is called by:
@@ -842,6 +838,70 @@ Total ram usage:        8 bytes
 		Nothing
  This function is called by:
 		_waitSEG
+ This function uses a non-reentrant model
+
+
+ *************** function _wait *****************
+ Defined at:
+		line 176 in file "Q3.c"
+ Parameters:    Size  Location     Type
+  wt              2    6[COMMON] unsigned short 
+ Auto vars:     Size  Location     Type
+  j               2   10[COMMON] unsigned int 
+  i               2    8[COMMON] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___wmul
+ This function is called by:
+		_main
+		_hyouji
+ This function uses a non-reentrant model
+
+
+ *************** function ___wmul *****************
+ Defined at:
+		line 15 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c"
+ Parameters:    Size  Location     Type
+  multiplier      2    0[COMMON] unsigned int 
+  multiplicand    2    2[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+  product         2    4[COMMON] unsigned int 
+ Return value:  Size  Location     Type
+                  2    0[COMMON] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_wait
+		_hen7
+		_hens
  This function uses a non-reentrant model
 
 
@@ -946,6 +1006,36 @@ Total ram usage:       16 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _jikan *****************
+ Defined at:
+		line 406 in file "Q3.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+		_bottomTime
+ This function uses a non-reentrant model
+
+
  *************** function _fclr *****************
  Defined at:
 		line 369 in file "Q3.c"
@@ -976,128 +1066,6 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _bottomTime *****************
- Defined at:
-		line 467 in file "Q3.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  2   10[COMMON] int 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		_jikan
-		_tact
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _tact *****************
- Defined at:
-		line 346 in file "Q3.c"
- Parameters:    Size  Location     Type
-  mode            2    8[COMMON] unsigned short 
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_tactsw
- This function is called by:
-		_bottomTime
-		_kaisu
- This function uses a non-reentrant model
-
-
- *************** function _tactsw *****************
- Defined at:
-		line 331 in file "Q3.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-  a               2    6[COMMON] unsigned short 
-  c               2    4[COMMON] unsigned short 
-  b               2    2[COMMON] unsigned short 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         8       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        8 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_tact
- This function uses a non-reentrant model
-
-
- *************** function _jikan *****************
- Defined at:
-		line 406 in file "Q3.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_bottomTime
- This function uses a non-reentrant model
-
-
 
 MODULE INFORMATION
 
@@ -1108,22 +1076,25 @@ shared
 shared estimated size: 44
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-		___lwdiv       		CODE           	0418	0000	60
+		___lwdiv       		CODE           	0435	0000	60
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c estimated size: 60
 
 Q3.c
-		_main          		CODE           	0570	0000	247
-		_jikan         		CODE           	0353	0000	13
-		_tactsw        		CODE           	0454	0000	61
-		_zenoff        		CODE           	034A	0000	9
+		_main          		CODE           	0505	0000	354
+		_jikan         		CODE           	0354	0000	13
+		_zenoff        		CODE           	034B	0000	9
 		_dynam         		CODE           	0667	0000	362
-		_tact          		CODE           	04D9	0000	75
-		_portinit      		CODE           	0360	0000	19
-		_fclr          		CODE           	0373	0000	32
-		_motor         		CODE           	0393	0000	36
-		_waitSEG       		CODE           	03E4	0000	52
-		_bottomTime    		CODE           	03B7	0000	45
+		_portinit      		CODE           	0361	0000	19
+		_fclr          		CODE           	0393	0000	32
+		_motor         		CODE           	03B3	0000	36
+		_waitSEG       		CODE           	0401	0000	52
+		_wait          		CODE           	03D7	0000	42
 
-Q3.c estimated size: 951
+Q3.c estimated size: 919
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+		___wmul        		CODE           	0374	0000	31
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c estimated size: 31
 

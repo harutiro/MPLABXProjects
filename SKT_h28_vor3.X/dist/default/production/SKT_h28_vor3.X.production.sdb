@@ -39,8 +39,6 @@
 [v _waitSEG waitSEG `(v  1 e 1 0 ]
 "460
 [v _motor motor `(v  1 e 1 0 ]
-"467
-[v _bottomTime bottomTime `(i  1 e 2 0 ]
 "483
 [v _main main `(v  1 e 1 0 ]
 "429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
@@ -113,7 +111,7 @@
 [v main@j j `i  1 a 2 26 ]
 "511
 [v main@time time `i  1 a 2 24 ]
-"552
+"571
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]
@@ -142,6 +140,26 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
+} 0
+"176 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q3.c
+[v _wait wait `(v  1 e 1 0 ]
+{
+"178
+[v wait@j j `ui  1 a 2 10 ]
+[v wait@i i `ui  1 a 2 8 ]
+"176
+[v wait@wt wt `us  1 p 2 6 ]
+"182
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
 } 0
 "160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q3.c
 [v _portinit portinit `(v  1 e 1 0 ]
@@ -178,34 +196,14 @@
 [v dynam@tr tr `ui  1 p 2 6 ]
 "248
 } 0
+"406
+[v _jikan jikan `(v  1 e 1 0 ]
+{
+"410
+} 0
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
 {
 [v fclr@flg flg `us  1 p 2 0 ]
 "384
-} 0
-"467
-[v _bottomTime bottomTime `(i  1 e 2 0 ]
-{
-"480
-} 0
-"346
-[v _tact tact `(v  1 e 1 0 ]
-{
-[v tact@mode mode `us  1 p 2 8 ]
-"365
-} 0
-"331
-[v _tactsw tactsw `(v  1 e 1 0 ]
-{
-"333
-[v tactsw@a a `us  1 a 2 6 ]
-[v tactsw@c c `us  1 a 2 4 ]
-[v tactsw@b b `us  1 a 2 2 ]
-"342
-} 0
-"406
-[v _jikan jikan `(v  1 e 1 0 ]
-{
-"410
 } 0
