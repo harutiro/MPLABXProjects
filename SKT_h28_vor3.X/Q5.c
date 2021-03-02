@@ -448,7 +448,7 @@ void clear(void){
 
 //タイミング調整関数
 //wait(調整時間);
-int waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
 {
 
     wt = wt / 10;
@@ -481,7 +481,7 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt)
     }
 }
 
-int motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
+void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
 
     for(int i = kakudo;i>=0;i--){
         dynam(dig1data,dig2data,smdata,tr);
@@ -608,7 +608,7 @@ void main(void)
             hens(ataiL*10+ataiR,DEC);
             segL = code10;
             segR = code1;
-            
+
         } 
                
                 
