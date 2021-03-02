@@ -595,7 +595,14 @@ void main(void)
         }
         
         if(SW1 == DN && SW2 == UP){
-        
+            while(1){
+                dynam(hidari,migi,0,0);
+
+                if(SW1 ==DN && SW2 ==DN){
+                    
+                }
+            }
+
         }
     }
 }
