@@ -12,6 +12,7 @@
       <itemPath>Q2.c</itemPath>
       <itemPath>Q3.c</itemPath>
       <itemPath>Q4.c</itemPath>
+      <itemPath>Q5.c</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
