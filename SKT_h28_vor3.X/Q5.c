@@ -548,58 +548,69 @@ void main(void)
     int zyoutai = 0;
     //ÉÅÉCÉìÇÃìÆÇ´
 
-    unsigned short hidari = SEGg;
-    unsigned short migi = SEGg;
+    unsigned short segL = SEGg;
+    unsigned short segR = SEGg;
+
+    int ataiL = 0;
+    int ataiR = 0;
 
     hukki:
     while(1){
+        //(1)
         if(SW1 == UP && SW2 == DN){
-            dynam(hidari,migi,0,0);
+            dynam(segL,segR,0,0);
             tact(REN);
             if(SW3PR){
                 
-                if(k == 0){
-                    k = 10;
+                if(ataiL == 0){
+                    ataiL = 10;
                 }
 
-                k--;
+                ataiL--;
                 
                 fclr(PR);
                 
-                hidari = num0[k];
+                segL = num0[k];
 
             }
         }
 
-        if(SW1 == DN && SW2 == DN && hidari != SEGg){
+        //(2)
+        if(SW1 == DN && SW2 == DN && segR != SEGg){
             
-            if(migi == SEGg){
-                migi = num0[0];
+            if(segR == SEGg){
+                segR = num0[0];
             }
             
-            dynam(hidari,migi,0,0);
+            dynam(segL,segR,0,0);
             tact(REN);
             if(SW3PR){
                 
-                if(m == 9){
-                    m = -1;
+                if(ataiR == 9){
+                    ataiR = -1;
                 }
 
-                m++;
+                ataiR++;
                 
                 fclr(PR);
                 
-                migi = num0[m];
+                ataiR = num0[m];
 
             }
         }
-        
+
+        //(3)
         if(SW1 == DN && SW2 == UP){
             while(1){
-                dynam(hidari,migi,0,0);
+                dynam(segL,segR,0,0);
 
                 if(SW1 ==DN && SW2 ==DN){
                     
+                    hens(ataiL*10+ataiR,DEC);
+                    segL = code10;
+                    segR = code1;
+
+
                 }
             }
 
