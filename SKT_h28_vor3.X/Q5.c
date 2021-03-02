@@ -556,9 +556,13 @@ void main(void)
 
     hukki:
     while(1){
+
+        //‘S‚Ä‚Ì•\Ž¦•”•ª
+        dynam(segL,segR,0,0);
+
         //(1)
         if(SW1 == UP && SW2 == DN){
-            dynam(segL,segR,0,0);
+            
             tact(REN);
             if(SW3PR){
                 
@@ -582,7 +586,6 @@ void main(void)
                 segR = num0[0];
             }
             
-            dynam(segL,segR,0,0);
             tact(REN);
             if(SW3PR){
                 
@@ -600,21 +603,20 @@ void main(void)
         }
 
         //(3)
-        if(SW1 == DN && SW2 == UP){
-            while(1){
-                dynam(segL,segR,0,0);
+        if(SW1 ==DN && SW2 ==DN){
 
-                if(SW1 ==DN && SW2 ==DN){
-                    
-                    hens(ataiL*10+ataiR,DEC);
-                    segL = code10;
-                    segR = code1;
+            hens(ataiL*10+ataiR,DEC);
+            segL = code10;
+            segR = code1;
+            
+        } 
+               
+                
 
+                
+            
 
-                }
-            }
-
-        }
+        
     }
 }
 
