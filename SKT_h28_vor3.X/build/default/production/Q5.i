@@ -5291,5 +5291,23 @@ void main(void)
 
             }
         }
+
+        if(RA0 == 1 && RA1 == 1 && hidari != 0x40){
+            dynam(hidari,migi,0,0);
+            tact(2);
+            if(((flag_sw3==0)&&(flag_P==1))){
+
+                if(m == 9){
+                    m = -1;
+                }
+
+                m++;
+
+                fclr(2);
+
+                migi = num0[m];
+
+            }
+        }
     }
 }

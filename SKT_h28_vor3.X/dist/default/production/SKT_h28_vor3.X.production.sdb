@@ -102,13 +102,14 @@
 "519
 [v _main main `(v  1 e 1 0 ]
 {
-"528
-[v main@k k `i  1 a 2 24 ]
 "551
-[v main@hidari hidari `us  1 a 2 22 ]
+[v main@hidari hidari `us  1 a 2 24 ]
+"528
+[v main@m m `i  1 a 2 22 ]
+[v main@k k `i  1 a 2 20 ]
 "552
-[v main@migi migi `us  1 a 2 20 ]
-"574
+[v main@migi migi `us  1 a 2 18 ]
+"592
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]

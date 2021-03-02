@@ -570,6 +570,24 @@ void main(void)
 
             }
         }
+
+        if(SW1 == DN && SW2 == DN && hidari != SEGg){
+            dynam(hidari,migi,0,0);
+            tact(REN);
+            if(SW3PR){
+                
+                if(m == 9){
+                    m = -1;
+                }
+
+                m++;
+                
+                fclr(PR);
+                
+                migi = num0[m];
+
+            }
+        }
     }
 }
 
