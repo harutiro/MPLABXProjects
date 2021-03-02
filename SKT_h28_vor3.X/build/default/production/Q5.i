@@ -5177,7 +5177,7 @@ void clear(void){
 
 
 
-int waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
+void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
 {
 
     wt = wt / 10;
@@ -5210,7 +5210,7 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt)
     }
 }
 
-int motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
+void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
 
     for(int i = kakudo;i>=0;i--){
         dynam(dig1data,dig2data,smdata,tr);
@@ -5269,50 +5269,74 @@ void main(void)
     int zyoutai = 0;
 
 
-    unsigned short hidari = 0x40;
-    unsigned short migi = 0x40;
+    unsigned short segL = 0x40;
+    unsigned short segR = 0x40;
+
+    int ataiL = 0;
+    int ataiR = 0;
 
     hukki:
     while(1){
+
+
+        dynam(segL,segR,0,0);
+
+
         if(RA0 == 0 && RA1 == 1){
-            dynam(hidari,migi,0,0);
+
             tact(2);
             if(((flag_sw3==0)&&(flag_P==1))){
 
-                if(k == 0){
-                    k = 10;
+                if(ataiL == 0){
+                    ataiL = 10;
                 }
 
-                k--;
+                ataiL--;
 
                 fclr(2);
 
-                hidari = num0[k];
+                segL = num0[k];
 
             }
         }
 
-        if(RA0 == 1 && RA1 == 1 && hidari != 0x40){
 
-            if(migi == 0x40){
-                migi = num0[0];
+        if(RA0 == 1 && RA1 == 1 && segR != 0x40){
+
+            if(segR == 0x40){
+                segR = num0[0];
             }
 
-            dynam(hidari,migi,0,0);
             tact(2);
             if(((flag_sw3==0)&&(flag_P==1))){
 
-                if(m == 9){
-                    m = -1;
+                if(ataiR == 9){
+                    ataiR = -1;
                 }
 
-                m++;
+                ataiR++;
 
                 fclr(2);
 
-                migi = num0[m];
+                ataiR = num0[m];
 
             }
         }
+
+
+        if(RA0 ==1 && RA1 ==1){
+
+            hen7(ataiL*10+ataiR,10);
+            segL = code10;
+            segR = code1;
+
+        }
+
+
+
+
+
+
+
     }
 }

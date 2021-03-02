@@ -605,7 +605,7 @@ void main(void)
         //(3)
         if(SW1 ==DN && SW2 ==DN){
 
-            hens(ataiL*10+ataiR,DEC);
+            hen7(ataiL*10+ataiR,DEC);
             segL = code10;
             segR = code1;
 
