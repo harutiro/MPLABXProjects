@@ -572,6 +572,11 @@ void main(void)
         }
 
         if(SW1 == DN && SW2 == DN && hidari != SEGg){
+            
+            if(migi == SEGg){
+                migi = num0[0];
+            }
+            
             dynam(hidari,migi,0,0);
             tact(REN);
             if(SW3PR){
@@ -587,6 +592,10 @@ void main(void)
                 migi = num0[m];
 
             }
+        }
+        
+        if(SW1 == DN && SW2 == UP){
+        
         }
     }
 }

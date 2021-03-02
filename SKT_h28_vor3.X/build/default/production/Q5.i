@@ -5293,6 +5293,11 @@ void main(void)
         }
 
         if(RA0 == 1 && RA1 == 1 && hidari != 0x40){
+
+            if(migi == 0x40){
+                migi = num0[0];
+            }
+
             dynam(hidari,migi,0,0);
             tact(2);
             if(((flag_sw3==0)&&(flag_P==1))){
