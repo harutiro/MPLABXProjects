@@ -667,7 +667,7 @@ void main(void)
 
         } 
 
-        //(5) (7) (8)
+        //(5) (7) (9)
         tact(REN);
 
         if(SW1 ==DN && SW2 == DN && SW3PR && segR != SEGg && segL != SEGg && zyoutai == 3){
