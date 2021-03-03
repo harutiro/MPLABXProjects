@@ -19,7 +19,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+"160 C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
 [v _portinit portinit `(v  1 e 1 0 ]
 "176
 [v _wait wait `(v  1 e 1 0 ]
@@ -27,6 +27,8 @@
 [v _zenoff zenoff `(v  1 e 1 0 ]
 "206
 [v _dynam dynam `(v  1 e 1 0 ]
+"252
+[v _hen7 hen7 `(v  1 e 1 0 ]
 "331
 [v _tactsw tactsw `(v  1 e 1 0 ]
 "346
@@ -34,7 +36,7 @@
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
 "484
-[v _motor motor `(i  1 e 2 0 ]
+[v _motor motor `(v  1 e 1 0 ]
 "519
 [v _main main `(v  1 e 1 0 ]
 "429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
@@ -73,7 +75,7 @@
 [v _RC6 RC6 `VEb  1 e 0 @118 ]
 "8203
 [v _RC7 RC7 `VEb  1 e 0 @119 ]
-"134 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+"134 C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
 [v _flag_sw3 flag_sw3 `us  1 e 2 0 ]
 "135
 [v _flag_R flag_R `us  1 e 2 0 ]
@@ -103,13 +105,17 @@
 [v _main main `(v  1 e 1 0 ]
 {
 "552
-[v main@migi migi `us  1 a 2 24 ]
+[v main@segR segR `us  1 a 2 46 ]
+"555
+[v main@ataiR ataiR `i  1 a 2 44 ]
+"554
+[v main@ataiL ataiL `i  1 a 2 42 ]
 "551
-[v main@hidari hidari `us  1 a 2 22 ]
+[v main@segL segL `us  1 a 2 40 ]
 "528
-[v main@m m `i  1 a 2 20 ]
-[v main@k k `i  1 a 2 18 ]
-"597
+[v main@m m `i  1 a 2 36 ]
+[v main@k k `i  1 a 2 34 ]
+"621
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]
@@ -136,7 +142,57 @@
 {
 "172
 } 0
-"369
+"252
+[v _hen7 hen7 `(v  1 e 1 0 ]
+{
+"255
+[v hen7@n n `ui  1 a 2 22 ]
+[v hen7@m m `ui  1 a 2 20 ]
+[v hen7@l l `ui  1 a 2 18 ]
+"254
+[v hen7@value100 value100 `i  1 a 2 16 ]
+[v hen7@value10 value10 `i  1 a 2 14 ]
+[v hen7@value1 value1 `i  1 a 2 12 ]
+"252
+[v hen7@value value `i  1 p 2 4 ]
+[v hen7@ns1 ns1 `us  1 p 2 6 ]
+"307
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
+"41
+} 0
+"369 C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
 [v _fclr fclr `(v  1 e 1 0 ]
 {
 [v fclr@flg flg `us  1 p 2 0 ]
