@@ -550,8 +550,14 @@ void main(void)
     unsigned short segL = 0;
     unsigned short segR = 0;
 
+    unsigned short segL2 = 0;
+    unsigned short segR2 = 0;
+
     int ataiL = 0;
     int ataiR = 0;
+
+    int ataiL2 = 0;
+    int ataiR2 = 0;
 
     int zyoutai = 0;
     /*
@@ -565,12 +571,14 @@ void main(void)
     */
 
     int ans = 0;
+    int ans2 = 0;
 
     hukki:
     while(1){
 
         //‘S‚Ä‚Ì•\Ž¦•”•ª
         dynam(segL,segR,0,0);
+        dynam(segL2,segR2,0,0);
 
         //(1)
         if(SW1 == UP && SW2 == DN){
@@ -685,6 +693,49 @@ void main(void)
             ans = 0;
         }
 
+        //========================‚±‚±‚©‚ç–â‚U=============================
+
+        if(SW1 == DN && SW2 == UP){
+            //(2)
+            segL = segR = SEGN;
+
+            //(3)
+            tact(REN);
+
+            if(SW3PR){
+                k++;
+            }
+            if(k >= 2 && zyoutai == 0){
+                for(i = 0; i<=15; i++){
+                    hen7(i);
+                    
+                    segL2 = code10;
+                    segR2 = code1;
+
+                    time = waitSEGStop(segL2,segR2,1000);
+
+                    if (time == 1){
+                        ans2 = i;
+                        zyoutai = 11;
+                        break;
+                    }
+                    
+
+                }
+            }
+        }
+
+        //(5)
+        if(SW1 == UP && SW2 == UP && zyoutai == 11){
+            zyoutai = 12;
+
+        }
+
+        if(SW1 == DN && SW2 == UP && zyoutai == 12){
+            hens7(ans2,HEX );
+            segL2 = SEG0;
+            segR2 = code1;
+        }
 
         
 
