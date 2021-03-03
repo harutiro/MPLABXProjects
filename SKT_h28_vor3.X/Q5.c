@@ -547,8 +547,8 @@ void main(void)
     int time = 0;
     //ƒƒCƒ“‚Ì“®‚«
 
-    unsigned short segL = SEGg;
-    unsigned short segR = SEGg;
+    unsigned short segL = 0;
+    unsigned short segR = 0;
 
     int ataiL = 0;
     int ataiR = 0;
@@ -574,6 +574,9 @@ void main(void)
 
         //(1)
         if(SW1 == UP && SW2 == DN){
+
+            segL = SEGg;
+            segR = SEGg;
             
             tact(REN);
             if(SW3PR){
