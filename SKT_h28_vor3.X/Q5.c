@@ -545,7 +545,6 @@ void main(void)
 //    }
 
     int time = 0;
-    int zyoutai = 0;
     //メインの動き
 
     unsigned short segL = SEGg;
@@ -556,8 +555,12 @@ void main(void)
 
     int zyoutai = 0;
     /*
-    0: 特になし
+
+    0: emptty
     1: 一定のサイクル動作の上、SW2上に変更された
+    2: 計算結果が表示されまだ回転していない
+    3:　計算結果が表示され回転し終わった
+    
     
     */
 
@@ -631,12 +634,43 @@ void main(void)
             
             segR = code1;
 
+            //(4)
+            if(zyoutai == 0){
+                zyoutai = 2;
+            }
+            
+
+            if(ans%2 == 1 && ans != 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(360,segL,segR,T2,H);
+                
+            }
+
+            //(6)
+
+
         } 
 
-        //(4)
-        if(ans%2 == 1 && ans != 0){
-            motor(360,segL,segR,T2,H);
+        //(5)
+        tact(REN);
+
+        if(SW1 ==DN && SW2 == DN && SW3PR && segR != SEGg && segL != SEGg){
+            zyoutai = 0;
+
+            segR = 0;
+            segL = 0;
+
+            ataiR = 0;
+            ataiL = 0;
+
+            ans = 0;
         }
+
+
+        
+
+        
                
                 
 
