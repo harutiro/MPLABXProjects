@@ -640,7 +640,7 @@ void main(void)
             }
             
 
-            if(ans%2 == 1 && ans != 0 && zyoutai == 2){
+            if(ans%2 == 1 && zyoutai == 2){
                 zyoutai = 3;
 
                 motor(360,segL,segR,T2,H);
@@ -648,6 +648,12 @@ void main(void)
             }
 
             //(6)
+            if(ans%2 == 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(720,segL,segR,H2,H);
+                
+            }
 
 
         } 
