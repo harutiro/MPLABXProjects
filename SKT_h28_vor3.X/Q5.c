@@ -603,13 +603,18 @@ void main(void)
         }
 
         //(3)
-        if(SW1 ==DN && SW2 ==DN){
+        if(SW1 ==DN && SW2 ==DN && segR != SEGg && segL != SEGg){
 
             hens(ataiL*10+ataiR,DEC);
             segL = code10;
             segR = code1;
 
         } 
+
+        //(4)
+        if(){
+            
+        }
                
                 
 
