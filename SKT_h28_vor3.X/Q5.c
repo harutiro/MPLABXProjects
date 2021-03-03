@@ -554,6 +554,13 @@ void main(void)
     int ataiL = 0;
     int ataiR = 0;
 
+    int zyoutai = 0;
+    /*
+    0: 特になし
+    1: 一定のサイクル動作の上、SW2上に変更された
+    
+    */
+
     hukki:
     while(1){
 
@@ -603,10 +610,23 @@ void main(void)
         }
 
         //(3)
-        if(SW1 ==DN && SW2 ==DN && segR != SEGg && segL != SEGg){
+        if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && zyoutai == 0;){
+            zyoutai = 1;
+        }    
 
-            hens(ataiL*10+ataiR,DEC);
-            segL = code10;
+        if(SW1 ==DN && SW2 == DN && segR != SEGg && segL != SEGg && zyoutai == 1){
+
+            zyoutai = 0;
+
+            int ans = (ataiL*10)+ataiR;
+
+            hens(ans,DEC);
+            if(ans/10 > 1){
+                segL = code10;
+            }else{
+                segL = 0;
+            }
+            
             segR = code1;
 
         } 
