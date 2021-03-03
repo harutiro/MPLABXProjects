@@ -35,6 +35,8 @@
 [v _tact tact `(v  1 e 1 0 ]
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
+"464
+[v _waitSEGStop waitSEGStop `(i  1 e 2 0 ]
 "484
 [v _motor motor `(v  1 e 1 0 ]
 "519
@@ -104,23 +106,57 @@
 "519
 [v _main main `(v  1 e 1 0 ]
 {
-"552
-[v main@segR segR `us  1 a 2 46 ]
-"555
-[v main@ataiR ataiR `i  1 a 2 44 ]
-"554
-[v main@ataiL ataiL `i  1 a 2 42 ]
+"562
+[v main@zyoutai zyoutai `i  1 a 2 56 ]
 "551
-[v main@segL segL `us  1 a 2 40 ]
+[v main@segR segR `us  1 a 2 54 ]
+"550
+[v main@segL segL `us  1 a 2 52 ]
+"573
+[v main@ans ans `i  1 a 2 50 ]
 "528
-[v main@m m `i  1 a 2 36 ]
-[v main@k k `i  1 a 2 34 ]
-"621
+[v main@i i `i  1 a 2 48 ]
+"557
+[v main@ataiR ataiR `i  1 a 2 46 ]
+"556
+[v main@ataiL ataiL `i  1 a 2 44 ]
+"554
+[v main@segR2 segR2 `us  1 a 2 42 ]
+"553
+[v main@segL2 segL2 `us  1 a 2 40 ]
+"528
+[v main@k k `i  1 a 2 38 ]
+"574
+[v main@ans2 ans2 `i  1 a 2 36 ]
+"547
+[v main@time time `i  1 a 2 34 ]
+"528
+[v main@m m `i  1 a 2 32 ]
+"560
+[v main@ataiR2 ataiR2 `i  1 a 2 30 ]
+"559
+[v main@ataiL2 ataiL2 `i  1 a 2 28 ]
+"751
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]
 {
 "202
+} 0
+"464
+[v _waitSEGStop waitSEGStop `(i  1 e 2 0 ]
+{
+"471
+[v waitSEGStop@i i `ui  1 a 2 18 ]
+"468
+[v waitSEGStop@cpSW2 cpSW2 `i  1 a 2 16 ]
+"467
+[v waitSEGStop@cpSW1 cpSW1 `i  1 a 2 14 ]
+"464
+[v waitSEGStop@seg1 seg1 `us  1 p 2 8 ]
+[v waitSEGStop@seg2 seg2 `us  1 p 2 10 ]
+[v waitSEGStop@wt wt `us  1 p 2 12 ]
+"482
 } 0
 "346
 [v _tact tact `(v  1 e 1 0 ]
@@ -137,10 +173,52 @@
 [v tactsw@b b `us  1 a 2 2 ]
 "342
 } 0
-"160
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"160 C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172
+} 0
+"484
+[v _motor motor `(v  1 e 1 0 ]
+{
+"486
+[v motor@i i `i  1 a 2 8 ]
+"484
+[v motor@kakudo kakudo `i  1 p 2 8 ]
+[v motor@dig1data dig1data `us  1 p 2 10 ]
+[v motor@dig2data dig2data `us  1 p 2 12 ]
+[v motor@smdata smdata `us  1 p 2 14 ]
+[v motor@tr tr `ui  1 p 2 16 ]
+"489
+} 0
+"206
+[v _dynam dynam `(v  1 e 1 0 ]
+{
+"209
+[v dynam@ext ext `us  1 a 2 6 ]
+"208
+[v dynam@j j `ui  1 a 2 4 ]
+[v dynam@tm tm `ui  1 a 2 2 ]
+"209
+[v dynam@smd smd `us  1 a 2 0 ]
+"206
+[v dynam@dig1data dig1data `us  1 p 2 0 ]
+[v dynam@dig2data dig2data `us  1 p 2 2 ]
+[v dynam@smdata smdata `us  1 p 2 4 ]
+[v dynam@tr tr `ui  1 p 2 6 ]
+"248
 } 0
 "252
 [v _hen7 hen7 `(v  1 e 1 0 ]
@@ -197,21 +275,4 @@
 {
 [v fclr@flg flg `us  1 p 2 0 ]
 "384
-} 0
-"206
-[v _dynam dynam `(v  1 e 1 0 ]
-{
-"209
-[v dynam@ext ext `us  1 a 2 6 ]
-"208
-[v dynam@j j `ui  1 a 2 4 ]
-[v dynam@tm tm `ui  1 a 2 2 ]
-"209
-[v dynam@smd smd `us  1 a 2 0 ]
-"206
-[v dynam@dig1data dig1data `us  1 p 2 0 ]
-[v dynam@dig2data dig2data `us  1 p 2 2 ]
-[v dynam@smdata smdata `us  1 p 2 4 ]
-[v dynam@tr tr `ui  1 p 2 6 ]
-"248
 } 0

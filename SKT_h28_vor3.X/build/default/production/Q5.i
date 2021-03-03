@@ -5266,23 +5266,37 @@ void main(void)
     fclr(2);
 # 547 "Q5.c"
     int time = 0;
-    int zyoutai = 0;
 
 
-    unsigned short segL = 0x40;
-    unsigned short segR = 0x40;
+    unsigned short segL = 0;
+    unsigned short segR = 0;
+
+    unsigned short segL2 = 0;
+    unsigned short segR2 = 0;
 
     int ataiL = 0;
     int ataiR = 0;
+
+    int ataiL2 = 0;
+    int ataiR2 = 0;
+
+    int zyoutai = 0;
+# 573 "Q5.c"
+    int ans = 0;
+    int ans2 = 0;
 
     hukki:
     while(1){
 
 
         dynam(segL,segR,0,0);
+        dynam(segL2,segR2,0,0);
 
 
         if(RA0 == 0 && RA1 == 1){
+
+            segL = 0x40;
+            segR = 0x40;
 
             tact(2);
             if(((flag_sw3==0)&&(flag_P==1))){
@@ -5324,19 +5338,116 @@ void main(void)
         }
 
 
-        if(RA0 ==1 && RA1 ==1){
+        if(RA0 ==1 && RA1 == 0 && segR != 0x40 && segL != 0x40 && zyoutai == 0){
+            zyoutai = 1;
+        }
 
-            hen7(ataiL*10+ataiR,10);
-            segL = code10;
+        if(RA0 ==1 && RA1 == 1 && segR != 0x40 && segL != 0x40 && zyoutai == 1){
+
+            zyoutai = 0;
+
+            ans = (ataiL*10)+ataiR;
+
+            hen7(ans,10);
+            if(ans/10 > 1){
+                segL = code10;
+            }else{
+                segL = 0;
+            }
+
             segR = code1;
+
+
+            if(zyoutai == 0){
+                zyoutai = 2;
+            }
+
+
+            if(ans%2 == 1 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(360,segL,segR,1,1);
+
+            }
+
+
+            if(ans%2 == 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(720,segL,segR,2,1);
+
+            }
+
+
+            if(ans%2 == 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(360,segL,segR,1,1);
+                motor(360,segL,segR,2,1);
+
+            }
+
 
         }
 
 
+        tact(2);
+
+        if(RA0 ==1 && RA1 == 1 && ((flag_sw3==0)&&(flag_P==1)) && segR != 0x40 && segL != 0x40 && zyoutai == 3){
+            zyoutai = 0;
+
+            segR = 0;
+            segL = 0;
+
+            ataiR = 0;
+            ataiL = 0;
+
+            ans = 0;
+        }
 
 
 
+        if(RA0 == 1 && RA1 == 0){
+
+            segL = segR = (0x04|0x10|0x40);
 
 
+            tact(2);
+
+            if(((flag_sw3==0)&&(flag_P==1))){
+                k++;
+            }
+            if(k >= 2 && zyoutai == 0){
+                for(i = 0; i<=15; i++){
+                    hen7(i,10);
+
+                    segL2 = code10;
+                    segR2 = code1;
+
+                    time = waitSEGStop(segL2,segR2,1000);
+
+                    if (time == 1){
+                        ans2 = i;
+                        zyoutai = 11;
+                        break;
+                    }
+
+
+                }
+            }
+        }
+
+
+        if(RA0 == 0 && RA1 == 0 && zyoutai == 11){
+            zyoutai = 12;
+
+        }
+
+        if(RA0 == 1 && RA1 == 0 && zyoutai == 12){
+            hen7(ans2,16 );
+            segL2 = (0x01|0x02|0x04|0x08|0x10|0x20);
+            segR2 = code1;
+        }
+# 750 "Q5.c"
     }
 }

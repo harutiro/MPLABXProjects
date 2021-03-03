@@ -626,7 +626,7 @@ void main(void)
         }
 
         //(3)
-        if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && zyoutai == 0;){
+        if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && zyoutai == 0){
             zyoutai = 1;
         }    
 
@@ -636,7 +636,7 @@ void main(void)
 
             ans = (ataiL*10)+ataiR;
 
-            hens(ans,DEC);
+            hen7(ans,DEC);
             if(ans/10 > 1){
                 segL = code10;
             }else{
@@ -707,7 +707,7 @@ void main(void)
             }
             if(k >= 2 && zyoutai == 0){
                 for(i = 0; i<=15; i++){
-                    hen7(i);
+                    hen7(i,DEC);
                     
                     segL2 = code10;
                     segR2 = code1;
@@ -732,7 +732,7 @@ void main(void)
         }
 
         if(SW1 == DN && SW2 == UP && zyoutai == 12){
-            hens7(ans2,HEX );
+            hen7(ans2,HEX );
             segL2 = SEG0;
             segR2 = code1;
         }
