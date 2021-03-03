@@ -655,13 +655,22 @@ void main(void)
                 
             }
 
+            //(8)
+            if(ans%2 == 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(360,segL,segR,T2,H);
+                motor(360,segL,segR,H2,H);
+                
+            }
+
 
         } 
 
-        //(5)
+        //(5) (7) (8)
         tact(REN);
 
-        if(SW1 ==DN && SW2 == DN && SW3PR && segR != SEGg && segL != SEGg){
+        if(SW1 ==DN && SW2 == DN && SW3PR && segR != SEGg && segL != SEGg && zyoutai == 3){
             zyoutai = 0;
 
             segR = 0;
