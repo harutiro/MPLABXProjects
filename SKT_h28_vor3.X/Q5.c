@@ -561,6 +561,8 @@ void main(void)
     
     */
 
+    int ans = 0;
+
     hukki:
     while(1){
 
@@ -618,7 +620,7 @@ void main(void)
 
             zyoutai = 0;
 
-            int ans = (ataiL*10)+ataiR;
+            ans = (ataiL*10)+ataiR;
 
             hens(ans,DEC);
             if(ans/10 > 1){
@@ -632,8 +634,8 @@ void main(void)
         } 
 
         //(4)
-        if(){
-            
+        if(ans%2 == 1 && ans != 0){
+            motor(360,segL,segR,T2,H);
         }
                
                 
