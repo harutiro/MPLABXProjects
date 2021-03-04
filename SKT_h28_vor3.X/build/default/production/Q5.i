@@ -5472,9 +5472,13 @@ void main(void)
                 tact(2);
 
                 if(((flag_sw3==0)&&(flag_P==1))){
+                    fclr(2);
                     k++;
                 }
                 if(k >= 2 && zyoutai == 0){
+
+                    k = 0;
+
                     for(i = 0; i<=15; i++){
                         hen7(i,10);
 
@@ -5503,7 +5507,53 @@ void main(void)
                     hen7(ans,16 );
                     segL = (0x01|0x02|0x04|0x08|0x10|0x20);
                     segR = code1;
+
+                    zyoutai = 13;
                 }
+
+
+                if(RA0 == 1 && RA1 == 1 && ans >= 10 && zyoutai == 13){
+                    RC0 = 0;
+
+                    for(i = 0;i <= 5;i++){
+                        motor(60,(0x01|0x02|0x04|0x08|0x10|0x20),moji[i],2,5);
+                    }
+                    zyoutai = 14;
+
+                    segL = (0x01|0x02|0x04|0x08|0x10|0x20);
+                    segR = moji[i];
+
+                }
+
+
+                if(RA0 == 1 && RA1 == 1 && ans <= 9 && zyoutai == 13){
+                    for(i = 0;i <= 9;i++){
+                        motor(36,(0x01|0x02|0x04|0x08|0x10|0x20),num0[i],2,5);
+                    }
+                    zyoutai = 14;
+
+                    segL = (0x01|0x02|0x04|0x08|0x10|0x20);
+                    segR = num0[i];
+
+                }
+
+
+                if(RA0 == 1 && RA1 == 1 && zyoutai == 14){
+                    fclr(2);
+
+                    zyoutai = 0;
+
+                    segR = 0;
+                    segL = 0;
+
+                    ataiR = 0;
+                    ataiL = 0;
+
+                    ans = 0;
+
+                    break;
+                }
+
             }
         }
     }

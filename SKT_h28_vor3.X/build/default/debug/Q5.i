@@ -5207,7 +5207,21 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int do
         tact(0);
 
         if(cpSW1 != RA0){
-            if(0b100 & dousa == 0b100){
+            if((0b100 & dousa) == 0b100){
+
+                fclr(2);
+                return 1;
+            }
+        }
+        if(cpSW2 != RA1){
+            if((0b010 & dousa) == 0b010){
+
+                fclr(2);
+                return 1;
+            }
+        }
+        if(((flag_sw3==1)&&(flag_R==1))){
+            if((0b001 & dousa) == 0b001){
 
                 fclr(2);
                 return 1;
@@ -5234,11 +5248,26 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
 
         tact(0);
 
-        if((cpSW1 != RA0 && (0b100 & dousa == 0b100)) ||
-           (cpSW2 != RA1 && (0b010 & dousa == 0b010)) ||
-           (((flag_sw3==1)&&(flag_R==1)) && (0b001 & dousa == 0b001))){
-            fclr(2);
-            return i;
+        if(cpSW1 != RA0){
+            if((0b100 & dousa) == 0b100){
+
+                fclr(2);
+                return i;
+            }
+        }
+        if(cpSW2 != RA1){
+            if((0b010 & dousa) == 0b010){
+
+                fclr(2);
+                return i;
+            }
+        }
+        if(((flag_sw3==1)&&(flag_R==1))){
+            if((0b001 & dousa) == 0b001){
+
+                fclr(2);
+                return i;
+            }
         }
     }
 }
@@ -5273,7 +5302,7 @@ void main(void)
 
 
     fclr(2);
-# 556 "Q5.c"
+# 585 "Q5.c"
     int time = 0;
 
 
@@ -5284,7 +5313,7 @@ void main(void)
     int ataiR = 0;
 
     int zyoutai = 0;
-# 575 "Q5.c"
+# 604 "Q5.c"
     int ans = 0;
 
     hukki:
@@ -5452,7 +5481,7 @@ void main(void)
                         segL = code10;
                         segR = code1;
 
-                        time = waitSEGStop(segL,segR,1000,0b110);
+                        time = waitSEGStop(segL,segR,1000,0b100);
 
                         if (time == 1){
                             ans = i;
@@ -5474,7 +5503,53 @@ void main(void)
                     hen7(ans,16 );
                     segL = (0x01|0x02|0x04|0x08|0x10|0x20);
                     segR = code1;
+
+                    zyoutai == 13;
                 }
+
+
+                if(RA0 == 1 && RA1 == 1 && ans >= 10 && zyoutai == 13){
+                    RC0 = 0;
+
+                    for(i = 0;i <= 5;i++){
+                        motor(60,(0x01|0x02|0x04|0x08|0x10|0x20),moji[i],2,5);
+                    }
+                    zyoutai = 14;
+
+                    segL = (0x01|0x02|0x04|0x08|0x10|0x20);
+                    segR = moji[i];
+
+                }
+
+
+                if(RA0 == 1 && RA1 == 1 && ans <= 9 && zyoutai == 13){
+                    for(i = 0;i <= 9;i++){
+                        motor(36,(0x01|0x02|0x04|0x08|0x10|0x20),num0[i],2,5);
+                    }
+                    zyoutai = 14;
+
+                    segL = (0x01|0x02|0x04|0x08|0x10|0x20);
+                    segR = num0[i];
+
+                }
+
+
+                if(RA0 == 1 && RA1 == 1 && zyoutai == 14){
+                    fclr(2);
+
+                    zyoutai = 0;
+
+                    segR = 0;
+                    segL = 0;
+
+                    ataiR = 0;
+                    ataiL = 0;
+
+                    ans = 0;
+
+                    break;
+                }
+
             }
         }
     }

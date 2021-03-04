@@ -103,28 +103,30 @@
 [v _samp samp `[16]us  1 e 32 0 ]
 "149
 [v _num0 num0 `[10]us  1 e 20 0 ]
+"152
+[v _moji moji `[10]us  1 e 20 0 ]
 "557
 [v _main main `(v  1 e 1 0 ]
 {
-"589
-[v main@segR segR `us  1 a 2 46 ]
-"588
-[v main@segL segL `us  1 a 2 44 ]
 "594
-[v main@zyoutai zyoutai `i  1 a 2 42 ]
-"604
-[v main@ans ans `i  1 a 2 40 ]
+[v main@zyoutai zyoutai `i  1 a 2 46 ]
+"589
+[v main@segR segR `us  1 a 2 44 ]
+"588
+[v main@segL segL `us  1 a 2 42 ]
 "566
-[v main@i i `i  1 a 2 38 ]
+[v main@i i `i  1 a 2 40 ]
+"604
+[v main@ans ans `i  1 a 2 38 ]
 "592
 [v main@ataiR ataiR `i  1 a 2 36 ]
 "591
 [v main@ataiL ataiL `i  1 a 2 34 ]
-"585
-[v main@time time `i  1 a 2 32 ]
 "566
-[v main@k k `i  1 a 2 30 ]
-"797
+[v main@k k `i  1 a 2 32 ]
+"585
+[v main@time time `i  1 a 2 30 ]
+"847
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]

@@ -759,9 +759,13 @@ void main(void)
                 tact(REN);
 
                 if(SW3PR){
+                    fclr(PR);
                     k++;
                 }
                 if(k >= 2 && zyoutai == 0){
+                    
+                    k = 0;
+                    
                     for(i = 0; i<=15; i++){
                         hen7(i,DEC);
                         
@@ -790,7 +794,52 @@ void main(void)
                     hen7(ans,HEX );
                     segL = SEG0;
                     segR = code1;
+
+                    zyoutai = 13;
                 }
+
+                //(6)
+                if(SW1 == DN && SW2 == DN && ans >= 10 && zyoutai == 13){
+                    
+                    for(i = 0;i <= 5;i++){
+                        motor(60,SEG0,moji[i],H2,L);
+                    }
+                    zyoutai = 14;
+
+                    segL = SEG0;
+                    segR = moji[i];
+
+                }
+
+                //(8)
+                if(SW1 == DN && SW2 == DN && ans <= 9 && zyoutai == 13){
+                    for(i = 0;i <= 9;i++){
+                        motor(36,SEG0,num0[i],T2,L);
+                    }
+                    zyoutai = 14;
+
+                    segL = SEG0;
+                    segR = num0[i];
+
+                }
+
+                //(7)
+                if(SW1 == DN && SW2 == DN && zyoutai == 14){
+                    fclr(PR);
+                    
+                    zyoutai = 0;
+
+                    segR = 0;
+                    segL = 0;
+
+                    ataiR = 0;
+                    ataiL = 0;
+
+                    ans = 0;
+
+                    break;
+                }
+                
             }
         }    
     }
