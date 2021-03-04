@@ -2023,17 +2023,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 501 ]
 }
 "464
-[; ;Q5.c: 464: int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt)
-[v _waitSEGStop `(i ~T0 @X0 1 ef3`us`us`us ]
+[; ;Q5.c: 464: int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int dousa)
+[v _waitSEGStop `(i ~T0 @X0 1 ef4`us`us`us`i ]
 "465
 [; ;Q5.c: 465: {
 {
 [e :U _waitSEGStop ]
 "464
-[; ;Q5.c: 464: int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt)
+[; ;Q5.c: 464: int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int dousa)
 [v _seg1 `us ~T0 @X0 1 r1 ]
 [v _seg2 `us ~T0 @X0 1 r2 ]
 [v _wt `us ~T0 @X0 1 r3 ]
+[v _dousa `i ~T0 @X0 1 r4 ]
 "465
 [; ;Q5.c: 465: {
 [f ]
@@ -2045,51 +2046,108 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Q5.c: 468:     int cpSW2 = RA1;
 [v _cpSW2 `i ~T0 @X0 1 a ]
 [e = _cpSW2 -> _RA1 `i ]
-"470
-[; ;Q5.c: 470:     wt = wt / 10;
+"472
+[; ;Q5.c: 472:     wt = wt / 10;
 [e = _wt -> / -> _wt `ui -> -> 10 `i `ui `us ]
-"471
-[; ;Q5.c: 471:     unsigned int i;
-[v _i `ui ~T0 @X0 1 a ]
 "473
-[; ;Q5.c: 473:     for(i=wt;i>0;--i){
+[; ;Q5.c: 473:     unsigned int i;
+[v _i `ui ~T0 @X0 1 a ]
+"475
+[; ;Q5.c: 475:     for(i=wt;i>0;--i){
 {
 [e = _i -> _wt `ui ]
 [e $ > _i -> -> 0 `i `ui 506  ]
 [e $U 507  ]
 [e :U 506 ]
 {
-"474
-[; ;Q5.c: 474:         dynam(seg1,seg2,0,0);
-[e ( _dynam (4 , , , _seg1 _seg2 -> -> 0 `i `us -> -> 0 `i `ui ]
 "476
-[; ;Q5.c: 476:         tact(0);
-[e ( _tact (1 -> -> 0 `i `us ]
+[; ;Q5.c: 476:         dynam(seg1,seg2,0,0);
+[e ( _dynam (4 , , , _seg1 _seg2 -> -> 0 `i `us -> -> 0 `i `ui ]
 "478
-[; ;Q5.c: 478:         if(cpSW1 != RA0 || cpSW2 != RA1 || ((flag_sw3==1)&&(flag_R==1))){
-[e $ ! || || != _cpSW1 -> _RA0 `i != _cpSW2 -> _RA1 `i && == -> _flag_sw3 `ui -> -> 1 `i `ui == -> _flag_R `ui -> -> 1 `i `ui 509  ]
+[; ;Q5.c: 478:         tact(0);
+[e ( _tact (1 -> -> 0 `i `us ]
+"480
+[; ;Q5.c: 480:         if(cpSW1 != RA0){
+[e $ ! != _cpSW1 -> _RA0 `i 509  ]
 {
-"479
-[; ;Q5.c: 479:             return 1;
+"481
+[; ;Q5.c: 481:             if((0b100 & dousa) == 0b100){
+[e $ ! == & -> 4 `i _dousa -> 4 `i 510  ]
+{
+"483
+[; ;Q5.c: 483:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"484
+[; ;Q5.c: 484:                 return 1;
 [e ) -> 1 `i ]
 [e $UE 505  ]
-"480
-[; ;Q5.c: 480:         }
+"485
+[; ;Q5.c: 485:             }
+}
+[e :U 510 ]
+"486
+[; ;Q5.c: 486:         }
 }
 [e :U 509 ]
-"481
-[; ;Q5.c: 481:     }
+"487
+[; ;Q5.c: 487:         if(cpSW2 != RA1){
+[e $ ! != _cpSW2 -> _RA1 `i 511  ]
+{
+"488
+[; ;Q5.c: 488:             if((0b010 & dousa) == 0b010){
+[e $ ! == & -> 2 `i _dousa -> 2 `i 512  ]
+{
+"490
+[; ;Q5.c: 490:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"491
+[; ;Q5.c: 491:                 return 1;
+[e ) -> 1 `i ]
+[e $UE 505  ]
+"492
+[; ;Q5.c: 492:             }
+}
+[e :U 512 ]
+"493
+[; ;Q5.c: 493:         }
+}
+[e :U 511 ]
+"494
+[; ;Q5.c: 494:         if(((flag_sw3==1)&&(flag_R==1))){
+[e $ ! && == -> _flag_sw3 `ui -> -> 1 `i `ui == -> _flag_R `ui -> -> 1 `i `ui 513  ]
+{
+"495
+[; ;Q5.c: 495:             if((0b001 & dousa) == 0b001){
+[e $ ! == & -> 1 `i _dousa -> 1 `i 514  ]
+{
+"497
+[; ;Q5.c: 497:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"498
+[; ;Q5.c: 498:                 return 1;
+[e ) -> 1 `i ]
+[e $UE 505  ]
+"499
+[; ;Q5.c: 499:             }
+}
+[e :U 514 ]
+"500
+[; ;Q5.c: 500:         }
+}
+[e :U 513 ]
+"501
+[; ;Q5.c: 501:     }
 }
 [e =- _i -> -> 1 `i `ui ]
 [e $ > _i -> -> 0 `i `ui 506  ]
 [e :U 507 ]
 }
-"482
-[; ;Q5.c: 482: }
+"502
+[; ;Q5.c: 502: }
 [e :UE 505 ]
 }
-"484
-[; ;Q5.c: 484: void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
+"504
+[; ;Q5.c: 504: void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
 [v _motor `(v ~T0 @X0 1 ef5`i`us`us`us`ui ]
 {
 [e :U _motor ]
@@ -2099,32 +2157,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _smdata `us ~T0 @X0 1 r4 ]
 [v _tr `ui ~T0 @X0 1 r5 ]
 [f ]
-"486
-[; ;Q5.c: 486:     for(int i = kakudo;i>=0;i--){
+"506
+[; ;Q5.c: 506:     for(int i = kakudo;i>=0;i--){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i _kakudo ]
-[e $ >= _i -> 0 `i 511  ]
-[e $U 512  ]
-[e :U 511 ]
+[e $ >= _i -> 0 `i 516  ]
+[e $U 517  ]
+[e :U 516 ]
 {
-"487
-[; ;Q5.c: 487:         dynam(dig1data,dig2data,smdata,tr);
+"507
+[; ;Q5.c: 507:         dynam(dig1data,dig2data,smdata,tr);
 [e ( _dynam (4 , , , _dig1data _dig2data _smdata _tr ]
-"488
-[; ;Q5.c: 488:     }
+"508
+[; ;Q5.c: 508:     }
 }
 [e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 511  ]
-[e :U 512 ]
+[e $ >= _i -> 0 `i 516  ]
+[e :U 517 ]
 }
-"489
-[; ;Q5.c: 489: }
-[e :UE 510 ]
+"509
+[; ;Q5.c: 509: }
+[e :UE 515 ]
 }
-"491
-[; ;Q5.c: 491: int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
-[v _motorStop `(i ~T0 @X0 1 ef5`i`us`us`us`ui ]
+"511
+[; ;Q5.c: 511: int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr,int dousa){
+[v _motorStop `(i ~T0 @X0 1 ef6`i`us`us`us`ui`i ]
 {
 [e :U _motorStop ]
 [v _kakudo `i ~T0 @X0 1 r1 ]
@@ -2132,96 +2190,154 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _dig2data `us ~T0 @X0 1 r3 ]
 [v _smdata `us ~T0 @X0 1 r4 ]
 [v _tr `ui ~T0 @X0 1 r5 ]
+[v _dousa `i ~T0 @X0 1 r6 ]
 [f ]
-"494
-[; ;Q5.c: 494:     int cpSW1 = RA0;
+"514
+[; ;Q5.c: 514:     int cpSW1 = RA0;
 [v _cpSW1 `i ~T0 @X0 1 a ]
 [e = _cpSW1 -> _RA0 `i ]
-"495
-[; ;Q5.c: 495:     int cpSW2 = RA1;
+"515
+[; ;Q5.c: 515:     int cpSW2 = RA1;
 [v _cpSW2 `i ~T0 @X0 1 a ]
 [e = _cpSW2 -> _RA1 `i ]
-"497
-[; ;Q5.c: 497:     for(int i = kakudo;i>=0;i--){
+"517
+[; ;Q5.c: 517:     for(int i = kakudo;i>=0;i--){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i _kakudo ]
-[e $ >= _i -> 0 `i 515  ]
-[e $U 516  ]
-[e :U 515 ]
+[e $ >= _i -> 0 `i 520  ]
+[e $U 521  ]
+[e :U 520 ]
 {
-"498
-[; ;Q5.c: 498:         dynam(dig1data,dig2data,smdata,tr);
+"518
+[; ;Q5.c: 518:         dynam(dig1data,dig2data,smdata,tr);
 [e ( _dynam (4 , , , _dig1data _dig2data _smdata _tr ]
-"500
-[; ;Q5.c: 500:         tact(0);
+"520
+[; ;Q5.c: 520:         tact(0);
 [e ( _tact (1 -> -> 0 `i `us ]
-"502
-[; ;Q5.c: 502:         if(cpSW1 != RA0 || cpSW2 != RA1 || ((flag_sw3==1)&&(flag_R==1))){
-[e $ ! || || != _cpSW1 -> _RA0 `i != _cpSW2 -> _RA1 `i && == -> _flag_sw3 `ui -> -> 1 `i `ui == -> _flag_R `ui -> -> 1 `i `ui 518  ]
+"522
+[; ;Q5.c: 522:         if(cpSW1 != RA0){
+[e $ ! != _cpSW1 -> _RA0 `i 523  ]
 {
-"503
-[; ;Q5.c: 503:             return 1;
-[e ) -> 1 `i ]
-[e $UE 514  ]
-"504
-[; ;Q5.c: 504:         }
+"523
+[; ;Q5.c: 523:             if((0b100 & dousa) == 0b100){
+[e $ ! == & -> 4 `i _dousa -> 4 `i 524  ]
+{
+"525
+[; ;Q5.c: 525:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"526
+[; ;Q5.c: 526:                 return i;
+[e ) _i ]
+[e $UE 519  ]
+"527
+[; ;Q5.c: 527:             }
 }
-[e :U 518 ]
-"505
-[; ;Q5.c: 505:     }
+[e :U 524 ]
+"528
+[; ;Q5.c: 528:         }
+}
+[e :U 523 ]
+"529
+[; ;Q5.c: 529:         if(cpSW2 != RA1){
+[e $ ! != _cpSW2 -> _RA1 `i 525  ]
+{
+"530
+[; ;Q5.c: 530:             if((0b010 & dousa) == 0b010){
+[e $ ! == & -> 2 `i _dousa -> 2 `i 526  ]
+{
+"532
+[; ;Q5.c: 532:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"533
+[; ;Q5.c: 533:                 return i;
+[e ) _i ]
+[e $UE 519  ]
+"534
+[; ;Q5.c: 534:             }
+}
+[e :U 526 ]
+"535
+[; ;Q5.c: 535:         }
+}
+[e :U 525 ]
+"536
+[; ;Q5.c: 536:         if(((flag_sw3==1)&&(flag_R==1))){
+[e $ ! && == -> _flag_sw3 `ui -> -> 1 `i `ui == -> _flag_R `ui -> -> 1 `i `ui 527  ]
+{
+"537
+[; ;Q5.c: 537:             if((0b001 & dousa) == 0b001){
+[e $ ! == & -> 1 `i _dousa -> 1 `i 528  ]
+{
+"539
+[; ;Q5.c: 539:                 fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"540
+[; ;Q5.c: 540:                 return i;
+[e ) _i ]
+[e $UE 519  ]
+"541
+[; ;Q5.c: 541:             }
+}
+[e :U 528 ]
+"542
+[; ;Q5.c: 542:         }
+}
+[e :U 527 ]
+"543
+[; ;Q5.c: 543:     }
 }
 [e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 515  ]
-[e :U 516 ]
+[e $ >= _i -> 0 `i 520  ]
+[e :U 521 ]
 }
-"506
-[; ;Q5.c: 506: }
-[e :UE 514 ]
+"544
+[; ;Q5.c: 544: }
+[e :UE 519 ]
 }
-"509
-[; ;Q5.c: 509: void henka (int zyoutai,int kakudo){
+"547
+[; ;Q5.c: 547: void henka (int zyoutai,int kakudo){
 [v _henka `(v ~T0 @X0 1 ef2`i`i ]
 {
 [e :U _henka ]
 [v _zyoutai `i ~T0 @X0 1 r1 ]
 [v _kakudo `i ~T0 @X0 1 r2 ]
 [f ]
-"511
-[; ;Q5.c: 511:     if(zyoutai == 1){
-[e $ ! == _zyoutai -> 1 `i 520  ]
+"549
+[; ;Q5.c: 549:     if(zyoutai == 1){
+[e $ ! == _zyoutai -> 1 `i 530  ]
 {
-"512
-[; ;Q5.c: 512:         motor(kakudo,(0x01|0x08|0x10|0x20|0x40),(0x01|0x08|0x10|0x20|0x40),1,1);
+"550
+[; ;Q5.c: 550:         motor(kakudo,(0x01|0x08|0x10|0x20|0x40),(0x01|0x08|0x10|0x20|0x40),1,1);
 [e ( _motor (4 , , , , _kakudo -> | | | | -> 1 `i -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us -> | | | | -> 1 `i -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
-"513
-[; ;Q5.c: 513:     }
+"551
+[; ;Q5.c: 551:     }
 }
-[e :U 520 ]
-"516
-[; ;Q5.c: 516: }
-[e :UE 519 ]
+[e :U 530 ]
+"554
+[; ;Q5.c: 554: }
+[e :UE 529 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"519
-[; ;Q5.c: 519: void main(void)
+"557
+[; ;Q5.c: 557: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"520
-[; ;Q5.c: 520: {
+"558
+[; ;Q5.c: 558: {
 {
 [e :U _main ]
 [f ]
-"522
-[; ;Q5.c: 522:     OSCCON=0x7A;
+"560
+[; ;Q5.c: 560:     OSCCON=0x7A;
 [e = _OSCCON -> -> 122 `i `uc ]
-"524
-[; ;Q5.c: 524:     portinit();
+"562
+[; ;Q5.c: 562:     portinit();
 [e ( _portinit ..  ]
-"526
-[; ;Q5.c: 526:     zenoff();
+"564
+[; ;Q5.c: 564:     zenoff();
 [e ( _zenoff ..  ]
-"528
-[; ;Q5.c: 528:     int i=0,j=0,k=0,m=0,n=0;
+"566
+[; ;Q5.c: 566:     int i=0,j=0,k=0,m=0,n=0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [v _j `i ~T0 @X0 1 a ]
@@ -2232,306 +2348,453 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _m -> 0 `i ]
 [v _n `i ~T0 @X0 1 a ]
 [e = _n -> 0 `i ]
-"531
-[; ;Q5.c: 531:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
-[e $U 522  ]
-[e :U 523 ]
-[e :U 522 ]
-[e $ || || != -> _RA0 `i -> 1 `i != -> _RA1 `i -> 1 `i != -> _RA2 `i -> 1 `i 523  ]
-[e :U 524 ]
-"534
-[; ;Q5.c: 534:     RC0=RC2=RC1=1;
+"569
+[; ;Q5.c: 569:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
+[e $U 532  ]
+[e :U 533 ]
+[e :U 532 ]
+[e $ || || != -> _RA0 `i -> 1 `i != -> _RA1 `i -> 1 `i != -> _RA2 `i -> 1 `i 533  ]
+[e :U 534 ]
+"572
+[; ;Q5.c: 572:     RC0=RC2=RC1=1;
 [e = _RC0 -> = _RC2 -> = _RC1 -> -> 1 `i `b `b `b ]
-"537
-[; ;Q5.c: 537:     fclr(2);
+"575
+[; ;Q5.c: 575:     fclr(2);
 [e ( _fclr (1 -> -> 2 `i `us ]
-"547
-[; ;Q5.c: 547:     int time = 0;
+"585
+[; ;Q5.c: 585:     int time = 0;
 [v _time `i ~T0 @X0 1 a ]
 [e = _time -> 0 `i ]
-"550
-[; ;Q5.c: 550:     unsigned short segL = 0;
+"588
+[; ;Q5.c: 588:     unsigned short segL = 0;
 [v _segL `us ~T0 @X0 1 a ]
 [e = _segL -> -> 0 `i `us ]
-"551
-[; ;Q5.c: 551:     unsigned short segR = 0;
+"589
+[; ;Q5.c: 589:     unsigned short segR = 0;
 [v _segR `us ~T0 @X0 1 a ]
 [e = _segR -> -> 0 `i `us ]
-"553
-[; ;Q5.c: 553:     int ataiL = 0;
+"591
+[; ;Q5.c: 591:     int ataiL = 0;
 [v _ataiL `i ~T0 @X0 1 a ]
 [e = _ataiL -> 0 `i ]
-"554
-[; ;Q5.c: 554:     int ataiR = 0;
+"592
+[; ;Q5.c: 592:     int ataiR = 0;
 [v _ataiR `i ~T0 @X0 1 a ]
 [e = _ataiR -> 0 `i ]
-"556
-[; ;Q5.c: 556:     int zyoutai = 0;
+"594
+[; ;Q5.c: 594:     int zyoutai = 0;
 [v _zyoutai `i ~T0 @X0 1 a ]
 [e = _zyoutai -> 0 `i ]
-"566
-[; ;Q5.c: 566:     int ans = 0;
+"604
+[; ;Q5.c: 604:     int ans = 0;
 [v _ans `i ~T0 @X0 1 a ]
 [e = _ans -> 0 `i ]
-"568
-[; ;Q5.c: 568:     hukki:
-[e :U 525 ]
-"569
-[; ;Q5.c: 569:     while(1){
-[e :U 527 ]
-{
-"572
-[; ;Q5.c: 572:         dynam(segL,segR,0,0);
-[e ( _dynam (4 , , , _segL _segR -> -> 0 `i `us -> -> 0 `i `ui ]
-"575
-[; ;Q5.c: 575:         if(RA0 == 0 && RA1 == 1){
-[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 1 `i 529  ]
-{
-"577
-[; ;Q5.c: 577:             if(segL == 0 && segR == 0){
-[e $ ! && == -> _segL `ui -> -> 0 `i `ui == -> _segR `ui -> -> 0 `i `ui 530  ]
-{
-"578
-[; ;Q5.c: 578:                 segL = 0x40;
-[e = _segL -> -> 64 `i `us ]
-"579
-[; ;Q5.c: 579:                 segR = 0x40;
-[e = _segR -> -> 64 `i `us ]
-"581
-[; ;Q5.c: 581:             }
-}
-[e :U 530 ]
-"585
-[; ;Q5.c: 585:             tact(2);
-[e ( _tact (1 -> -> 2 `i `us ]
-"586
-[; ;Q5.c: 586:             if(((flag_sw3==0)&&(flag_P==1))){
-[e $ ! && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui 531  ]
-{
-"587
-[; ;Q5.c: 587:                 fclr(2);
-[e ( _fclr (1 -> -> 2 `i `us ]
-"589
-[; ;Q5.c: 589:                 if(ataiL == 0){
-[e $ ! == _ataiL -> 0 `i 532  ]
-{
-"590
-[; ;Q5.c: 590:                     ataiL = 10;
-[e = _ataiL -> 10 `i ]
-"591
-[; ;Q5.c: 591:                 }
-}
-[e :U 532 ]
-"593
-[; ;Q5.c: 593:                 ataiL--;
-[e -- _ataiL -> 1 `i ]
-"597
-[; ;Q5.c: 597:                 segL = num0[ataiL];
-[e = _segL *U + &U _num0 * -> -> _ataiL `ui `ux -> -> # *U &U _num0 `ui `ux ]
-"599
-[; ;Q5.c: 599:             }
-}
-[e :U 531 ]
-"600
-[; ;Q5.c: 600:         }
-}
-[e :U 529 ]
-"603
-[; ;Q5.c: 603:         if(RA0 == 1 && RA1 == 1 && segL != 0x40 && zyoutai == 0){
-[e $ ! && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i != -> _segL `ui -> -> 64 `i `ui == _zyoutai -> 0 `i 533  ]
-{
-"605
-[; ;Q5.c: 605:             if(segR == 0x40){
-[e $ ! == -> _segR `ui -> -> 64 `i `ui 534  ]
-{
 "606
-[; ;Q5.c: 606:                 segR = num0[0];
-[e = _segR *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux ]
-"607
-[; ;Q5.c: 607:             }
-}
-[e :U 534 ]
-"609
-[; ;Q5.c: 609:             tact(2);
-[e ( _tact (1 -> -> 2 `i `us ]
-"610
-[; ;Q5.c: 610:             if(((flag_sw3==0)&&(flag_P==1))){
-[e $ ! && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui 535  ]
-{
-"611
-[; ;Q5.c: 611:                 fclr(2);
-[e ( _fclr (1 -> -> 2 `i `us ]
-"613
-[; ;Q5.c: 613:                 if(ataiR == 9){
-[e $ ! == _ataiR -> 9 `i 536  ]
-{
-"614
-[; ;Q5.c: 614:                     ataiR = -1;
-[e = _ataiR -U -> 1 `i ]
-"615
-[; ;Q5.c: 615:                 }
-}
-[e :U 536 ]
-"617
-[; ;Q5.c: 617:                 ataiR++;
-[e ++ _ataiR -> 1 `i ]
-"621
-[; ;Q5.c: 621:                 segR = num0[ataiR];
-[e = _segR *U + &U _num0 * -> -> _ataiR `ui `ux -> -> # *U &U _num0 `ui `ux ]
-"623
-[; ;Q5.c: 623:             }
-}
+[; ;Q5.c: 606:     hukki:
 [e :U 535 ]
-"624
-[; ;Q5.c: 624:         }
-}
-[e :U 533 ]
-"627
-[; ;Q5.c: 627:         if(RA0 ==1 && RA1 == 0 && segR != 0x40 && segL != 0x40 && segR != 0 && segL != 0 && zyoutai == 0){
-[e $ ! && && && && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i != -> _segR `ui -> -> 64 `i `ui != -> _segL `ui -> -> 64 `i `ui != -> _segR `ui -> -> 0 `i `ui != -> _segL `ui -> -> 0 `i `ui == _zyoutai -> 0 `i 537  ]
-{
-"628
-[; ;Q5.c: 628:             zyoutai = 1;
-[e = _zyoutai -> 1 `i ]
-"629
-[; ;Q5.c: 629:         }
-}
+"607
+[; ;Q5.c: 607:     while(1){
 [e :U 537 ]
-"631
-[; ;Q5.c: 631:         if(RA0 ==1 && RA1 == 1 && segR != 0x40 && segL != 0x40 && segR != 0 && segL != 0 && zyoutai == 1){
-[e $ ! && && && && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i != -> _segR `ui -> -> 64 `i `ui != -> _segL `ui -> -> 64 `i `ui != -> _segR `ui -> -> 0 `i `ui != -> _segL `ui -> -> 0 `i `ui == _zyoutai -> 1 `i 538  ]
 {
-"633
-[; ;Q5.c: 633:             zyoutai = 0;
-[e = _zyoutai -> 0 `i ]
-"635
-[; ;Q5.c: 635:             ans = ataiL*ataiR;
-[e = _ans * _ataiL _ataiR ]
-"637
-[; ;Q5.c: 637:             hen7(ans,10);
-[e ( _hen7 (2 , _ans -> -> 10 `i `us ]
-"638
-[; ;Q5.c: 638:             if(ans/10 > 1){
-[e $ ! > / _ans -> 10 `i -> 1 `i 539  ]
+"609
+[; ;Q5.c: 609:         if(RA0 == 0 && RA1 == 1){
+[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 1 `i 539  ]
 {
-"639
-[; ;Q5.c: 639:                 segL = code10;
-[e = _segL _code10 ]
-"640
-[; ;Q5.c: 640:             }else{
-}
-[e $U 540  ]
-[e :U 539 ]
-{
-"641
-[; ;Q5.c: 641:                 segL = 0;
-[e = _segL -> -> 0 `i `us ]
-"642
-[; ;Q5.c: 642:             }
-}
-[e :U 540 ]
-"644
-[; ;Q5.c: 644:             segR = code1;
-[e = _segR _code1 ]
-"647
-[; ;Q5.c: 647:             if(zyoutai == 0){
-[e $ ! == _zyoutai -> 0 `i 541  ]
-{
-"648
-[; ;Q5.c: 648:                 zyoutai = 2;
-[e = _zyoutai -> 2 `i ]
-"649
-[; ;Q5.c: 649:             }
-}
+"610
+[; ;Q5.c: 610:             while(1){
 [e :U 541 ]
-"652
-[; ;Q5.c: 652:             if(ans%2 == 1 && zyoutai == 2){
-[e $ ! && == % _ans -> 2 `i -> 1 `i == _zyoutai -> 2 `i 542  ]
 {
-"653
-[; ;Q5.c: 653:                 zyoutai = 3;
-[e = _zyoutai -> 3 `i ]
-"655
-[; ;Q5.c: 655:                 motor(360,segL,segR,1,1);
-[e ( _motor (4 , , , , -> 360 `i _segL _segR -> -> 1 `i `us -> -> 1 `i `ui ]
-"657
-[; ;Q5.c: 657:             }
-}
-[e :U 542 ]
-"660
-[; ;Q5.c: 660:             if(ans == 0 && zyoutai == 2){
-[e $ ! && == _ans -> 0 `i == _zyoutai -> 2 `i 543  ]
+"612
+[; ;Q5.c: 612:                 dynam(segL,segR,0,0);
+[e ( _dynam (4 , , , _segL _segR -> -> 0 `i `us -> -> 0 `i `ui ]
+"615
+[; ;Q5.c: 615:                 if(RA0 == 0 && RA1 == 1){
+[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 1 `i 543  ]
 {
-"661
-[; ;Q5.c: 661:                 zyoutai = 3;
-[e = _zyoutai -> 3 `i ]
-"663
-[; ;Q5.c: 663:                 motor(360,segL,segR,1,1);
-[e ( _motor (4 , , , , -> 360 `i _segL _segR -> -> 1 `i `us -> -> 1 `i `ui ]
-"664
-[; ;Q5.c: 664:                 motor(360,segL,segR,2,1);
-[e ( _motor (4 , , , , -> 360 `i _segL _segR -> -> 2 `i `us -> -> 1 `i `ui ]
-"666
-[; ;Q5.c: 666:             }
-}
-[e :U 543 ]
-"669
-[; ;Q5.c: 669:             if(ans%2 == 0 && zyoutai == 2){
-[e $ ! && == % _ans -> 2 `i -> 0 `i == _zyoutai -> 2 `i 544  ]
+"617
+[; ;Q5.c: 617:                     if(segL == 0 && segR == 0){
+[e $ ! && == -> _segL `ui -> -> 0 `i `ui == -> _segR `ui -> -> 0 `i `ui 544  ]
 {
-"670
-[; ;Q5.c: 670:                 zyoutai = 3;
-[e = _zyoutai -> 3 `i ]
-"672
-[; ;Q5.c: 672:                 motor(720,segL,segR,2,1);
-[e ( _motor (4 , , , , -> 720 `i _segL _segR -> -> 2 `i `us -> -> 1 `i `ui ]
-"674
-[; ;Q5.c: 674:             }
+"618
+[; ;Q5.c: 618:                         segL = 0x40;
+[e = _segL -> -> 64 `i `us ]
+"619
+[; ;Q5.c: 619:                         segR = 0x40;
+[e = _segR -> -> 64 `i `us ]
+"621
+[; ;Q5.c: 621:                     }
 }
 [e :U 544 ]
-"679
-[; ;Q5.c: 679:         }
-}
-[e :U 538 ]
-"682
-[; ;Q5.c: 682:         tact(2);
+"625
+[; ;Q5.c: 625:                     tact(2);
 [e ( _tact (1 -> -> 2 `i `us ]
-"684
-[; ;Q5.c: 684:         if(RA0 ==1 && RA1 == 1 && ((flag_sw3==0)&&(flag_P==1)) && zyoutai == 3){
-[e $ ! && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui == _zyoutai -> 3 `i 545  ]
+"626
+[; ;Q5.c: 626:                     if(((flag_sw3==0)&&(flag_P==1))){
+[e $ ! && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui 545  ]
 {
-"685
-[; ;Q5.c: 685:             fclr(2);
+"627
+[; ;Q5.c: 627:                         fclr(2);
 [e ( _fclr (1 -> -> 2 `i `us ]
-"687
-[; ;Q5.c: 687:             zyoutai = 0;
-[e = _zyoutai -> 0 `i ]
-"689
-[; ;Q5.c: 689:             segR = 0;
-[e = _segR -> -> 0 `i `us ]
-"690
-[; ;Q5.c: 690:             segL = 0;
-[e = _segL -> -> 0 `i `us ]
-"692
-[; ;Q5.c: 692:             ataiR = 0;
-[e = _ataiR -> 0 `i ]
-"693
-[; ;Q5.c: 693:             ataiL = 0;
-[e = _ataiL -> 0 `i ]
-"695
-[; ;Q5.c: 695:             ans = 0;
-[e = _ans -> 0 `i ]
-"696
-[; ;Q5.c: 696:         }
+"629
+[; ;Q5.c: 629:                         if(ataiL == 0){
+[e $ ! == _ataiL -> 0 `i 546  ]
+{
+"630
+[; ;Q5.c: 630:                             ataiL = 10;
+[e = _ataiL -> 10 `i ]
+"631
+[; ;Q5.c: 631:                         }
+}
+[e :U 546 ]
+"633
+[; ;Q5.c: 633:                         ataiL--;
+[e -- _ataiL -> 1 `i ]
+"637
+[; ;Q5.c: 637:                         segL = num0[ataiL];
+[e = _segL *U + &U _num0 * -> -> _ataiL `ui `ux -> -> # *U &U _num0 `ui `ux ]
+"639
+[; ;Q5.c: 639:                     }
 }
 [e :U 545 ]
-"709
-[; ;Q5.c: 709:     }
+"640
+[; ;Q5.c: 640:                 }
 }
-[e :U 526 ]
-[e $U 527  ]
-[e :U 528 ]
+[e :U 543 ]
+"643
+[; ;Q5.c: 643:                 if(RA0 == 1 && RA1 == 1 && segL != 0x40 && zyoutai == 0){
+[e $ ! && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i != -> _segL `ui -> -> 64 `i `ui == _zyoutai -> 0 `i 547  ]
+{
+"645
+[; ;Q5.c: 645:                     if(segR == 0x40){
+[e $ ! == -> _segR `ui -> -> 64 `i `ui 548  ]
+{
+"646
+[; ;Q5.c: 646:                         segR = num0[0];
+[e = _segR *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux ]
+"647
+[; ;Q5.c: 647:                     }
+}
+[e :U 548 ]
+"649
+[; ;Q5.c: 649:                     tact(2);
+[e ( _tact (1 -> -> 2 `i `us ]
+"650
+[; ;Q5.c: 650:                     if(((flag_sw3==0)&&(flag_P==1))){
+[e $ ! && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui 549  ]
+{
+"651
+[; ;Q5.c: 651:                         fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"653
+[; ;Q5.c: 653:                         if(ataiR == 9){
+[e $ ! == _ataiR -> 9 `i 550  ]
+{
+"654
+[; ;Q5.c: 654:                             ataiR = -1;
+[e = _ataiR -U -> 1 `i ]
+"655
+[; ;Q5.c: 655:                         }
+}
+[e :U 550 ]
+"657
+[; ;Q5.c: 657:                         ataiR++;
+[e ++ _ataiR -> 1 `i ]
+"661
+[; ;Q5.c: 661:                         segR = num0[ataiR];
+[e = _segR *U + &U _num0 * -> -> _ataiR `ui `ux -> -> # *U &U _num0 `ui `ux ]
+"663
+[; ;Q5.c: 663:                     }
+}
+[e :U 549 ]
+"664
+[; ;Q5.c: 664:                 }
+}
+[e :U 547 ]
+"667
+[; ;Q5.c: 667:                 if(RA0 ==1 && RA1 == 0 && segR != 0x40 && segL != 0x40 && segR != 0 && segL != 0 && zyoutai == 0){
+[e $ ! && && && && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i != -> _segR `ui -> -> 64 `i `ui != -> _segL `ui -> -> 64 `i `ui != -> _segR `ui -> -> 0 `i `ui != -> _segL `ui -> -> 0 `i `ui == _zyoutai -> 0 `i 551  ]
+{
+"668
+[; ;Q5.c: 668:                     zyoutai = 1;
+[e = _zyoutai -> 1 `i ]
+"669
+[; ;Q5.c: 669:                 }
+}
+[e :U 551 ]
+"671
+[; ;Q5.c: 671:                 if(RA0 ==1 && RA1 == 1 && segR != 0x40 && segL != 0x40 && segR != 0 && segL != 0 && zyoutai == 1){
+[e $ ! && && && && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i != -> _segR `ui -> -> 64 `i `ui != -> _segL `ui -> -> 64 `i `ui != -> _segR `ui -> -> 0 `i `ui != -> _segL `ui -> -> 0 `i `ui == _zyoutai -> 1 `i 552  ]
+{
+"673
+[; ;Q5.c: 673:                     zyoutai = 0;
+[e = _zyoutai -> 0 `i ]
+"675
+[; ;Q5.c: 675:                     ans = ataiL*ataiR;
+[e = _ans * _ataiL _ataiR ]
+"677
+[; ;Q5.c: 677:                     hen7(ans,10);
+[e ( _hen7 (2 , _ans -> -> 10 `i `us ]
+"678
+[; ;Q5.c: 678:                     if(ans/10 > 1){
+[e $ ! > / _ans -> 10 `i -> 1 `i 553  ]
+{
+"679
+[; ;Q5.c: 679:                         segL = code10;
+[e = _segL _code10 ]
+"680
+[; ;Q5.c: 680:                     }else{
+}
+[e $U 554  ]
+[e :U 553 ]
+{
+"681
+[; ;Q5.c: 681:                         segL = 0;
+[e = _segL -> -> 0 `i `us ]
+"682
+[; ;Q5.c: 682:                     }
+}
+[e :U 554 ]
+"684
+[; ;Q5.c: 684:                     segR = code1;
+[e = _segR _code1 ]
+"687
+[; ;Q5.c: 687:                     if(zyoutai == 0){
+[e $ ! == _zyoutai -> 0 `i 555  ]
+{
+"688
+[; ;Q5.c: 688:                         zyoutai = 2;
+[e = _zyoutai -> 2 `i ]
+"689
+[; ;Q5.c: 689:                     }
+}
+[e :U 555 ]
+"692
+[; ;Q5.c: 692:                     if(ans%2 == 1 && zyoutai == 2){
+[e $ ! && == % _ans -> 2 `i -> 1 `i == _zyoutai -> 2 `i 556  ]
+{
+"693
+[; ;Q5.c: 693:                         zyoutai = 3;
+[e = _zyoutai -> 3 `i ]
+"695
+[; ;Q5.c: 695:                         motor(360,segL,segR,1,1);
+[e ( _motor (4 , , , , -> 360 `i _segL _segR -> -> 1 `i `us -> -> 1 `i `ui ]
+"697
+[; ;Q5.c: 697:                     }
+}
+[e :U 556 ]
+"700
+[; ;Q5.c: 700:                     if(ans == 0 && zyoutai == 2){
+[e $ ! && == _ans -> 0 `i == _zyoutai -> 2 `i 557  ]
+{
+"701
+[; ;Q5.c: 701:                         zyoutai = 3;
+[e = _zyoutai -> 3 `i ]
+"703
+[; ;Q5.c: 703:                         motor(360,segL,segR,1,1);
+[e ( _motor (4 , , , , -> 360 `i _segL _segR -> -> 1 `i `us -> -> 1 `i `ui ]
+"704
+[; ;Q5.c: 704:                         motor(360,segL,segR,2,1);
+[e ( _motor (4 , , , , -> 360 `i _segL _segR -> -> 2 `i `us -> -> 1 `i `ui ]
+"706
+[; ;Q5.c: 706:                     }
+}
+[e :U 557 ]
+"709
+[; ;Q5.c: 709:                     if(ans%2 == 0 && zyoutai == 2){
+[e $ ! && == % _ans -> 2 `i -> 0 `i == _zyoutai -> 2 `i 558  ]
+{
 "710
-[; ;Q5.c: 710: }
-[e :UE 521 ]
+[; ;Q5.c: 710:                         zyoutai = 3;
+[e = _zyoutai -> 3 `i ]
+"712
+[; ;Q5.c: 712:                         motor(720,segL,segR,2,1);
+[e ( _motor (4 , , , , -> 720 `i _segL _segR -> -> 2 `i `us -> -> 1 `i `ui ]
+"714
+[; ;Q5.c: 714:                     }
+}
+[e :U 558 ]
+"719
+[; ;Q5.c: 719:                 }
+}
+[e :U 552 ]
+"722
+[; ;Q5.c: 722:                 tact(2);
+[e ( _tact (1 -> -> 2 `i `us ]
+"724
+[; ;Q5.c: 724:                 if(RA0 ==1 && RA1 == 1 && ((flag_sw3==0)&&(flag_P==1)) && zyoutai == 3){
+[e $ ! && && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui == _zyoutai -> 3 `i 559  ]
+{
+"725
+[; ;Q5.c: 725:                     fclr(2);
+[e ( _fclr (1 -> -> 2 `i `us ]
+"727
+[; ;Q5.c: 727:                     zyoutai = 0;
+[e = _zyoutai -> 0 `i ]
+"729
+[; ;Q5.c: 729:                     segR = 0;
+[e = _segR -> -> 0 `i `us ]
+"730
+[; ;Q5.c: 730:                     segL = 0;
+[e = _segL -> -> 0 `i `us ]
+"732
+[; ;Q5.c: 732:                     ataiR = 0;
+[e = _ataiR -> 0 `i ]
+"733
+[; ;Q5.c: 733:                     ataiL = 0;
+[e = _ataiL -> 0 `i ]
+"735
+[; ;Q5.c: 735:                     ans = 0;
+[e = _ans -> 0 `i ]
+"737
+[; ;Q5.c: 737:                     break;
+[e $U 542  ]
+"738
+[; ;Q5.c: 738:                 }
+}
+[e :U 559 ]
+"739
+[; ;Q5.c: 739:             }
+}
+[e :U 540 ]
+[e $U 541  ]
+[e :U 542 ]
+"741
+[; ;Q5.c: 741:         }
+}
+[e :U 539 ]
+"748
+[; ;Q5.c: 748:         if(RA0 == 1 && RA1 == 0){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 560  ]
+{
+"750
+[; ;Q5.c: 750:             while(1){
+[e :U 562 ]
+{
+"751
+[; ;Q5.c: 751:                 dynam(segL,segR,0,0);
+[e ( _dynam (4 , , , _segL _segR -> -> 0 `i `us -> -> 0 `i `ui ]
+"754
+[; ;Q5.c: 754:                 if(segL == 0 && segR == 0){
+[e $ ! && == -> _segL `ui -> -> 0 `i `ui == -> _segR `ui -> -> 0 `i `ui 564  ]
+{
+"755
+[; ;Q5.c: 755:                     segL = segR = (0x04|0x10|0x40);
+[e = _segL = _segR -> | | -> 4 `i -> 16 `i -> 64 `i `us ]
+"756
+[; ;Q5.c: 756:                 }
+}
+[e :U 564 ]
+"759
+[; ;Q5.c: 759:                 tact(2);
+[e ( _tact (1 -> -> 2 `i `us ]
+"761
+[; ;Q5.c: 761:                 if(((flag_sw3==0)&&(flag_P==1))){
+[e $ ! && == -> _flag_sw3 `ui -> -> 0 `i `ui == -> _flag_P `ui -> -> 1 `i `ui 565  ]
+{
+"762
+[; ;Q5.c: 762:                     k++;
+[e ++ _k -> 1 `i ]
+"763
+[; ;Q5.c: 763:                 }
+}
+[e :U 565 ]
+"764
+[; ;Q5.c: 764:                 if(k >= 2 && zyoutai == 0){
+[e $ ! && >= _k -> 2 `i == _zyoutai -> 0 `i 566  ]
+{
+"765
+[; ;Q5.c: 765:                     for(i = 0; i<=15; i++){
+{
+[e = _i -> 0 `i ]
+[e $ <= _i -> 15 `i 567  ]
+[e $U 568  ]
+[e :U 567 ]
+{
+"766
+[; ;Q5.c: 766:                         hen7(i,10);
+[e ( _hen7 (2 , _i -> -> 10 `i `us ]
+"768
+[; ;Q5.c: 768:                         segL = code10;
+[e = _segL _code10 ]
+"769
+[; ;Q5.c: 769:                         segR = code1;
+[e = _segR _code1 ]
+"771
+[; ;Q5.c: 771:                         time = waitSEGStop(segL,segR,1000,0b100);
+[e = _time ( _waitSEGStop (4 , , , _segL _segR -> -> 1000 `i `us -> 4 `i ]
+"773
+[; ;Q5.c: 773:                         if (time == 1){
+[e $ ! == _time -> 1 `i 570  ]
+{
+"774
+[; ;Q5.c: 774:                             ans = i;
+[e = _ans _i ]
+"775
+[; ;Q5.c: 775:                             zyoutai = 11;
+[e = _zyoutai -> 11 `i ]
+"776
+[; ;Q5.c: 776:                             break;
+[e $U 568  ]
+"777
+[; ;Q5.c: 777:                         }
+}
+[e :U 570 ]
+"780
+[; ;Q5.c: 780:                     }
+}
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 15 `i 567  ]
+[e :U 568 ]
+}
+"781
+[; ;Q5.c: 781:                 }
+}
+[e :U 566 ]
+"784
+[; ;Q5.c: 784:                 if(RA0 == 0 && RA1 == 0 && zyoutai == 11){
+[e $ ! && && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 0 `i == _zyoutai -> 11 `i 571  ]
+{
+"785
+[; ;Q5.c: 785:                     zyoutai = 12;
+[e = _zyoutai -> 12 `i ]
+"787
+[; ;Q5.c: 787:                 }
+}
+[e :U 571 ]
+"789
+[; ;Q5.c: 789:                 if(RA0 == 1 && RA1 == 0 && zyoutai == 12){
+[e $ ! && && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i == _zyoutai -> 12 `i 572  ]
+{
+"790
+[; ;Q5.c: 790:                     hen7(ans,16 );
+[e ( _hen7 (2 , _ans -> -> 16 `i `us ]
+"791
+[; ;Q5.c: 791:                     segL = (0x01|0x02|0x04|0x08|0x10|0x20);
+[e = _segL -> | | | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i -> 16 `i -> 32 `i `us ]
+"792
+[; ;Q5.c: 792:                     segR = code1;
+[e = _segR _code1 ]
+"793
+[; ;Q5.c: 793:                 }
+}
+[e :U 572 ]
+"794
+[; ;Q5.c: 794:             }
+}
+[e :U 561 ]
+[e $U 562  ]
+[e :U 563 ]
+"795
+[; ;Q5.c: 795:         }
+}
+[e :U 560 ]
+"796
+[; ;Q5.c: 796:     }
+}
+[e :U 536 ]
+[e $U 537  ]
+[e :U 538 ]
+"797
+[; ;Q5.c: 797: }
+[e :UE 531 ]
 }

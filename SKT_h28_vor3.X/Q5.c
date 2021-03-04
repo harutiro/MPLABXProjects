@@ -461,11 +461,13 @@ void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
 
 //タイミング調整関数
 //wait(調整時間);
-int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt)
+int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int dousa)
 {
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    
+    
 
     wt = wt / 10;
     unsigned int i;
@@ -475,8 +477,26 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt)
         
         tact(ON);
 
-        if(cpSW1 != SW1 || cpSW2 != SW2 || SW3R){
-            return 1;
+        if(cpSW1 != SW1){
+            if((0b100 & dousa) == 0b100){
+            
+                fclr(PR);
+                return 1;
+            }
+        }
+        if(cpSW2 != SW2){
+            if((0b010 & dousa) == 0b010){
+            
+                fclr(PR);
+                return 1;
+            }
+        }
+        if(SW3R){
+            if((0b001 & dousa) == 0b001){
+            
+                fclr(PR);
+                return 1;
+            }
         }
     }
 }
@@ -488,7 +508,7 @@ void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned 
     }
 }
 
-int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
+int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr,int dousa){
 
     //状態
     int cpSW1 = SW1;
@@ -499,8 +519,26 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
 
         tact(ON);
 
-        if(cpSW1 != SW1 || cpSW2 != SW2 || SW3R){
-            return 1;
+        if(cpSW1 != SW1){
+            if((0b100 & dousa) == 0b100){
+            
+                fclr(PR);
+                return i;
+            }
+        }
+        if(cpSW2 != SW2){
+            if((0b010 & dousa) == 0b010){
+            
+                fclr(PR);
+                return i;
+            }
+        }
+        if(SW3R){
+            if((0b001 & dousa) == 0b001){
+            
+                fclr(PR);
+                return i;
+            }
         }
     }
 }
@@ -555,7 +593,7 @@ void main(void)
 
     int zyoutai = 0;
     /*
-    0: emptty
+    0: empty
     1: 一定のサイクル動作の上、SW2上に変更された
     2: 計算結果が表示されまだ回転していない
     3:　計算結果が表示され回転し終わった
@@ -568,143 +606,192 @@ void main(void)
     hukki:
     while(1){
 
-        //全ての表示部分
-        dynam(segL,segR,0,0);
-
-        //(1)
         if(SW1 == UP && SW2 == DN){
-            
-            if(segL == 0 && segR == 0){
-                segL = SEGg;
-                segR = SEGg;
-            
-            }
-            
-            
-            
-            tact(REN);
-            if(SW3PR){
-                fclr(PR);
-                
-                if(ataiL == 0){
-                    ataiL = 10;
+            while(1){
+                //全ての表示部分
+                dynam(segL,segR,0,0);
+
+                //(1)
+                if(SW1 == UP && SW2 == DN){
+                    
+                    if(segL == 0 && segR == 0){
+                        segL = SEGg;
+                        segR = SEGg;
+                    
+                    }
+                    
+                    
+                    
+                    tact(REN);
+                    if(SW3PR){
+                        fclr(PR);
+                        
+                        if(ataiL == 0){
+                            ataiL = 10;
+                        }
+
+                        ataiL--;
+                        
+                        
+                        
+                        segL = num0[ataiL];
+
+                    }
                 }
 
-                ataiL--;
-                
-                
-                
-                segL = num0[ataiL];
+                //(2)
+                if(SW1 == DN && SW2 == DN && segL != SEGg && zyoutai == 0){
+                    
+                    if(segR == SEGg){
+                        segR = num0[0];
+                    }
+                    
+                    tact(REN);
+                    if(SW3PR){
+                        fclr(PR);
+                        
+                        if(ataiR == 9){
+                            ataiR = -1;
+                        }
 
-            }
-        }
+                        ataiR++;
+                        
+                        
+                        
+                        segR = num0[ataiR];
 
-        //(2)
-        if(SW1 == DN && SW2 == DN && segL != SEGg && zyoutai == 0){
-            
-            if(segR == SEGg){
-                segR = num0[0];
-            }
-            
-            tact(REN);
-            if(SW3PR){
-                fclr(PR);
-                
-                if(ataiR == 9){
-                    ataiR = -1;
+                    }
                 }
 
-                ataiR++;
-                
-                
-                
-                segR = num0[ataiR];
+                //(3)
+                if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && segR != 0 && segL != 0 && zyoutai == 0){
+                    zyoutai = 1;
+                }    
 
+                if(SW1 ==DN && SW2 == DN && segR != SEGg && segL != SEGg && segR != 0 && segL != 0 && zyoutai == 1){
+
+                    zyoutai = 0;
+
+                    ans = ataiL*ataiR;
+
+                    hen7(ans,DEC);
+                    if(ans/10 > 1){
+                        segL = code10;
+                    }else{
+                        segL = 0;
+                    }
+                    
+                    segR = code1;
+
+                    //(4)
+                    if(zyoutai == 0){
+                        zyoutai = 2;
+                    }
+                    
+
+                    if(ans%2 == 1 && zyoutai == 2){
+                        zyoutai = 3;
+
+                        motor(360,segL,segR,T2,H);
+                        
+                    }
+                    
+                    //(8)
+                    if(ans == 0 && zyoutai == 2){
+                        zyoutai = 3;
+
+                        motor(360,segL,segR,T2,H);
+                        motor(360,segL,segR,H2,H);
+                        
+                    }
+
+                    //(6)
+                    if(ans%2 == 0 && zyoutai == 2){
+                        zyoutai = 3;
+
+                        motor(720,segL,segR,H2,H);
+                        
+                    }
+
+                    
+
+
+                } 
+
+                //(5) (7) (8)
+                tact(REN);
+
+                if(SW1 ==DN && SW2 == DN && SW3PR && zyoutai == 3){
+                    fclr(PR);
+                    
+                    zyoutai = 0;
+
+                    segR = 0;
+                    segL = 0;
+
+                    ataiR = 0;
+                    ataiL = 0;
+
+                    ans = 0;
+
+                    break;
+                }
             }
-        }
-
-        //(3)
-        if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && segR != 0 && segL != 0 && zyoutai == 0){
-            zyoutai = 1;
+        
         }    
 
-        if(SW1 ==DN && SW2 == DN && segR != SEGg && segL != SEGg && segR != 0 && segL != 0 && zyoutai == 1){
-
-            zyoutai = 0;
-
-            ans = ataiL*ataiR;
-
-            hen7(ans,DEC);
-            if(ans/10 > 1){
-                segL = code10;
-            }else{
-                segL = 0;
-            }
-            
-            segR = code1;
-
-            //(4)
-            if(zyoutai == 0){
-                zyoutai = 2;
-            }
-            
-
-            if(ans%2 == 1 && zyoutai == 2){
-                zyoutai = 3;
-
-                motor(360,segL,segR,T2,H);
-                
-            }
-            
-            //(8)
-            if(ans == 0 && zyoutai == 2){
-                zyoutai = 3;
-
-                motor(360,segL,segR,T2,H);
-                motor(360,segL,segR,H2,H);
-                
-            }
-
-            //(6)
-            if(ans%2 == 0 && zyoutai == 2){
-                zyoutai = 3;
-
-                motor(720,segL,segR,H2,H);
-                
-            }
-
-            
-
-
-        } 
-
-        //(5) (7) (8)
-        tact(REN);
-
-        if(SW1 ==DN && SW2 == DN && SW3PR && zyoutai == 3){
-            fclr(PR);
-            
-            zyoutai = 0;
-
-            segR = 0;
-            segL = 0;
-
-            ataiR = 0;
-            ataiL = 0;
-
-            ans = 0;
-        }
-
-
+        
         
 
-        
-               
-                
+        //========================ここから問６=============================
 
-                
-            
+        if(SW1 == DN && SW2 == UP){
 
-        
+            while(1){
+                dynam(segL,segR,0,0);
+
+                //(2)
+                if(segL == 0 && segR == 0){
+                    segL = segR = SEGN;
+                }
+
+                //(3)
+                tact(REN);
+
+                if(SW3PR){
+                    k++;
+                }
+                if(k >= 2 && zyoutai == 0){
+                    for(i = 0; i<=15; i++){
+                        hen7(i,DEC);
+                        
+                        segL = code10;
+                        segR = code1;
+
+                        time = waitSEGStop(segL,segR,1000,0b100);
+
+                        if (time == 1){
+                            ans = i;
+                            zyoutai = 11;
+                            break;
+                        }
+                        
+
+                    }
+                }
+
+                //(5)
+                if(SW1 == UP && SW2 == UP && zyoutai == 11){
+                    zyoutai = 12;
+
+                }
+
+                if(SW1 == DN && SW2 == UP && zyoutai == 12){
+                    hen7(ans,HEX );
+                    segL = SEG0;
+                    segR = code1;
+                }
+            }
+        }    
     }
 }

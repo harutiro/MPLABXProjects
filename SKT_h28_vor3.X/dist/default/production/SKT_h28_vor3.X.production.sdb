@@ -35,9 +35,11 @@
 [v _tact tact `(v  1 e 1 0 ]
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
-"484
+"464
+[v _waitSEGStop waitSEGStop `(i  1 e 2 0 ]
+"504
 [v _motor motor `(v  1 e 1 0 ]
-"519
+"557
 [v _main main `(v  1 e 1 0 ]
 "429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -101,27 +103,49 @@
 [v _samp samp `[16]us  1 e 32 0 ]
 "149
 [v _num0 num0 `[10]us  1 e 20 0 ]
-"519
+"557
 [v _main main `(v  1 e 1 0 ]
 {
-"551
+"589
 [v main@segR segR `us  1 a 2 46 ]
-"550
+"588
 [v main@segL segL `us  1 a 2 44 ]
-"556
+"594
 [v main@zyoutai zyoutai `i  1 a 2 42 ]
-"566
+"604
 [v main@ans ans `i  1 a 2 40 ]
-"554
-[v main@ataiR ataiR `i  1 a 2 38 ]
-"553
-[v main@ataiL ataiL `i  1 a 2 36 ]
-"710
+"566
+[v main@i i `i  1 a 2 38 ]
+"592
+[v main@ataiR ataiR `i  1 a 2 36 ]
+"591
+[v main@ataiL ataiL `i  1 a 2 34 ]
+"585
+[v main@time time `i  1 a 2 32 ]
+"566
+[v main@k k `i  1 a 2 30 ]
+"797
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]
 {
 "202
+} 0
+"464
+[v _waitSEGStop waitSEGStop `(i  1 e 2 0 ]
+{
+"473
+[v waitSEGStop@i i `ui  1 a 2 20 ]
+"468
+[v waitSEGStop@cpSW2 cpSW2 `i  1 a 2 18 ]
+"467
+[v waitSEGStop@cpSW1 cpSW1 `i  1 a 2 16 ]
+"464
+[v waitSEGStop@seg1 seg1 `us  1 p 2 8 ]
+[v waitSEGStop@seg2 seg2 `us  1 p 2 10 ]
+[v waitSEGStop@wt wt `us  1 p 2 12 ]
+[v waitSEGStop@dousa dousa `i  1 p 2 14 ]
+"502
 } 0
 "346
 [v _tact tact `(v  1 e 1 0 ]
@@ -138,23 +162,41 @@
 [v tactsw@b b `us  1 a 2 2 ]
 "342
 } 0
-"160
+"369
+[v _fclr fclr `(v  1 e 1 0 ]
+{
+[v fclr@flg flg `us  1 p 2 0 ]
+"384
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172
 } 0
-"484
+"504
 [v _motor motor `(v  1 e 1 0 ]
 {
-"486
+"506
 [v motor@i i `i  1 a 2 8 ]
-"484
+"504
 [v motor@kakudo kakudo `i  1 p 2 8 ]
 [v motor@dig1data dig1data `us  1 p 2 10 ]
 [v motor@dig2data dig2data `us  1 p 2 12 ]
 [v motor@smdata smdata `us  1 p 2 14 ]
 [v motor@tr tr `ui  1 p 2 16 ]
-"489
+"509
 } 0
 "206
 [v _dynam dynam `(v  1 e 1 0 ]
@@ -222,10 +264,4 @@
 [v ___awdiv@divisor divisor `i  1 p 2 6 ]
 [v ___awdiv@dividend dividend `i  1 p 2 8 ]
 "41
-} 0
-"369 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-[v _fclr fclr `(v  1 e 1 0 ]
-{
-[v fclr@flg flg `us  1 p 2 0 ]
-"384
 } 0
