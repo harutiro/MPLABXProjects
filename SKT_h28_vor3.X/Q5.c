@@ -550,18 +550,11 @@ void main(void)
     unsigned short segL = 0;
     unsigned short segR = 0;
 
-    unsigned short segL2 = 0;
-    unsigned short segR2 = 0;
-
     int ataiL = 0;
     int ataiR = 0;
 
-    int ataiL2 = 0;
-    int ataiR2 = 0;
-
     int zyoutai = 0;
     /*
-
     0: emptty
     1: 一定のサイクル動作の上、SW2上に変更された
     2: 計算結果が表示されまだ回転していない
@@ -571,23 +564,27 @@ void main(void)
     */
 
     int ans = 0;
-    int ans2 = 0;
 
     hukki:
     while(1){
 
         //全ての表示部分
         dynam(segL,segR,0,0);
-        dynam(segL2,segR2,0,0);
 
         //(1)
         if(SW1 == UP && SW2 == DN){
-
-            segL = SEGg;
-            segR = SEGg;
+            
+            if(segL == 0 && segR == 0){
+                segL = SEGg;
+                segR = SEGg;
+            
+            }
+            
+            
             
             tact(REN);
             if(SW3PR){
+                fclr(PR);
                 
                 if(ataiL == 0){
                     ataiL = 10;
@@ -595,15 +592,15 @@ void main(void)
 
                 ataiL--;
                 
-                fclr(PR);
                 
-                segL = num0[k];
+                
+                segL = num0[ataiL];
 
             }
         }
 
         //(2)
-        if(SW1 == DN && SW2 == DN && segR != SEGg){
+        if(SW1 == DN && SW2 == DN && segL != SEGg && zyoutai == 0){
             
             if(segR == SEGg){
                 segR = num0[0];
@@ -611,6 +608,7 @@ void main(void)
             
             tact(REN);
             if(SW3PR){
+                fclr(PR);
                 
                 if(ataiR == 9){
                     ataiR = -1;
@@ -618,23 +616,23 @@ void main(void)
 
                 ataiR++;
                 
-                fclr(PR);
                 
-                ataiR = num0[m];
+                
+                segR = num0[ataiR];
 
             }
         }
 
         //(3)
-        if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && zyoutai == 0){
+        if(SW1 ==DN && SW2 == UP && segR != SEGg && segL != SEGg && segR != 0 && segL != 0 && zyoutai == 0){
             zyoutai = 1;
         }    
 
-        if(SW1 ==DN && SW2 == DN && segR != SEGg && segL != SEGg && zyoutai == 1){
+        if(SW1 ==DN && SW2 == DN && segR != SEGg && segL != SEGg && segR != 0 && segL != 0 && zyoutai == 1){
 
             zyoutai = 0;
 
-            ans = (ataiL*10)+ataiR;
+            ans = ataiL*ataiR;
 
             hen7(ans,DEC);
             if(ans/10 > 1){
@@ -657,6 +655,15 @@ void main(void)
                 motor(360,segL,segR,T2,H);
                 
             }
+            
+            //(8)
+            if(ans == 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(360,segL,segR,T2,H);
+                motor(360,segL,segR,H2,H);
+                
+            }
 
             //(6)
             if(ans%2 == 0 && zyoutai == 2){
@@ -666,22 +673,17 @@ void main(void)
                 
             }
 
-            //(8)
-            if(ans%2 == 0 && zyoutai == 2){
-                zyoutai = 3;
-
-                motor(360,segL,segR,T2,H);
-                motor(360,segL,segR,H2,H);
-                
-            }
+            
 
 
         } 
 
-        //(5) (7) (9)
+        //(5) (7) (8)
         tact(REN);
 
-        if(SW1 ==DN && SW2 == DN && SW3PR && segR != SEGg && segL != SEGg && zyoutai == 3){
+        if(SW1 ==DN && SW2 == DN && SW3PR && zyoutai == 3){
+            fclr(PR);
+            
             zyoutai = 0;
 
             segR = 0;
@@ -693,49 +695,6 @@ void main(void)
             ans = 0;
         }
 
-        //========================ここから問６=============================
-
-        if(SW1 == DN && SW2 == UP){
-            //(2)
-            segL = segR = SEGN;
-
-            //(3)
-            tact(REN);
-
-            if(SW3PR){
-                k++;
-            }
-            if(k >= 2 && zyoutai == 0){
-                for(i = 0; i<=15; i++){
-                    hen7(i,DEC);
-                    
-                    segL2 = code10;
-                    segR2 = code1;
-
-                    time = waitSEGStop(segL2,segR2,1000);
-
-                    if (time == 1){
-                        ans2 = i;
-                        zyoutai = 11;
-                        break;
-                    }
-                    
-
-                }
-            }
-        }
-
-        //(5)
-        if(SW1 == UP && SW2 == UP && zyoutai == 11){
-            zyoutai = 12;
-
-        }
-
-        if(SW1 == DN && SW2 == UP && zyoutai == 12){
-            hen7(ans2,HEX );
-            segL2 = SEG0;
-            segR2 = code1;
-        }
 
         
 
@@ -749,4 +708,3 @@ void main(void)
         
     }
 }
-

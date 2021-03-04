@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\SKT_h28_vor3.X.production.hex">
+  <executable name="dist/default/debug\SKT_h28_vor3.X.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>16384</length>
-      <used>2058</used>
-      <free>14326</free>
+      <used>2035</used>
+      <free>14349</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

@@ -5297,7 +5297,6 @@ void main(void)
 
             tact(2);
             if(((flag_sw3==0)&&(flag_P==1))){
-                fclr(2);
 
                 if(ataiL == 0){
                     ataiL = 10;
@@ -5305,7 +5304,7 @@ void main(void)
 
                 ataiL--;
 
-
+                fclr(2);
 
                 segL = num0[ataiL];
 
@@ -5313,7 +5312,7 @@ void main(void)
         }
 
 
-        if(RA0 == 1 && RA1 == 1 && segL != 0x40 && zyoutai == 0){
+        if(RA0 == 1 && RA1 == 1 && segL != 0x40){
 
             if(segR == 0x40){
                 segR = num0[0];
@@ -5321,7 +5320,6 @@ void main(void)
 
             tact(2);
             if(((flag_sw3==0)&&(flag_P==1))){
-                fclr(2);
 
                 if(ataiR == 9){
                     ataiR = -1;
@@ -5329,7 +5327,7 @@ void main(void)
 
                 ataiR++;
 
-
+                fclr(2);
 
                 segR = num0[ataiR];
 
@@ -5337,15 +5335,17 @@ void main(void)
         }
 
 
-        if(RA0 ==1 && RA1 == 0 && segR != 0x40 && segL != 0x40 && segR != 0 && segL != 0 && zyoutai == 0){
+        if(RA0 ==1 && RA1 == 0 && segR != 0x40 && segL != 0x40 && zyoutai == 0){
             zyoutai = 1;
         }
 
-        if(RA0 ==1 && RA1 == 1 && segR != 0x40 && segL != 0x40 && segR != 0 && segL != 0 && zyoutai == 1){
+        if(RA0 ==1 && RA1 == 1 && segR != 0x40 && segL != 0x40 && zyoutai == 1){
+
+            RC0 = 0;
 
             zyoutai = 0;
 
-            ans = ataiL*ataiR;
+            ans = (ataiL*10)+ataiR;
 
             hen7(ans,10);
             if(ans/10 > 1){
@@ -5370,15 +5370,6 @@ void main(void)
             }
 
 
-            if(ans == 0 && zyoutai == 2){
-                zyoutai = 3;
-
-                motor(360,segL,segR,1,1);
-                motor(360,segL,segR,2,1);
-
-            }
-
-
             if(ans%2 == 0 && zyoutai == 2){
                 zyoutai = 3;
 
@@ -5387,6 +5378,13 @@ void main(void)
             }
 
 
+            if(ans%2 == 0 && zyoutai == 2){
+                zyoutai = 3;
+
+                motor(360,segL,segR,1,1);
+                motor(360,segL,segR,2,1);
+
+            }
 
 
         }
@@ -5394,9 +5392,7 @@ void main(void)
 
         tact(2);
 
-        if(RA0 ==1 && RA1 == 1 && ((flag_sw3==0)&&(flag_P==1)) && zyoutai == 3){
-            fclr(2);
-
+        if(RA0 ==1 && RA1 == 1 && ((flag_sw3==0)&&(flag_P==1)) && segR != 0x40 && segL != 0x40 && zyoutai == 3){
             zyoutai = 0;
 
             segR = 0;
@@ -5407,6 +5403,6 @@ void main(void)
 
             ans = 0;
         }
-# 709 "Q5.c"
+# 705 "Q5.c"
     }
 }

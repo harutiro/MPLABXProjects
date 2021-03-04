@@ -11,38 +11,34 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\harut\AppData\Local\Temp\s8u0.o
+$C:\Users\harut\AppData\Local\Temp\sgbc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
 $dist/default/production\SKT_h28_vor3.X.production.o
-cinit CODE 0 7C9 7C9 37 2
-text1 CODE 0 E5D E5D 9 2
-text2 CODE 0 F3 F3 83 2
-text3 CODE 0 FB5 FB5 4B 2
-text4 CODE 0 F38 F38 3D 2
-text5 CODE 0 EFC EFC 3C 2
-text6 CODE 0 E66 E66 13 2
-text7 CODE 0 ED8 ED8 24 2
-text8 CODE 0 176 176 16A 2
-text9 CODE 0 2E0 2E0 1D4 2
-text10 CODE 0 E79 E79 1F 2
-text11 CODE 0 40 40 53 2
-text12 CODE 0 93 93 60 2
-text13 CODE 0 E98 E98 20 2
-maintext CODE 0 4B4 4B4 315 2
-cstackCOMMON COMMON 1 70 70 D 1
-cstackBANK0 BANK0 1 20 20 3A 1
-inittext CODE 0 E57 E57 6 2
-bssBANK0 BANK0 1 5A 5A 16 1
-bssBANK1 BANK1 1 DC DC C 1
-idataBANK1 CODE 0 4 4 3C 2
-idataBANK2 CODE 0 F75 F75 40 2
-idataBANK3 CODE 0 EB8 EB8 20 2
-dataBANK1 BANK1 1 A0 A0 3C 1
-dataBANK2 BANK2 1 120 120 40 1
-dataBANK3 BANK3 1 1A0 1A0 20 1
-clrtext CODE 0 E51 E51 6 2
+cinit CODE 0 7DB 7DB 25 2
+text1 CODE 0 6 6 9 2
+text2 CODE 0 C2 C2 4C 2
+text3 CODE 0 85 85 3D 2
+text4 CODE 0 F F 13 2
+text5 CODE 0 61 61 24 2
+text6 CODE 0 25D 25D 16A 2
+text7 CODE 0 3C7 3C7 1CA 2
+text8 CODE 0 22 22 1F 2
+text9 CODE 0 1AA 1AA 53 2
+text10 CODE 0 1FD 1FD 60 2
+text11 CODE 0 41 41 20 2
+maintext CODE 0 591 591 24A 2
+cstackCOMMON COMMON 1 70 70 C 1
+cstackBANK0 BANK0 1 20 20 30 1
+inittext CODE 0 FFA FFA 6 2
+bssBANK0 BANK0 1 50 50 20 1
+idataBANK1 CODE 0 15A 15A 50 2
+idataBANK2 CODE 0 10E 10E 4C 2
+dataBANK1 BANK1 1 A0 A0 50 1
+dataBANK2 BANK2 1 120 120 4C 1
+clrtext CODE 0 FF4 FF4 6 2
+bssCOMMON COMMON 1 7C 7C 2 1
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -50,9 +46,8 @@ config CONFIG 4 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM E8-EF 1
-RAM 160-16F 1
-RAM 1C0-1EF 1
+RAM 16C-16F 1
+RAM 1A0-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
 RAM 320-36F 1
@@ -62,18 +57,19 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK1 E8-EF 1
-BANK2 160-16F 1
-BANK3 1C0-1EF 1
+BANK2 16C-16F 1
+BANK3 1A0-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 800-E50 2
+CONST 4-5 2
+CONST 800-FF3 2
 CONST 1000-3FFF 2
-ENTRY 800-E50 2
+ENTRY 4-5 2
+ENTRY 800-FF3 2
 ENTRY 1000-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -98,8 +94,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2110-23EF 1
-CODE 800-E50 2
+STACK 20EC-23EF 1
+CODE 4-5 2
+CODE 800-FF3 2
 CODE 1000-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -115,11 +112,12 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-COMMON 7D-7D 1
 EEDATA F000-F0FF 2
-STRCODE 800-E50 2
+STRCODE 4-5 2
+STRCODE 800-FF3 2
 STRCODE 1000-3FFF 2
-STRING 800-E50 2
+STRING 4-5 2
+STRING 800-FF3 2
 STRING 1000-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -135,379 +133,308 @@ STRING 1000-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SKT_h28_vor3.X.production.o
-7C9 cinit CODE >1126:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7C9 cinit CODE >1129:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7C9 cinit CODE >1268:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7CA cinit CODE >1269:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7CB cinit CODE >1270:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7CC cinit CODE >1271:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7CD cinit CODE >1272:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7CE cinit CODE >1273:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7CF cinit CODE >1274:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D0 cinit CODE >1275:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D1 cinit CODE >1276:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D2 cinit CODE >1277:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D5 cinit CODE >1281:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D6 cinit CODE >1282:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D7 cinit CODE >1283:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D8 cinit CODE >1284:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7D9 cinit CODE >1285:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7DA cinit CODE >1286:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7DB cinit CODE >1287:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7DC cinit CODE >1288:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7DD cinit CODE >1289:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7DE cinit CODE >1290:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E1 cinit CODE >1294:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E2 cinit CODE >1295:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E3 cinit CODE >1296:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E4 cinit CODE >1297:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E5 cinit CODE >1298:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E6 cinit CODE >1299:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E7 cinit CODE >1300:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E8 cinit CODE >1301:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7E9 cinit CODE >1302:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7EA cinit CODE >1303:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7ED cinit CODE >1320:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7EE cinit CODE >1321:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7EF cinit CODE >1322:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F0 cinit CODE >1323:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F1 cinit CODE >1324:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F2 cinit CODE >1325:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F5 cinit CODE >1329:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F6 cinit CODE >1330:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F7 cinit CODE >1331:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F8 cinit CODE >1332:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7F9 cinit CODE >1333:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7FA cinit CODE >1334:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7FD cinit CODE >1340:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7FD cinit CODE >1342:C:\Users\harut\AppData\Local\Temp\s8u0.s
-7FE cinit CODE >1343:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E98 text13 CODE >369:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E98 text13 CODE >371:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E99 text13 CODE >373:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E9C text13 CODE >374:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E9D text13 CODE >376:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EA0 text13 CODE >377:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EA1 text13 CODE >379:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EA6 text13 CODE >380:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EA7 text13 CODE >383:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EB7 text13 CODE >384:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-93 text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-93 text12 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-95 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-99 text12 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-9E text12 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-A0 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-A4 text12 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-A9 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-AD text12 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-AF text12 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-B5 text12 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-B7 text12 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-B8 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-BD text12 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-C1 text12 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-C5 text12 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-CA text12 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-D4 text12 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-D8 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-D9 text12 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-DE text12 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-E4 text12 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-E9 text12 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-EE text12 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-F2 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-40 text11 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-40 text11 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-41 text11 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-45 text11 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-4A text11 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-4C text11 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-50 text11 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-55 text11 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-5B text11 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-5D text11 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-5E text11 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-63 text11 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-67 text11 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-6B text11 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-75 text11 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-79 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-7E text11 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-84 text11 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-89 text11 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-8E text11 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-92 text11 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-E79 text10 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E79 text10 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E7B text10 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E7F text10 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E83 text10 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E88 text10 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E8D text10 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E93 text10 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E97 text10 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-2E0 text9 CODE >252:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2E0 text9 CODE >256:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2E3 text9 CODE >257:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2EB text9 CODE >258:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2F1 text9 CODE >259:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2FC text9 CODE >263:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-30C text9 CODE >264:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-32A text9 CODE >265:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-33A text9 CODE >266:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-33F text9 CODE >267:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-342 text9 CODE >268:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-355 text9 CODE >269:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-363 text9 CODE >270:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-365 text9 CODE >271:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-377 text9 CODE >272:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-384 text9 CODE >273:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-386 text9 CODE >274:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-398 text9 CODE >275:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3A6 text9 CODE >278:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3B5 text9 CODE >279:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3D1 text9 CODE >280:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3D7 text9 CODE >281:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3DC text9 CODE >282:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3DF text9 CODE >283:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-3F2 text9 CODE >284:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-400 text9 CODE >285:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-402 text9 CODE >286:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-414 text9 CODE >287:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-421 text9 CODE >288:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-423 text9 CODE >289:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-435 text9 CODE >290:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-443 text9 CODE >293:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-448 text9 CODE >294:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-44C text9 CODE >295:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-45A text9 CODE >296:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-460 text9 CODE >297:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-462 text9 CODE >298:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-474 text9 CODE >299:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-481 text9 CODE >300:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-483 text9 CODE >301:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-495 text9 CODE >302:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4A3 text9 CODE >306:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4B3 text9 CODE >307:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-176 text8 CODE >206:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-176 text8 CODE >208:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-179 text8 CODE >209:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-17D text8 CODE >210:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-17E text8 CODE >211:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-180 text8 CODE >212:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-182 text8 CODE >213:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-18E text8 CODE >214:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-192 text8 CODE >215:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1A2 text8 CODE >216:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1A4 text8 CODE >217:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1A6 text8 CODE >218:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1A8 text8 CODE >219:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1B4 text8 CODE >220:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1B8 text8 CODE >221:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1C8 text8 CODE >222:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1CA text8 CODE >223:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1CB text8 CODE >225:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1CC text8 CODE >226:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1CF text8 CODE >227:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1D0 text8 CODE >229:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1DA text8 CODE >230:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-1F6 text8 CODE >231:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-214 text8 CODE >232:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-233 text8 CODE >233:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-24D text8 CODE >237:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-257 text8 CODE >238:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-273 text8 CODE >239:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-291 text8 CODE >240:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2B0 text8 CODE >241:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2CA text8 CODE >245:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2CE text8 CODE >246:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2CF text8 CODE >247:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-2DF text8 CODE >248:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-ED8 text7 CODE >484:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-ED8 text7 CODE >486:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EE2 text7 CODE >487:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EF6 text7 CODE >488:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EFB text7 CODE >489:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E66 text6 CODE >160:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E66 text6 CODE >163:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E68 text6 CODE >164:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E69 text6 CODE >166:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E6C text6 CODE >167:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E6F text6 CODE >168:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E71 text6 CODE >169:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E73 text6 CODE >170:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E76 text6 CODE >171:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E78 text6 CODE >172:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-EFC text5 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-EFC text5 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-EFE text5 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F04 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F06 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F07 text5 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F0C text5 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F10 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F14 text5 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F19 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F23 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F27 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F28 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F2D text5 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F33 text5 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F37 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-F38 text4 CODE >331:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F38 text4 CODE >334:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F3C text4 CODE >336:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F48 text4 CODE >337:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F57 text4 CODE >338:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F59 text4 CODE >339:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F6F text4 CODE >340:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F74 text4 CODE >342:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FB5 text3 CODE >346:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FB5 text3 CODE >348:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FB6 text3 CODE >350:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FB9 text3 CODE >351:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FC5 text3 CODE >354:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FC8 text3 CODE >355:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FD4 text3 CODE >358:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FD7 text3 CODE >359:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FE2 text3 CODE >360:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FEF text3 CODE >364:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FFF text3 CODE >365:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F3 text2 CODE >464:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-F3 text2 CODE >467:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-FF text2 CODE >468:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-10A text2 CODE >470:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-11A text2 CODE >473:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-125 text2 CODE >474:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-136 text2 CODE >476:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-13C text2 CODE >478:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-16B text2 CODE >479:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-170 text2 CODE >481:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-175 text2 CODE >482:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E5D text1 CODE >195:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E5D text1 CODE >197:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E5F text1 CODE >198:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E60 text1 CODE >199:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E61 text1 CODE >200:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E62 text1 CODE >201:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E65 text1 CODE >202:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4B4 maintext CODE >519:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4B4 maintext CODE >522:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4B7 maintext CODE >524:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4BA maintext CODE >526:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4BD maintext CODE >528:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4C2 maintext CODE >531:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4CE maintext CODE >534:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4DF maintext CODE >537:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4E6 maintext CODE >547:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4E6 maintext CODE >550:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4E9 maintext CODE >551:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4EB maintext CODE >553:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4ED maintext CODE >554:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4EF maintext CODE >556:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4F1 maintext CODE >557:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4F3 maintext CODE >559:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4F5 maintext CODE >560:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4F7 maintext CODE >562:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4F9 maintext CODE >573:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4FB maintext CODE >574:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4FD maintext CODE >577:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-4FD maintext CODE >580:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-50E maintext CODE >581:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-520 maintext CODE >584:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-529 maintext CODE >586:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-52D maintext CODE >587:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-531 maintext CODE >589:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-538 maintext CODE >590:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-545 maintext CODE >592:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-54B maintext CODE >593:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-54F maintext CODE >594:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-54F maintext CODE >596:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-553 maintext CODE >598:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-55A maintext CODE >600:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-563 maintext CODE >606:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-572 maintext CODE >608:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-579 maintext CODE >609:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-581 maintext CODE >612:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-588 maintext CODE >613:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-595 maintext CODE >615:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-59C maintext CODE >616:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5A0 maintext CODE >617:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5A0 maintext CODE >619:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5A4 maintext CODE >621:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5AB maintext CODE >623:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5B4 maintext CODE >629:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5D0 maintext CODE >630:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5D4 maintext CODE >633:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5F0 maintext CODE >635:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-5F2 maintext CODE >637:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-604 maintext CODE >639:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-60F maintext CODE >640:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-628 maintext CODE >641:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-62D maintext CODE >642:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-62E maintext CODE >643:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-631 maintext CODE >646:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-635 maintext CODE >649:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-63B maintext CODE >650:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-63F maintext CODE >654:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-64A maintext CODE >655:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-64E maintext CODE >657:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-665 maintext CODE >662:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-671 maintext CODE >663:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-675 maintext CODE >665:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-68C maintext CODE >670:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-698 maintext CODE >671:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-69C maintext CODE >673:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-6B3 maintext CODE >674:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-6CB maintext CODE >682:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-6D2 maintext CODE >684:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-6FC maintext CODE >685:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-6FE maintext CODE >687:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-700 maintext CODE >688:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-702 maintext CODE >690:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-704 maintext CODE >691:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-706 maintext CODE >693:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-708 maintext CODE >698:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-710 maintext CODE >700:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-718 maintext CODE >703:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-71F maintext CODE >705:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-72C maintext CODE >706:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-730 maintext CODE >707:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-730 maintext CODE >708:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-744 maintext CODE >709:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-746 maintext CODE >710:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-752 maintext CODE >712:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-757 maintext CODE >713:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-75B maintext CODE >715:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-76F maintext CODE >717:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-775 maintext CODE >718:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-779 maintext CODE >719:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-77D maintext CODE >720:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-77E maintext CODE >724:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-78F maintext CODE >726:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-78F maintext CODE >729:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-79F maintext CODE >730:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-7A3 maintext CODE >734:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-7B2 maintext CODE >735:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-7BD maintext CODE >736:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-7C2 maintext CODE >737:C:\Users\harut\MPLABXProjects\SKT_h28_vor3.X\Q5.c
-E51 clrtext CODE >1309:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E51 clrtext CODE >1310:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E52 clrtext CODE >1311:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E52 clrtext CODE >1312:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E53 clrtext CODE >1313:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E54 clrtext CODE >1314:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E55 clrtext CODE >1315:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E56 clrtext CODE >1316:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E57 inittext CODE >1257:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E57 inittext CODE >1258:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E58 inittext CODE >1259:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E58 inittext CODE >1260:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E59 inittext CODE >1261:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E5A inittext CODE >1262:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E5B inittext CODE >1263:C:\Users\harut\AppData\Local\Temp\s8u0.s
-E5C inittext CODE >1264:C:\Users\harut\AppData\Local\Temp\s8u0.s
+7DB cinit CODE >1119:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7DB cinit CODE >1122:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7DB cinit CODE >1259:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7DC cinit CODE >1260:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7DD cinit CODE >1261:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7DE cinit CODE >1262:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7DF cinit CODE >1263:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E0 cinit CODE >1264:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E1 cinit CODE >1265:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E2 cinit CODE >1266:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E3 cinit CODE >1267:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E4 cinit CODE >1268:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E7 cinit CODE >1272:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E8 cinit CODE >1273:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7E9 cinit CODE >1274:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7EA cinit CODE >1275:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7EB cinit CODE >1276:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7EC cinit CODE >1277:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7ED cinit CODE >1278:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7EE cinit CODE >1279:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7EF cinit CODE >1280:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F0 cinit CODE >1281:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F3 cinit CODE >1298:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F4 cinit CODE >1299:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F5 cinit CODE >1303:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F6 cinit CODE >1304:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F7 cinit CODE >1305:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F8 cinit CODE >1306:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7F9 cinit CODE >1307:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7FA cinit CODE >1308:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7FD cinit CODE >1314:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7FD cinit CODE >1316:C:\Users\harut\AppData\Local\Temp\sgbc.s
+7FE cinit CODE >1317:C:\Users\harut\AppData\Local\Temp\sgbc.s
+41 text11 CODE >369:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+41 text11 CODE >371:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+42 text11 CODE >373:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+45 text11 CODE >374:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+46 text11 CODE >376:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+49 text11 CODE >377:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4A text11 CODE >379:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4F text11 CODE >380:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+50 text11 CODE >383:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+60 text11 CODE >384:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+1FD text10 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+1FD text10 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+1FF text10 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+203 text10 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+208 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+20A text10 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+20E text10 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+213 text10 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+217 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+219 text10 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+21F text10 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+221 text10 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+222 text10 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+227 text10 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+22B text10 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+22F text10 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+234 text10 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+23E text10 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+242 text10 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+243 text10 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+248 text10 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+24E text10 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+253 text10 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+258 text10 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+25C text10 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+1AA text9 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1AA text9 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1AB text9 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1AF text9 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1B4 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1B6 text9 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1BA text9 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1BF text9 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1C5 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1C7 text9 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1C8 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1CD text9 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1D1 text9 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1D5 text9 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1DF text9 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1E3 text9 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1E8 text9 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1EE text9 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1F3 text9 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1F8 text9 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1FC text9 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+22 text8 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+22 text8 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+24 text8 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+28 text8 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+2C text8 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+31 text8 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+36 text8 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+3C text8 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+40 text8 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+3C7 text7 CODE >252:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3C7 text7 CODE >256:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3CA text7 CODE >257:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3D2 text7 CODE >258:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3D8 text7 CODE >259:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3E3 text7 CODE >263:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3F3 text7 CODE >264:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+411 text7 CODE >265:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+421 text7 CODE >266:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+425 text7 CODE >267:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+427 text7 CODE >268:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+439 text7 CODE >269:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+446 text7 CODE >270:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+448 text7 CODE >271:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+45A text7 CODE >272:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+467 text7 CODE >273:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+469 text7 CODE >274:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+47B text7 CODE >275:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+489 text7 CODE >278:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+498 text7 CODE >279:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4B4 text7 CODE >280:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4BA text7 CODE >281:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4BE text7 CODE >282:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4C0 text7 CODE >283:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4D2 text7 CODE >284:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4DF text7 CODE >285:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4E1 text7 CODE >286:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+4F3 text7 CODE >287:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+500 text7 CODE >288:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+502 text7 CODE >289:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+514 text7 CODE >290:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+522 text7 CODE >293:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+526 text7 CODE >294:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+52A text7 CODE >295:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+537 text7 CODE >296:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+53D text7 CODE >297:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+53F text7 CODE >298:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+551 text7 CODE >299:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+55E text7 CODE >300:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+560 text7 CODE >301:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+572 text7 CODE >302:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+580 text7 CODE >306:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+590 text7 CODE >307:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+25D text6 CODE >206:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+25D text6 CODE >208:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+260 text6 CODE >209:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+264 text6 CODE >210:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+265 text6 CODE >211:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+267 text6 CODE >212:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+269 text6 CODE >213:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+275 text6 CODE >214:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+279 text6 CODE >215:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+289 text6 CODE >216:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+28B text6 CODE >217:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+28D text6 CODE >218:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+28F text6 CODE >219:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+29B text6 CODE >220:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+29F text6 CODE >221:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2AF text6 CODE >222:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2B1 text6 CODE >223:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2B2 text6 CODE >225:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2B3 text6 CODE >226:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2B6 text6 CODE >227:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2B7 text6 CODE >229:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2C1 text6 CODE >230:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2DD text6 CODE >231:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+2FB text6 CODE >232:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+31A text6 CODE >233:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+334 text6 CODE >237:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+33E text6 CODE >238:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+35A text6 CODE >239:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+378 text6 CODE >240:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+397 text6 CODE >241:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3B1 text6 CODE >245:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3B5 text6 CODE >246:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3B6 text6 CODE >247:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+3C6 text6 CODE >248:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+61 text5 CODE >484:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+61 text5 CODE >486:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6B text5 CODE >487:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7F text5 CODE >488:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+84 text5 CODE >489:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+F text4 CODE >160:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+F text4 CODE >163:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+11 text4 CODE >164:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+12 text4 CODE >166:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+15 text4 CODE >167:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+18 text4 CODE >168:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+1A text4 CODE >169:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+1C text4 CODE >170:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+1F text4 CODE >171:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+21 text4 CODE >172:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+85 text3 CODE >331:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+85 text3 CODE >334:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+89 text3 CODE >336:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+95 text3 CODE >337:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+A4 text3 CODE >338:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+A6 text3 CODE >339:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+BC text3 CODE >340:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+C1 text3 CODE >342:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+C2 text2 CODE >346:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+C2 text2 CODE >348:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+C3 text2 CODE >350:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+C6 text2 CODE >351:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+D2 text2 CODE >354:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+D5 text2 CODE >355:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+E1 text2 CODE >358:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+E4 text2 CODE >359:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+EF text2 CODE >360:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+FD text2 CODE >364:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+10D text2 CODE >365:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6 text1 CODE >195:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6 text1 CODE >197:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+8 text1 CODE >198:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+9 text1 CODE >199:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+A text1 CODE >200:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+B text1 CODE >201:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+E text1 CODE >202:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+591 maintext CODE >519:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+591 maintext CODE >522:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+594 maintext CODE >524:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+597 maintext CODE >526:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+59A maintext CODE >528:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+59A maintext CODE >531:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5A7 maintext CODE >534:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5B8 maintext CODE >537:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5BF maintext CODE >547:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5BF maintext CODE >550:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5C2 maintext CODE >551:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5C4 maintext CODE >553:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5C6 maintext CODE >554:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5C8 maintext CODE >556:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5CA maintext CODE >566:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5CA maintext CODE >572:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5DB maintext CODE >575:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5E4 maintext CODE >577:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5F0 maintext CODE >578:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5F4 maintext CODE >579:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5F8 maintext CODE >585:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+5FF maintext CODE >586:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+60C maintext CODE >587:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+613 maintext CODE >589:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+61A maintext CODE >590:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+61E maintext CODE >591:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+61E maintext CODE >593:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+622 maintext CODE >597:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+62A maintext CODE >603:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+640 maintext CODE >605:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+647 maintext CODE >606:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+64F maintext CODE >609:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+656 maintext CODE >610:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+663 maintext CODE >611:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+66A maintext CODE >613:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+672 maintext CODE >614:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+676 maintext CODE >615:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+676 maintext CODE >617:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+67A maintext CODE >621:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+682 maintext CODE >627:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6AB maintext CODE >628:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6AF maintext CODE >631:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6D7 maintext CODE >633:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6D7 maintext CODE >635:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6E7 maintext CODE >637:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+6F2 maintext CODE >638:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+70B maintext CODE >639:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+710 maintext CODE >640:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+711 maintext CODE >641:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+714 maintext CODE >644:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+718 maintext CODE >647:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+718 maintext CODE >648:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+71C maintext CODE >652:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+720 maintext CODE >653:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+724 maintext CODE >655:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+73B maintext CODE >660:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+749 maintext CODE >661:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+74D maintext CODE >663:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+764 maintext CODE >664:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+77C maintext CODE >669:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+788 maintext CODE >670:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+78C maintext CODE >672:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7A3 maintext CODE >682:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7AA maintext CODE >684:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7C6 maintext CODE >685:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7CD maintext CODE >687:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7D0 maintext CODE >689:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7D2 maintext CODE >690:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7D4 maintext CODE >692:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+7D6 maintext CODE >693:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_h28_vor3.X\Q5.c
+FF4 clrtext CODE >1287:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF4 clrtext CODE >1288:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF5 clrtext CODE >1289:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF5 clrtext CODE >1290:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF6 clrtext CODE >1291:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF7 clrtext CODE >1292:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF8 clrtext CODE >1293:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FF9 clrtext CODE >1294:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFA inittext CODE >1248:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFA inittext CODE >1249:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFB inittext CODE >1250:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFB inittext CODE >1251:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFC inittext CODE >1252:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFD inittext CODE >1253:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFE inittext CODE >1254:C:\Users\harut\AppData\Local\Temp\sgbc.s
+FFF inittext CODE >1255:C:\Users\harut\AppData\Local\Temp\sgbc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -524,60 +451,53 @@ ___latbits 3 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 ___awdiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
 __LdataBANK2 0 0 ABS 0 dataBANK2 -
-__LdataBANK3 0 0 ABS 0 dataBANK3 -
 hen7@l 32 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 hen7@m 34 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 hen7@n 36 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __Hspace_0 1000 0 ABS 0 - -
-__Hspace_1 1C0 0 ABS 0 - -
+__Hspace_1 16C 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
-__end_of_portinit 1CF2 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_portinit 44 0 CODE 0 text4 dist/default/production\SKT_h28_vor3.X.production.o
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
 __HidataBANK2 0 0 ABS 0 idataBANK2 -
-__HidataBANK3 0 0 ABS 0 idataBANK3 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_cw 66 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@i 50 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@k 46 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@m 40 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_cw 64 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\s8u0.o
-_atai E2 0 BANK1 1 bssBANK1 dist/default/production\SKT_h28_vor3.X.production.o
-_fclr 1D30 0 CODE 0 text13 dist/default/production\SKT_h28_vor3.X.production.o
-_hen7 5C0 0 CODE 0 text9 dist/default/production\SKT_h28_vor3.X.production.o
-_main 968 0 CODE 0 maintext dist/default/production\SKT_h28_vor3.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sgbc.o
+_atai 5C 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_fclr 82 0 CODE 0 text11 dist/default/production\SKT_h28_vor3.X.production.o
+_hen7 78E 0 CODE 0 text7 dist/default/production\SKT_h28_vor3.X.production.o
+_main B22 0 CODE 0 maintext dist/default/production\SKT_h28_vor3.X.production.o
 _num0 C0 0 BANK1 1 dataBANK1 dist/default/production\SKT_h28_vor3.X.production.o
 _samp A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_h28_vor3.X.production.o
-_tact 1F6A 0 CODE 0 text3 dist/default/production\SKT_h28_vor3.X.production.o
+_tact 184 0 CODE 0 text2 dist/default/production\SKT_h28_vor3.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\s8u0.o
+start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\sgbc.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __size_of_fclr 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __size_of_hen7 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __size_of_tact 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-__size_of___lwdiv 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 hen7@value10 2E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
 ?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-?_waitSEGStop 28 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 tact@mode 78 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
 __LidataBANK2 0 0 ABS 0 idataBANK2 -
-__LidataBANK3 0 0 ABS 0 idataBANK3 -
 __Hpowerup 0 0 CODE 0 powerup -
 dynam@ext 26 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 dynam@smd 20 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\s8u0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\s8u0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\s8u0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\s8u0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\s8u0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\s8u0.o
-__size_of_waitSEGStop 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgbc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgbc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgbc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgbc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgbc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgbc.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 ___awdiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
@@ -589,26 +509,24 @@ _ANSELA 18C 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 ___awdiv@dividend 78 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 dynam@j 24 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-__end_of___wmul 1D30 0 CODE 0 text10 dist/default/production\SKT_h28_vor3.X.production.o
-main@ans 52 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of___wmul 82 0 CODE 0 text8 dist/default/production\SKT_h28_vor3.X.production.o
+main@ans 48 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 ___awdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-__end_of___awdiv 1E6 0 CODE 0 text12 dist/default/production\SKT_h28_vor3.X.production.o
-__end_of___awmod 126 0 CODE 0 text11 dist/default/production\SKT_h28_vor3.X.production.o
-__end_of___lwdiv 1E70 0 CODE 0 text5 dist/default/production\SKT_h28_vor3.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\s8u0.o
-___stacklo 2110 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\s8u0.o
-___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
+__end_of___awdiv 4BA 0 CODE 0 text10 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of___awmod 3FA 0 CODE 0 text9 dist/default/production\SKT_h28_vor3.X.production.o
+___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sgbc.o
+___stacklo 20EC 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sgbc.o
 __size_of_dynam 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 dynam@smdata 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __size_of_motor 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-main@zyoutai 58 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-start_initialization F92 0 CODE 0 cinit dist/default/production\SKT_h28_vor3.X.production.o
+main@zyoutai 4A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+start_initialization FB6 0 CODE 0 cinit dist/default/production\SKT_h28_vor3.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-clear_ram0 1CA2 0 CODE 0 clrtext dist/default/production\SKT_h28_vor3.X.production.o
+clear_ram0 1FE8 0 CODE 0 clrtext dist/default/production\SKT_h28_vor3.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 hen7@value100 30 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\s8u0.o
+___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sgbc.o
 fclr@flg 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -644,8 +562,7 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
-__end_of_tactsw 1EEA 0 CODE 0 text4 dist/default/production\SKT_h28_vor3.X.production.o
-___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_tactsw 184 0 CODE 0 text3 dist/default/production\SKT_h28_vor3.X.production.o
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -684,7 +601,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit F92 0 CODE 0 cinit -
+__Lcinit FB6 0 CODE 0 cinit -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -708,8 +625,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-waitSEGStop@wt 2C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-init_ram 1CAE 0 CODE 0 inittext dist/default/production\SKT_h28_vor3.X.production.o
+init_ram 1FF4 0 CODE 0 inittext dist/default/production\SKT_h28_vor3.X.production.o
 __Linittext 0 0 ABS 0 inittext -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -725,7 +641,7 @@ __Hsfr7 0 0 ABS 0 sfr7 -
 __Hsfr8 0 0 ABS 0 sfr8 -
 __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
-__end_of_zenoff 1CCC 0 CODE 0 text1 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_zenoff 1E 0 CODE 0 text1 dist/default/production\SKT_h28_vor3.X.production.o
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
 __Linit 4 0 CODE 0 init -
@@ -740,8 +656,7 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-___wmul 1CF2 0 CODE 0 text10 dist/default/production\SKT_h28_vor3.X.production.o
-_waitSEGStop 1E6 0 CODE 0 text2 dist/default/production\SKT_h28_vor3.X.production.o
+___wmul 44 0 CODE 0 text8 dist/default/production\SKT_h28_vor3.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 hen7@value 24 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
@@ -755,32 +670,27 @@ _RC5 75 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _RC6 76 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _RC7 77 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __S0 1000 0 ABS 0 - -
-__S1 1C0 0 ABS 0 - -
+__S1 16C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_ccw 64 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_flg 68 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_atai10 62 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_code10 5E 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_flag_P 6A 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_flag_R 6C 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_ccw 62 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_flg 66 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_atai10 60 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_code10 54 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_flag_P 68 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_flag_R 6A 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 motor@tr 30 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\s8u0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\sgbc.o
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_h28_vor3.X.production.o
 __pdataBANK2 120 0 BANK2 1 dataBANK2 dist/default/production\SKT_h28_vor3.X.production.o
-__pdataBANK3 1A0 0 BANK3 1 dataBANK3 dist/default/production\SKT_h28_vor3.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__LbssBANK1 0 0 ABS 0 bssBANK1 -
 ___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-__ptext10 1CF2 0 CODE 0 text10 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext11 80 0 CODE 0 text11 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext12 126 0 CODE 0 text12 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext13 1D30 0 CODE 0 text13 dist/default/production\SKT_h28_vor3.X.production.o
-___awdiv 126 0 CODE 0 text12 dist/default/production\SKT_h28_vor3.X.production.o
-___awmod 80 0 CODE 0 text11 dist/default/production\SKT_h28_vor3.X.production.o
-___lwdiv 1DF8 0 CODE 0 text5 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext10 3FA 0 CODE 0 text10 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext11 82 0 CODE 0 text11 dist/default/production\SKT_h28_vor3.X.production.o
+___awdiv 3FA 0 CODE 0 text10 dist/default/production\SKT_h28_vor3.X.production.o
+___awmod 354 0 CODE 0 text9 dist/default/production\SKT_h28_vor3.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -803,7 +713,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 968 0 CODE 0 maintext dist/default/production\SKT_h28_vor3.X.production.o
+__pmaintext B22 0 CODE 0 maintext dist/default/production\SKT_h28_vor3.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -812,52 +722,41 @@ tactsw@a 76 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.produ
 tactsw@b 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 tactsw@c 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 ___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-main@ans2 44 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@segL 54 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@segR 56 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@time 42 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@ataiL 4C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@ataiR 4E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-main@segL2 48 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@segR2 4A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_tactsw 1E70 0 CODE 0 text4 dist/default/production\SKT_h28_vor3.X.production.o
-main@ataiL2 3C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-main@ataiR2 3E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_flag_sw3 6E 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+main@segL 4C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+main@segR 4E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+main@ataiL 44 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+main@ataiR 46 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_tactsw 10A 0 CODE 0 text3 dist/default/production\SKT_h28_vor3.X.production.o
+_flag_sw3 7C 0 COMMON 1 bssCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
+__pbssCOMMON 7C 0 COMMON 1 bssCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_zenoff 1CBA 0 CODE 0 text1 dist/default/production\SKT_h28_vor3.X.production.o
-waitSEGStop@seg1 28 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-waitSEGStop@seg2 2A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_zenoff C 0 CODE 0 text1 dist/default/production\SKT_h28_vor3.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\SKT_h28_vor3.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 ___awdiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 ?___awdiv 76 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 ?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__HbssBANK1 0 0 ABS 0 bssBANK1 -
 ___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __size_of_tactsw 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-__ptext1 1CBA 0 CODE 0 text1 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext2 1E6 0 CODE 0 text2 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext3 1F6A 0 CODE 0 text3 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext4 1E70 0 CODE 0 text4 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext5 1DF8 0 CODE 0 text5 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext6 1CCC 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext7 1DB0 0 CODE 0 text7 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext8 2EC 0 CODE 0 text8 dist/default/production\SKT_h28_vor3.X.production.o
-__ptext9 5C0 0 CODE 0 text9 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext1 C 0 CODE 0 text1 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext2 184 0 CODE 0 text2 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext3 10A 0 CODE 0 text3 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext4 1E 0 CODE 0 text4 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext5 C2 0 CODE 0 text5 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext6 4BA 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext7 78E 0 CODE 0 text7 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext8 44 0 CODE 0 text8 dist/default/production\SKT_h28_vor3.X.production.o
+__ptext9 354 0 CODE 0 text9 dist/default/production\SKT_h28_vor3.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 motor@kakudo 28 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
@@ -869,50 +768,43 @@ ___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3
 __Lfunctab 0 0 ENTRY 0 functab -
 hen7@value1 2C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 hen7@ns1 26 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-__pidataBANK1 8 0 CODE 0 idataBANK1 dist/default/production\SKT_h28_vor3.X.production.o
-__pidataBANK2 1EEA 0 CODE 0 idataBANK2 dist/default/production\SKT_h28_vor3.X.production.o
-__pidataBANK3 1D70 0 CODE 0 idataBANK3 dist/default/production\SKT_h28_vor3.X.production.o
-_code1000 DE 0 BANK1 1 bssBANK1 dist/default/production\SKT_h28_vor3.X.production.o
+__pidataBANK1 2B4 0 CODE 0 idataBANK1 dist/default/production\SKT_h28_vor3.X.production.o
+__pidataBANK2 21C 0 CODE 0 idataBANK2 dist/default/production\SKT_h28_vor3.X.production.o
+_code1000 58 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __size_of_portinit 0 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-__end_of_waitSEGStop 2EC 0 CODE 0 text2 dist/default/production\SKT_h28_vor3.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 motor@smdata 2E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_fclr 1D70 0 CODE 0 text13 dist/default/production\SKT_h28_vor3.X.production.o
-__end_of_hen7 968 0 CODE 0 text9 dist/default/production\SKT_h28_vor3.X.production.o
-__end_of_main F92 0 CODE 0 maintext dist/default/production\SKT_h28_vor3.X.production.o
-__end_of_tact 2000 0 CODE 0 text3 dist/default/production\SKT_h28_vor3.X.production.o
-waitSEGStop@cpSW1 2E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-waitSEGStop@cpSW2 30 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-__end_of_dynam 5C0 0 CODE 0 text8 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_fclr C2 0 CODE 0 text11 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_hen7 B22 0 CODE 0 text7 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_main FB6 0 CODE 0 maintext dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_tact 21C 0 CODE 0 text2 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_dynam 78E 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.o
 _PORTA C 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _PORTB D 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _PORTC E 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
-__end_of_motor 1DF8 0 CODE 0 text7 dist/default/production\SKT_h28_vor3.X.production.o
+__end_of_motor 10A 0 CODE 0 text5 dist/default/production\SKT_h28_vor3.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _TRISB 8D 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\SKT_h28_vor3.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_atai1 60 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_code1 5C 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_count E0 0 BANK1 1 bssBANK1 dist/default/production\SKT_h28_vor3.X.production.o
-_dynam 2EC 0 CODE 0 text8 dist/default/production\SKT_h28_vor3.X.production.o
-_fugou 5A 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_motor 1DB0 0 CODE 0 text7 dist/default/production\SKT_h28_vor3.X.production.o
+_atai1 5E 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_code1 52 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_count 5A 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_dynam 4BA 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.o
+_fugou 50 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_motor C2 0 CODE 0 text5 dist/default/production\SKT_h28_vor3.X.production.o
 dynam@dig1data 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 dynam@dig2data 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __HdataBANK2 0 0 ABS 0 dataBANK2 -
-__HdataBANK3 0 0 ABS 0 dataBANK3 -
-__initialization F92 0 CODE 0 cinit dist/default/production\SKT_h28_vor3.X.production.o
-__pbssBANK0 5A 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-__pbssBANK1 DC 0 BANK1 1 bssBANK1 dist/default/production\SKT_h28_vor3.X.production.o
-_code100 DC 0 BANK1 1 bssBANK1 dist/default/production\SKT_h28_vor3.X.production.o
+__initialization FB6 0 CODE 0 cinit dist/default/production\SKT_h28_vor3.X.production.o
+__pbssBANK0 50 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
+_code100 56 0 BANK0 1 bssBANK0 dist/default/production\SKT_h28_vor3.X.production.o
 ___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_h28_vor3.X.production.o
-waitSEGStop@i 32 0 BANK0 1 cstackBANK0 dist/default/production\SKT_h28_vor3.X.production.o
-_portinit 1CCC 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.o
+_portinit 1E 0 CODE 0 text4 dist/default/production\SKT_h28_vor3.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -938,31 +830,28 @@ _portinit 1CCC 0 CODE 0 text6 dist/default/production\SKT_h28_vor3.X.production.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7C9 F92 37 2
-text1 0 E5D 1CBA 9 2
-text2 0 F3 1E6 83 2
-text3 0 FB5 1F6A 4B 2
-text4 0 F38 1E70 3D 2
-text5 0 EFC 1DF8 3C 2
-text6 0 E66 1CCC 13 2
-text7 0 ED8 1DB0 24 2
-text8 0 176 2EC 16A 2
-text9 0 2E0 5C0 1D4 2
-text10 0 E79 1CF2 1F 2
-text11 0 40 80 53 2
-text12 0 93 126 60 2
-text13 0 E98 1D30 20 2
-maintext 0 4B4 968 315 2
-cstackCOMMON 1 70 70 D 1
+cinit 0 7DB FB6 25 2
+text1 0 6 C 9 2
+text2 0 C2 184 4C 2
+text3 0 85 10A 3D 2
+text4 0 F 1E 13 2
+text5 0 61 C2 24 2
+text6 0 25D 4BA 16A 2
+text7 0 3C7 78E 1CA 2
+text8 0 22 44 1F 2
+text9 0 1AA 354 53 2
+text10 0 1FD 3FA 60 2
+text11 0 41 82 20 2
+maintext 0 591 B22 24A 2
+cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 50 1
-inittext 0 E57 1CAE 6 2
-reset_vec 0 0 0 40 2
-idataBANK2 0 F75 1EEA 40 2
-idataBANK3 0 EB8 1D70 20 2
-dataBANK1 1 A0 A0 48 1
-dataBANK2 1 120 120 40 1
-dataBANK3 1 1A0 1A0 20 1
-clrtext 0 E51 1CA2 6 2
+inittext 0 FFA 1FF4 6 2
+reset_vec 0 0 0 4 2
+idataBANK1 0 15A 2B4 50 2
+idataBANK2 0 10E 21C 4C 2
+dataBANK1 1 A0 A0 50 1
+dataBANK2 1 120 120 4C 1
+clrtext 0 FF4 1FE8 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
