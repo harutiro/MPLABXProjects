@@ -2303,49 +2303,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Q4.c: 548: }
 [e :UE 519 ]
 }
-"551
-[; ;Q4.c: 551: void henka (int zyoutai,int kakudo){
-[v _henka `(v ~T0 @X0 1 ef2`i`i ]
-{
-[e :U _henka ]
-[v _zyoutai `i ~T0 @X0 1 r1 ]
-[v _kakudo `i ~T0 @X0 1 r2 ]
-[f ]
-"553
-[; ;Q4.c: 553:     if(zyoutai == 1){
-[e $ ! == _zyoutai -> 1 `i 530  ]
-{
-"554
-[; ;Q4.c: 554:         motor(kakudo,(0x01|0x08|0x10|0x20|0x40),(0x01|0x08|0x10|0x20|0x40),1,1);
-[e ( _motor (4 , , , , _kakudo -> | | | | -> 1 `i -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us -> | | | | -> 1 `i -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
-"555
-[; ;Q4.c: 555:     }
-}
-[e :U 530 ]
-"558
-[; ;Q4.c: 558: }
-[e :UE 529 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"561
-[; ;Q4.c: 561: void main(void)
+"551
+[; ;Q4.c: 551: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"562
-[; ;Q4.c: 562: {
+"552
+[; ;Q4.c: 552: {
 {
 [e :U _main ]
 [f ]
-"564
-[; ;Q4.c: 564:     OSCCON=0x7A;
+"554
+[; ;Q4.c: 554:     OSCCON=0x7A;
 [e = _OSCCON -> -> 122 `i `uc ]
-"566
-[; ;Q4.c: 566:     portinit();
+"556
+[; ;Q4.c: 556:     portinit();
 [e ( _portinit ..  ]
-"568
-[; ;Q4.c: 568:     zenoff();
+"558
+[; ;Q4.c: 558:     zenoff();
 [e ( _zenoff ..  ]
-"570
-[; ;Q4.c: 570:     int i=0,j=0,k=0,m=0,n=0;
+"560
+[; ;Q4.c: 560:     int i=0,j=0,k=0,m=0,n=0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [v _j `i ~T0 @X0 1 a ]
@@ -2356,282 +2333,282 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _m -> 0 `i ]
 [v _n `i ~T0 @X0 1 a ]
 [e = _n -> 0 `i ]
-"573
-[; ;Q4.c: 573:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
-[e $U 532  ]
-[e :U 533 ]
+"563
+[; ;Q4.c: 563:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
+[e $U 530  ]
+[e :U 531 ]
+[e :U 530 ]
+[e $ || || != -> _RA0 `i -> 1 `i != -> _RA1 `i -> 1 `i != -> _RA2 `i -> 1 `i 531  ]
 [e :U 532 ]
-[e $ || || != -> _RA0 `i -> 1 `i != -> _RA1 `i -> 1 `i != -> _RA2 `i -> 1 `i 533  ]
-[e :U 534 ]
-"576
-[; ;Q4.c: 576:     RC0=RC2=RC1=1;
+"566
+[; ;Q4.c: 566:     RC0=RC2=RC1=1;
 [e = _RC0 -> = _RC2 -> = _RC1 -> -> 1 `i `b `b `b ]
-"579
-[; ;Q4.c: 579:     fclr(2);
+"569
+[; ;Q4.c: 569:     fclr(2);
 [e ( _fclr (1 -> -> 2 `i `us ]
-"591
-[; ;Q4.c: 591:     int time = 0;
+"579
+[; ;Q4.c: 579:     int time = 0;
 [v _time `i ~T0 @X0 1 a ]
 [e = _time -> 0 `i ]
-"593
-[; ;Q4.c: 593:     int ans = 0;
+"581
+[; ;Q4.c: 581:     int ans = 0;
 [v _ans `i ~T0 @X0 1 a ]
 [e = _ans -> 0 `i ]
-"595
-[; ;Q4.c: 595:     unsigned short segL = 0;
+"583
+[; ;Q4.c: 583:     unsigned short segL = 0;
 [v _segL `us ~T0 @X0 1 a ]
 [e = _segL -> -> 0 `i `us ]
-"596
-[; ;Q4.c: 596:     unsigned short segR = 0;
+"584
+[; ;Q4.c: 584:     unsigned short segR = 0;
 [v _segR `us ~T0 @X0 1 a ]
 [e = _segR -> -> 0 `i `us ]
-"598
-[; ;Q4.c: 598:     int ataiL = 0;
+"586
+[; ;Q4.c: 586:     int ataiL = 0;
 [v _ataiL `i ~T0 @X0 1 a ]
 [e = _ataiL -> 0 `i ]
-"599
-[; ;Q4.c: 599:     int ataiR = 0;
+"587
+[; ;Q4.c: 587:     int ataiR = 0;
 [v _ataiR `i ~T0 @X0 1 a ]
 [e = _ataiR -> 0 `i ]
-"601
-[; ;Q4.c: 601:     int zyoutai = 0;
+"589
+[; ;Q4.c: 589:     int zyoutai = 0;
 [v _zyoutai `i ~T0 @X0 1 a ]
 [e = _zyoutai -> 0 `i ]
-"603
-[; ;Q4.c: 603:     hukki:
+"592
+[; ;Q4.c: 592:     hukki:
+[e :U 533 ]
+"593
+[; ;Q4.c: 593:     while(1){
 [e :U 535 ]
-"604
-[; ;Q4.c: 604:     while(1){
+{
+"595
+[; ;Q4.c: 595:         if(RA0 == 1 && RA1 == 0){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 537  ]
+{
+"596
+[; ;Q4.c: 596:             dynam(moji[5],moji[5],0,0);
+[e ( _dynam (4 , , , *U + &U _moji * -> -> -> 5 `i `ui `ux -> -> # *U &U _moji `ui `ux *U + &U _moji * -> -> -> 5 `i `ui `ux -> -> # *U &U _moji `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
+"597
+[; ;Q4.c: 597:         }
+}
 [e :U 537 ]
+"599
+[; ;Q4.c: 599:         if(RA0 == 0 && RA1 ==0){
+[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 0 `i 538  ]
+{
+"600
+[; ;Q4.c: 600:             zyoutai = waitSEGStop(num0[1],num0[8],1000,0b001);
+[e = _zyoutai ( _waitSEGStop (4 , , , *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1000 `i `us -> 1 `i ]
+"601
+[; ;Q4.c: 601:             if(zyoutai == 1){
+[e $ ! == _zyoutai -> 1 `i 539  ]
+{
+"602
+[; ;Q4.c: 602:                 motor(90,num0[0],num0[0],1,1);
+[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
+"603
+[; ;Q4.c: 603:                 motor(90,num0[9],num0[0],1,1);
+[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 9 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
+"605
+[; ;Q4.c: 605:                 while(1){
+[e :U 541 ]
 {
 "606
-[; ;Q4.c: 606:         if(RA0 == 1 && RA1 == 0){
-[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 539  ]
-{
-"607
-[; ;Q4.c: 607:             dynam(moji[5],moji[5],0,0);
-[e ( _dynam (4 , , , *U + &U _moji * -> -> -> 5 `i `ui `ux -> -> # *U &U _moji `ui `ux *U + &U _moji * -> -> -> 5 `i `ui `ux -> -> # *U &U _moji `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
-"608
-[; ;Q4.c: 608:         }
-}
-[e :U 539 ]
-"610
-[; ;Q4.c: 610:         if(RA0 == 0 && RA1 ==0){
-[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 0 `i 540  ]
-{
-"611
-[; ;Q4.c: 611:             zyoutai = waitSEGStop(num0[1],num0[8],1000,0b001);
-[e = _zyoutai ( _waitSEGStop (4 , , , *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1000 `i `us -> 1 `i ]
-"612
-[; ;Q4.c: 612:             if(zyoutai == 1){
-[e $ ! == _zyoutai -> 1 `i 541  ]
-{
-"613
-[; ;Q4.c: 613:                 motor(90,num0[0],num0[0],1,1);
-[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
-"614
-[; ;Q4.c: 614:                 motor(90,num0[9],num0[0],1,1);
-[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 9 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
-"616
-[; ;Q4.c: 616:                 while(1){
-[e :U 543 ]
-{
-"617
-[; ;Q4.c: 617:                     dynam(num0[1],num0[8],0,0);
+[; ;Q4.c: 606:                     dynam(num0[1],num0[8],0,0);
 [e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
-"619
-[; ;Q4.c: 619:                     if(RA0 == 1 && RA1 == 0){
-[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 545  ]
+"608
+[; ;Q4.c: 608:                     if(RA0 == 1 && RA1 == 0){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 543  ]
 {
-"620
-[; ;Q4.c: 620:                         goto hukki;
-[e $U 535  ]
-"621
-[; ;Q4.c: 621:                     }
+"609
+[; ;Q4.c: 609:                         goto hukki;
+[e $U 533  ]
+"610
+[; ;Q4.c: 610:                     }
 }
-[e :U 545 ]
-"622
-[; ;Q4.c: 622:                 }
-}
-[e :U 542 ]
-[e $U 543  ]
-[e :U 544 ]
-"623
-[; ;Q4.c: 623:             }
-}
-[e :U 541 ]
-"625
-[; ;Q4.c: 625:             zyoutai = waitSEGStop(num0[3],num0[6],1000,0b001);
-[e = _zyoutai ( _waitSEGStop (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1000 `i `us -> 1 `i ]
-"626
-[; ;Q4.c: 626:             if(zyoutai == 1){
-[e $ ! == _zyoutai -> 1 `i 546  ]
-{
-"627
-[; ;Q4.c: 627:                 motor(90,num0[0],num0[0],1,1);
-[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
-"628
-[; ;Q4.c: 628:                 motor(90,num0[9],num0[0],1,1);
-[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 9 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
-"629
-[; ;Q4.c: 629:                 motor(90,num0[1],num0[8],1,1);
-[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
-"630
-[; ;Q4.c: 630:                 motor(90,num0[2],num0[7],1,1);
-[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 2 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 7 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
-"632
-[; ;Q4.c: 632:                 while(1){
-[e :U 548 ]
-{
-"633
-[; ;Q4.c: 633:                     dynam(num0[3],num0[6],0,0);
-[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
-"635
-[; ;Q4.c: 635:                     if(RA0 == 1 && RA1 == 0){
-[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 550  ]
-{
-"636
-[; ;Q4.c: 636:                         goto hukki;
-[e $U 535  ]
-"637
-[; ;Q4.c: 637:                     }
-}
-[e :U 550 ]
-"638
-[; ;Q4.c: 638:                 }
-}
-[e :U 547 ]
-[e $U 548  ]
-[e :U 549 ]
-"640
-[; ;Q4.c: 640:             }
-}
-[e :U 546 ]
-"642
-[; ;Q4.c: 642:         }
+[e :U 543 ]
+"611
+[; ;Q4.c: 611:                 }
 }
 [e :U 540 ]
-"645
-[; ;Q4.c: 645:         if(RA0 == 0 && RA1 == 1){
-[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 1 `i 551  ]
+[e $U 541  ]
+[e :U 542 ]
+"612
+[; ;Q4.c: 612:             }
+}
+[e :U 539 ]
+"614
+[; ;Q4.c: 614:             zyoutai = waitSEGStop(num0[3],num0[6],1000,0b001);
+[e = _zyoutai ( _waitSEGStop (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1000 `i `us -> 1 `i ]
+"615
+[; ;Q4.c: 615:             if(zyoutai == 1){
+[e $ ! == _zyoutai -> 1 `i 544  ]
 {
-"646
-[; ;Q4.c: 646:             zyoutai = motorStop(180,num0[1],num0[8],1,5,0b001);
+"616
+[; ;Q4.c: 616:                 motor(90,num0[0],num0[0],1,1);
+[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
+"617
+[; ;Q4.c: 617:                 motor(90,num0[9],num0[0],1,1);
+[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 9 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 0 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
+"618
+[; ;Q4.c: 618:                 motor(90,num0[1],num0[8],1,1);
+[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
+"619
+[; ;Q4.c: 619:                 motor(90,num0[2],num0[7],1,1);
+[e ( _motor (4 , , , , -> 90 `i *U + &U _num0 * -> -> -> 2 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 7 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 1 `i `ui ]
+"621
+[; ;Q4.c: 621:                 while(1){
+[e :U 546 ]
+{
+"622
+[; ;Q4.c: 622:                     dynam(num0[3],num0[6],0,0);
+[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
+"624
+[; ;Q4.c: 624:                     if(RA0 == 1 && RA1 == 0){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 548  ]
+{
+"625
+[; ;Q4.c: 625:                         goto hukki;
+[e $U 533  ]
+"626
+[; ;Q4.c: 626:                     }
+}
+[e :U 548 ]
+"627
+[; ;Q4.c: 627:                 }
+}
+[e :U 545 ]
+[e $U 546  ]
+[e :U 547 ]
+"629
+[; ;Q4.c: 629:             }
+}
+[e :U 544 ]
+"631
+[; ;Q4.c: 631:         }
+}
+[e :U 538 ]
+"634
+[; ;Q4.c: 634:         if(RA0 == 0 && RA1 == 1){
+[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 1 `i 549  ]
+{
+"635
+[; ;Q4.c: 635:             zyoutai = motorStop(180,num0[1],num0[8],1,5,0b001);
 [e = _zyoutai ( _motorStop (4 , , , , , -> 180 `i *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 5 `i `ui -> 1 `i ]
-"647
-[; ;Q4.c: 647:             if(zyoutai != 0){
-[e $ ! != _zyoutai -> 0 `i 552  ]
+"636
+[; ;Q4.c: 636:             if(zyoutai != 0){
+[e $ ! != _zyoutai -> 0 `i 550  ]
 {
-"648
-[; ;Q4.c: 648:                 motor(zyoutai,0,0,1,5);
+"637
+[; ;Q4.c: 637:                 motor(zyoutai,0,0,1,5);
 [e ( _motor (4 , , , , _zyoutai -> -> 0 `i `us -> -> 0 `i `us -> -> 1 `i `us -> -> 5 `i `ui ]
-"649
-[; ;Q4.c: 649:                 motor(180,0,0,2,1);
+"638
+[; ;Q4.c: 638:                 motor(180,0,0,2,1);
 [e ( _motor (4 , , , , -> 180 `i -> -> 0 `i `us -> -> 0 `i `us -> -> 2 `i `us -> -> 1 `i `ui ]
-"650
-[; ;Q4.c: 650:                 while(1){
-[e :U 554 ]
-{
-"651
-[; ;Q4.c: 651:                     dynam(num0[1],num0[8],0,0);
-[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
-"653
-[; ;Q4.c: 653:                     if(RA0 == 1 && RA1==1){
-[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i 556  ]
-{
-"654
-[; ;Q4.c: 654:                         goto hukki;
-[e $U 535  ]
-"655
-[; ;Q4.c: 655:                     }
-}
-[e :U 556 ]
-"656
-[; ;Q4.c: 656:                 }
-}
-[e :U 553 ]
-[e $U 554  ]
-[e :U 555 ]
-"657
-[; ;Q4.c: 657:             }
-}
+"639
+[; ;Q4.c: 639:                 while(1){
 [e :U 552 ]
-"659
-[; ;Q4.c: 659:             zyoutai = motorStop(180,num0[3],num0[6],1,5,0b001);
-[e = _zyoutai ( _motorStop (4 , , , , , -> 180 `i *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 5 `i `ui -> 1 `i ]
-"660
-[; ;Q4.c: 660:             if(zyoutai != 0){
-[e $ ! != _zyoutai -> 0 `i 557  ]
 {
-"661
-[; ;Q4.c: 661:                 motor(zyoutai,0,0,1,5);
-[e ( _motor (4 , , , , _zyoutai -> -> 0 `i `us -> -> 0 `i `us -> -> 1 `i `us -> -> 5 `i `ui ]
-"662
-[; ;Q4.c: 662:                 motor(360,0,0,2,1);
-[e ( _motor (4 , , , , -> 360 `i -> -> 0 `i `us -> -> 0 `i `us -> -> 2 `i `us -> -> 1 `i `ui ]
-"663
-[; ;Q4.c: 663:                 while(1){
-[e :U 559 ]
+"640
+[; ;Q4.c: 640:                     dynam(num0[1],num0[8],0,0);
+[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 1 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 8 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
+"642
+[; ;Q4.c: 642:                     if(RA0 == 1 && RA1==1){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i 554  ]
 {
-"664
-[; ;Q4.c: 664:                     dynam(num0[3],num0[6],0,0);
-[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
-"666
-[; ;Q4.c: 666:                     if(RA0 == 1 && RA1==1){
-[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i 561  ]
-{
-"667
-[; ;Q4.c: 667:                         goto hukki;
-[e $U 535  ]
-"668
-[; ;Q4.c: 668:                     }
+"643
+[; ;Q4.c: 643:                         goto hukki;
+[e $U 533  ]
+"644
+[; ;Q4.c: 644:                     }
 }
-[e :U 561 ]
-"669
-[; ;Q4.c: 669:                 }
-}
-[e :U 558 ]
-[e $U 559  ]
-[e :U 560 ]
-"670
-[; ;Q4.c: 670:             }
-}
-[e :U 557 ]
-"672
-[; ;Q4.c: 672:             while(1){
-[e :U 563 ]
-{
-"673
-[; ;Q4.c: 673:                 dynam(num0[3],num0[6],0,0);
-[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
-"674
-[; ;Q4.c: 674:                 if(RA0 == 1 && RA1==1){
-[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i 565  ]
-{
-"675
-[; ;Q4.c: 675:                     goto hukki;
-[e $U 535  ]
-"676
-[; ;Q4.c: 676:                 }
-}
-[e :U 565 ]
-"677
-[; ;Q4.c: 677:             }
-}
-[e :U 562 ]
-[e $U 563  ]
-[e :U 564 ]
-"678
-[; ;Q4.c: 678:         }
+[e :U 554 ]
+"645
+[; ;Q4.c: 645:                 }
 }
 [e :U 551 ]
-"681
-[; ;Q4.c: 681:     }
+[e $U 552  ]
+[e :U 553 ]
+"646
+[; ;Q4.c: 646:             }
 }
+[e :U 550 ]
+"648
+[; ;Q4.c: 648:             zyoutai = motorStop(180,num0[3],num0[6],1,5,0b001);
+[e = _zyoutai ( _motorStop (4 , , , , , -> 180 `i *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 5 `i `ui -> 1 `i ]
+"649
+[; ;Q4.c: 649:             if(zyoutai != 0){
+[e $ ! != _zyoutai -> 0 `i 555  ]
+{
+"650
+[; ;Q4.c: 650:                 motor(zyoutai,0,0,1,5);
+[e ( _motor (4 , , , , _zyoutai -> -> 0 `i `us -> -> 0 `i `us -> -> 1 `i `us -> -> 5 `i `ui ]
+"651
+[; ;Q4.c: 651:                 motor(360,0,0,2,1);
+[e ( _motor (4 , , , , -> 360 `i -> -> 0 `i `us -> -> 0 `i `us -> -> 2 `i `us -> -> 1 `i `ui ]
+"652
+[; ;Q4.c: 652:                 while(1){
+[e :U 557 ]
+{
+"653
+[; ;Q4.c: 653:                     dynam(num0[3],num0[6],0,0);
+[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
+"655
+[; ;Q4.c: 655:                     if(RA0 == 1 && RA1==1){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i 559  ]
+{
+"656
+[; ;Q4.c: 656:                         goto hukki;
+[e $U 533  ]
+"657
+[; ;Q4.c: 657:                     }
+}
+[e :U 559 ]
+"658
+[; ;Q4.c: 658:                 }
+}
+[e :U 556 ]
+[e $U 557  ]
+[e :U 558 ]
+"659
+[; ;Q4.c: 659:             }
+}
+[e :U 555 ]
+"661
+[; ;Q4.c: 661:             while(1){
+[e :U 561 ]
+{
+"662
+[; ;Q4.c: 662:                 dynam(num0[3],num0[6],0,0);
+[e ( _dynam (4 , , , *U + &U _num0 * -> -> -> 3 `i `ui `ux -> -> # *U &U _num0 `ui `ux *U + &U _num0 * -> -> -> 6 `i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 0 `i `us -> -> 0 `i `ui ]
+"663
+[; ;Q4.c: 663:                 if(RA0 == 1 && RA1==1){
+[e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 1 `i 563  ]
+{
+"664
+[; ;Q4.c: 664:                     goto hukki;
+[e $U 533  ]
+"665
+[; ;Q4.c: 665:                 }
+}
+[e :U 563 ]
+"666
+[; ;Q4.c: 666:             }
+}
+[e :U 560 ]
+[e $U 561  ]
+[e :U 562 ]
+"667
+[; ;Q4.c: 667:         }
+}
+[e :U 549 ]
+"669
+[; ;Q4.c: 669:     }
+}
+[e :U 534 ]
+[e $U 535  ]
 [e :U 536 ]
-[e $U 537  ]
-[e :U 538 ]
-"682
-[; ;Q4.c: 682: }
-[e :UE 531 ]
+"670
+[; ;Q4.c: 670: }
+[e :UE 529 ]
 }

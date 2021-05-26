@@ -5277,16 +5277,6 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
 }
 
 
-void henka (int zyoutai,int kakudo){
-
-    if(zyoutai == 1){
-        motor(kakudo,(0x01|0x08|0x10|0x20|0x40),(0x01|0x08|0x10|0x20|0x40),1,1);
-    }
-
-
-}
-
-
 void main(void)
 {
 
@@ -5306,7 +5296,7 @@ void main(void)
 
 
     fclr(2);
-# 591 "Q4.c"
+# 579 "Q4.c"
     int time = 0;
 
     int ans = 0;
@@ -5318,6 +5308,7 @@ void main(void)
     int ataiR = 0;
 
     int zyoutai = 0;
+
 
     hukki:
     while(1){
@@ -5395,7 +5386,6 @@ void main(void)
                 }
             }
         }
-
 
     }
 }
