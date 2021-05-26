@@ -450,11 +450,57 @@ void clear(void){
 //wait(調整時間);
 void waitSEG(unsigned short seg1,unsigned short seg2,unsigned short wt)
 {
+
     wt = wt / 10;
     unsigned int i;
+
     for(i=wt;i>0;--i){   
         dynam(seg1,seg2,0,0);
     }
+}
+
+//タイミング調整関数
+//wait(調整時間);
+int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int dousa)
+{
+    //状態
+    int cpSW1 = SW1;
+    int cpSW2 = SW2;
+    
+    
+
+    wt = wt / 10;
+    unsigned int i;
+
+    for(i=wt;i>0;--i){   
+        dynam(seg1,seg2,0,0);
+        
+        tact(ON);
+
+        if(cpSW1 != SW1){
+            if((0b100 & dousa) == 0b100){
+            
+                fclr(PR);
+                return 1;
+            }
+        }
+        if(cpSW2 != SW2){
+            if((0b010 & dousa) == 0b010){
+            
+                fclr(PR);
+                return 1;
+            }
+        }
+        if(SW3R){
+            if((0b001 & dousa) == 0b001){
+            
+                fclr(PR);
+                return 1;
+            }
+        }
+    }
+
+    return 0;
 }
 
 void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr){
@@ -462,6 +508,43 @@ void motor (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned 
     for(int i = kakudo;i>=0;i--){
         dynam(dig1data,dig2data,smdata,tr);
     }
+}
+
+int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsigned short smdata,unsigned int tr,int dousa){
+
+    //状態
+    int cpSW1 = SW1;
+    int cpSW2 = SW2;
+
+    for(int i = kakudo;i>=0;i--){
+        dynam(dig1data,dig2data,smdata,tr);
+
+        tact(ON);
+
+        if(cpSW1 != SW1){
+            if((0b100 & dousa) == 0b100){
+            
+                fclr(PR);
+                return i;
+            }
+        }
+        if(cpSW2 != SW2){
+            if((0b010 & dousa) == 0b010){
+            
+                fclr(PR);
+                return i;
+            }
+        }
+        if(SW3R){
+            if((0b001 & dousa) == 0b001){
+            
+                fclr(PR);
+                return i;
+            }
+        }
+    }
+
+    return 0;
 }
 
 /*  メイン関数（問題にあわせて変更）    */
@@ -486,17 +569,30 @@ void main(void)
     fclr(PR);
 
 
-    //最初の起動ロック
-    while(1){
-        if(SW1 == UP){
-            break;
-        }
-    }
+    // //最初の起動ロック
+    // while(1){
+    //     if(SW1 == UP){
+    //         break;
+    //     }
+    // }
+
+    int time = 0;
+
+    int ans = 0;
+
+    unsigned short segL = 0;
+    unsigned short segR = 0;
+
+    int ataiL = 0;
+    int ataiR = 0;
+
+    int zyoutai = 0;
+
     //メインの動き
     hukki:
     while(1){
         
-            
+        
         
     }
 }
