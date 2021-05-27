@@ -568,7 +568,8 @@ void main(void)
     //フラグリセット
     fclr(PR);
 
-
+    hukki:
+    
      //最初の起動ロック
     while(1){
         if(SW1 == UP){
@@ -589,17 +590,38 @@ void main(void)
     int zyoutai = 0;
 
     //メインの動き
-    hukki:
+    
     while(1){
         
         if(SW1 == UP && SW2 ==DN){
             dynam(SEGU,SEGP,0,0);
-
-            for
+            
+            if(SW1 == UP && SW2 == UP){
+                while(1){
+                    for(i=1;i<=9;i+=2){
+                        zyoutai = waitSEGStop(num0[i],0,1000,0b010);
+                        if(zyoutai == 1){
+                            goto hukki;
+                        }
+                    }
+                }
+            }
         }
         
         if(SW1 ==DN && SW2 ==DN){
             dynam(SEGD,SEGN,0,0);
+            
+            if(SW1 == DN && SW2 == UP){
+                while(1){
+                    for(i=0;i>=0;i+=2){
+                        zyoutai = waitSEGStop(num0[i],0,1000,0b010);
+                        if(zyoutai == 1){
+                            waitSEG(SEGD,SEGN,1000);
+                            goto hukki;
+                        }
+                    }
+                }
+            }
         }
         
     }
