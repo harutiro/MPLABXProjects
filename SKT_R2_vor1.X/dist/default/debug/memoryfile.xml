@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\SKT_R2_vor1.X.debug.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>16384</length>
+      <used>786</used>
+      <free>15598</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>1024</length>
+      <used>232</used>
+      <free>792</free>
+    </memory>
+  </executable>
+</project>

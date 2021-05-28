@@ -767,7 +767,22 @@ void main(void)
     hukki:
     while(1){
         
+        // for(i=0;i<=5000;i++){
+        //     buzzon();
+        // }
+        // for(i=0;i<=5000;i++){
+        //     buzzof();
+        // }
         
+        __delay_ms(2000);
+
+        buzzStop(H,10,0b001);
+
+        while(1){
+        
+            dynam(SEGA,0,0,0);
+        
+        }
         
         
     }
