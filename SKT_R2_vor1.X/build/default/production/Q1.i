@@ -5381,7 +5381,7 @@ int buzzStop (int dousa,int time,int rokku){
         }
 
         if(dousa == 5){
-            for(i=0;i<=10000;i++){
+            for(i=0;i<=7500;i++){
                 buzzon();
 
                 tact(0);
@@ -5411,7 +5411,7 @@ int buzzStop (int dousa,int time,int rokku){
                     }
                 }
             }
-            for(i=0;i<=10000;i++){
+            for(i=0;i<=7500;i++){
                 buzzof();
 
                 tact(0);
@@ -5490,7 +5490,7 @@ void main(void)
 # 777 "Q1.c"
         _delay((unsigned long)((2000)*(16000000/4000UL)));
 
-        buzzStop(1,10,0b001);
+        buzzStop(5,3,0b111);
 
         while(1){
 

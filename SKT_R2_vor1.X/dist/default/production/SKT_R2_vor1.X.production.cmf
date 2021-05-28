@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\harut\AppData\Local\Temp\sgsg.o
+$C:\Users\harut\AppData\Local\Temp\sdio.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
@@ -131,47 +131,47 @@ STRING 800-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SKT_R2_vor1.X.production.o
-7D1 cinit CODE >1117:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D1 cinit CODE >1120:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D1 cinit CODE >1256:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D2 cinit CODE >1257:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D3 cinit CODE >1258:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D4 cinit CODE >1259:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D5 cinit CODE >1260:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D6 cinit CODE >1261:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D7 cinit CODE >1262:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D8 cinit CODE >1263:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7D9 cinit CODE >1264:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7DA cinit CODE >1265:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7DD cinit CODE >1269:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7DE cinit CODE >1270:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7DF cinit CODE >1271:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E0 cinit CODE >1272:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E1 cinit CODE >1273:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E2 cinit CODE >1274:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E3 cinit CODE >1275:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E4 cinit CODE >1276:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E5 cinit CODE >1277:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E6 cinit CODE >1278:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7E9 cinit CODE >1282:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7EA cinit CODE >1283:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7EB cinit CODE >1284:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7EC cinit CODE >1285:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7ED cinit CODE >1286:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7EE cinit CODE >1287:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7EF cinit CODE >1288:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F0 cinit CODE >1289:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F1 cinit CODE >1290:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F2 cinit CODE >1291:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F5 cinit CODE >1308:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F6 cinit CODE >1309:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F7 cinit CODE >1310:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F8 cinit CODE >1311:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7F9 cinit CODE >1312:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7FA cinit CODE >1313:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7FD cinit CODE >1319:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7FD cinit CODE >1321:C:\Users\harut\AppData\Local\Temp\sgsg.s
-7FE cinit CODE >1322:C:\Users\harut\AppData\Local\Temp\sgsg.s
+7D1 cinit CODE >1117:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D1 cinit CODE >1120:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D1 cinit CODE >1256:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D2 cinit CODE >1257:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D3 cinit CODE >1258:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D4 cinit CODE >1259:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D5 cinit CODE >1260:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D6 cinit CODE >1261:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D7 cinit CODE >1262:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D8 cinit CODE >1263:C:\Users\harut\AppData\Local\Temp\sdio.s
+7D9 cinit CODE >1264:C:\Users\harut\AppData\Local\Temp\sdio.s
+7DA cinit CODE >1265:C:\Users\harut\AppData\Local\Temp\sdio.s
+7DD cinit CODE >1269:C:\Users\harut\AppData\Local\Temp\sdio.s
+7DE cinit CODE >1270:C:\Users\harut\AppData\Local\Temp\sdio.s
+7DF cinit CODE >1271:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E0 cinit CODE >1272:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E1 cinit CODE >1273:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E2 cinit CODE >1274:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E3 cinit CODE >1275:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E4 cinit CODE >1276:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E5 cinit CODE >1277:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E6 cinit CODE >1278:C:\Users\harut\AppData\Local\Temp\sdio.s
+7E9 cinit CODE >1282:C:\Users\harut\AppData\Local\Temp\sdio.s
+7EA cinit CODE >1283:C:\Users\harut\AppData\Local\Temp\sdio.s
+7EB cinit CODE >1284:C:\Users\harut\AppData\Local\Temp\sdio.s
+7EC cinit CODE >1285:C:\Users\harut\AppData\Local\Temp\sdio.s
+7ED cinit CODE >1286:C:\Users\harut\AppData\Local\Temp\sdio.s
+7EE cinit CODE >1287:C:\Users\harut\AppData\Local\Temp\sdio.s
+7EF cinit CODE >1288:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F0 cinit CODE >1289:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F1 cinit CODE >1290:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F2 cinit CODE >1291:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F5 cinit CODE >1308:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F6 cinit CODE >1309:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F7 cinit CODE >1310:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F8 cinit CODE >1311:C:\Users\harut\AppData\Local\Temp\sdio.s
+7F9 cinit CODE >1312:C:\Users\harut\AppData\Local\Temp\sdio.s
+7FA cinit CODE >1313:C:\Users\harut\AppData\Local\Temp\sdio.s
+7FD cinit CODE >1319:C:\Users\harut\AppData\Local\Temp\sdio.s
+7FD cinit CODE >1321:C:\Users\harut\AppData\Local\Temp\sdio.s
+7FE cinit CODE >1322:C:\Users\harut\AppData\Local\Temp\sdio.s
 2CC text9 CODE >427:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_R2_vor1.X\Q1.c
 2CC text9 CODE >430:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_R2_vor1.X\Q1.c
 2D0 text9 CODE >431:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_R2_vor1.X\Q1.c
@@ -338,22 +338,22 @@ $dist/default/production\SKT_R2_vor1.X.production.o
 476 maintext CODE >777:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_R2_vor1.X\Q1.c
 482 maintext CODE >779:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_R2_vor1.X\Q1.c
 492 maintext CODE >783:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_R2_vor1.X\Q1.c
-29C clrtext CODE >1297:C:\Users\harut\AppData\Local\Temp\sgsg.s
-29C clrtext CODE >1298:C:\Users\harut\AppData\Local\Temp\sgsg.s
-29D clrtext CODE >1299:C:\Users\harut\AppData\Local\Temp\sgsg.s
-29D clrtext CODE >1300:C:\Users\harut\AppData\Local\Temp\sgsg.s
-29E clrtext CODE >1301:C:\Users\harut\AppData\Local\Temp\sgsg.s
-29F clrtext CODE >1302:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A0 clrtext CODE >1303:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A1 clrtext CODE >1304:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A2 inittext CODE >1245:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A2 inittext CODE >1246:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A3 inittext CODE >1247:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A3 inittext CODE >1248:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A4 inittext CODE >1249:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A5 inittext CODE >1250:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A6 inittext CODE >1251:C:\Users\harut\AppData\Local\Temp\sgsg.s
-2A7 inittext CODE >1252:C:\Users\harut\AppData\Local\Temp\sgsg.s
+29C clrtext CODE >1297:C:\Users\harut\AppData\Local\Temp\sdio.s
+29C clrtext CODE >1298:C:\Users\harut\AppData\Local\Temp\sdio.s
+29D clrtext CODE >1299:C:\Users\harut\AppData\Local\Temp\sdio.s
+29D clrtext CODE >1300:C:\Users\harut\AppData\Local\Temp\sdio.s
+29E clrtext CODE >1301:C:\Users\harut\AppData\Local\Temp\sdio.s
+29F clrtext CODE >1302:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A0 clrtext CODE >1303:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A1 clrtext CODE >1304:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A2 inittext CODE >1245:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A2 inittext CODE >1246:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A3 inittext CODE >1247:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A3 inittext CODE >1248:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A4 inittext CODE >1249:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A5 inittext CODE >1250:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A6 inittext CODE >1251:C:\Users\harut\AppData\Local\Temp\sdio.s
+2A7 inittext CODE >1252:C:\Users\harut\AppData\Local\Temp\sdio.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -382,7 +382,7 @@ __HidataBANK2 0 0 ABS 0 idataBANK2 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _cw 34 0 BANK0 1 bssBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sgsg.o
+___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sdio.o
 _atai 2C 0 BANK0 1 bssBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 _fclr 618 0 CODE 0 text7 dist/default/production\SKT_R2_vor1.X.production.o
 _main 890 0 CODE 0 maintext dist/default/production\SKT_R2_vor1.X.production.o
@@ -391,7 +391,7 @@ _tact 762 0 CODE 0 text5 dist/default/production\SKT_R2_vor1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
 buzzStop@i 4E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 buzzStop@j 48 0 BANK0 1 cstackBANK0 dist/default/production\SKT_R2_vor1.X.production.o
-start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\sgsg.o
+start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\sdio.o
 __size_of_fclr 0 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
 __size_of_tact 0 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
@@ -402,12 +402,12 @@ __LidataBANK2 0 0 ABS 0 idataBANK2 -
 __Hpowerup 0 0 CODE 0 powerup -
 dynam@ext 48 0 BANK0 1 cstackBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 dynam@smd 42 0 BANK0 1 cstackBANK0 dist/default/production\SKT_R2_vor1.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgsg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgsg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgsg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgsg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgsg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sgsg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sdio.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sdio.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sdio.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sdio.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sdio.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\sdio.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -421,15 +421,15 @@ buzzof@t 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_R2_vor1.X.produc
 buzzon@t 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_R2_vor1.X.production.o
 __end_of_buzzof 5D8 0 CODE 0 text9 dist/default/production\SKT_R2_vor1.X.production.o
 __end_of_buzzon 618 0 CODE 0 text8 dist/default/production\SKT_R2_vor1.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sgsg.o
-___stacklo 20E8 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sgsg.o
+___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sdio.o
+___stacklo 20E8 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\sdio.o
 __size_of_dynam 0 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
 dynam@smdata 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_R2_vor1.X.production.o
 start_initialization FA2 0 CODE 0 cinit dist/default/production\SKT_R2_vor1.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\SKT_R2_vor1.X.production.o
 clear_ram0 538 0 CODE 0 clrtext dist/default/production\SKT_R2_vor1.X.production.o
 __pcstackBANK0 42 0 BANK0 1 cstackBANK0 dist/default/production\SKT_R2_vor1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sgsg.o
+___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\sdio.o
 fclr@flg 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_R2_vor1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -581,7 +581,7 @@ _code10 24 0 BANK0 1 bssBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 _flag_P 38 0 BANK0 1 bssBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 _flag_R 3A 0 BANK0 1 bssBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\sgsg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\sdio.o
 __pdataBANK0 50 0 BANK0 1 dataBANK0 dist/default/production\SKT_R2_vor1.X.production.o
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_R2_vor1.X.production.o
 __pdataBANK2 120 0 BANK2 1 dataBANK2 dist/default/production\SKT_R2_vor1.X.production.o

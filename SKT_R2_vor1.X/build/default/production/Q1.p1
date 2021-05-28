@@ -2670,10 +2670,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == _dousa -> 5 `i 570  ]
 {
 "655
-[; ;Q1.c: 655:             for(i=0;i<=10000;i++){
+[; ;Q1.c: 655:             for(i=0;i<=7500;i++){
 {
 [e = _i -> 0 `i ]
-[e $ <= _i -> 10000 `i 571  ]
+[e $ <= _i -> 7500 `i 571  ]
 [e $U 572  ]
 [e :U 571 ]
 {
@@ -2765,14 +2765,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Q1.c: 684:             }
 }
 [e ++ _i -> 1 `i ]
-[e $ <= _i -> 10000 `i 571  ]
+[e $ <= _i -> 7500 `i 571  ]
 [e :U 572 ]
 }
 "685
-[; ;Q1.c: 685:             for(i=0;i<=10000;i++){
+[; ;Q1.c: 685:             for(i=0;i<=7500;i++){
 {
 [e = _i -> 0 `i ]
-[e $ <= _i -> 10000 `i 580  ]
+[e $ <= _i -> 7500 `i 580  ]
 [e $U 581  ]
 [e :U 580 ]
 {
@@ -2864,7 +2864,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Q1.c: 714:             }
 }
 [e ++ _i -> 1 `i ]
-[e $ <= _i -> 10000 `i 580  ]
+[e $ <= _i -> 7500 `i 580  ]
 [e :U 581 ]
 }
 "715
@@ -2971,8 +2971,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Q1.c: 777:         _delay((unsigned long)((2000)*(16000000/4000UL)));
 [e ( __delay (1 * -> -> -> 2000 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
 "779
-[; ;Q1.c: 779:         buzzStop(1,10,0b001);
-[e ( _buzzStop (3 , , -> 1 `i -> 10 `i -> 1 `i ]
+[; ;Q1.c: 779:         buzzStop(5,3,0b111);
+[e ( _buzzStop (3 , , -> 5 `i -> 3 `i -> 7 `i ]
 "781
 [; ;Q1.c: 781:         while(1){
 [e :U 598 ]

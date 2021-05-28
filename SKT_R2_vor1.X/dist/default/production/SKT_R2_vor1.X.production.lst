@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri May 28 18:25:04 2021
+                                                                                               Fri May 28 18:30:11 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F1938
@@ -1060,17 +1060,17 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1041  0481  0000               	nop
   1042  0482                     l2924:
   1043                           
-  1044                           ;Q1.c: 779:         buzzStop(1,10,0b001);
-  1045  0482  3001               	movlw	1
+  1044                           ;Q1.c: 779:         buzzStop(5,3,0b111);
+  1045  0482  3005               	movlw	5
   1046  0483  0020               	movlb	0	; select bank0
   1047  0484  00C2               	movwf	buzzStop@dousa
   1048  0485  3000               	movlw	0
   1049  0486  00C3               	movwf	buzzStop@dousa+1
-  1050  0487  300A               	movlw	10
+  1050  0487  3003               	movlw	3
   1051  0488  00C4               	movwf	buzzStop@time
   1052  0489  3000               	movlw	0
   1053  048A  00C5               	movwf	buzzStop@time+1
-  1054  048B  3001               	movlw	1
+  1054  048B  3007               	movlw	7
   1055  048C  00C6               	movwf	buzzStop@rokku
   1056  048D  3000               	movlw	0
   1057  048E  00C7               	movwf	buzzStop@rokku+1
@@ -2282,7 +2282,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2242  0708                     u1930:
   2243  0708                     l2388:
   2244                           
-  2245                           ;Q1.c: 655:             for(i=0;i<=10000;i++){
+  2245                           ;Q1.c: 655:             for(i=0;i<=7500;i++){
   2246  0708  01CE               	clrf	buzzStop@i
   2247  0709  01CF               	clrf	buzzStop@i+1
   2248  070A                     l2394:
@@ -2403,11 +2403,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2363  0755  084F               	movf	buzzStop@i+1,w
   2364  0756  3A80               	xorlw	128
   2365  0757  00FA               	movwf	??_buzzStop
-  2366  0758  30A7               	movlw	167
+  2366  0758  309D               	movlw	157
   2367  0759  027A               	subwf	??_buzzStop,w
   2368  075A  1D03               	skipz
   2369  075B  2F5E               	goto	u2015
-  2370  075C  3011               	movlw	17
+  2370  075C  304D               	movlw	77
   2371  075D  024E               	subwf	buzzStop@i,w
   2372  075E                     u2015:
   2373  075E  1C03               	skipc
@@ -2418,7 +2418,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2378  0762                     u2010:
   2379  0762                     l2432:
   2380                           
-  2381                           ;Q1.c: 685:             for(i=0;i<=10000;i++){
+  2381                           ;Q1.c: 685:             for(i=0;i<=7500;i++){
   2382  0762  0020               	movlb	0	; select bank0
   2383  0763  01CE               	clrf	buzzStop@i
   2384  0764  01CF               	clrf	buzzStop@i+1
@@ -2540,11 +2540,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2500  07B0  084F               	movf	buzzStop@i+1,w
   2501  07B1  3A80               	xorlw	128
   2502  07B2  00FA               	movwf	??_buzzStop
-  2503  07B3  30A7               	movlw	167
+  2503  07B3  309D               	movlw	157
   2504  07B4  027A               	subwf	??_buzzStop,w
   2505  07B5  1D03               	skipz
   2506  07B6  2FB9               	goto	u2095
-  2507  07B7  3011               	movlw	17
+  2507  07B7  304D               	movlw	77
   2508  07B8  024E               	subwf	buzzStop@i,w
   2509  07B9                     u2095:
   2510  07B9  1C03               	skipc
@@ -3516,7 +3516,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri May 28 18:25:04 2021
+Symbol Table                                                                                   Fri May 28 18:30:11 2021
 
                      l95 02CB                       _cw 0034            buzzStop@cpSW1 004A  
           buzzStop@cpSW2 004C                      l112 04C1                      l114 04D1  

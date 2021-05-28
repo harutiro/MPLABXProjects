@@ -348,7 +348,7 @@ inittext 544 54F CODE 544 0
 clrtext 538 543 CODE 538 0
 %locals
 dist/default/production\SKT_R2_vor1.X.production.o
-C:\Users\harut\AppData\Local\Temp\sgsg.s
+C:\Users\harut\AppData\Local\Temp\sdio.s
 1117 7D1 0 CODE 0
 1120 7D1 0 CODE 0
 1256 7D1 0 CODE 0
