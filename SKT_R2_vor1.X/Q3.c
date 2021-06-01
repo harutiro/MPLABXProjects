@@ -767,7 +767,40 @@ void main(void)
     hukki:
     while(1){
 
+        if(SW1 == UP && SW2 == DN){
+            dynam(SEG1,SEGU,0,0);
 
+            tact(ON);
+            if(SW3R){
+                fclr(PR);
+                waitSEG(SEG1,SEGU,1000);
+                motor(360,SEG1,SEGU,T2,L);
+
+                while(1){
+                    dynam(SEG1,SEGU,0,0);
+                }
+            }
+
+        }
+
+        if(SW1 == DN && SW2 == UP){
+            dynam(SEGU,SEG2,0,0);
+
+            tact(REN);
+            if(SW3PR){
+                fclr(PR);
+                waitSEG(SEGU,SEG2,2000);
+                motor(360*2,SEG1,SEGU,H2,H);
+
+                while(1){
+                    dynam(SEGU,SEG2,0,0);
+                }
+            }
+            
+        }
+        
+        
+        
     }
 }
 

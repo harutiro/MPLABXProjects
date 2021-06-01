@@ -9,6 +9,7 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <itemPath>Q1.c</itemPath>
+      <itemPath>Q3.c</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
