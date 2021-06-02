@@ -745,7 +745,7 @@ void main(void)
 
     // //最初の起動ロック
     // while(1){
-    //     if(SW1 == UP){
+    //     if(SW1 == UP || SW2 ==UP){
     //         break;
     //     }
     // }
