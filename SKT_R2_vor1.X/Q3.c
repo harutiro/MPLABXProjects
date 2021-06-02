@@ -777,7 +777,18 @@ void main(void)
                 motor(360,SEG1,SEGU,T2,L);
 
                 while(1){
-                    dynam(SEG1,SEGU,0,0);
+                    if(SW1 == UP && SW2 == DN){
+                        dynam(SEG1,SEGU,0,0);
+                    }
+                    
+                    if(SW1 == DN && SW2 ==DN){
+                        dynam(SEGD,SEGD,0,0);
+                        jikan();
+                        if(count >= 500){
+                            goto hukki;
+                        }
+                        
+                    }
                 }
             }
 
@@ -793,7 +804,17 @@ void main(void)
                 motor(360*2,SEG1,SEGU,H2,H);
 
                 while(1){
-                    dynam(SEGU,SEG2,0,0);
+                    if(SW1 == DN && SW2 == UP){
+                        dynam(SEGU,SEG2,0,0);
+                    }
+                    
+                    if(SW1 == DN && SW2 ==DN){
+                        dynam(SEGD,SEGD,0,0);
+                        jikan();
+                        if(count >= 500){
+                            goto hukki;
+                        }
+                    }
                 }
             }
             

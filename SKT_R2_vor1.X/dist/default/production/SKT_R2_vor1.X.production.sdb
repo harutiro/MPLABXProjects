@@ -33,6 +33,8 @@
 [v _tact tact `(v  1 e 1 0 ]
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
+"406
+[v _jikan jikan `(v  1 e 1 0 ]
 "414
 [v _buzzon buzzon `(v  1 e 1 0 ]
 "427
@@ -106,7 +108,7 @@
 "725
 [v _main main `(v  1 e 1 0 ]
 {
-"805
+"826
 } 0
 "195
 [v _zenoff zenoff `(v  1 e 1 0 ]
@@ -185,6 +187,11 @@
 [v dynam@smdata smdata `us  1 p 2 4 ]
 [v dynam@tr tr `ui  1 p 2 6 ]
 "248
+} 0
+"406
+[v _jikan jikan `(v  1 e 1 0 ]
+{
+"410
 } 0
 "369
 [v _fclr fclr `(v  1 e 1 0 ]
