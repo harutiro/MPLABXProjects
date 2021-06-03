@@ -466,10 +466,11 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int do
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    int cpSW3 = SW3;
     
     
 
-    wt = wt / 10;
+    wt = wt / 10 + wt/1000*60;
     unsigned int i;
 
     for(i=wt;i>0;--i){   
@@ -498,6 +499,12 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int do
                 return 1;
             }
         }
+        if(cpSW3 != SW3){
+            if((0b001 & dousa) == 0b001){
+            
+                return 1;
+            }
+        }
     }
 
     return 0;
@@ -515,6 +522,7 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    int cpSW3 = SW3;
 
     for(int i = kakudo;i>=0;i--){
         dynam(dig1data,dig2data,smdata,tr);
@@ -539,6 +547,12 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
             if((0b001 & dousa) == 0b001){
             
                 fclr(PR);
+                return i;
+            }
+        }
+        if(cpSW3 != SW3){
+            if((0b001 & dousa) == 0b001){
+            
                 return i;
             }
         }
@@ -585,6 +599,7 @@ int buzzStop (int dousa,int time,int rokku){
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    int cpSW3 = SW3;
 
     for(j=time;j>0;j--){
 
@@ -618,6 +633,13 @@ int buzzStop (int dousa,int time,int rokku){
                         return j;
                     }
                 }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
+                        buzzof();
+                        return j;
+                    }
+                }
             }
             for(i=0;i<=2500;i++){
                 buzzof();
@@ -644,6 +666,13 @@ int buzzStop (int dousa,int time,int rokku){
                     if((0b001 & rokku) == 0b001){
                     
                         fclr(PR);
+                        buzzof();
+                        return j;
+                    }
+                }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
                         buzzof();
                         return j;
                     }
@@ -681,6 +710,13 @@ int buzzStop (int dousa,int time,int rokku){
                         return j;
                     }
                 }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
+                        buzzof();
+                        return j;
+                    }
+                }
             }
             for(i=0;i<=7500;i++){
                 buzzof();
@@ -707,6 +743,13 @@ int buzzStop (int dousa,int time,int rokku){
                     if((0b001 & rokku) == 0b001){
                     
                         fclr(PR);
+                        buzzof();
+                        return j;
+                    }
+                }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
                         buzzof();
                         return j;
                     }
@@ -745,7 +788,7 @@ void main(void)
 
     // //最初の起動ロック
     // while(1){
-    //     if(SW1 == UP){
+    //     if(SW1 == UP || SW2 ==UP){
     //         break;
     //     }
     // }
@@ -767,55 +810,20 @@ void main(void)
     hukki:
     while(1){
 
-        if(SW1 == UP && SW2 == DN){
-            dynam(SEG1,SEGU,0,0);
-
-            tact(ON);
-            if(SW3R){
-                fclr(PR);
-                waitSEG(SEG1,SEGU,1000);
-                motor(360,SEG1,SEGU,T2,L);
-
-                while(1){
-                    if(SW1 == UP && SW2 == DN){
-                        dynam(SEG1,SEGU,0,0);
-                    }
-                    
-                    if(SW1 == DN && SW2 ==DN){
-                        dynam(SEGD,SEGD,0,0);
-                        jikan();
-                        if(count >= 500){
-                            goto hukki;
-                        }
-                    }
-                }
+        if(SW3 == PUSH){
+            buzzon();
+        }
+        if(SW3 == NPUSH){
+            buzzof();
+        }
+        
+        if(SW1 == DN && SW2 == UP){
+            if(SW3 == PUSH){
+                buzzStop(H,1,0b111);
             }
         }
+        
 
-        if(SW1 == DN && SW2 == UP){
-            dynam(SEGU,SEG2,0,0);
-
-            tact(REN);
-            if(SW3PR){
-                fclr(PR);
-                waitSEG(SEGU,SEG2,2000);
-                motor(360*2,SEG1,SEGU,H2,H);
-
-                while(1){
-                    if(SW1 == DN && SW2 == UP){
-                        dynam(SEGU,SEG2,0,0);
-                    }
-                    
-                    if(SW1 == DN && SW2 ==DN){
-                        dynam(SEGD,SEGD,0,0);
-                        jikan();
-                        if(count >= 500){
-                            goto hukki;
-                        }
-                    }
-                }
-            }
-        }     
     }
 }
 
