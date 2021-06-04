@@ -66,7 +66,7 @@
 //#define SEGdp   0x80
 //
 ////７セグメント数字・文字表示定義
-//#define SEG0    (SEGa|SEGb|SEGc|SEGd|SEGe|SEGf)
+//#define SEG0    ((SEGa|SEGb|SEGc|SEGd)|SEGe|SEGf)
 //#define SEG1    (SEGb|SEGc)
 //#define SEG2    (SEGa|SEGb|SEGd|SEGg|SEGe)
 //#define SEG3    (SEGg|SEGa|SEGd|SEGb|SEGc)
@@ -74,9 +74,9 @@
 //#define SEG5    (SEGf|SEGd|SEGg|SEGa|SEGc)
 //#define SEG6    (SEGf|SEGe|SEGd|SEGc|SEGa|SEGg)
 //#define SEG7    (SEGa|SEGb|SEGc|SEGf)
-//#define SEG8    (SEGa|SEGb|SEGc|SEGd|SEGe|SEGf|SEGg)
+//#define SEG8    ((SEGa|SEGb|SEGc|SEGd)|SEGe|SEGf|SEGg)
 //#define SEG9    (SEGf|SEGd|SEGg|SEGa|SEGb|SEGc)
-//#define SEGA    (SEGa|SEGb|SEGc|SEGd|SEGe|SEGg)
+//#define SEGA    ((SEGa|SEGb|SEGc|SEGd)|SEGe|SEGg)
 //#define SEGB    (SEGc|SEGd|SEGe|SEGf|SEGg)
 //#define SEGC    (SEGd|SEGe|SEGg)
 //#define SEGD    (SEGb|SEGc|SEGd|SEGe|SEGg)
@@ -764,6 +764,9 @@
 //    
 //}
 //
+//unsigned short gegiMigi[]={(SEGa),(SEGa|SEGb|SEGc),(SEGa|SEGb|SEGc|SEGd),(SEGa|SEGb|SEGc|SEGd),(SEGa|SEGb|SEGc|SEGd),(SEGa|SEGb|SEGc|SEGd)};  //  num0-9  配列 数字表示
+//unsigned short gegiHidari[]={0,0,0,(SEGd),(SEGd|SEGe|SEGf),(SEGd|SEGe|SEGf|SEGg)};  //  num0-9  配列 数字表示
+//
 ///*  メイン関数（問題にあわせて変更）    */
 //void main(void)
 //{
@@ -778,6 +781,14 @@
 ////初期状態（スタート後） 
 //    //SW1：下　SW2：下　SW3：離す
 //    while((SW1!=1)||(SW2!=1)||(SW3!=1));  
+//
+//// ================================================================================
+//
+//    hukki:
+//
+//    
+//
+//
 //
 //    //ここから編集
 //    LEDR=LEDG=LEDB=OFF;
@@ -805,24 +816,89 @@
 //
 //    int zyoutai = 0;
 //
+//    count = 0;
+//
 //    
 //    //メインの動き
-//    hukki:
+//    
 //    while(1){
 //
-//        if(SW3 == PUSH){
-//            buzzon();
-//        }
-//        if(SW3 == NPUSH){
-//            buzzof();
+//        if(SW1 ==DN && SW2 ==UP){
+//            dynam(SEGg,SEGg,0,0);
+//
 //        }
 //        
-//        if(SW1 == DN && SW2 == UP){
-//            if(SW3 == PUSH){
-//                buzzStop(H,1,0b111);
+//        
+//
+//        if(SW1 ==UP && SW2 ==UP){
+//            zyoutai = waitSEGStop(SEGg,SEGg,1000,0b001);
+//            if(zyoutai == 1){
+//                for(i = 1;i<=6;i++){
+//                    waitSEG(SEGg,num0[i],1000);
+//
+//                    kaisu(ON);
+//                    if(count >= 2){
+//                        motor(60*i,SEGg,num0[i],H2,L);
+//
+//                        while(1){
+//                            if(SW1 == DN && SW2 == UP){
+//                                motor(60*(6-i),SEGg,SEGg,H2,H);
+//
+//                                goto hukki;
+//                            }
+//
+//                            if(SW1 ==UP && SW2 ==DN){
+//                                for (j = i;j>=0;j--){
+//                                    zyoutai = motorStop(60,gegiHidari[i],gegiMigi[i],T2,H,0b100);
+//
+//                                    if(zyoutai > 0){
+//                                        goto hukki;
+//                                    }
+//                                    
+//                                }
+//                                
+//
+//                            }
+//                        }
+//                    }
+//                }
 //            }
+//
+//            zyoutai = waitSEGStop(0,SEGg,1000,0b001);
+//            if(zyoutai == 1){
+//                for(i = 1;i<=6;i++){
+//                    waitSEG(0,num0[i],1000);
+//
+//                    kaisu(ON);
+//                    if(count >= 2){
+//                        motor(60*i,0,num0[i],T2,L);
+//
+//                        while(1){
+//                            if(SW1 == DN && SW2 == UP){
+//                                motor(60*(6-i),SEGg,SEGg,T2,H);
+//
+//                                goto hukki;
+//                            }
+//
+//                            if(SW1 ==UP && SW2 ==DN){
+//                                for (j = (6-i);j>=0;j--){
+//                                    zyoutai = motorStop(60,gegiHidari[i],gegiMigi[i],T2,H,0b100);
+//
+//                                    if(zyoutai > 0){
+//                                        goto hukki;
+//                                    }
+//                                    
+//                                }
+//                                
+//
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//
+//            
 //        }
-//        
 //
 //    }
 //}

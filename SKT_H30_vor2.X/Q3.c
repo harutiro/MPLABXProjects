@@ -779,6 +779,10 @@
 //    //SW1：下　SW2：下　SW3：離す
 //    while((SW1!=1)||(SW2!=1)||(SW3!=1));  
 //
+//// ================================================================================
+//
+//    hukki:
+//
 //    //ここから編集
 //    LEDR=LEDG=LEDB=OFF;
 //    
@@ -807,22 +811,82 @@
 //
 //    
 //    //メインの動き
-//    hukki:
+//    __delay(2);
 //    while(1){
 //
-//        if(SW3 == PUSH){
-//            buzzon();
-//        }
-//        if(SW3 == NPUSH){
-//            buzzof();
-//        }
-//        
-//        if(SW1 == DN && SW2 == UP){
-//            if(SW3 == PUSH){
-//                buzzStop(H,1,0b111);
+//        if(SW1 == DN && SW2 ==DN){
+//            waitSEG(SEGU,SEGP,3000);
+//            while(1){
+//
+//                tact(ON);
+//                if(SW3R){
+//                    fclr(PR);
+//
+//                    if(SW1 == DN && SW2 == DN){
+//                        
+//                        for(i = 0; i <= 9; i++){
+//                            motor(40,num0[i],num0[i],T2,L);
+//                        }
+//                        while(1){
+//                            dynam(num0[i],num0[i],0,0);
+//
+//                            jikan();
+//                            if(count >= 500){
+//                                goto hukki;
+//                            }
+//                        }
+//                    }
+//
+//                    if(SW1 == UP && SW2 == DN){
+//                        for(i = 0; i <= 9; i++){
+//                            motor(40,moji[i],num0[i],H2,L);
+//                        }
+//                        while(1){
+//                            dynam(moji[i],num0[i],0,0);
+//
+//                            jikan();
+//                            if(count >= 500){
+//                                goto hukki;
+//                            }
+//                        }
+//                        
+//                    }
+//
+//                    if(SW1 == DN && SW2 == UP){
+//                        for(i = 0; i <= 9; i++){
+//                            motor(40,num0[i],moji[i],T2,H);
+//                        }
+//                        while(1){
+//                            dynam(num0[i],moji[i],0,0);
+//
+//                            jikan();
+//                            if(count >= 500){
+//                                goto hukki;
+//                            }
+//                        }
+//                        
+//                    }
+//
+//                    if(SW1 == UP && SW2 == UP){
+//                        for(i = 0; i <= 9; i++){
+//                            motor(40,moji[i],moji[i],H2,H);
+//                        }
+//                        while(1){
+//                            dynam(moji[i],moji[i],0,0);
+//
+//                            jikan();
+//                            if(count >= 500){
+//                                goto hukki;
+//                            }
+//                        }
+//
+//                        
+//                    }
+//
+//
+//                }
 //            }
 //        }
-//        
 //
 //    }
 //}

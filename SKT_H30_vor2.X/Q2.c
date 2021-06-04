@@ -806,24 +806,65 @@
 //    int zyoutai = 0;
 //
 //    
-//    //メインの動き
-//    hukki:
+//     //メインの動き
+//    __delay(3);
+//
 //    while(1){
 //
-//        if(SW3 == PUSH){
-//            buzzon();
-//        }
-//        if(SW3 == NPUSH){
-//            buzzof();
-//        }
-//        
-//        if(SW1 == DN && SW2 == UP){
+//        if(SW1 == DN && SW2 == DN){
+//            dynam(SEGc|SEGd|SEGe,SEGc|SEGd|SEGe,0,0);
+//
 //            if(SW3 == PUSH){
-//                buzzStop(H,1,0b111);
+//                zyoutai = waitSEGStop(SEGc|SEGd|SEGe|SEGg,SEGc|SEGd|SEGe|SEGg,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//
+//                zyoutai = waitSEGStop(SEGc|SEGd|SEGe,SEGc|SEGd|SEGe,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
 //            }
 //        }
-//        
+//        if(SW1 == DN && SW2 == UP){
+//            dynam(SEGb|SEGd|SEGf,SEGa|SEGc|SEGe,0,0);
 //
+//            if(SW3 == PUSH){
+//                zyoutai = waitSEGStop(SEGb|SEGd|SEGf|SEGg,SEGa|SEGc|SEGe|SEGg,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//
+//                zyoutai = waitSEGStop(SEGb|SEGd|SEGf,SEGa|SEGc|SEGe,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//            }
+//        }
+//        if(SW1 == UP && SW2 == DN){
+//            dynam(SEGa|SEGb|SEGf,SEGa|SEGb|SEGf,0,0);
+//
+//            if(SW3 == PUSH){
+//                zyoutai = waitSEGStop(SEGa|SEGb|SEGf|SEGg,SEGa|SEGb|SEGf|SEGg,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//
+//                zyoutai = waitSEGStop(SEGa|SEGb|SEGf,SEGa|SEGb|SEGf,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//            }
+//        }
+//        if(SW1 == UP && SW2 == UP){
+//            dynam(SEGa|SEGc|SEGe,SEGb|SEGd|SEGf,0,0);
+//
+//            if(SW3 == PUSH){
+//                zyoutai = waitSEGStop(SEGa|SEGc|SEGe|SEGg,SEGb|SEGd|SEGf|SEGg,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//
+//                zyoutai = waitSEGStop(SEGa|SEGc|SEGe,SEGb|SEGd|SEGf,500,0b001);
+//
+//                if(zyoutai == 1){while(1);}
+//            }
+//        }
 //    }
+//
+//
 //}
 //
