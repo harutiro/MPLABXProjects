@@ -839,7 +839,7 @@ void main(void)
                 waitSEG(segL,SEGc|SEGe|SEGg,1000);
                 waitSEG(segL,0,1000);
                 
-                zyoutai = 1
+                zyoutai = 1;
             }
             
         }
@@ -850,7 +850,7 @@ void main(void)
                 waitSEG(segL,SEGb|SEGf|SEGg,1000);
                 waitSEG(segL,0,1000);
 
-                zyoutai = 2
+                zyoutai = 2;
 
 
             }
@@ -862,7 +862,7 @@ void main(void)
                 waitSEG(segL,SEGb|SEGc|SEGe|SEGf,1000);
                 waitSEG(segL|SEGa,0,1000);
 
-                zyoutai = 3
+                zyoutai = 3;
 
 
             }

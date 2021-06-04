@@ -5560,7 +5560,9 @@ void main(void)
                 waitSEG(segL,0x04|0x10|0x40,1000);
                 waitSEG(segL,0,1000);
 
+                zyoutai = 1;
             }
+
         }
 
         if(segL != 0 && RA0 ==1 &&RA1 ==0){
@@ -5568,6 +5570,9 @@ void main(void)
             if(count >= 500){
                 waitSEG(segL,0x02|0x20|0x40,1000);
                 waitSEG(segL,0,1000);
+
+                zyoutai = 2;
+
 
             }
         }
@@ -5578,7 +5583,16 @@ void main(void)
                 waitSEG(segL,0x02|0x04|0x10|0x20,1000);
                 waitSEG(segL|0x01,0,1000);
 
+                zyoutai = 3;
+
+
             }
+
+        }
+
+        if(segL != 0 && RA0 ==1 && RA1 ==1 && zyoutai != 0){
+
+
         }
 
     }
