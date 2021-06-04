@@ -466,10 +466,11 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int do
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    int cpSW3 = SW3;
     
     
 
-    wt = wt / 10;
+    wt = wt / 10 + wt/1000*60;
     unsigned int i;
 
     for(i=wt;i>0;--i){   
@@ -498,6 +499,12 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int do
                 return 1;
             }
         }
+        if(cpSW3 != SW3){
+            if((0b001 & dousa) == 0b001){
+            
+                return 1;
+            }
+        }
     }
 
     return 0;
@@ -515,6 +522,7 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    int cpSW3 = SW3;
 
     for(int i = kakudo;i>=0;i--){
         dynam(dig1data,dig2data,smdata,tr);
@@ -539,6 +547,12 @@ int motorStop (int kakudo,unsigned short dig1data,unsigned short dig2data,unsign
             if((0b001 & dousa) == 0b001){
             
                 fclr(PR);
+                return i;
+            }
+        }
+        if(cpSW3 != SW3){
+            if((0b001 & dousa) == 0b001){
+            
                 return i;
             }
         }
@@ -585,6 +599,7 @@ int buzzStop (int dousa,int time,int rokku){
     //状態
     int cpSW1 = SW1;
     int cpSW2 = SW2;
+    int cpSW3 = SW3;
 
     for(j=time;j>0;j--){
 
@@ -618,6 +633,13 @@ int buzzStop (int dousa,int time,int rokku){
                         return j;
                     }
                 }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
+                        buzzof();
+                        return j;
+                    }
+                }
             }
             for(i=0;i<=2500;i++){
                 buzzof();
@@ -644,6 +666,13 @@ int buzzStop (int dousa,int time,int rokku){
                     if((0b001 & rokku) == 0b001){
                     
                         fclr(PR);
+                        buzzof();
+                        return j;
+                    }
+                }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
                         buzzof();
                         return j;
                     }
@@ -681,6 +710,13 @@ int buzzStop (int dousa,int time,int rokku){
                         return j;
                     }
                 }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
+                        buzzof();
+                        return j;
+                    }
+                }
             }
             for(i=0;i<=7500;i++){
                 buzzof();
@@ -711,6 +747,13 @@ int buzzStop (int dousa,int time,int rokku){
                         return j;
                     }
                 }
+                if(SW3 != cpSW3){
+                    if((0b001 & rokku) == 0b001){
+                        
+                        buzzof();
+                        return j;
+                    }
+                }
             }
         }
 
@@ -735,6 +778,10 @@ void main(void)
 //初期状態（スタート後） 
     //SW1：下　SW2：下　SW3：離す
     while((SW1!=1)||(SW2!=1)||(SW3!=1));  
+
+// ================================================================================
+
+    hukki:
 
     //ここから編集
     LEDR=LEDG=LEDB=OFF;
@@ -764,7 +811,7 @@ void main(void)
 
     
     //メインの動き
-    hukki:
+    
     while(1){
 
 
