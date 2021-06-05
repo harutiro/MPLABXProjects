@@ -764,6 +764,9 @@ int buzzStop (int dousa,int time,int rokku){
     
 }
 
+unsigned short kaisu[]={SEGd,SEGa,SEGa|SEGd};
+
+
 /*  メイン関数（問題にあわせて変更）    */
 void main(void)
 {
@@ -799,7 +802,7 @@ void main(void)
 
     int time = 0;
 
-    int ans = 0;
+    int ans = -1;
 
     unsigned short segL = 0;
     unsigned short segR = 0;
@@ -815,11 +818,20 @@ void main(void)
     while(1){
 
 
-        kaisu(ON);
+        tact(ON);
+        if(SW3R){
+            fclr(PR);
 
-        if(count == 2){
-            dynam(SEGg,SEGg,0,0);
+            ans++;
         }
+
+        if(ans != -1){
+            dynam(kasisu[ans%3],0,0,0)
+        }
+
+        
+
+
 
         
 
