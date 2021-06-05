@@ -479,28 +479,28 @@ int waitSEGStop(unsigned short seg1,unsigned short seg2,unsigned short wt,int do
         tact(ON);
 
         if(cpSW1 != SW1){
-            if((0b100 & dousa) == 0b100){
+            if((0b1000 & dousa) == 0b1000){
             
                 fclr(PR);
                 return 1;
             }
         }
         if(cpSW2 != SW2){
-            if((0b010 & dousa) == 0b010){
+            if((0b0100 & dousa) == 0b0100){
             
                 fclr(PR);
                 return 1;
             }
         }
         if(SW3R){
-            if((0b001 & dousa) == 0b001){
+            if((0b0010 & dousa) == 0b0010){
             
                 fclr(PR);
                 return 1;
             }
         }
         if(cpSW3 != SW3){
-            if((0b001 & dousa) == 0b001){
+            if((0b0001 & dousa) == 0b0001){
             
                 return 1;
             }
@@ -813,6 +813,17 @@ void main(void)
     //メインの動き
     
     while(1){
+
+
+        kaisu(ON);
+
+        if(count == 2){
+            dynam(SEGg,SEGg,0,0);
+        }
+
+        
+
+        
 
 
     }
