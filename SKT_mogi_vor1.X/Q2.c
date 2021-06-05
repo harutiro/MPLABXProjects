@@ -811,9 +811,49 @@
 //
 //    
 //    //メインの動き
-//    
-//    while(1){
+//    __delay_ms(3000);
 //
+//    while(1){
+//        
+//        if(SW1 == DN && SW2 == DN){
+//            dynam(SEGc|SEGd|SEGe,SEGc|SEGd|SEGe,0,0);
+//            
+//            if(SW3 ==PUSH){
+//                waitSEG(SEGc|SEGd|SEGe|SEGg,SEGc|SEGd|SEGe|SEGg,1000);
+//                waitSEG(SEGc|SEGd|SEGe,SEGc|SEGd|SEGe,1000);
+//            }
+//            
+//        }
+//
+//        if(SW1 == DN && SW2 == UP){
+//            dynam(SEGb|SEGd|SEGf,SEGb|SEGd|SEGf,0,0);
+//
+//            if(SW3 ==PUSH){
+//                waitSEG(SEGb|SEGd|SEGf|SEGg,SEGb|SEGd|SEGf|SEGg,1000);
+//                waitSEG(SEGb|SEGd|SEGf,SEGb|SEGd|SEGf,1000);
+//            }
+//            
+//        }
+//
+//        if(SW1 == UP && SW2 == UP){
+//            dynam(SEGa|SEGb|SEGf,SEGa|SEGb|SEGf,0,0);
+//
+//            if(SW3 ==PUSH){
+//                waitSEG(SEGa|SEGb|SEGf|SEGg,SEGa|SEGb|SEGf|SEGg,1000);
+//                waitSEG(SEGa|SEGb|SEGf,SEGa|SEGb|SEGf,1000);
+//            }
+//            
+//        }
+//
+//        if(SW1 == UP && SW2 == DN){
+//            dynam(SEGa|SEGc|SEGe,SEGa|SEGc|SEGe,0,0);
+//
+//            if(SW3 ==PUSH){
+//                waitSEG(SEGa|SEGc|SEGe|SEGg,SEGa|SEGc|SEGe|SEGg,1000);
+//                waitSEG(SEGa|SEGc|SEGe,SEGa|SEGc|SEGe,1000);
+//            }
+//            
+//        }
 //
 //    }
 //}

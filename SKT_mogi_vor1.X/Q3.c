@@ -799,7 +799,7 @@
 //
 //    int time = 0;
 //
-//    int ans = 0;
+//    int ans = 1;
 //
 //    unsigned short segL = 0;
 //    unsigned short segR = 0;
@@ -811,9 +811,120 @@
 //
 //    
 //    //メインの動き
-//    
+//    __delay_ms(2000);
+//    waitSEG(SEGU,SEGP,3000);
+//
 //    while(1){
 //
+//        if(SW1 == DN && SW2 == DN){
+//            tact(REN);
+//            if(SW3PR){
+//                fclr(PR);
+//                ans++;
+//            }
+//            dynam(num0[ans],num0[ans],T2,L);
+//            
+//            zyoutai++;
+//            if(zyoutai == 360){
+//                zyoutai=0;
+//            }
+//
+//            if(ans == 9){
+//                motor(360-zyoutai,num0[ans],num0[ans],T2,L);
+//                while(1){
+//                    dynam(num0[ans],num0[ans],0,0);
+//                    
+//                    jikan();
+//                    if(count >= 500){
+//                        goto hukki;
+//                    }
+//                }
+//            }
+//        }
+//
+//        if(SW1 == UP && SW2 == DN){
+//            tact(REN);
+//            if(SW3PR){
+//                fclr(PR);
+//                ans++;
+//            }
+//            dynam(moji[ans-1],num0[ans],H2,L);
+//
+//            zyoutai--;
+//            if(zyoutai == 0){
+//                zyoutai=360;
+//            }
+//
+//            if(ans == 9){
+//                motor(zyoutai,moji[ans-1],num0[ans],H2,L);
+//
+//                while(1){
+//                    dynam(moji[ans-1],num0[ans],0,0);
+//
+//                    jikan();
+//                    if(count >= 500){
+//                        goto hukki;
+//                    }
+//                    
+//                }
+//            }
+//        }
+//
+//        if(SW1 == DN && SW2 == UP){
+//            tact(REN);
+//            if(SW3PR){
+//                fclr(PR);
+//                ans++;
+//            }
+//            dynam(num0[ans],moji[ans-1],T2,H);
+//
+//            zyoutai++;
+//            if(zyoutai == 360){
+//                zyoutai=0;
+//            }
+//
+//            if(ans == 9){
+//                motor(360-zyoutai,num0[ans],moji[ans-1],T2,H);
+//                while(1){
+//                    dynam(num0[ans],moji[ans-1],0,0);
+//
+//                    jikan();
+//                    if(count >= 500){
+//                        goto hukki;
+//                    }
+//                    
+//                }
+//            }
+//
+//            
+//        }
+//
+//        if(SW1 == UP && SW2 == UP){
+//            tact(REN);
+//            if(SW3PR){
+//                fclr(PR);
+//                ans++;
+//            }
+//            dynam(moji[ans-1],moji[ans-1],H2,H);
+//
+//            zyoutai--;
+//            if(zyoutai == 0){
+//                zyoutai=360;
+//            }
+//
+//            if(ans == 9){
+//                motor(zyoutai,moji[ans-1],moji[ans-1],H2,H);
+//                while(1){
+//                    dynam(moji[ans-1],moji[ans-1],0,0);
+//
+//                    jikan();
+//                    if(count >= 500){
+//                        goto hukki;
+//                    }
+//                    
+//                }
+//            }
+//        }
 //
 //    }
 //}
