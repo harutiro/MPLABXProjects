@@ -811,82 +811,9 @@ void main(void)
 
     
     //メインの動き
-    __delay_ms(2000);
+    
     while(1){
 
-        if(SW1 == DN && SW2 ==DN){
-            waitSEG(SEGU,SEGP,3000);
-            while(1){
-
-                tact(REN);
-                if(SW3PR){
-                    fclr(PR);
-
-                    if(SW1 == DN && SW2 == DN){
-                        
-                        for(i = 0; i <= 9; i++){
-                            motor(36,num0[i],num0[i],T2,L);
-                        }
-                        while(1){
-                            dynam(num0[i],num0[i],0,0);
-
-                            jikan();
-                            if(count >= 500){
-                                goto hukki;
-                            }
-                        }
-                    }
-
-                    if(SW1 == UP && SW2 == DN){
-                        for(i = 0; i <= 9; i++){
-                            motor(40,moji[i],num0[i],H2,L);
-                        }
-                        while(1){
-                            dynam(moji[i],num0[i],0,0);
-
-                            jikan();
-                            if(count >= 500){
-                                goto hukki;
-                            }
-                        }
-                        
-                    }
-
-                    if(SW1 == DN && SW2 == UP){
-                        for(i = 0; i <= 9; i++){
-                            motor(40,num0[i],moji[i],T2,H);
-                        }
-                        while(1){
-                            dynam(num0[i],moji[i],0,0);
-
-                            jikan();
-                            if(count >= 500){
-                                goto hukki;
-                            }
-                        }
-                        
-                    }
-
-                    if(SW1 == UP && SW2 == UP){
-                        for(i = 0; i <= 9; i++){
-                            motor(40,moji[i],moji[i],H2,H);
-                        }
-                        while(1){
-                            dynam(moji[i],moji[i],0,0);
-
-                            jikan();
-                            if(count >= 500){
-                                goto hukki;
-                            }
-                        }
-
-                        
-                    }
-
-
-                }
-            }
-        }
 
     }
 }

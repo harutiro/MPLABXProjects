@@ -779,6 +779,10 @@
 //    //SW1：下　SW2：下　SW3：離す
 //    while((SW1!=1)||(SW2!=1)||(SW3!=1));  
 //
+//// ================================================================================
+//
+//    hukki:
+//
 //    //ここから編集
 //    LEDR=LEDG=LEDB=OFF;
 //    
@@ -806,65 +810,11 @@
 //    int zyoutai = 0;
 //
 //    
-//     //メインの動き
-//    __delay_ms(3000);
-//
+//    //メインの動き
+//    
 //    while(1){
 //
-//        if(SW1 == DN && SW2 == DN){
-//            dynam(SEGc|SEGd|SEGe,SEGc|SEGd|SEGe,0,0);
 //
-//            if(SW3 == PUSH){
-//                zyoutai = waitSEGStop(SEGc|SEGd|SEGe|SEGg,SEGc|SEGd|SEGe|SEGg,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//
-//                zyoutai = waitSEGStop(SEGc|SEGd|SEGe,SEGc|SEGd|SEGe,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//            }
-//        }
-//        if(SW1 == DN && SW2 == UP){
-//            dynam(SEGb|SEGd|SEGf,SEGa|SEGc|SEGe,0,0);
-//
-//            if(SW3 == PUSH){
-//                zyoutai = waitSEGStop(SEGb|SEGd|SEGf|SEGg,SEGa|SEGc|SEGe|SEGg,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//
-//                zyoutai = waitSEGStop(SEGb|SEGd|SEGf,SEGa|SEGc|SEGe,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//            }
-//        }
-//        if(SW1 == UP && SW2 == DN){
-//            dynam(SEGa|SEGb|SEGf,SEGa|SEGb|SEGf,0,0);
-//
-//            if(SW3 == PUSH){
-//                zyoutai = waitSEGStop(SEGa|SEGb|SEGf|SEGg,SEGa|SEGb|SEGf|SEGg,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//
-//                zyoutai = waitSEGStop(SEGa|SEGb|SEGf,SEGa|SEGb|SEGf,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//            }
-//        }
-//        if(SW1 == UP && SW2 == UP){
-//            dynam(SEGa|SEGc|SEGe,SEGb|SEGd|SEGf,0,0);
-//
-//            if(SW3 == PUSH){
-//                zyoutai = waitSEGStop(SEGa|SEGc|SEGe|SEGg,SEGb|SEGd|SEGf|SEGg,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//
-//                zyoutai = waitSEGStop(SEGa|SEGc|SEGe,SEGb|SEGd|SEGf,500,0b001);
-//
-//                if(zyoutai == 1){while(1);}
-//            }
-//        }
 //    }
-//
-//
 //}
 //
