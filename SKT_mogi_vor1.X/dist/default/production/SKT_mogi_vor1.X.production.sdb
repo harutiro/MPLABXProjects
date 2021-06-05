@@ -3,23 +3,23 @@
 [d edition pro ]
 [d chip 16F1938 ]
 [d frameptr 6 ]
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+"5 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+"5 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
+"5 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
+"10 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+"15 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
+"4 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\pic\__eeprom.c
+"6 /Applications/microchip/xc8/v2.32/pic/sources/c99/pic/__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
+"160 /Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
 [v _portinit portinit `(v  1 e 1 0 ]
 "176
 [v _wait wait `(v  1 e 1 0 ]
@@ -43,7 +43,7 @@
 [v _motor motor `(v  1 e 1 0 ]
 "773
 [v _main main `(v  1 e 1 0 ]
-"429 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
+"429 /Applications/microchip/mplabx/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8/pic/include/proc/pic16f1938.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
 "491
 [v _PORTB PORTB `VEuc  1 e 1 @13 ]
@@ -79,7 +79,7 @@
 [v _RC6 RC6 `VEb  1 e 0 @118 ]
 "8203
 [v _RC7 RC7 `VEb  1 e 0 @119 ]
-"134 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
+"134 /Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
 [v _flag_sw3 flag_sw3 `us  1 e 2 0 ]
 "135
 [v _flag_R flag_R `us  1 e 2 0 ]
@@ -111,10 +111,10 @@
 [v _main main `(v  1 e 1 0 ]
 {
 "782
-[v main@i i `i  1 a 2 48 ]
-[v main@j j `i  1 a 2 46 ]
+[v main@i i `i  1 a 2 32 ]
+[v main@j j `i  1 a 2 30 ]
 "807
-[v main@ans ans `i  1 a 2 44 ]
+[v main@ans ans `i  1 a 2 28 ]
 "898
 } 0
 "195
@@ -161,7 +161,7 @@
 [v fclr@flg flg `us  1 p 2 0 ]
 "384
 } 0
-"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+"15 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
@@ -171,7 +171,7 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 10 ]
 "53
 } 0
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
+"5 /Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
@@ -183,7 +183,7 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"160 C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
+"160 /Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
 [v _portinit portinit `(v  1 e 1 0 ]
 {
 "172

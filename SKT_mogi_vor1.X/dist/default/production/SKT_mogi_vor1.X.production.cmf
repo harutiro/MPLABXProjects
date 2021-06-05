@@ -11,35 +11,36 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\harut\AppData\Local\Temp\scd0.o
+$/tmp/xcth9CV0L.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
-$dist/default/production\SKT_mogi_vor1.X.production.o
-cinit CODE 0 7CA 7CA 36 2
-text1 CODE 0 C2 C2 9 2
-text2 CODE 0 2B9 2B9 DD 2
-text3 CODE 0 220 220 4B 2
-text4 CODE 0 19D 19D 3D 2
-text5 CODE 0 FD FD 20 2
-text6 CODE 0 DE DE 1F 2
-text7 CODE 0 161 161 3C 2
-text8 CODE 0 CB CB 13 2
-text9 CODE 0 13D 13D 24 2
-text10 CODE 0 396 396 16A 2
-maintext CODE 0 500 500 2CA 2
+$dist/default/production/SKT_mogi_vor1.X.production.o
+cinit CODE 0 7C5 7C5 3B 2
+text1 CODE 0 C5 C5 9 2
+text2 CODE 0 2B4 2B4 DD 2
+text3 CODE 0 269 269 4B 2
+text4 CODE 0 1A0 1A0 3D 2
+text5 CODE 0 100 100 20 2
+text6 CODE 0 E1 E1 1F 2
+text7 CODE 0 164 164 3C 2
+text8 CODE 0 CE CE 13 2
+text9 CODE 0 140 140 24 2
+text10 CODE 0 391 391 16A 2
+maintext CODE 0 4FB 4FB 2CA 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 20 20 32 1
-inittext CODE 0 BC BC 6 2
-bssBANK0 BANK0 1 52 52 1E 1
-bssBANK1 BANK1 1 E6 E6 6 1
-idataBANK1 CODE 0 1DA 1DA 46 2
-idataBANK2 CODE 0 26B 26B 4E 2
-idataBANK3 CODE 0 11D 11D 20 2
-dataBANK1 BANK1 1 A0 A0 46 1
-dataBANK2 BANK2 1 120 120 4E 1
+cstackBANK0 BANK0 1 44 44 22 1
+inittext CODE 0 B7 B7 6 2
+bssBANK0 BANK0 1 20 20 24 1
+idataBANK0 CODE 0 BD BD 8 2
+idataBANK1 CODE 0 221 221 48 2
+idataBANK2 CODE 0 1DD 1DD 44 2
+idataBANK3 CODE 0 120 120 20 2
+dataBANK0 BANK0 1 66 66 8 1
+dataBANK1 BANK1 1 A0 A0 48 1
+dataBANK2 BANK2 1 120 120 44 1
 dataBANK3 BANK3 1 1A0 1A0 20 1
-clrtext CODE 0 B6 B6 6 2
+clrtext CODE 0 B1 B1 6 2
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -47,8 +48,9 @@ config CONFIG 4 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM EC-EF 1
-RAM 16E-16F 1
+RAM 6E-6F 1
+RAM E8-EF 1
+RAM 164-16F 1
 RAM 1C0-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
@@ -59,8 +61,9 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK1 EC-EF 1
-BANK2 16E-16F 1
+BANK0 6E-6F 1
+BANK1 E8-EF 1
+BANK2 164-16F 1
 BANK3 1C0-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
@@ -68,9 +71,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-B5 2
+CONST 4-B0 2
 CONST 800-3FFF 2
-ENTRY 4-B5 2
+ENTRY 4-B0 2
 ENTRY 800-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -96,7 +99,7 @@ SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2110-23EF 1
-CODE 4-B5 2
+CODE 4-B0 2
 CODE 800-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -113,9 +116,9 @@ BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
-STRCODE 4-B5 2
+STRCODE 4-B0 2
 STRCODE 800-3FFF 2
-STRING 4-B5 2
+STRING 4-B0 2
 STRING 800-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -130,261 +133,315 @@ STRING 800-3FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/production\SKT_mogi_vor1.X.production.o
-7CA cinit CODE >1165:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CA cinit CODE >1168:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CA cinit CODE >1322:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CB cinit CODE >1323:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CC cinit CODE >1324:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CD cinit CODE >1325:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CE cinit CODE >1326:C:\Users\harut\AppData\Local\Temp\scd0.s
-7CF cinit CODE >1327:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D0 cinit CODE >1328:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D1 cinit CODE >1329:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D2 cinit CODE >1330:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D3 cinit CODE >1331:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D6 cinit CODE >1335:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D7 cinit CODE >1336:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D8 cinit CODE >1337:C:\Users\harut\AppData\Local\Temp\scd0.s
-7D9 cinit CODE >1338:C:\Users\harut\AppData\Local\Temp\scd0.s
-7DA cinit CODE >1339:C:\Users\harut\AppData\Local\Temp\scd0.s
-7DB cinit CODE >1340:C:\Users\harut\AppData\Local\Temp\scd0.s
-7DC cinit CODE >1341:C:\Users\harut\AppData\Local\Temp\scd0.s
-7DD cinit CODE >1342:C:\Users\harut\AppData\Local\Temp\scd0.s
-7DE cinit CODE >1343:C:\Users\harut\AppData\Local\Temp\scd0.s
-7DF cinit CODE >1344:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E2 cinit CODE >1348:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E3 cinit CODE >1349:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E4 cinit CODE >1350:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E5 cinit CODE >1351:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E6 cinit CODE >1352:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E7 cinit CODE >1353:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E8 cinit CODE >1354:C:\Users\harut\AppData\Local\Temp\scd0.s
-7E9 cinit CODE >1355:C:\Users\harut\AppData\Local\Temp\scd0.s
-7EA cinit CODE >1356:C:\Users\harut\AppData\Local\Temp\scd0.s
-7EB cinit CODE >1357:C:\Users\harut\AppData\Local\Temp\scd0.s
-7EE cinit CODE >1374:C:\Users\harut\AppData\Local\Temp\scd0.s
-7EF cinit CODE >1375:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F0 cinit CODE >1376:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F1 cinit CODE >1377:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F2 cinit CODE >1378:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F3 cinit CODE >1379:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F6 cinit CODE >1383:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F7 cinit CODE >1384:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F8 cinit CODE >1385:C:\Users\harut\AppData\Local\Temp\scd0.s
-7F9 cinit CODE >1386:C:\Users\harut\AppData\Local\Temp\scd0.s
-7FA cinit CODE >1387:C:\Users\harut\AppData\Local\Temp\scd0.s
-7FB cinit CODE >1388:C:\Users\harut\AppData\Local\Temp\scd0.s
-7FC cinit CODE >1389:C:\Users\harut\AppData\Local\Temp\scd0.s
-7FD cinit CODE >1395:C:\Users\harut\AppData\Local\Temp\scd0.s
-7FD cinit CODE >1397:C:\Users\harut\AppData\Local\Temp\scd0.s
-7FE cinit CODE >1398:C:\Users\harut\AppData\Local\Temp\scd0.s
-396 text10 CODE >206:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-396 text10 CODE >208:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-399 text10 CODE >209:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-39D text10 CODE >210:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-39E text10 CODE >211:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3A0 text10 CODE >212:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3A2 text10 CODE >213:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3AE text10 CODE >214:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3B2 text10 CODE >215:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3C2 text10 CODE >216:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3C4 text10 CODE >217:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3C6 text10 CODE >218:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3C8 text10 CODE >219:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3D4 text10 CODE >220:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3D8 text10 CODE >221:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3E8 text10 CODE >222:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3EA text10 CODE >223:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3EB text10 CODE >225:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3EC text10 CODE >226:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3EF text10 CODE >227:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3F0 text10 CODE >229:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-3FA text10 CODE >230:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-416 text10 CODE >231:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-434 text10 CODE >232:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-453 text10 CODE >233:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-46D text10 CODE >237:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-477 text10 CODE >238:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-493 text10 CODE >239:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-4B1 text10 CODE >240:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-4D0 text10 CODE >241:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-4EA text10 CODE >245:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-4EE text10 CODE >246:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-4EF text10 CODE >247:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-4FF text10 CODE >248:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-13D text9 CODE >513:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-13D text9 CODE >515:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-147 text9 CODE >516:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-15A text9 CODE >517:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-160 text9 CODE >518:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-CB text8 CODE >160:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-CB text8 CODE >163:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-CD text8 CODE >164:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-CE text8 CODE >166:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-D1 text8 CODE >167:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-D4 text8 CODE >168:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-D6 text8 CODE >169:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-D8 text8 CODE >170:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-DB text8 CODE >171:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-DD text8 CODE >172:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-161 text7 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-161 text7 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-163 text7 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-169 text7 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-16B text7 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-16C text7 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-171 text7 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-175 text7 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-179 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-17E text7 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-188 text7 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-18C text7 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-18D text7 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-192 text7 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-198 text7 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-19C text7 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lwdiv.c
-DE text6 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-DE text6 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E0 text6 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E4 text6 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-E8 text6 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-ED text6 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-F2 text6 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-F8 text6 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-FC text6 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-FD text5 CODE >369:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-FD text5 CODE >371:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-FE text5 CODE >373:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-101 text5 CODE >374:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-102 text5 CODE >376:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-105 text5 CODE >377:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-106 text5 CODE >379:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-10B text5 CODE >380:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-10C text5 CODE >383:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-11C text5 CODE >384:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-19D text4 CODE >331:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-19D text4 CODE >334:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-1A1 text4 CODE >336:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-1AD text4 CODE >337:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-1BC text4 CODE >338:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-1BE text4 CODE >339:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-1D4 text4 CODE >340:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-1D9 text4 CODE >342:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-220 text3 CODE >346:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-220 text3 CODE >348:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-221 text3 CODE >350:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-224 text3 CODE >351:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-230 text3 CODE >354:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-233 text3 CODE >355:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-23F text3 CODE >358:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-242 text3 CODE >359:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-24D text3 CODE >360:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-25A text3 CODE >364:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-26A text3 CODE >365:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-2B9 text2 CODE >464:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-2B9 text2 CODE >467:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-2C5 text2 CODE >468:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-2D0 text2 CODE >469:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-2DB text2 CODE >473:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-308 text2 CODE >476:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-313 text2 CODE >477:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-324 text2 CODE >479:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-32A text2 CODE >481:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-33C text2 CODE >482:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-340 text2 CODE >484:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-347 text2 CODE >485:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-34D text2 CODE >488:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-35E text2 CODE >489:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-363 text2 CODE >495:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-36F text2 CODE >496:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-378 text2 CODE >502:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-389 text2 CODE >503:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-38E text2 CODE >508:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-393 text2 CODE >510:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-395 text2 CODE >511:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-C2 text1 CODE >195:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-C2 text1 CODE >197:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-C4 text1 CODE >198:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-C5 text1 CODE >199:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-C6 text1 CODE >200:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-C7 text1 CODE >201:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-CA text1 CODE >202:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-500 maintext CODE >773:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-500 maintext CODE >776:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-503 maintext CODE >778:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-506 maintext CODE >780:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-509 maintext CODE >782:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-509 maintext CODE >785:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-516 maintext CODE >789:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-516 maintext CODE >792:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-528 maintext CODE >795:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-52F maintext CODE >805:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-52F maintext CODE >807:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-534 maintext CODE >809:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-534 maintext CODE >810:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-534 maintext CODE >812:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-534 maintext CODE >813:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-534 maintext CODE >821:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-53D maintext CODE >822:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-54E maintext CODE >825:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-557 maintext CODE >826:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-56F maintext CODE >828:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-57C maintext CODE >829:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-589 maintext CODE >830:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-589 maintext CODE >831:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-58E maintext CODE >832:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5AB maintext CODE >833:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5B8 maintext CODE >834:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5BD maintext CODE >835:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5D9 maintext CODE >836:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5DB maintext CODE >837:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5E8 maintext CODE >838:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5ED maintext CODE >842:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-5F5 maintext CODE >843:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-61C maintext CODE >846:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-625 maintext CODE >847:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-648 maintext CODE >848:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-649 maintext CODE >852:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-65B maintext CODE >856:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-673 maintext CODE >858:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-680 maintext CODE >859:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-68D maintext CODE >860:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-68D maintext CODE >861:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-692 maintext CODE >862:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6AE maintext CODE >863:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6BB maintext CODE >864:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6C0 maintext CODE >865:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6DB maintext CODE >866:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6E8 maintext CODE >867:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6ED maintext CODE >871:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-6F5 maintext CODE >872:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-71B maintext CODE >875:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-724 maintext CODE >876:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-74C maintext CODE >877:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-74D maintext CODE >879:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-74D maintext CODE >880:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-755 maintext CODE >881:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-77D maintext CODE >883:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-780 maintext CODE >884:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-7A3 maintext CODE >886:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-7B6 maintext CODE >890:C:\Users\harut\MPLABXProjects\MPLABXProjects\SKT_mogi_vor1.X\Q4.c
-B6 clrtext CODE >1363:C:\Users\harut\AppData\Local\Temp\scd0.s
-B6 clrtext CODE >1364:C:\Users\harut\AppData\Local\Temp\scd0.s
-B7 clrtext CODE >1365:C:\Users\harut\AppData\Local\Temp\scd0.s
-B7 clrtext CODE >1366:C:\Users\harut\AppData\Local\Temp\scd0.s
-B8 clrtext CODE >1367:C:\Users\harut\AppData\Local\Temp\scd0.s
-B9 clrtext CODE >1368:C:\Users\harut\AppData\Local\Temp\scd0.s
-BA clrtext CODE >1369:C:\Users\harut\AppData\Local\Temp\scd0.s
-BB clrtext CODE >1370:C:\Users\harut\AppData\Local\Temp\scd0.s
-BC inittext CODE >1311:C:\Users\harut\AppData\Local\Temp\scd0.s
-BC inittext CODE >1312:C:\Users\harut\AppData\Local\Temp\scd0.s
-BD inittext CODE >1313:C:\Users\harut\AppData\Local\Temp\scd0.s
-BD inittext CODE >1314:C:\Users\harut\AppData\Local\Temp\scd0.s
-BE inittext CODE >1315:C:\Users\harut\AppData\Local\Temp\scd0.s
-BF inittext CODE >1316:C:\Users\harut\AppData\Local\Temp\scd0.s
-C0 inittext CODE >1317:C:\Users\harut\AppData\Local\Temp\scd0.s
-C1 inittext CODE >1318:C:\Users\harut\AppData\Local\Temp\scd0.s
+$dist/default/production/SKT_mogi_vor1.X.production.o
+7C5 cinit CODE >1169:/tmp/xcqjarLIs.s
+7C5 cinit CODE >1172:/tmp/xcqjarLIs.s
+7C5 cinit CODE >1325:/tmp/xcqjarLIs.s
+7C6 cinit CODE >1326:/tmp/xcqjarLIs.s
+7C7 cinit CODE >1327:/tmp/xcqjarLIs.s
+7C8 cinit CODE >1328:/tmp/xcqjarLIs.s
+7C9 cinit CODE >1329:/tmp/xcqjarLIs.s
+7CA cinit CODE >1330:/tmp/xcqjarLIs.s
+7CB cinit CODE >1331:/tmp/xcqjarLIs.s
+7CC cinit CODE >1332:/tmp/xcqjarLIs.s
+7CD cinit CODE >1333:/tmp/xcqjarLIs.s
+7CE cinit CODE >1334:/tmp/xcqjarLIs.s
+7D1 cinit CODE >1338:/tmp/xcqjarLIs.s
+7D2 cinit CODE >1339:/tmp/xcqjarLIs.s
+7D3 cinit CODE >1340:/tmp/xcqjarLIs.s
+7D4 cinit CODE >1341:/tmp/xcqjarLIs.s
+7D5 cinit CODE >1342:/tmp/xcqjarLIs.s
+7D6 cinit CODE >1343:/tmp/xcqjarLIs.s
+7D7 cinit CODE >1344:/tmp/xcqjarLIs.s
+7D8 cinit CODE >1345:/tmp/xcqjarLIs.s
+7D9 cinit CODE >1346:/tmp/xcqjarLIs.s
+7DA cinit CODE >1347:/tmp/xcqjarLIs.s
+7DD cinit CODE >1351:/tmp/xcqjarLIs.s
+7DE cinit CODE >1352:/tmp/xcqjarLIs.s
+7DF cinit CODE >1353:/tmp/xcqjarLIs.s
+7E0 cinit CODE >1354:/tmp/xcqjarLIs.s
+7E1 cinit CODE >1355:/tmp/xcqjarLIs.s
+7E2 cinit CODE >1356:/tmp/xcqjarLIs.s
+7E3 cinit CODE >1357:/tmp/xcqjarLIs.s
+7E4 cinit CODE >1358:/tmp/xcqjarLIs.s
+7E5 cinit CODE >1359:/tmp/xcqjarLIs.s
+7E6 cinit CODE >1360:/tmp/xcqjarLIs.s
+7E9 cinit CODE >1364:/tmp/xcqjarLIs.s
+7EA cinit CODE >1365:/tmp/xcqjarLIs.s
+7EB cinit CODE >1366:/tmp/xcqjarLIs.s
+7EC cinit CODE >1367:/tmp/xcqjarLIs.s
+7ED cinit CODE >1368:/tmp/xcqjarLIs.s
+7EE cinit CODE >1369:/tmp/xcqjarLIs.s
+7EF cinit CODE >1370:/tmp/xcqjarLIs.s
+7F0 cinit CODE >1371:/tmp/xcqjarLIs.s
+7F1 cinit CODE >1372:/tmp/xcqjarLIs.s
+7F2 cinit CODE >1373:/tmp/xcqjarLIs.s
+7F5 cinit CODE >1390:/tmp/xcqjarLIs.s
+7F6 cinit CODE >1391:/tmp/xcqjarLIs.s
+7F7 cinit CODE >1392:/tmp/xcqjarLIs.s
+7F8 cinit CODE >1393:/tmp/xcqjarLIs.s
+7F9 cinit CODE >1394:/tmp/xcqjarLIs.s
+7FA cinit CODE >1395:/tmp/xcqjarLIs.s
+7FD cinit CODE >1401:/tmp/xcqjarLIs.s
+7FD cinit CODE >1403:/tmp/xcqjarLIs.s
+7FE cinit CODE >1404:/tmp/xcqjarLIs.s
+391 text10 CODE >206:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+391 text10 CODE >208:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+394 text10 CODE >209:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+398 text10 CODE >210:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+399 text10 CODE >211:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+39B text10 CODE >212:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+39D text10 CODE >213:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3A9 text10 CODE >214:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3AD text10 CODE >215:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3BD text10 CODE >216:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3BF text10 CODE >217:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3C1 text10 CODE >218:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3C3 text10 CODE >219:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3CF text10 CODE >220:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3D3 text10 CODE >221:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3E3 text10 CODE >222:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3E5 text10 CODE >223:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3E6 text10 CODE >225:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3E7 text10 CODE >226:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3EA text10 CODE >227:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3EB text10 CODE >229:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+3F5 text10 CODE >230:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+411 text10 CODE >231:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+42F text10 CODE >232:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+44E text10 CODE >233:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+468 text10 CODE >237:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+472 text10 CODE >238:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+48E text10 CODE >239:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4AC text10 CODE >240:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4CB text10 CODE >241:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4E5 text10 CODE >245:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4E9 text10 CODE >246:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4EA text10 CODE >247:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4EC text10 CODE >247:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4F1 text10 CODE >247:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4F4 text10 CODE >247:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4F7 text10 CODE >247:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4FA text10 CODE >248:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+140 text9 CODE >513:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+140 text9 CODE >515:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+14A text9 CODE >516:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+15D text9 CODE >517:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+163 text9 CODE >518:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+CE text8 CODE >160:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+CE text8 CODE >163:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+D0 text8 CODE >164:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+D1 text8 CODE >166:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+D4 text8 CODE >167:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+D7 text8 CODE >168:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+D9 text8 CODE >169:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+DB text8 CODE >170:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+DE text8 CODE >171:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+E0 text8 CODE >172:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+164 text7 CODE >5:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+164 text7 CODE >13:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+166 text7 CODE >14:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+16C text7 CODE >15:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+16E text7 CODE >16:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+16F text7 CODE >17:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+174 text7 CODE >18:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+178 text7 CODE >16:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+17C text7 CODE >21:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+181 text7 CODE >22:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+183 text7 CODE >22:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+187 text7 CODE >22:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+18B text7 CODE >23:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+18F text7 CODE >24:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+190 text7 CODE >26:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+195 text7 CODE >27:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+19B text7 CODE >29:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+19F text7 CODE >30:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/lwdiv.c
+E1 text6 CODE >15:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+E1 text6 CODE >43:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+E3 text6 CODE >45:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+E7 text6 CODE >46:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+EB text6 CODE >47:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+F0 text6 CODE >48:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+F5 text6 CODE >49:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+FB text6 CODE >52:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+FF text6 CODE >53:/Applications/microchip/xc8/v2.32/pic/sources/c99/common/Umul16.c
+100 text5 CODE >369:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+100 text5 CODE >371:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+101 text5 CODE >373:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+104 text5 CODE >374:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+105 text5 CODE >376:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+108 text5 CODE >377:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+109 text5 CODE >379:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+10E text5 CODE >380:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+10F text5 CODE >383:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+111 text5 CODE >383:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+116 text5 CODE >383:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+119 text5 CODE >383:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+11C text5 CODE >383:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+11F text5 CODE >384:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1A0 text4 CODE >331:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1A0 text4 CODE >334:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1A4 text4 CODE >336:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1A7 text4 CODE >336:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1B0 text4 CODE >337:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1B2 text4 CODE >337:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1B6 text4 CODE >337:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1BF text4 CODE >338:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1C1 text4 CODE >339:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1C4 text4 CODE >339:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1C6 text4 CODE >339:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1D7 text4 CODE >340:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+1DC text4 CODE >342:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+269 text3 CODE >346:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+269 text3 CODE >348:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+26A text3 CODE >350:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+26D text3 CODE >351:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+279 text3 CODE >354:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+27C text3 CODE >355:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+288 text3 CODE >358:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+28B text3 CODE >359:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+296 text3 CODE >360:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2A3 text3 CODE >364:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2A5 text3 CODE >364:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2AA text3 CODE >364:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2AD text3 CODE >364:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2B0 text3 CODE >364:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2B3 text3 CODE >365:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2B4 text2 CODE >464:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2B4 text2 CODE >467:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2B7 text2 CODE >467:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2C0 text2 CODE >468:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2C2 text2 CODE >468:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2CB text2 CODE >469:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2CD text2 CODE >469:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+2D6 text2 CODE >473:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+303 text2 CODE >476:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+30E text2 CODE >477:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+31F text2 CODE >479:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+325 text2 CODE >481:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+328 text2 CODE >481:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+32F text2 CODE >481:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+333 text2 CODE >481:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+337 text2 CODE >482:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+33B text2 CODE >484:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+342 text2 CODE >485:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+348 text2 CODE >488:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+34A text2 CODE >488:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+351 text2 CODE >488:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+355 text2 CODE >488:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+359 text2 CODE >489:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+35E text2 CODE >495:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+36A text2 CODE >496:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+373 text2 CODE >502:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+375 text2 CODE >502:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+37C text2 CODE >502:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+380 text2 CODE >502:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+384 text2 CODE >503:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+389 text2 CODE >508:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+38E text2 CODE >510:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+390 text2 CODE >511:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+C5 text1 CODE >195:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+C5 text1 CODE >197:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+C7 text1 CODE >198:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+C8 text1 CODE >199:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+C9 text1 CODE >200:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+CA text1 CODE >201:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+CD text1 CODE >202:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4FB maintext CODE >773:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4FB maintext CODE >776:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+4FE maintext CODE >778:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+501 maintext CODE >780:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+504 maintext CODE >782:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+504 maintext CODE >785:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+511 maintext CODE >789:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+511 maintext CODE >792:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+523 maintext CODE >795:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52A maintext CODE >805:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52A maintext CODE >807:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52F maintext CODE >809:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52F maintext CODE >810:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52F maintext CODE >812:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52F maintext CODE >813:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+52F maintext CODE >821:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+538 maintext CODE >822:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+549 maintext CODE >825:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+552 maintext CODE >826:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+56A maintext CODE >828:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+56F maintext CODE >828:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+573 maintext CODE >828:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+577 maintext CODE >829:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+584 maintext CODE >830:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+584 maintext CODE >831:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+589 maintext CODE >832:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5A6 maintext CODE >833:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5AB maintext CODE >833:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5AF maintext CODE >833:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5B3 maintext CODE >834:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5B8 maintext CODE >835:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5D4 maintext CODE >836:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5D6 maintext CODE >837:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5DB maintext CODE >837:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5DF maintext CODE >837:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5E3 maintext CODE >838:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5E8 maintext CODE >842:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+5F0 maintext CODE >843:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+617 maintext CODE >846:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+620 maintext CODE >847:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+643 maintext CODE >848:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+644 maintext CODE >852:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+64D maintext CODE >852:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+651 maintext CODE >852:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+656 maintext CODE >856:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+66E maintext CODE >858:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+673 maintext CODE >858:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+677 maintext CODE >858:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+67B maintext CODE >859:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+688 maintext CODE >860:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+688 maintext CODE >861:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+68D maintext CODE >862:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6A9 maintext CODE >863:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6AE maintext CODE >863:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6B2 maintext CODE >863:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6B6 maintext CODE >864:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6BB maintext CODE >865:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6D6 maintext CODE >866:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6DB maintext CODE >866:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6DF maintext CODE >866:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6E3 maintext CODE >867:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6E8 maintext CODE >871:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+6F0 maintext CODE >872:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+716 maintext CODE >875:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+71F maintext CODE >876:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+725 maintext CODE >876:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+747 maintext CODE >877:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+748 maintext CODE >879:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+748 maintext CODE >880:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+750 maintext CODE >881:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+756 maintext CODE >881:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+778 maintext CODE >883:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+77B maintext CODE >884:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+79E maintext CODE >886:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+7A8 maintext CODE >886:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+7AC maintext CODE >886:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+7B1 maintext CODE >890:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+7BA maintext CODE >890:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+7BE maintext CODE >890:/Users/makinoharukato/MPLABXProjects/MPLABXProjects/SKT_mogi_vor1.X/Q4.c
+B1 clrtext CODE >1379:/tmp/xcqjarLIs.s
+B1 clrtext CODE >1380:/tmp/xcqjarLIs.s
+B2 clrtext CODE >1381:/tmp/xcqjarLIs.s
+B2 clrtext CODE >1382:/tmp/xcqjarLIs.s
+B3 clrtext CODE >1383:/tmp/xcqjarLIs.s
+B4 clrtext CODE >1384:/tmp/xcqjarLIs.s
+B5 clrtext CODE >1385:/tmp/xcqjarLIs.s
+B6 clrtext CODE >1386:/tmp/xcqjarLIs.s
+B7 inittext CODE >1314:/tmp/xcqjarLIs.s
+B7 inittext CODE >1315:/tmp/xcqjarLIs.s
+B8 inittext CODE >1316:/tmp/xcqjarLIs.s
+B8 inittext CODE >1317:/tmp/xcqjarLIs.s
+B9 inittext CODE >1318:/tmp/xcqjarLIs.s
+BA inittext CODE >1319:/tmp/xcqjarLIs.s
+BB inittext CODE >1320:/tmp/xcqjarLIs.s
+BC inittext CODE >1321:/tmp/xcqjarLIs.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -397,7 +454,8 @@ C1 inittext CODE >1318:C:\Users\harut\AppData\Local\Temp\scd0.s
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 3 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
+___latbits 3 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
 __LdataBANK2 0 0 ABS 0 dataBANK2 -
 __LdataBANK3 0 0 ABS 0 dataBANK3 -
@@ -406,69 +464,71 @@ __Hspace_1 1C0 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
-__end_of_portinit 1BC 0 CODE 0 text8 dist/default/production\SKT_mogi_vor1.X.production.o
+__end_of_portinit 1C2 0 CODE 0 text8 dist/default/production/SKT_mogi_vor1.X.production.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
 __HidataBANK2 0 0 ABS 0 idataBANK2 -
 __HidataBANK3 0 0 ABS 0 idataBANK3 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_cw 62 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-main@i 50 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-main@j 4E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+_cw 36 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+main@i 64 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+main@j 62 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\scd0.o
-_atai 5A 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_fclr 1FA 0 CODE 0 text5 dist/default/production\SKT_mogi_vor1.X.production.o
-_main A00 0 CODE 0 maintext dist/default/production\SKT_mogi_vor1.X.production.o
-_num0 C0 0 BANK1 1 dataBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-_samp A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-_tact 440 0 CODE 0 text3 dist/default/production\SKT_mogi_vor1.X.production.o
-btemp 7E 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-start 4 0 CODE 0 init C:\Users\harut\AppData\Local\Temp\scd0.o
-__size_of_fclr 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-__size_of_main 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-__size_of_tact 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-__size_of___lwdiv 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-?___wmul 78 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-?_waitSEGStop 28 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-tact@mode 78 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
+___sp 0 0 STACK 2 stack /tmp/xcth9CV0L.o
+_atai 2E 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_fclr 200 0 CODE 0 text5 dist/default/production/SKT_mogi_vor1.X.production.o
+_main 9F6 0 CODE 0 maintext dist/default/production/SKT_mogi_vor1.X.production.o
+_num0 C0 0 BANK1 1 dataBANK1 dist/default/production/SKT_mogi_vor1.X.production.o
+_samp A0 0 BANK1 1 dataBANK1 dist/default/production/SKT_mogi_vor1.X.production.o
+_tact 4D2 0 CODE 0 text3 dist/default/production/SKT_mogi_vor1.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+start 4 0 CODE 0 init /tmp/xcth9CV0L.o
+__size_of_fclr 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__size_of_tact 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+?___wmul 78 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+?_waitSEGStop 4C 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+tact@mode 78 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
 __LidataBANK2 0 0 ABS 0 idataBANK2 -
 __LidataBANK3 0 0 ABS 0 idataBANK3 -
 __Hpowerup 0 0 CODE 0 powerup -
-dynam@ext 26 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-dynam@smd 20 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\scd0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\scd0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\scd0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\scd0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\scd0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\harut\AppData\Local\Temp\scd0.o
-__size_of_waitSEGStop 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-wtemp0 7E 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
+dynam@ext 4A 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+dynam@smd 44 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+intlevel0 0 0 ENTRY 0 functab /tmp/xcth9CV0L.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xcth9CV0L.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xcth9CV0L.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xcth9CV0L.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xcth9CV0L.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xcth9CV0L.o
+__size_of_waitSEGStop 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-dynam@tm 22 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-dynam@tr 76 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-___wmul@multiplicand 7A 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-_ANSELA 18C 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_ANSELB 18D 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-dynam@j 24 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of___wmul 1FA 0 CODE 0 text6 dist/default/production\SKT_mogi_vor1.X.production.o
-main@ans 4C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+dynam@tm 46 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+dynam@tr 76 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+___wmul@multiplicand 7A 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+_ANSELA 18C 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_ANSELB 18D 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+dynam@j 48 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of___wmul 200 0 CODE 0 text6 dist/default/production/SKT_mogi_vor1.X.production.o
+main@ans 60 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___lwdiv 33A 0 CODE 0 text7 dist/default/production\SKT_mogi_vor1.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\scd0.o
-___stacklo 2110 0 ABS 0 - C:\Users\harut\AppData\Local\Temp\scd0.o
-___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-__size_of_dynam 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-dynam@smdata 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-__size_of_motor 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-start_initialization F94 0 CODE 0 cinit dist/default/production\SKT_mogi_vor1.X.production.o
-_OSCCON 99 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-clear_ram0 16C 0 CODE 0 clrtext dist/default/production\SKT_mogi_vor1.X.production.o
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\harut\AppData\Local\Temp\scd0.o
-fclr@flg 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
+__end_of___lwdiv 340 0 CODE 0 text7 dist/default/production/SKT_mogi_vor1.X.production.o
+___stackhi 23EF 0 ABS 0 - /tmp/xcth9CV0L.o
+___stacklo 2110 0 ABS 0 - /tmp/xcth9CV0L.o
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+__size_of_dynam 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+dynam@smdata 74 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+__size_of_motor 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+start_initialization F8A 0 CODE 0 cinit dist/default/production/SKT_mogi_vor1.X.production.o
+_OSCCON 99 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+clear_ram0 162 0 CODE 0 clrtext dist/default/production/SKT_mogi_vor1.X.production.o
+__pcstackBANK0 44 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xcth9CV0L.o
+fclr@flg 70 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -503,8 +563,8 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
-__end_of_tactsw 3B4 0 CODE 0 text4 dist/default/production\SKT_mogi_vor1.X.production.o
-___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
+__end_of_tactsw 3BA 0 CODE 0 text4 dist/default/production/SKT_mogi_vor1.X.production.o
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -531,8 +591,8 @@ __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 4 config -
-motor@dig1data 2A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-motor@dig2data 2C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+motor@dig1data 4E 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+motor@dig2data 50 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -543,7 +603,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit F94 0 CODE 0 cinit -
+__Lcinit F8A 0 CODE 0 cinit -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -567,8 +627,8 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-waitSEGStop@wt 2C 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-init_ram 178 0 CODE 0 inittext dist/default/production\SKT_mogi_vor1.X.production.o
+waitSEGStop@wt 50 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+init_ram 16E 0 CODE 0 inittext dist/default/production/SKT_mogi_vor1.X.production.o
 __Linittext 0 0 ABS 0 inittext -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -584,7 +644,7 @@ __Hsfr7 0 0 ABS 0 sfr7 -
 __Hsfr8 0 0 ABS 0 sfr8 -
 __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
-__end_of_zenoff 196 0 CODE 0 text1 dist/default/production\SKT_mogi_vor1.X.production.o
+__end_of_zenoff 19C 0 CODE 0 text1 dist/default/production/SKT_mogi_vor1.X.production.o
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
 __Linit 4 0 CODE 0 init -
@@ -599,40 +659,40 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-___wmul 1BC 0 CODE 0 text6 dist/default/production\SKT_mogi_vor1.X.production.o
-_waitSEGStop 572 0 CODE 0 text2 dist/default/production\SKT_mogi_vor1.X.production.o
+___wmul 1C2 0 CODE 0 text6 dist/default/production/SKT_mogi_vor1.X.production.o
+_waitSEGStop 568 0 CODE 0 text2 dist/default/production/SKT_mogi_vor1.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_RA0 60 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RA1 61 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RA2 62 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RC0 70 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RC1 71 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RC2 72 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RC5 75 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RC6 76 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_RC7 77 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
+_RA0 60 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RA1 61 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RA2 62 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RC0 70 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RC1 71 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RC2 72 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RC5 75 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RC6 76 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_RC7 77 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
 __S0 800 0 ABS 0 - -
 __S1 1C0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_ccw 60 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_flg 64 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_atai10 5E 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_code10 E8 0 BANK1 1 bssBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-_flag_P 66 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_flag_R 68 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-motor@tr 30 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+_ccw 34 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_flg 38 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_atai10 32 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_code10 26 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_flag_P 3A 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_flag_R 3C 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+motor@tr 54 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\harut\AppData\Local\Temp\scd0.o
-__pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-__pdataBANK2 120 0 BANK2 1 dataBANK2 dist/default/production\SKT_mogi_vor1.X.production.o
-__pdataBANK3 1A0 0 BANK3 1 dataBANK3 dist/default/production\SKT_mogi_vor1.X.production.o
-__size_of___wmul 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcth9CV0L.o
+__pdataBANK0 66 0 BANK0 1 dataBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+__pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production/SKT_mogi_vor1.X.production.o
+__pdataBANK2 120 0 BANK2 1 dataBANK2 dist/default/production/SKT_mogi_vor1.X.production.o
+__pdataBANK3 1A0 0 BANK3 1 dataBANK3 dist/default/production/SKT_mogi_vor1.X.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__LbssBANK1 0 0 ABS 0 bssBANK1 -
-__ptext10 72C 0 CODE 0 text10 dist/default/production\SKT_mogi_vor1.X.production.o
-___lwdiv 2C2 0 CODE 0 text7 dist/default/production\SKT_mogi_vor1.X.production.o
+__ptext10 722 0 CODE 0 text10 dist/default/production/SKT_mogi_vor1.X.production.o
+___lwdiv 2C8 0 CODE 0 text7 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -655,18 +715,18 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext A00 0 CODE 0 maintext dist/default/production\SKT_mogi_vor1.X.production.o
+__pmaintext 9F6 0 CODE 0 maintext dist/default/production/SKT_mogi_vor1.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __Hinittext 0 0 ABS 0 inittext -
-tactsw@a 76 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-tactsw@b 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-tactsw@c 74 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-___wmul@multiplier 78 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-_tactsw 33A 0 CODE 0 text4 dist/default/production\SKT_mogi_vor1.X.production.o
-_flag_sw3 6A 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+tactsw@a 76 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+tactsw@b 72 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+tactsw@c 74 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+___wmul@multiplier 78 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+_tactsw 340 0 CODE 0 text4 dist/default/production/SKT_mogi_vor1.X.production.o
+_flag_sw3 3E 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -675,81 +735,81 @@ __Lspace_4 0 0 ABS 0 - -
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_zenoff 184 0 CODE 0 text1 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@seg1 28 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@seg2 2A 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-end_of_initialization FFA 0 CODE 0 cinit dist/default/production\SKT_mogi_vor1.X.production.o
+_zenoff 18A 0 CODE 0 text1 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@seg1 4C 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@seg2 4E 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production/SKT_mogi_vor1.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__HbssBANK1 0 0 ABS 0 bssBANK1 -
-__size_of_tactsw 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext1 184 0 CODE 0 text1 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext2 572 0 CODE 0 text2 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext3 440 0 CODE 0 text3 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext4 33A 0 CODE 0 text4 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext5 1FA 0 CODE 0 text5 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext6 1BC 0 CODE 0 text6 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext7 2C2 0 CODE 0 text7 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext8 196 0 CODE 0 text8 dist/default/production\SKT_mogi_vor1.X.production.o
-__ptext9 27A 0 CODE 0 text9 dist/default/production\SKT_mogi_vor1.X.production.o
+__size_of_tactsw 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext1 18A 0 CODE 0 text1 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext2 568 0 CODE 0 text2 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext3 4D2 0 CODE 0 text3 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext4 340 0 CODE 0 text4 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext5 200 0 CODE 0 text5 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext6 1C2 0 CODE 0 text6 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext7 2C8 0 CODE 0 text7 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext8 19C 0 CODE 0 text8 dist/default/production/SKT_mogi_vor1.X.production.o
+__ptext9 280 0 CODE 0 text9 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-motor@kakudo 28 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+motor@kakudo 4C 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__size_of_zenoff 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-motor@i 32 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\SKT_mogi_vor1.X.production.o
+__size_of_zenoff 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+motor@i 56 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production/SKT_mogi_vor1.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK1 3B4 0 CODE 0 idataBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-__pidataBANK2 4D6 0 CODE 0 idataBANK2 dist/default/production\SKT_mogi_vor1.X.production.o
-__pidataBANK3 23A 0 CODE 0 idataBANK3 dist/default/production\SKT_mogi_vor1.X.production.o
-_code1000 56 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+__pidataBANK0 17A 0 CODE 0 idataBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+__pidataBANK1 442 0 CODE 0 idataBANK1 dist/default/production/SKT_mogi_vor1.X.production.o
+__pidataBANK2 3BA 0 CODE 0 idataBANK2 dist/default/production/SKT_mogi_vor1.X.production.o
+__pidataBANK3 240 0 CODE 0 idataBANK3 dist/default/production/SKT_mogi_vor1.X.production.o
+_code1000 2A 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__size_of_portinit 0 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of_waitSEGStop 72C 0 CODE 0 text2 dist/default/production\SKT_mogi_vor1.X.production.o
-__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-motor@smdata 2E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
+__size_of_portinit 0 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of_waitSEGStop 722 0 CODE 0 text2 dist/default/production/SKT_mogi_vor1.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+motor@smdata 52 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_fclr 23A 0 CODE 0 text5 dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of_main F94 0 CODE 0 maintext dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of_tact 4D6 0 CODE 0 text3 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@cpSW1 32 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@cpSW2 34 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@cpSW3 36 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@dousa 2E 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of_dynam A00 0 CODE 0 text10 dist/default/production\SKT_mogi_vor1.X.production.o
-_PORTA C 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_PORTB D 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_PORTC E 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-__end_of_motor 2C2 0 CODE 0 text9 dist/default/production\SKT_mogi_vor1.X.production.o
-_TRISA 8C 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_TRISB 8D 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
-_TRISC 8E 0 ABS 0 - dist/default/production\SKT_mogi_vor1.X.production.o
+__end_of_fclr 240 0 CODE 0 text5 dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of_main F8A 0 CODE 0 maintext dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of_tact 568 0 CODE 0 text3 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@cpSW1 56 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@cpSW2 58 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@cpSW3 5A 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@dousa 52 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of_dynam 9F6 0 CODE 0 text10 dist/default/production/SKT_mogi_vor1.X.production.o
+_PORTA C 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_PORTB D 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_PORTC E 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+__end_of_motor 2C8 0 CODE 0 text9 dist/default/production/SKT_mogi_vor1.X.production.o
+_TRISA 8C 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_TRISB 8D 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
+_TRISC 8E 0 ABS 0 - dist/default/production/SKT_mogi_vor1.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_atai1 5C 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_code1 E6 0 BANK1 1 bssBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-_count 58 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_dynam 72C 0 CODE 0 text10 dist/default/production\SKT_mogi_vor1.X.production.o
-_fugou 54 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_motor 27A 0 CODE 0 text9 dist/default/production\SKT_mogi_vor1.X.production.o
-dynam@dig1data 70 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-dynam@dig2data 72 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
+_atai1 30 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_code1 24 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_count 2C 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_dynam 722 0 CODE 0 text10 dist/default/production/SKT_mogi_vor1.X.production.o
+_fugou 22 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_motor 280 0 CODE 0 text9 dist/default/production/SKT_mogi_vor1.X.production.o
+dynam@dig1data 70 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+dynam@dig2data 72 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __HdataBANK2 0 0 ABS 0 dataBANK2 -
 __HdataBANK3 0 0 ABS 0 dataBANK3 -
-__initialization F94 0 CODE 0 cinit dist/default/production\SKT_mogi_vor1.X.production.o
-__pbssBANK0 52 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-__pbssBANK1 E6 0 BANK1 1 bssBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-_code100 EA 0 BANK1 1 bssBANK1 dist/default/production\SKT_mogi_vor1.X.production.o
-___wmul@product 7C 0 COMMON 1 cstackCOMMON dist/default/production\SKT_mogi_vor1.X.production.o
-_zyoutai 52 0 BANK0 1 bssBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-waitSEGStop@i 38 0 BANK0 1 cstackBANK0 dist/default/production\SKT_mogi_vor1.X.production.o
-_portinit 196 0 CODE 0 text8 dist/default/production\SKT_mogi_vor1.X.production.o
+__initialization F8A 0 CODE 0 cinit dist/default/production/SKT_mogi_vor1.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_code100 28 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+___wmul@product 7C 0 COMMON 1 cstackCOMMON dist/default/production/SKT_mogi_vor1.X.production.o
+_zyoutai 20 0 BANK0 1 bssBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+waitSEGStop@i 5C 0 BANK0 1 cstackBANK0 dist/default/production/SKT_mogi_vor1.X.production.o
+_portinit 19C 0 CODE 0 text8 dist/default/production/SKT_mogi_vor1.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -775,29 +835,30 @@ _portinit 196 0 CODE 0 text8 dist/default/production\SKT_mogi_vor1.X.production.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7CA F94 36 2
-text1 0 C2 184 9 2
-text2 0 2B9 572 DD 2
-text3 0 220 440 4B 2
-text4 0 19D 33A 3D 2
-text5 0 FD 1FA 20 2
-text6 0 DE 1BC 1F 2
-text7 0 161 2C2 3C 2
-text8 0 CB 196 13 2
-text9 0 13D 27A 24 2
-text10 0 396 72C 16A 2
-maintext 0 500 A00 2CA 2
+cinit 0 7C5 F8A 3B 2
+text1 0 C5 18A 9 2
+text2 0 2B4 568 DD 2
+text3 0 269 4D2 4B 2
+text4 0 1A0 340 3D 2
+text5 0 100 200 20 2
+text6 0 E1 1C2 1F 2
+text7 0 164 2C8 3C 2
+text8 0 CE 19C 13 2
+text9 0 140 280 24 2
+text10 0 391 722 16A 2
+maintext 0 4FB 9F6 2CA 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 50 1
-inittext 0 BC 178 6 2
+inittext 0 B7 16E 6 2
 reset_vec 0 0 0 4 2
-idataBANK1 0 1DA 3B4 46 2
-idataBANK2 0 26B 4D6 4E 2
-idataBANK3 0 11D 23A 20 2
-dataBANK1 1 A0 A0 4C 1
-dataBANK2 1 120 120 4E 1
+bssBANK0 1 20 20 4E 1
+idataBANK0 0 BD 17A 8 2
+idataBANK1 0 221 442 48 2
+idataBANK2 0 1DD 3BA 44 2
+idataBANK3 0 120 240 20 2
+dataBANK1 1 A0 A0 48 1
+dataBANK2 1 120 120 44 1
 dataBANK3 1 1A0 1A0 20 1
-clrtext 0 B6 16C 6 2
+clrtext 0 B1 162 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
