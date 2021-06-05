@@ -847,6 +847,18 @@ void main(void)
                                     motor(60*i,SEGg,SEGg,T2,H);
                                     goto hukki;
                                 }
+
+                                if(SW1 ==UP && SW2 ==DN){
+                                    for(j = i ; j<=6; j++){
+                                        motor(60*j,gegiHidari[j],gegiMigi[j],T2,H);
+                                        
+                                    }
+
+                                    for(j = 0 ; j<=6; j++){
+                                        motor(36*j,gegiHidari[j],gegiMigi[j],T2,H);
+                                        
+                                    }
+                                }
                             }
                         }
                     }
@@ -878,10 +890,13 @@ void main(void)
 
                                 }
                                 if(SW1 ==UP && SW2 ==DN){
-                                    motor(60*(6-i),SEGg,SEGg,T2,H);
+                                    for(j = i ; j<=6; j++){
+                                        motor(60,gegiHidari[j],gegiMigi[j],T2,H);
+                                        
+                                    }
 
-                                    for(j = 0 ; j<=6; j++){
-                                    motor(36*j,0,SEGg,T2,H);
+                                    for(j = 0 ; j<=i; j++){
+                                        motor(60,gegiHidari[j],gegiMigi[j],T2,H);
                                         
                                     }
                                 }

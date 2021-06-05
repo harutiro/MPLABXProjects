@@ -3039,26 +3039,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _zyoutai
 -> 0 `i
 ]
+"767
+[; ;Q4.c: 767:     unsigned short gegiMigi[]={(0x01),(0x01|0x02|0x04),(0x01|0x02|0x04|0x08),(0x01|0x02|0x04|0x08),(0x01|0x02|0x04|0x08),(0x01|0x02|0x04|0x08)};
+[v _gegiMigi `us ~T0 @X0 -> 6 `i e ]
+[i _gegiMigi
+:U ..
+-> -> 1 `i `us
+-> | | -> 1 `i -> 2 `i -> 4 `i `us
+-> | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i `us
+-> | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i `us
+-> | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i `us
+-> | | | -> 1 `i -> 2 `i -> 4 `i -> 8 `i `us
+..
+]
+"768
+[; ;Q4.c: 768:     unsigned short gegiHidari[]={0,0,0,(0x08),(0x08|0x10|0x20),(0x08|0x10|0x20|0x40)};
+[v _gegiHidari `us ~T0 @X0 -> 6 `i e ]
+[i _gegiHidari
+:U ..
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 8 `i `us
+-> | | -> 8 `i -> 16 `i -> 32 `i `us
+-> | | | -> 8 `i -> 16 `i -> 32 `i -> 64 `i `us
+..
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"770
-[; ;Q4.c: 770: void main(void)
+"773
+[; ;Q4.c: 773: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"771
-[; ;Q4.c: 771: {
+"774
+[; ;Q4.c: 774: {
 {
 [e :U _main ]
 [f ]
-"773
-[; ;Q4.c: 773:     OSCCON=0x7A;
+"776
+[; ;Q4.c: 776:     OSCCON=0x7A;
 [e = _OSCCON -> -> 122 `i `uc ]
-"775
-[; ;Q4.c: 775:     portinit();
+"778
+[; ;Q4.c: 778:     portinit();
 [e ( _portinit ..  ]
-"777
-[; ;Q4.c: 777:     zenoff();
+"780
+[; ;Q4.c: 780:     zenoff();
 [e ( _zenoff ..  ]
-"779
-[; ;Q4.c: 779:     int i=0,j=0,k=0,m=0,n=0;
+"782
+[; ;Q4.c: 782:     int i=0,j=0,k=0,m=0,n=0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [v _j `i ~T0 @X0 1 a ]
@@ -3069,283 +3095,312 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _m -> 0 `i ]
 [v _n `i ~T0 @X0 1 a ]
 [e = _n -> 0 `i ]
-"782
-[; ;Q4.c: 782:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
+"785
+[; ;Q4.c: 785:     while((RA0!=1)||(RA1!=1)||(RA2!=1));
 [e $U 602  ]
 [e :U 603 ]
 [e :U 602 ]
 [e $ || || != -> _RA0 `i -> 1 `i != -> _RA1 `i -> 1 `i != -> _RA2 `i -> 1 `i 603  ]
 [e :U 604 ]
-"786
-[; ;Q4.c: 786:     hukki:
-[e :U 605 ]
 "789
-[; ;Q4.c: 789:     RC2=RC0=RC1=1;
-[e = _RC2 -> = _RC0 -> = _RC1 -> -> 1 `i `b `b `b ]
+[; ;Q4.c: 789:     hukki:
+[e :U 605 ]
 "792
-[; ;Q4.c: 792:     fclr(2);
+[; ;Q4.c: 792:     RC2=RC0=RC1=1;
+[e = _RC2 -> = _RC0 -> = _RC1 -> -> 1 `i `b `b `b ]
+"795
+[; ;Q4.c: 795:     fclr(2);
 [e ( _fclr (1 -> -> 2 `i `us ]
-"802
-[; ;Q4.c: 802:     int time = 0;
+"805
+[; ;Q4.c: 805:     int time = 0;
 [v _time `i ~T0 @X0 1 a ]
 [e = _time -> 0 `i ]
-"804
-[; ;Q4.c: 804:     int ans = -1;
+"807
+[; ;Q4.c: 807:     int ans = -1;
 [v _ans `i ~T0 @X0 1 a ]
 [e = _ans -U -> 1 `i ]
-"806
-[; ;Q4.c: 806:     unsigned short segL = 0;
+"809
+[; ;Q4.c: 809:     unsigned short segL = 0;
 [v _segL `us ~T0 @X0 1 a ]
 [e = _segL -> -> 0 `i `us ]
-"807
-[; ;Q4.c: 807:     unsigned short segR = 0;
+"810
+[; ;Q4.c: 810:     unsigned short segR = 0;
 [v _segR `us ~T0 @X0 1 a ]
 [e = _segR -> -> 0 `i `us ]
-"809
-[; ;Q4.c: 809:     int ataiL = 0;
+"812
+[; ;Q4.c: 812:     int ataiL = 0;
 [v _ataiL `i ~T0 @X0 1 a ]
 [e = _ataiL -> 0 `i ]
-"810
-[; ;Q4.c: 810:     int ataiR = 0;
+"813
+[; ;Q4.c: 813:     int ataiR = 0;
 [v _ataiR `i ~T0 @X0 1 a ]
 [e = _ataiR -> 0 `i ]
-"816
-[; ;Q4.c: 816:     while(1){
+"819
+[; ;Q4.c: 819:     while(1){
 [e :U 607 ]
 {
-"818
-[; ;Q4.c: 818:         if(RA0 ==1 && RA1 == 0){
+"821
+[; ;Q4.c: 821:         if(RA0 ==1 && RA1 == 0){
 [e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 609  ]
 {
-"819
-[; ;Q4.c: 819:             dynam(0x40,0x40,0,0);
+"822
+[; ;Q4.c: 822:             dynam(0x40,0x40,0,0);
 [e ( _dynam (4 , , , -> -> 64 `i `us -> -> 64 `i `us -> -> 0 `i `us -> -> 0 `i `ui ]
-"820
-[; ;Q4.c: 820:         }
+"823
+[; ;Q4.c: 823:         }
 }
 [e :U 609 ]
-"822
-[; ;Q4.c: 822:         if(RA0 ==0 && RA1 == 0){
+"825
+[; ;Q4.c: 825:         if(RA0 ==0 && RA1 == 0){
 [e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 0 `i 610  ]
 {
-"823
-[; ;Q4.c: 823:             zyoutai = waitSEGStop(0x40,0x40,1000,0b001);
+"826
+[; ;Q4.c: 826:             zyoutai = waitSEGStop(0x40,0x40,1000,0b001);
 [e = _zyoutai ( _waitSEGStop (4 , , , -> -> 64 `i `us -> -> 64 `i `us -> -> 1000 `i `us -> 1 `i ]
-"825
-[; ;Q4.c: 825:             if(zyoutai >= 1){
+"828
+[; ;Q4.c: 828:             if(zyoutai >= 1){
 [e $ ! >= _zyoutai -> 1 `i 611  ]
 {
-"826
-[; ;Q4.c: 826:                 _delay((unsigned long)((500)*(16000000/4000UL)));
+"829
+[; ;Q4.c: 829:                 _delay((unsigned long)((500)*(16000000/4000UL)));
 [e ( __delay (1 * -> -> -> 500 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
-"827
-[; ;Q4.c: 827:                 while(1){
+"830
+[; ;Q4.c: 830:                 while(1){
 [e :U 613 ]
 {
-"828
-[; ;Q4.c: 828:                     for(i = 1;i<=6;i++){
+"831
+[; ;Q4.c: 831:                     for(i = 1;i<=6;i++){
 {
 [e = _i -> 1 `i ]
 [e $ <= _i -> 6 `i 615  ]
 [e $U 616  ]
 [e :U 615 ]
 {
-"829
-[; ;Q4.c: 829:                         zyoutai = waitSEGStop(0x40,num0[i],1000,0b001);
+"832
+[; ;Q4.c: 832:                         zyoutai = waitSEGStop(0x40,num0[i],1000,0b001);
 [e = _zyoutai ( _waitSEGStop (4 , , , -> -> 64 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1000 `i `us -> 1 `i ]
-"830
-[; ;Q4.c: 830:                         if(zyoutai > 0){
+"833
+[; ;Q4.c: 833:                         if(zyoutai > 0){
 [e $ ! > _zyoutai -> 0 `i 618  ]
 {
-"831
-[; ;Q4.c: 831:                             ans++;
-[e ++ _ans -> 1 `i ]
-"832
-[; ;Q4.c: 832:                             zyoutai = waitSEGStop(0x40,num0[i],zyoutai,0b001);
-[e = _zyoutai ( _waitSEGStop (4 , , , -> -> 64 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> _zyoutai `us -> 1 `i ]
-"833
-[; ;Q4.c: 833:                             zyoutai =0;
-[e = _zyoutai -> 0 `i ]
 "834
-[; ;Q4.c: 834:                             if(zyoutai > 0){
+[; ;Q4.c: 834:                             ans++;
+[e ++ _ans -> 1 `i ]
+"835
+[; ;Q4.c: 835:                             zyoutai = waitSEGStop(0x40,num0[i],zyoutai,0b001);
+[e = _zyoutai ( _waitSEGStop (4 , , , -> -> 64 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> _zyoutai `us -> 1 `i ]
+"836
+[; ;Q4.c: 836:                             zyoutai =0;
+[e = _zyoutai -> 0 `i ]
+"837
+[; ;Q4.c: 837:                             if(zyoutai > 0){
 [e $ ! > _zyoutai -> 0 `i 619  ]
 {
-"835
-[; ;Q4.c: 835:                                 ans++;
+"838
+[; ;Q4.c: 838:                                 ans++;
 [e ++ _ans -> 1 `i ]
-"836
-[; ;Q4.c: 836:                             }
+"839
+[; ;Q4.c: 839:                             }
 }
 [e :U 619 ]
-"837
-[; ;Q4.c: 837:                         }
+"840
+[; ;Q4.c: 840:                         }
 }
 [e :U 618 ]
-"839
-[; ;Q4.c: 839:                         if(ans == 2){
+"842
+[; ;Q4.c: 842:                         if(ans == 2){
 [e $ ! == _ans -> 2 `i 620  ]
 {
-"840
-[; ;Q4.c: 840:                             motor(60*i,0x40,num0[i],2,5);
+"843
+[; ;Q4.c: 843:                             motor(60*i,0x40,num0[i],2,5);
 [e ( _motor (4 , , , , * -> 60 `i _i -> -> 64 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 2 `i `us -> -> 5 `i `ui ]
-"842
-[; ;Q4.c: 842:                             while(1){
+"845
+[; ;Q4.c: 845:                             while(1){
 [e :U 622 ]
 {
-"843
-[; ;Q4.c: 843:                                 if(RA0==1 && RA1 == 0){
+"846
+[; ;Q4.c: 846:                                 if(RA0==1 && RA1 == 0){
 [e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 624  ]
 {
-"844
-[; ;Q4.c: 844:                                     motor(60*i,0x40,0x40,1,1);
+"847
+[; ;Q4.c: 847:                                     motor(60*i,0x40,0x40,1,1);
 [e ( _motor (4 , , , , * -> 60 `i _i -> -> 64 `i `us -> -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
-"845
-[; ;Q4.c: 845:                                     goto hukki;
+"848
+[; ;Q4.c: 848:                                     goto hukki;
 [e $U 605  ]
-"846
-[; ;Q4.c: 846:                                 }
+"849
+[; ;Q4.c: 849:                                 }
 }
 [e :U 624 ]
-"847
-[; ;Q4.c: 847:                             }
+"850
+[; ;Q4.c: 850:                             }
 }
 [e :U 621 ]
 [e $U 622  ]
 [e :U 623 ]
-"848
-[; ;Q4.c: 848:                         }
+"851
+[; ;Q4.c: 851:                         }
 }
 [e :U 620 ]
-"849
-[; ;Q4.c: 849:                     }
+"852
+[; ;Q4.c: 852:                     }
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 6 `i 615  ]
 [e :U 616 ]
 }
-"850
-[; ;Q4.c: 850:                 }
+"853
+[; ;Q4.c: 853:                 }
 }
 [e :U 612 ]
 [e $U 613  ]
 [e :U 614 ]
-"851
-[; ;Q4.c: 851:             }
+"854
+[; ;Q4.c: 854:             }
 }
 [e :U 611 ]
-"853
-[; ;Q4.c: 853:             zyoutai = waitSEGStop(0,0x40,1000,0b001);
+"856
+[; ;Q4.c: 856:             zyoutai = waitSEGStop(0,0x40,1000,0b001);
 [e = _zyoutai ( _waitSEGStop (4 , , , -> -> 0 `i `us -> -> 64 `i `us -> -> 1000 `i `us -> 1 `i ]
-"855
-[; ;Q4.c: 855:             if(zyoutai >= 1){
+"858
+[; ;Q4.c: 858:             if(zyoutai >= 1){
 [e $ ! >= _zyoutai -> 1 `i 625  ]
 {
-"856
-[; ;Q4.c: 856:                 _delay((unsigned long)((500)*(16000000/4000UL)));
+"859
+[; ;Q4.c: 859:                 _delay((unsigned long)((500)*(16000000/4000UL)));
 [e ( __delay (1 * -> -> -> 500 `i `l `ul / -> -> 16000000 `l `ul -> 4000 `ul ]
-"857
-[; ;Q4.c: 857:                 while(1){
+"860
+[; ;Q4.c: 860:                 while(1){
 [e :U 627 ]
 {
-"858
-[; ;Q4.c: 858:                     for(i = 1;i<=6;i++){
+"861
+[; ;Q4.c: 861:                     for(i = 1;i<=6;i++){
 {
 [e = _i -> 1 `i ]
 [e $ <= _i -> 6 `i 629  ]
 [e $U 630  ]
 [e :U 629 ]
 {
-"859
-[; ;Q4.c: 859:                         zyoutai = waitSEGStop(0,num0[i],1000,0b001);
+"862
+[; ;Q4.c: 862:                         zyoutai = waitSEGStop(0,num0[i],1000,0b001);
 [e = _zyoutai ( _waitSEGStop (4 , , , -> -> 0 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1000 `i `us -> 1 `i ]
-"860
-[; ;Q4.c: 860:                         if(zyoutai > 0){
+"863
+[; ;Q4.c: 863:                         if(zyoutai > 0){
 [e $ ! > _zyoutai -> 0 `i 632  ]
 {
-"861
-[; ;Q4.c: 861:                             ans++;
-[e ++ _ans -> 1 `i ]
-"862
-[; ;Q4.c: 862:                             zyoutai = waitSEGStop(0,num0[i],zyoutai,0b001);
-[e = _zyoutai ( _waitSEGStop (4 , , , -> -> 0 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> _zyoutai `us -> 1 `i ]
-"863
-[; ;Q4.c: 863:                             if(zyoutai > 0){
-[e $ ! > _zyoutai -> 0 `i 633  ]
-{
 "864
-[; ;Q4.c: 864:                                 ans++;
+[; ;Q4.c: 864:                             ans++;
 [e ++ _ans -> 1 `i ]
 "865
-[; ;Q4.c: 865:                             }
+[; ;Q4.c: 865:                             zyoutai = waitSEGStop(0,num0[i],zyoutai,0b001);
+[e = _zyoutai ( _waitSEGStop (4 , , , -> -> 0 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> _zyoutai `us -> 1 `i ]
+"866
+[; ;Q4.c: 866:                             if(zyoutai > 0){
+[e $ ! > _zyoutai -> 0 `i 633  ]
+{
+"867
+[; ;Q4.c: 867:                                 ans++;
+[e ++ _ans -> 1 `i ]
+"868
+[; ;Q4.c: 868:                             }
 }
 [e :U 633 ]
-"866
-[; ;Q4.c: 866:                         }
+"869
+[; ;Q4.c: 869:                         }
 }
 [e :U 632 ]
-"868
-[; ;Q4.c: 868:                         if(ans == 2){
+"871
+[; ;Q4.c: 871:                         if(ans == 2){
 [e $ ! == _ans -> 2 `i 634  ]
 {
-"869
-[; ;Q4.c: 869:                             motor(60*i,0,num0[i],1,5);
+"872
+[; ;Q4.c: 872:                             motor(60*i,0,num0[i],1,5);
 [e ( _motor (4 , , , , * -> 60 `i _i -> -> 0 `i `us *U + &U _num0 * -> -> _i `ui `ux -> -> # *U &U _num0 `ui `ux -> -> 1 `i `us -> -> 5 `i `ui ]
-"871
-[; ;Q4.c: 871:                             while(1){
+"874
+[; ;Q4.c: 874:                             while(1){
 [e :U 636 ]
 {
-"872
-[; ;Q4.c: 872:                                 if(RA0==1 && RA1 == 0){
+"875
+[; ;Q4.c: 875:                                 if(RA0==1 && RA1 == 0){
 [e $ ! && == -> _RA0 `i -> 1 `i == -> _RA1 `i -> 0 `i 638  ]
 {
-"873
-[; ;Q4.c: 873:                                     motor(60*(6-i),0x40,0x40,1,1);
-[e ( _motor (4 , , , , * -> 60 `i - -> 6 `i _i -> -> 64 `i `us -> -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
-"874
-[; ;Q4.c: 874:                                     goto hukki;
-[e $U 605  ]
 "876
-[; ;Q4.c: 876:                                 }
+[; ;Q4.c: 876:                                     motor(60*(6-i),0x40,0x40,1,1);
+[e ( _motor (4 , , , , * -> 60 `i - -> 6 `i _i -> -> 64 `i `us -> -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
+"877
+[; ;Q4.c: 877:                                     goto hukki;
+[e $U 605  ]
+"879
+[; ;Q4.c: 879:                                 }
 }
 [e :U 638 ]
-"877
-[; ;Q4.c: 877:                             }
+"880
+[; ;Q4.c: 880:                                 if(RA0 ==0 && RA1 ==1){
+[e $ ! && == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 1 `i 639  ]
+{
+"881
+[; ;Q4.c: 881:                                     motor(60*(6-i),0x40,0x40,1,1);
+[e ( _motor (4 , , , , * -> 60 `i - -> 6 `i _i -> -> 64 `i `us -> -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
+"883
+[; ;Q4.c: 883:                                     for(j = 0 ; j<=6; j++){
+{
+[e = _j -> 0 `i ]
+[e $ <= _j -> 6 `i 640  ]
+[e $U 641  ]
+[e :U 640 ]
+{
+"884
+[; ;Q4.c: 884:                                     motor(36*j,0,0x40,1,1);
+[e ( _motor (4 , , , , * -> 36 `i _j -> -> 0 `i `us -> -> 64 `i `us -> -> 1 `i `us -> -> 1 `i `ui ]
+"886
+[; ;Q4.c: 886:                                     }
+}
+[e ++ _j -> 1 `i ]
+[e $ <= _j -> 6 `i 640  ]
+[e :U 641 ]
+}
+"887
+[; ;Q4.c: 887:                                 }
+}
+[e :U 639 ]
+"888
+[; ;Q4.c: 888:                             }
 }
 [e :U 635 ]
 [e $U 636  ]
 [e :U 637 ]
-"878
-[; ;Q4.c: 878:                         }
+"889
+[; ;Q4.c: 889:                         }
 }
 [e :U 634 ]
-"879
-[; ;Q4.c: 879:                     }
+"890
+[; ;Q4.c: 890:                     }
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 6 `i 629  ]
 [e :U 630 ]
 }
-"880
-[; ;Q4.c: 880:                 }
+"891
+[; ;Q4.c: 891:                 }
 }
 [e :U 626 ]
 [e $U 627  ]
 [e :U 628 ]
-"881
-[; ;Q4.c: 881:             }
+"892
+[; ;Q4.c: 892:             }
 }
 [e :U 625 ]
-"884
-[; ;Q4.c: 884:         }
+"895
+[; ;Q4.c: 895:         }
 }
 [e :U 610 ]
-"886
-[; ;Q4.c: 886:     }
+"897
+[; ;Q4.c: 897:     }
 }
 [e :U 606 ]
 [e $U 607  ]
 [e :U 608 ]
-"887
-[; ;Q4.c: 887: }
+"898
+[; ;Q4.c: 898: }
 [e :UE 601 ]
 }

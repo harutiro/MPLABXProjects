@@ -5493,6 +5493,9 @@ int buzzStop (int dousa,int time,int rokku){
 
 }
     int zyoutai = 0;
+    unsigned short gegiMigi[]={(0x01),(0x01|0x02|0x04),(0x01|0x02|0x04|0x08),(0x01|0x02|0x04|0x08),(0x01|0x02|0x04|0x08),(0x01|0x02|0x04|0x08)};
+    unsigned short gegiHidari[]={0,0,0,(0x08),(0x08|0x10|0x20),(0x08|0x10|0x20|0x40)};
+
 
 
 
@@ -5519,7 +5522,7 @@ void main(void)
 
 
     fclr(2);
-# 802 "Q4.c"
+# 805 "Q4.c"
     int time = 0;
 
     int ans = -1;
@@ -5594,6 +5597,14 @@ void main(void)
                                     motor(60*(6-i),0x40,0x40,1,1);
                                     goto hukki;
 
+                                }
+                                if(RA0 ==0 && RA1 ==1){
+                                    motor(60*(6-i),0x40,0x40,1,1);
+
+                                    for(j = 0 ; j<=6; j++){
+                                    motor(36*j,0,0x40,1,1);
+
+                                    }
                                 }
                             }
                         }

@@ -799,7 +799,7 @@ void main(void)
             if(SW3PR){
                 fclr(PR);
                 waitSEG(SEGU,SEG2,2000);
-                motor(360*2,SEG1,SEGU,H2,H);
+                motor(360*2,SEGU,SEG2,H2,H);
 
                 while(1){
                     if(SW1 == DN && SW2 == UP){
