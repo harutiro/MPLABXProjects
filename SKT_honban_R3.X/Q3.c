@@ -466,10 +466,11 @@
 //    //状態
 //    int cpSW1 = SW1;
 //    int cpSW2 = SW2;
+//    int cpSW3 = SW3;
 //    
 //    
 //
-//    wt = wt / 10;
+//    wt = wt / 10 + wt/1000*60;
 //    unsigned int i;
 //
 //    for(i=wt;i>0;--i){   
@@ -498,6 +499,12 @@
 //                return 1;
 //            }
 //        }
+//        if(cpSW3 != SW3){
+//            if((0b001 & dousa) == 0b001){
+//            
+//                return 1;
+//            }
+//        }
 //    }
 //
 //    return 0;
@@ -515,6 +522,7 @@
 //    //状態
 //    int cpSW1 = SW1;
 //    int cpSW2 = SW2;
+//    int cpSW3 = SW3;
 //
 //    for(int i = kakudo;i>=0;i--){
 //        dynam(dig1data,dig2data,smdata,tr);
@@ -539,6 +547,12 @@
 //            if((0b001 & dousa) == 0b001){
 //            
 //                fclr(PR);
+//                return i;
+//            }
+//        }
+//        if(cpSW3 != SW3){
+//            if((0b001 & dousa) == 0b001){
+//            
 //                return i;
 //            }
 //        }
@@ -585,6 +599,7 @@
 //    //状態
 //    int cpSW1 = SW1;
 //    int cpSW2 = SW2;
+//    int cpSW3 = SW3;
 //
 //    for(j=time;j>0;j--){
 //
@@ -618,6 +633,13 @@
 //                        return j;
 //                    }
 //                }
+//                if(SW3 != cpSW3){
+//                    if((0b001 & rokku) == 0b001){
+//                        
+//                        buzzof();
+//                        return j;
+//                    }
+//                }
 //            }
 //            for(i=0;i<=2500;i++){
 //                buzzof();
@@ -644,6 +666,13 @@
 //                    if((0b001 & rokku) == 0b001){
 //                    
 //                        fclr(PR);
+//                        buzzof();
+//                        return j;
+//                    }
+//                }
+//                if(SW3 != cpSW3){
+//                    if((0b001 & rokku) == 0b001){
+//                        
 //                        buzzof();
 //                        return j;
 //                    }
@@ -681,6 +710,13 @@
 //                        return j;
 //                    }
 //                }
+//                if(SW3 != cpSW3){
+//                    if((0b001 & rokku) == 0b001){
+//                        
+//                        buzzof();
+//                        return j;
+//                    }
+//                }
 //            }
 //            for(i=0;i<=7500;i++){
 //                buzzof();
@@ -711,6 +747,13 @@
 //                        return j;
 //                    }
 //                }
+//                if(SW3 != cpSW3){
+//                    if((0b001 & rokku) == 0b001){
+//                        
+//                        buzzof();
+//                        return j;
+//                    }
+//                }
 //            }
 //        }
 //
@@ -736,6 +779,10 @@
 //    //SW1：下　SW2：下　SW3：離す
 //    while((SW1!=1)||(SW2!=1)||(SW3!=1));  
 //
+//// ================================================================================
+//
+//    hukki:
+//
 //    //ここから編集
 //    LEDR=LEDG=LEDB=OFF;
 //    
@@ -745,14 +792,14 @@
 //
 //    // //最初の起動ロック
 //    // while(1){
-//    //     if(SW1 == UP){
+//    //     if(SW1 == UP || SW2 ==UP){
 //    //         break;
 //    //     }
 //    // }
 //
 //    int time = 0;
 //
-//    int ans = 0;
+//    int ans = -1;
 //
 //    unsigned short segL = 0;
 //    unsigned short segR = 0;
@@ -764,58 +811,121 @@
 //
 //    
 //    //メインの動き
-//    hukki:
+//
+//    __delay_ms(1000);
+//    
 //    while(1){
 //
-//        if(SW1 == UP && SW2 == DN){
-//            dynam(SEG1,SEGU,0,0);
+//        if(SW1 == DN && SW2 == DN){
+//
+//            if(ans == -1){
+//                dynam(0,SEGd,0,0);
+//            }else{
+//                dynam(0,num0[ans],0,0);
+//
+//            }
 //
 //            tact(ON);
 //            if(SW3R){
 //                fclr(PR);
-//                waitSEG(SEG1,SEGU,1000);
-//                motor(360,SEG1,SEGU,T2,L);
+//                ans++;
 //
+//                if(ans == 9){
+//                    ans = 0;
+//                }
+//
+//            }
+//        }
+//
+//        if(SW1 == UP && SW2 == DN && ans >= 0){
+//
+//            if(ans == 0){
+//                waitSEG(SEGN,SEG0,2000);
 //                while(1){
-//                    if(SW1 == UP && SW2 == DN){
-//                        dynam(SEG1,SEGU,0,0);
-//                    }
-//                    
+//
 //                    if(SW1 == DN && SW2 ==DN){
-//                        dynam(SEGD,SEGD,0,0);
-//                        jikan();
-//                        if(count >= 500){
+//                        dynam(SEGg,SEGg,0,0);
+//                        kaisu(ON);
+//
+//                        if(count == 2){
 //                            goto hukki;
 //                        }
+//                    }else{
+//                        dynam(SEGN,SEGF,0,0);
+//
+//                    }
+//                }
+//            }
+//
+//            if(ans % 2 == 0){
+//                motor(720,SEGH,num0[ans],T2,H);
+//                while(1){
+//                    
+//                    if(SW1 == DN && SW2 ==DN){
+//                        dynam(SEGg,SEGg,0,0);
+//                        kaisu(ON);
+//
+//                        if(count == 2){
+//                            count = 0;
+//                            goto hukki;
+//                        }
+//                    }else{
+//                        waitSEGStop(SEGH,SEGF,1000,0b110);
+//
+//                    }
+//
+//                    if(SW1 == DN && SW2 ==DN){
+//                        dynam(SEGg,SEGg,0,0);
+//                        kaisu(ON);
+//
+//                        if(count == 2){
+//                            count = 0;
+//                            goto hukki;
+//                        }
+//                    }else{
+//                        waitSEGStop(SEGH,0,1000,0b110);
+//
+//                    }
+//                }
+//            }
+//
+//            if(ans % 2 == 1){
+//                motor(360,SEGL,num0[ans],H2,L);
+//                while(1){
+//                    if(SW1 == DN && SW2 ==DN){
+//                        dynam(SEGg,SEGg,0,0);
+//                        kaisu(ON);
+//
+//                        if(count == 2){
+//                            count = 0;
+//                            goto hukki;
+//                        }
+//                    }else{
+//                        waitSEGStop(SEGL,SEGF,2000,0b110);
+//
+//                    }
+//                    if(SW1 == DN && SW2 ==DN){
+//                        dynam(SEGg,SEGg,0,0);
+//                        kaisu(ON);
+//
+//                        if(count == 2){
+//                            count = 0;
+//                            goto hukki;
+//                        }
+//                    }else{
+//                        waitSEGStop(SEGL,0,2000,0b110);
+//
 //                    }
 //                }
 //            }
 //        }
 //
-//        if(SW1 == DN && SW2 == UP){
-//            dynam(SEGU,SEG2,0,0);
+//        
 //
-//            tact(REN);
-//            if(SW3PR){
-//                fclr(PR);
-//                waitSEG(SEGU,SEG2,2000);
-//                motor(360*2,SEGU,SEG2,H2,H);
 //
-//                while(1){
-//                    if(SW1 == DN && SW2 == UP){
-//                        dynam(SEGU,SEG2,0,0);
-//                    }
-//                    
-//                    if(SW1 == DN && SW2 ==DN){
-//                        dynam(SEGD,SEGD,0,0);
-//                        jikan();
-//                        if(count >= 500){
-//                            goto hukki;
-//                        }
-//                    }
-//                }
-//            }
-//        }     
+//
+//
+//
 //    }
 //}
 //

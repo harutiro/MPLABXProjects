@@ -744,11 +744,11 @@
 //
 //
 //    //最初の起動ロック
-//    while(1){
-//        if(SW1 == UP || SW2 ==UP){
-//            break;
-//        }
-//    }
+//    // while(1){
+//    //     if(SW1 == UP || SW2 ==UP){
+//    //         break;
+//    //     }
+//    // }
 //
 //    int time = 0;
 //
@@ -773,12 +773,17 @@
 //
 //        // buzzStop(L,3,0b111);
 //
-//        if(SW1 ==DN && SW2 ==UP){
+//        
+//        if(SW1 == UP && SW2 ==UP){
 //            LEDR = ON; LEDB =OFF;
 //        }
 //
-//        if(SW1 ==DN && SW2 ==DN){
+//        if(SW1 == UP && SW2 ==DN){
 //            LEDR = OFF; LEDB =ON;
+//        }
+//
+//        if(SW1 == DN && SW2 == DN && LEDB == ON){
+//            zenoff();
 //        }
 //        
 //        
